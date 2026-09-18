@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sophia & William 专属数学知识图谱与错题追踪系统 | 协和双语虹桥融合班</title>
+  
+  <!-- KaTeX for rendering mathematical expressions -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="header-title-group">
+        <div class="brand-badge">
+          <span class="school-tag">协和双语虹桥校区</span> · 融合班 (SUIS G6 Integrated)
+        </div>
+        <h1>
+          Sophia & William 专属数学知识图谱追踪系统
+          <span class="phase-pill">六上开学半个月阶段</span>
+        </h1>
+        <div class="header-subtitle">
+          融合体制内沪教版六上数学 + 国际数学《International Mathematics G6 Book A》+ 校本高阶思维拓展
+        </div>
+      </div>
+
+      <!-- Student Switcher -->
+      <div class="student-selector-bar">
+        <button class="student-btn active" data-student="dual">
+          <span>👥</span> 双人对比视图
+        </button>
+        <button class="student-btn" data-student="sophia">
+          <span>🌸</span> Sophia
+        </button>
+        <button class="student-btn" data-student="william">
+          <span>⚡</span> William
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="app-nav">
+      <button class="nav-tab active" data-view="overview">
+        <span>📊</span> 学情全貌与双人对比
+      </button>
+      <button class="nav-tab" data-view="graph">
+        <span>🕸️</span> 三轨融合知识图谱
+      </button>
+      <button class="nav-tab" data-view="errors">
+        <span>📕</span> 经典错题与深度解析库 (<span id="error-count-badge">17</span>)
+      </button>
+      <button class="nav-tab" data-view="roadmap">
+        <span>🎯</span> 教学路线与专属干预方案
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-main">
+
+    <!-- VIEW 1: OVERVIEW & COMPARATIVE ANALYTICS -->
+    <section id="view-overview" class="view-panel active">
+      
+      <!-- Top Overview Metrics -->
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="card" style="padding: 16px;">
+          <div class="card-subtitle">当前学期进度</div>
+          <div style="font-size: 20px; font-weight: 800; color: var(--primary); margin-top: 4px;">
+            六年级第一学期 · 开学半个月
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+            第1章《数的整除》结课，第2章《分数》新授
+          </div>
+        </div>
+
+        <div class="card" style="padding: 16px;">
+          <div class="card-subtitle">三轨融合教材</div>
+          <div style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-top: 4px;">
+            沪教六上 + Book A + 校本拓展
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+            双语术语覆盖 · 考点双向对齐
+          </div>
+        </div>
+
+        <div class="card" style="padding: 16px; border-left: 4px solid var(--sophia-color);">
+          <div class="card-subtitle">Sophia 累计课时 & 正确率</div>
+          <div style="font-size: 20px; font-weight: 800; color: var(--sophia-color); margin-top: 4px;">
+            17 节课 · 80%~85%
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+            思维敏锐反应快，薄弱在乘方概念与粗心
+          </div>
+        </div>
+
+        <div class="card" style="padding: 16px; border-left: 4px solid var(--william-color);">
+          <div class="card-subtitle">William 累计课时 & 正确率</div>
+          <div style="font-size: 20px; font-weight: 800; color: var(--william-color); margin-top: 4px;">
+            16 节课 · 70%~75%
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+            参与意愿高，薄弱在小数运算断层与乘方混淆
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Profile Cards -->
+      <div class="grid-2" style="margin-bottom: 24px;">
+        
+        <!-- Sophia Profile Card -->
+        <div class="card student-profile-card sophia-theme">
+          <div class="profile-hero">
+            <div style="display: flex; gap: 14px; align-items: center;">
+              <div class="avatar-badge">S</div>
+              <div>
+                <h3 style="font-size: 20px; font-weight: 800;">Sophia (协和融合G6)</h3>
+                <div style="font-size: 13px; color: var(--text-muted);">
+                  首次上课：2026年3月 | 课程：英数G5+AMC8 (5节) + G6暑期 (10节) + G6秋季 (2节)
+                </div>
+              </div>
+            </div>
+            <span class="tag student-sophia" style="font-size: 13px; padding: 4px 10px;">敏捷型 · 需抓粗心与概念</span>
+          </div>
+
+          <div class="profile-stats">
+            <div class="stat-item">
+              <div class="stat-label">最新秋季正确率</div>
+              <div class="stat-value" style="color: var(--sophia-color);">80% ~ 85%</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">已掌握知识点</div>
+              <div class="stat-value" style="color: var(--mastered);" id="sophia-mastered-count">8 / 20</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">待攻坚知识点</div>
+              <div class="stat-value" style="color: var(--needs-work);" id="sophia-needs-count">3 / 20</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <h4 style="font-size: 14px; font-weight: 700; color: var(--mastered);">🌟 核心优势与高光表现：</h4>
+            <ul class="bullet-list strengths" id="sophia-strengths-list"></ul>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <h4 style="font-size: 14px; font-weight: 700; color: var(--needs-work);">⚠️ 核心薄弱点与攻坚重点：</h4>
+            <ul class="bullet-list weaknesses" id="sophia-weaknesses-list"></ul>
+          </div>
+        </div>
+
+        <!-- William Profile Card -->
+        <div class="card student-profile-card william-theme">
+          <div class="profile-hero">
+            <div style="display: flex; gap: 14px; align-items: center;">
+              <div class="avatar-badge">W</div>
+              <div>
+                <h3 style="font-size: 20px; font-weight: 800;">William (协和融合G6)</h3>
+                <div style="font-size: 13px; color: var(--text-muted);">
+                  首次上课：2026年3月 | 课程：袋鼠C (4节) + G6暑期 (10节) + G6秋季 (2节)
+                </div>
+              </div>
+            </div>
+            <span class="tag student-william" style="font-size: 13px; padding: 4px 10px;">探索型 · 需补断层与规范</span>
+          </div>
+
+          <div class="profile-stats">
+            <div class="stat-item">
+              <div class="stat-label">最新秋季正确率</div>
+              <div class="stat-value" style="color: var(--william-color);">70% ~ 75%</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">已掌握知识点</div>
+              <div class="stat-value" style="color: var(--mastered);" id="william-mastered-count">2 / 20</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">亟待攻坚知识点</div>
+              <div class="stat-value" style="color: var(--needs-work);" id="william-needs-count">11 / 20</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <h4 style="font-size: 14px; font-weight: 700; color: var(--mastered);">🌟 核心优势与高光表现：</h4>
+            <ul class="bullet-list strengths" id="william-strengths-list"></ul>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <h4 style="font-size: 14px; font-weight: 700; color: var(--needs-work);">⚠️ 核心薄弱点与攻坚重点：</h4>
+            <ul class="bullet-list weaknesses" id="william-weaknesses-list"></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Competency Radar & Historical Trends -->
+      <div class="grid-2" style="margin-bottom: 24px;">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">五维核心数学能力雷达对比</div>
+              <div class="card-subtitle">运算流畅度 / 概念严谨性 / 空间代数建模 / 步骤规范度 / 专注持久力</div>
+            </div>
+            <div class="legend-bar">
+              <div class="legend-item"><span class="legend-dot" style="background: var(--sophia-color);"></span> Sophia</div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--william-color);"></span> William</div>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="radarCanvas"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">历史课堂正确率走势对比 (2026.03 ~ 2026.09)</div>
+              <div class="card-subtitle">春季基础拔高 → 暑期预备班密集攻坚 → 秋季开学两周回升</div>
+            </div>
+            <div class="legend-bar">
+              <div class="legend-item"><span class="legend-dot" style="background: var(--sophia-color);"></span> Sophia</div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--william-color);"></span> William</div>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="trendCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mutual Dynamics & Classroom Ecology -->
+      <div class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🤝</span> 双人同桌学习动力学与注意力相互影响深度剖析
+          </div>
+          <span class="tag category-tag">教学支持组教研结论</span>
+        </div>
+        <div class="grid-3" id="mutual-dynamics-grid" style="margin-bottom: 16px;"></div>
+        <div style="background: #eef2ff; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: var(--radius-sm); font-size: 13.5px; color: #312e81;">
+          <strong>💡 现场教学组织建议：</strong>
+          <span id="mutual-recommendation-text"></span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 2: INTERACTIVE KNOWLEDGE GRAPH -->
+    <section id="view-graph" class="view-panel">
+      
+      <!-- Graph Controls -->
+      <div class="graph-control-bar">
+        <div class="filter-group">
+          <span class="filter-label">知识模块筛选:</span>
+          <button class="pill-btn active" data-domain="all">全部模块 (20)</button>
+          <button class="pill-btn" data-domain="number_theory">🔢 数的整除 (7)</button>
+          <button class="pill-btn" data-domain="fractions">➗ 分数运算 (5)</button>
+          <button class="pill-btn" data-domain="place_value">🧮 数位与乘方 (4)</button>
+          <button class="pill-btn" data-domain="ratios_percent">📊 比与比例 (2)</button>
+          <button class="pill-btn" data-domain="advanced_topics">🧩 思维综合 (2)</button>
+        </div>
+
+        <div class="legend-bar">
+          <span style="font-size: 12px; color: var(--text-muted);">掌握状态：</span>
+          <div class="legend-item"><span class="legend-dot mastered"></span> ★ 熟练掌握</div>
+          <div class="legend-item"><span class="legend-dot proficient"></span> ☆ 掌握良好</div>
+          <div class="legend-item"><span class="legend-dot needs-work"></span> △ 亟待攻坚</div>
+          <div class="legend-item"><span class="legend-dot upcoming"></span> ○ 待学新课</div>
+        </div>
+      </div>
+
+      <!-- Graph Viewport -->
+      <div class="graph-viewport" id="graph-container">
+        <svg id="knowledge-graph-svg"></svg>
+        <div class="graph-tools">
+          <button class="graph-tool-btn" id="btn-zoom-in" title="放大">+</button>
+          <button class="graph-tool-btn" id="btn-zoom-out" title="缩小">-</button>
+          <button class="graph-tool-btn" id="btn-reset-zoom" title="重置视角">⟲</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px; font-size: 12.5px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+        <div>📌 提示：拖拽可平移画布，滚轮可缩放。点击节点可唤起右侧【详细学情分析与关联错题】。</div>
+        <div>当前视图基于：<strong id="graph-view-target-label" style="color: var(--primary);">双人综合</strong></div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 3: ERROR BANK & DEEP SOLUTIONS -->
+    <section id="view-errors" class="view-panel">
+      
+      <!-- Error Filters -->
+      <div class="graph-control-bar" style="margin-bottom: 20px;">
+        <div class="filter-group">
+          <span class="filter-label">学生筛选:</span>
+          <button class="pill-btn active" data-err-student="all">全部学生 (17)</button>
+          <button class="pill-btn" data-err-student="Sophia">🌸 Sophia (5)</button>
+          <button class="pill-btn" data-err-student="William">⚡ William (12)</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">错误类型:</span>
+          <button class="pill-btn active" data-err-cat="all">全部类型</button>
+          <button class="pill-btn" data-err-cat="概念混淆类">概念混淆类</button>
+          <button class="pill-btn" data-err-cat="计算粗心类">计算粗心类</button>
+          <button class="pill-btn" data-err-cat="算法步骤类">算法步骤类</button>
+          <button class="pill-btn" data-err-cat="审题综合类">审题综合类</button>
+        </div>
+
+        <div style="flex: 1; min-width: 200px; max-width: 320px;">
+          <input type="text" id="error-search-input" placeholder="🔍 搜索题干、错因、公式或口诀..." style="width: 100%; padding: 7px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-full); font-size: 13px; outline: none;">
+        </div>
+      </div>
+
+      <!-- Error List Container -->
+      <div id="error-list-container"></div>
+
+    </section>
+
+    <!-- VIEW 4: ROADMAP & INTERVENTION PLANS -->
+    <section id="view-roadmap" class="view-panel">
+      
+      <!-- Current Phase Callout -->
+      <div class="card" style="background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%); color: #fff; margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span class="tag" style="background: rgba(255,255,255,0.2); color: #fff; margin-bottom: 6px; display: inline-block;">当前关键节点锚定</span>
+            <h2 style="font-size: 22px; font-weight: 800;">六年级第一学期（开学半个月）承前启后攻坚期</h2>
+            <p style="color: #e0e7ff; font-size: 14px; max-width: 900px; margin-top: 6px;" id="current-phase-summary-text"></p>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 12px; color: #c7d2fe;">教学支持更新时间</div>
+            <div style="font-size: 16px; font-weight: 700;">2026年9月18日</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curriculum Roadmap Timeline -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <div class="card-title">🗺️ 六上全学期三轨教学进度推进路线图</div>
+          <div class="card-subtitle">打通沪教版进度与 International Maths Book A 章节</div>
+        </div>
+        <div class="timeline" id="roadmap-timeline-container"></div>
+      </div>
+
+      <!-- Dual Action Plans -->
+      <div class="grid-2">
+        
+        <!-- Sophia Action Plan -->
+        <div class="card" style="border-top: 4px solid var(--sophia-color);">
+          <div class="card-header">
+            <div class="card-title" style="color: var(--sophia-color);">
+              <span>🌸</span> Sophia 专属个性化提升方案
+            </div>
+            <span class="tag student-sophia">重点攻坚：通分同步性、估算纠错、高阶拓展</span>
+          </div>
+          <div id="sophia-actions-container" class="action-grid" style="grid-template-columns: 1fr;"></div>
+        </div>
+
+        <!-- William Action Plan -->
+        <div class="card" style="border-top: 4px solid var(--william-color);">
+          <div class="card-header">
+            <div class="card-title" style="color: var(--william-color);">
+              <span>⚡</span> William 专属个性化提升方案
+            </div>
+            <span class="tag student-william">重点攻坚：四五年级小数补漏、乘方本质、分步模板</span>
+          </div>
+          <div id="william-actions-container" class="action-grid" style="grid-template-columns: 1fr;"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Node Details Slide-in Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="node-drawer" id="node-drawer">
+    <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    <div id="drawer-content"></div>
+  </aside>
+
+  <!-- Load Data and Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
