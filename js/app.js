@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentView: "overview", // "overview" | "graph" | "errors" | "roadmap"
     graphDomainFilter: "all",
     errorStudentFilter: "all",
+    errorSeverityFilter: "all",
     errorCategoryFilter: "all",
     errorSearchQuery: "",
     selectedNodeId: null,
@@ -235,6 +236,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (gBadge) gBadge.textContent = totalNodes;
     const wsBadge = document.getElementById("ws-count-badge");
     if (wsBadge) wsBadge.textContent = data.consolidationWorksheets ? data.consolidationWorksheets.length : 8;
+    const errBadge = document.getElementById("error-count-badge");
+    if (errBadge) errBadge.textContent = data.errorBank ? data.errorBank.length : 29;
+
+    const allCount = document.getElementById("err-filter-count-all");
+    if (allCount) allCount.textContent = data.errorBank ? data.errorBank.length : 29;
+    const sCount = document.getElementById("err-filter-count-sophia");
+    if (sCount) sCount.textContent = data.errorBank ? data.errorBank.filter(e => e.student === 'Sophia').length : 12;
+    const wCount = document.getElementById("err-filter-count-william");
+    if (wCount) wCount.textContent = data.errorBank ? data.errorBank.filter(e => e.student === 'William').length : 17;
 
     // Render charts
     setTimeout(() => {
@@ -398,32 +408,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sTrend = data.students.sophia.trend;
     const wTrend = data.students.william.trend;
-    const pointsCount = sTrend.length;
-    const xStep = chartW / (pointsCount - 1);
+
+    // Master Timeline (24 unique sessions in chronological order)
+    const masterTimeline = [
+      { date: "03/16", label: "3/16袋鼠1", phase: "春季" },
+      { date: "03/20", label: "3/20袋鼠2", phase: "春季" },
+      { date: "03/23", label: "3/23袋鼠3", phase: "春季" },
+      { date: "03/27", label: "3/27袋鼠4", phase: "春季" },
+      { date: "03/30", label: "3/30G5基1", phase: "春季" },
+      { date: "04/13", label: "4/13G5拔1", phase: "春季" },
+      { date: "04/20", label: "4/20G5拔2", phase: "春季" },
+      { date: "04/27", label: "4/27G5拔3", phase: "春季" },
+      { date: "05/11", label: "5/11G5拔4", phase: "春季" },
+      { date: "05/25", label: "5/25G5拔5", phase: "春季" },
+      { date: "06/08", label: "6/8G5拔6", phase: "春季" },
+      { date: "06/15", label: "6/15G5拔7", phase: "春季" },
+      { date: "07/02", label: "7/2暑1", phase: "暑期" },
+      { date: "07/03", label: "7/3暑2", phase: "暑期" },
+      { date: "07/04", label: "7/4暑3", phase: "暑期" },
+      { date: "07/05", label: "7/5暑4", phase: "暑期" },
+      { date: "07/06", label: "7/6暑5", phase: "暑期" },
+      { date: "07/07", label: "7/7暑6", phase: "暑期" },
+      { date: "07/08", label: "7/8暑7", phase: "暑期" },
+      { date: "07/09", label: "7/9暑8", phase: "暑期" },
+      { date: "07/10", label: "7/10暑9", phase: "暑期" },
+      { date: "07/11", label: "7/11暑10", phase: "暑期" },
+      { date: "09/12", label: "9/12秋1", phase: "秋季" },
+      { date: "09/16", label: "9/16秋2", phase: "秋季" }
+    ];
+
+    const totalSlots = masterTimeline.length;
+    const xStep = chartW / (totalSlots - 1);
 
     // Draw Phase Separator bands (Spring, Summer, Autumn)
     const phases = [
-      { start: 0, end: 4, name: "26春基础拔高" },
-      { start: 5, end: 14, name: "26暑期预备攻坚" },
-      { start: 15, end: 16, name: "26秋开学" }
+      { start: 0, end: 11, name: "2026春季 · 集训与1v1拔高" },
+      { start: 12, end: 21, name: "2026暑期 · 预备衔接双人小班" },
+      { start: 22, end: 23, name: "2026秋季 · 随堂拔高" }
     ];
 
     phases.forEach(p => {
       const x1 = padding.left + p.start * xStep;
       const x2 = padding.left + p.end * xStep;
-      ctx.fillStyle = p.name.includes("秋") ? "rgba(236, 72, 153, 0.06)" : "rgba(241, 245, 249, 0.5)";
-      ctx.fillRect(x1 - xStep * 0.4, padding.top, (x2 - x1) + xStep * 0.8, chartH);
+      ctx.fillStyle = p.name.includes("秋") ? "rgba(236, 72, 153, 0.07)" : p.name.includes("暑") ? "rgba(59, 130, 246, 0.05)" : "rgba(241, 245, 249, 0.6)";
+      ctx.fillRect(x1 - xStep * 0.45, padding.top, (x2 - x1) + xStep * 0.9, chartH);
       ctx.font = "10px sans-serif";
       ctx.fillStyle = "#94a3b8";
       ctx.textAlign = "center";
       ctx.fillText(p.name, (x1 + x2) / 2, padding.top - 10);
     });
 
-    // Draw Line helper
+    // Draw Line helper mapping points by date
     function drawLine(trendData, color) {
       ctx.beginPath();
       trendData.forEach((pt, i) => {
-        const x = padding.left + i * xStep;
+        const slotIdx = masterTimeline.findIndex(m => m.date === pt.date);
+        const effectiveIdx = slotIdx >= 0 ? slotIdx : i;
+        const x = padding.left + effectiveIdx * xStep;
         const y = padding.top + chartH - (pt.score / 100) * chartH;
         if (i === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
@@ -434,7 +475,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Points
       trendData.forEach((pt, i) => {
-        const x = padding.left + i * xStep;
+        const slotIdx = masterTimeline.findIndex(m => m.date === pt.date);
+        const effectiveIdx = slotIdx >= 0 ? slotIdx : i;
+        const x = padding.left + effectiveIdx * xStep;
         const y = padding.top + chartH - (pt.score / 100) * chartH;
         ctx.beginPath();
         ctx.arc(x, y, 3.5, 0, Math.PI * 2);
@@ -452,10 +495,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // X Axis key labels
     ctx.fillStyle = "#64748b";
     ctx.textAlign = "center";
-    ctx.font = "10px sans-serif";
-    [0, 4, 5, 9, 14, 15, 16].forEach(idx => {
+    ctx.font = "9.5px sans-serif";
+    [0, 3, 4, 5, 11, 12, 16, 21, 22, 23].forEach(idx => {
       const x = padding.left + idx * xStep;
-      ctx.fillText(sTrend[idx].label, x, height - padding.bottom + 16);
+      ctx.fillText(masterTimeline[idx].label, x, height - padding.bottom + 16);
     });
   }
 
@@ -904,7 +947,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("error-list-container");
     if (!container) return;
 
-    // Filters Setup
+    // Student Filter Pills Setup
     const studentPills = document.querySelectorAll(".graph-control-bar .pill-btn[data-err-student]");
     studentPills.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -915,6 +958,18 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // Severity Filter Pills Setup
+    const severityPills = document.querySelectorAll(".graph-control-bar .pill-btn[data-err-severity]");
+    severityPills.forEach(btn => {
+      btn.addEventListener("click", () => {
+        severityPills.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.errorSeverityFilter = btn.dataset.errSeverity;
+        renderFilteredErrors();
+      });
+    });
+
+    // Category Filter Pills Setup
     const catPills = document.querySelectorAll(".graph-control-bar .pill-btn[data-err-cat]");
     catPills.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -925,6 +980,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // Search Input Setup
     const searchInput = document.getElementById("error-search-input");
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
@@ -940,11 +996,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("error-list-container");
     if (!container) return;
 
-    let list = data.errorBank;
+    let list = data.errorBank || [];
 
     // Filter by student
     if (state.errorStudentFilter !== "all") {
       list = list.filter(e => e.student.toLowerCase() === state.errorStudentFilter.toLowerCase());
+    }
+
+    // Filter by severity
+    if (state.errorSeverityFilter && state.errorSeverityFilter !== "all") {
+      list = list.filter(e => e.severity === state.errorSeverityFilter);
     }
 
     // Filter by category
@@ -956,11 +1017,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (state.errorSearchQuery) {
       const q = state.errorSearchQuery;
       list = list.filter(e => 
-        e.title.toLowerCase().includes(q) ||
-        e.originalQuestion.toLowerCase().includes(q) ||
-        e.rootCause.toLowerCase().includes(q) ||
-        e.studentAnswer.toLowerCase().includes(q) ||
-        e.teacherTip.toLowerCase().includes(q)
+        (e.id && e.id.toLowerCase().includes(q)) ||
+        (e.title && e.title.toLowerCase().includes(q)) ||
+        (e.originalQuestion && e.originalQuestion.toLowerCase().includes(q)) ||
+        (e.question && e.question.toLowerCase().includes(q)) ||
+        (e.rootCause && e.rootCause.toLowerCase().includes(q)) ||
+        (e.studentAnswer && e.studentAnswer.toLowerCase().includes(q)) ||
+        (e.standardSolution && e.standardSolution.toLowerCase().includes(q)) ||
+        (e.teacherTip && e.teacherTip.toLowerCase().includes(q)) ||
+        (e.mnemonic && e.mnemonic.toLowerCase().includes(q)) ||
+        (e.topic && e.topic.toLowerCase().includes(q))
       );
     }
 
@@ -973,26 +1039,44 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="card" style="text-align: center; padding: 48px; color: var(--text-muted);">
           <div style="font-size: 32px; margin-bottom: 10px;">🔍</div>
           <div style="font-size: 16px; font-weight: 600;">未找到符合筛选条件的错题</div>
-          <div style="font-size: 13px; margin-top: 4px;">可尝试切换学生、错误分类或清空搜索关键词</div>
+          <div style="font-size: 13px; margin-top: 4px;">可尝试切换学生、危险等级、错误分类或清空搜索关键词</div>
         </div>
       `;
       return;
     }
 
     container.innerHTML = list.map(err => {
-      const catClass = err.category.includes("概念") ? "cat-concept" :
-                       err.category.includes("计算") ? "cat-calc" :
-                       err.category.includes("算法") ? "cat-algorithm" : "cat-modeling";
       const studentClass = err.student === "Sophia" ? "student-sophia" : "student-william";
       const node = data.knowledgeNodes.find(n => n.id === err.nodeId);
 
+      const sevBadge = err.severity === "critical" 
+        ? `<span class="tag severity-critical">🔴 极高危 / 断层级</span>`
+        : err.severity === "high"
+        ? `<span class="tag severity-high">🟠 高危 / 机制级</span>`
+        : `<span class="tag severity-medium">🟡 中危 / 规范级</span>`;
+
+      const statusBadge = err.status === "mastered"
+        ? `<span class="tag status-mastered">✅ 已掌握</span>`
+        : err.status === "needs_consolidation"
+        ? `<span class="tag status-needs_consolidation">⚡ 需巩固</span>`
+        : `<span class="tag status-in_progress">⚠️ 待攻坚</span>`;
+
+      const borderClass = err.severity === "critical" ? "severity-border-critical" :
+                          err.severity === "high" ? "severity-border-high" : "severity-border-medium";
+
+      const questionText = err.originalQuestion || err.question || "";
+      const tipText = err.teacherTip || err.mnemonic || "";
+
       return `
-        <article class="error-card ${catClass}" id="card-${err.id}">
+        <article class="error-card ${borderClass}" id="card-${err.id}">
           <div class="error-header">
-            <div class="error-meta-tags">
+            <div class="error-meta-tags" style="flex-wrap: wrap; gap: 6px;">
+              <span class="tag" style="background: #1e293b; color: #fff; font-weight: 700; letter-spacing: 0.5px;">${err.id}</span>
               <span class="tag ${studentClass}">${err.student}</span>
+              ${sevBadge}
               <span class="tag category-tag">${err.category}</span>
-              <span class="tag" style="background: #e0e7ff; color: #3730a3;">${node ? node.title : ""}</span>
+              ${statusBadge}
+              <span class="tag" style="background: #e0e7ff; color: #3730a3; font-weight: 600;">考点: ${node ? node.title : err.nodeId}</span>
             </div>
             <div style="font-size: 12px; color: var(--text-muted);">
               来源：${err.source}
@@ -1003,7 +1087,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div style="margin-bottom: 12px; font-size: 14px;">
             <strong style="color: var(--text-main);">【原题呈现】：</strong>
-            <div style="margin-top: 4px; color: var(--text-sub);">${escapeHtml(err.originalQuestion)}</div>
+            <div style="margin-top: 4px; color: var(--text-sub);">${escapeHtml(questionText)}</div>
           </div>
 
           <div class="error-block">
@@ -1019,12 +1103,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="solution-accordion">
             <h5>✅ 名师标准解答与推导演算：</h5>
             <div style="line-height: 1.6; white-space: pre-line;">${escapeHtml(err.standardSolution)}</div>
-            <div class="teacher-tip">${escapeHtml(err.teacherTip)}</div>
+            ${tipText ? `<div class="teacher-tip">💡 【避坑记忆口诀】：${escapeHtml(tipText)}</div>` : ""}
           </div>
 
-          <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
-            <button class="pill-btn locate-node-btn" data-node-id="${err.nodeId}" style="font-size: 12px; padding: 4px 12px;">
-              📍 在知识图谱中定位此考点
+          <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 8px;">
+            <button class="pill-btn locate-node-btn" data-node-id="${err.nodeId}" style="font-size: 12px; padding: 4px 12px; background: #f8fafc; border: 1px solid var(--border-color); cursor: pointer;">
+              📍 在知识图谱中定位对应考点 (${node ? node.title : err.nodeId})
             </button>
           </div>
         </article>

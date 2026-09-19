@@ -1,7 +1,8 @@
 /**
  * Sophia & William 专属数学知识图谱追踪网站核心数据库
- * 升级包含三四五六年级全景知识图谱（36节点）与8套全英文默认针对性练习
- * 更新时间: 2026-09-19T01:41:47.055Z
+ * 完整同步最新重建学生档案（Sophia 23节 / William 17节）
+ * 与29道结构化高危错题库（Sophia 12题 / William 17题，含极高危/高危/中危分级）
+ * 更新时间: 2026-09-19T01:54:17.938Z
  */
 
 const trackerData = {
@@ -35,196 +36,307 @@ const trackerData = {
   "students": {
     "sophia": {
       "name": "Sophia",
-      "grade": "6年级",
+      "grade": "6年级（初中预备班）· 协和双语虹桥融合班",
       "initialDate": "2026年3月",
-      "totalLessons": 17,
-      "breakdown": "英数G5+AMC8共5节 + G6暑期10节 + G6秋季2节",
+      "totalLessons": 23,
+      "breakdown": "袋鼠C 4节 + 英数G5+AMC8 7节 + G6暑期 10节 + G6秋季 2节 = 累计23节",
       "currentAccuracy": "80% ~ 85%",
+      "summerAverage": "70.5%",
       "trend": [
         {
-          "label": "G5春1",
-          "score": 75
+          "label": "袋鼠1",
+          "date": "03/16",
+          "score": 70,
+          "stage": "袋鼠C"
         },
         {
-          "label": "G5春2",
-          "score": 70
+          "label": "袋鼠2",
+          "date": "03/20",
+          "score": 70,
+          "stage": "袋鼠C"
         },
         {
-          "label": "G5春3",
-          "score": 75
+          "label": "袋鼠3",
+          "date": "03/23",
+          "score": 70,
+          "stage": "袋鼠C"
         },
         {
-          "label": "G5春4",
-          "score": 70
+          "label": "袋鼠4",
+          "date": "03/27",
+          "score": 70,
+          "stage": "袋鼠C"
         },
         {
-          "label": "G5春5",
-          "score": 70
+          "label": "G5拔1",
+          "date": "04/13",
+          "score": 75,
+          "stage": "G5拔高"
+        },
+        {
+          "label": "G5拔2",
+          "date": "04/20",
+          "score": 70,
+          "stage": "G5拔高"
+        },
+        {
+          "label": "G5拔3",
+          "date": "04/27",
+          "score": 75,
+          "stage": "G5拔高"
+        },
+        {
+          "label": "G5拔4",
+          "date": "05/11",
+          "score": 70,
+          "stage": "G5拔高"
+        },
+        {
+          "label": "G5拔5",
+          "date": "05/25",
+          "score": 70,
+          "stage": "G5拔高"
+        },
+        {
+          "label": "G5拔6",
+          "date": "06/08",
+          "score": 70,
+          "stage": "G5拔高"
+        },
+        {
+          "label": "G5拔7",
+          "date": "06/15",
+          "score": 75,
+          "stage": "G5拔高"
         },
         {
           "label": "G6暑1",
-          "score": 75
+          "date": "07/02",
+          "score": 75,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑2",
-          "score": 60
+          "date": "07/03",
+          "score": 75,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑3",
-          "score": 55
+          "date": "07/04",
+          "score": 70,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑4",
-          "score": 55
+          "date": "07/05",
+          "score": 70,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑5",
-          "score": 50
+          "date": "07/06",
+          "score": 70,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑6",
-          "score": 50
+          "date": "07/07",
+          "score": 70,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑7",
-          "score": 55
+          "date": "07/08",
+          "score": 70,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑8",
-          "score": 60
+          "date": "07/09",
+          "score": 80,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑9",
-          "score": 55
+          "date": "07/10",
+          "score": 65,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑10",
-          "score": 50
+          "date": "07/11",
+          "score": 60,
+          "stage": "G6暑期"
         },
         {
           "label": "G6秋1",
-          "score": 85
+          "date": "09/12",
+          "score": 85,
+          "stage": "G6秋季"
         },
         {
           "label": "G6秋2",
-          "score": 80
+          "date": "09/16",
+          "score": 80,
+          "stage": "G6秋季"
         }
       ],
+      "radar": {
+        "fluency": 88,
+        "rigor": 62,
+        "modeling": 85,
+        "process": 68,
+        "focus": 82
+      },
       "strengths": [
-        "课堂参与度极高，听课专注，解题反应迅速敏锐",
-        "直观与几何空间悟性好（如折纸快速理解2⁶=64、光反射单向阀）",
-        "生活化类比理解能力强（如'花钱法'秒懂分数大小比较）",
-        "短除法质因数分解与GCD操作规范熟练"
+        "敏捷与高直觉：解题速度极快，对图形空间（展开图、表面积、折纸模型）领悟力拔群",
+        "生活化类比理解力强：如'花钱法'比分数大小一点即通，数感好",
+        "短除法质因数分解基本功扎实：60和105的GCD熟练算出15",
+        "前半堂课投入度极高，敢于主动表达观点与现场演算"
       ],
       "weaknesses": [
-        "核心概念混淆：混淆乘方与乘法（把6当完全平方数）、混淆加法与乘法（面积÷2=边长）",
-        "分数运算机制不牢：带分数与假分数运算混淆(3/6+5/6=8/6)、通分时分子忘记同步相乘",
-        "低级粗心失分严重：分数加法中计算出18+5=90、小数与百分数转换移位搞反(0.075→75%)",
-        "归纳推理与本质抽象能力偏弱，习惯直接报答案不写中间推导过程",
-        "课堂后半段偶有精力疲惫，易受同伴非教学话题分散注意力"
-      ],
-      "radar": {
-        "numericalFluency": 78,
-        "conceptualRigor": 68,
-        "spatialAlgebraic": 88,
-        "stepDiscipline": 62,
-        "focusEndurance": 82
-      }
+        "通分商不变原理不牢：通分时分母乘倍数、分子忘记同步乘（最顽固问题）",
+        "算术低级粗心失分严重：出现 18+5=90、同分母加法分母乱相加 3/6+5/6=8/12",
+        "乘方与乘法概念偶有混淆：误把 6 认定为完全平方数（2×3=6）、面积为3求边长写成 3÷2",
+        "解题习惯跳步：习惯直接报最终答案不写草稿推导，导致检查无从下手",
+        "注意力抗干扰待加强：后半节课易受同伴疲倦与小动作带动而分散注意力"
+      ]
     },
     "william": {
       "name": "William",
-      "grade": "6年级",
+      "grade": "6年级（初中预备班）· 协和双语虹桥融合班",
       "initialDate": "2026年3月",
-      "totalLessons": 16,
-      "breakdown": "袋鼠数学C共4节 + G6暑期10节 + G6秋季2节",
+      "totalLessons": 17,
+      "breakdown": "袋鼠C 4节 + 英数G5 1节 + G6暑期 10节 + G6秋季 2节 = 累计17节",
+      "identityNote": "六年级预备班学生，与四年级小Will（Will.md）严格区隔独立",
       "currentAccuracy": "70% ~ 75%",
+      "summerAverage": "49.0%",
       "trend": [
         {
-          "label": "袋鼠C1",
-          "score": 50
+          "label": "袋鼠1",
+          "date": "03/16",
+          "score": 50,
+          "stage": "袋鼠C"
         },
         {
-          "label": "袋鼠C2",
-          "score": 50
+          "label": "袋鼠2",
+          "date": "03/20",
+          "score": 50,
+          "stage": "袋鼠C"
         },
         {
-          "label": "袋鼠C3",
-          "score": 55
+          "label": "袋鼠3",
+          "date": "03/23",
+          "score": 50,
+          "stage": "袋鼠C"
         },
         {
-          "label": "袋鼠C4",
-          "score": 50
+          "label": "袋鼠4",
+          "date": "03/27",
+          "score": 50,
+          "stage": "袋鼠C"
+        },
+        {
+          "label": "G5基1",
+          "date": "03/30",
+          "score": 80,
+          "stage": "G5强化"
         },
         {
           "label": "G6暑1",
-          "score": 65
+          "date": "07/02",
+          "score": 65,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑2",
-          "score": 45
+          "date": "07/03",
+          "score": 50,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑3",
-          "score": 35
+          "date": "07/04",
+          "score": 55,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑4",
-          "score": 40
+          "date": "07/05",
+          "score": 50,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑5",
-          "score": 35
+          "date": "07/06",
+          "score": 65,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑6",
-          "score": 30
+          "date": "07/07",
+          "score": 60,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑7",
-          "score": 20
+          "date": "07/08",
+          "score": 40,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑8",
-          "score": 15
+          "date": "07/09",
+          "score": 30,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑9",
-          "score": 35
+          "date": "07/10",
+          "score": 35,
+          "stage": "G6暑期"
         },
         {
           "label": "G6暑10",
-          "score": 30
+          "date": "07/11",
+          "score": 40,
+          "stage": "G6暑期"
         },
         {
           "label": "G6秋1",
-          "score": 75
+          "date": "09/12",
+          "score": 75,
+          "stage": "G6秋季"
         },
         {
           "label": "G6秋2",
-          "score": 70
+          "date": "09/16",
+          "score": 70,
+          "stage": "G6秋季"
         }
       ],
+      "radar": {
+        "fluency": 48,
+        "rigor": 45,
+        "modeling": 55,
+        "process": 42,
+        "focus": 48
+      },
       "strengths": [
-        "课堂前半段积极主动，敢于上讲台尝试，有很强的参与愿望",
-        "折纸与动手实操能力强，能迅速推算2的幂次（128→256→512）",
-        "合数整除分解思路清晰，能正确拆解65=5×13得出Y=0或5",
-        "短除法求最大公因数（GCD）掌握扎实，能迅速算出24与88的GCD=8"
+        "动手实操悟性高：折纸 2ⁿ 幂次增长敏捷推算至 512，短除法求GCD熟练规范",
+        "前半节课堂参与意愿强：主动上台板演，鼓励下表现积极自信",
+        "数位位值判断敏捷：在数位读写与位值大小判断上反应快",
+        "秋季学期大幅提振：从暑期后半段低谷（30%~40%）成功恢复至 70%~75%"
       ],
       "weaknesses": [
-        "四五年级基础严重断层：小数加减乘除与数位概念模糊（0.9+0.1=4.1、5.4÷0.6=0.9、tens/tenths混淆）",
-        "乘方与乘法概念极度混淆：1³=3、2³=6、2⁴=8、3⁴=18、10⁴×10⁵=10²⁰（指数相乘而非相加）",
-        "质数与合数定义不牢固：反复遗忘质数'只能'被1和自身整除，将因数16说成'8个2'",
-        "审题与条件遗漏严重：大数整除压轴题仅解出Y未联立解X；行程问题因缺乏分步框架空题不写",
-        "注意力持久度低：后半节课走神显著（玩尺子、画画、吃东西），频繁带动干扰Sophia",
-        "依赖外部工具：作业曾用豆包查答案并抄错（3³抄成33），缺乏独立攻坚信心"
-      ],
-      "radar": {
-        "numericalFluency": 55,
-        "conceptualRigor": 52,
-        "spatialAlgebraic": 72,
-        "stepDiscipline": 50,
-        "focusEndurance": 48
-      }
+        "乘方本质严重混淆（第一顽疾）：反复将指数当乘数（1³=3, 2³=6, 2⁴=8, 3⁴=18, 10⁴×10⁵=10²⁰）",
+        "四五年级基础严重断层：小数进位混乱 0.9+0.1=4.1、小数除法移位反向 5.4÷0.6=0.9、tens/tenths混淆",
+        "分数与运算符号短路：分数除法当乘法 2/8=16、倒数法则只翻转不改乘号、比号当乘号 C:D=3:5 变形乱写",
+        "审题闭环与大题逃避：六位数整除压轴题漏解X、行程应用题缺乏分步框架直接空题",
+        "注意力后半程断崖下滑：35分钟后易走神（玩文具、发出声响），需'35-10-35'分段管控",
+        "曾有依赖外部工具痕迹：作业曾借助豆包查答案（3³抄成33），需强制手写验算推导"
+      ]
     }
   },
   "mutualAnalysis": {
@@ -306,7 +418,7 @@ const trackerData = {
       "williamScore": 78,
       "williamNote": "整数加减能算，但在小数进位时习惯未完全迁移，需持续规范数位对齐意识。",
       "errorRefIds": [
-        "err_05"
+        "ERR-SOP-05"
       ]
     },
     {
@@ -335,8 +447,8 @@ const trackerData = {
       "williamScore": 74,
       "williamNote": "带余除法能算，但商与余数写为假分数或带分数时偶有倒置（如52÷24写成24又4分之2）。",
       "errorRefIds": [
-        "err_07",
-        "err_12"
+        "ERR-SOP-11",
+        "ERR-WIL-12"
       ]
     },
     {
@@ -366,8 +478,10 @@ const trackerData = {
       "williamScore": 60,
       "williamNote": "运算顺序受视觉吸引容易冲动先算加法，需强制画出运算顺序辅助下划线。",
       "errorRefIds": [
-        "err_05",
-        "err_15"
+        "ERR-SOP-05",
+        "ERR-SOP-08",
+        "ERR-SOP-12",
+        "ERR-WIL-06"
       ]
     },
     {
@@ -397,7 +511,7 @@ const trackerData = {
       "williamScore": 55,
       "williamNote": "极易混淆tens与tenths，听到tenth仍本能往十位去写；需使用色块数位对照板辅助固定。",
       "errorRefIds": [
-        "err_13"
+        "ERR-WIL-03"
       ]
     },
     {
@@ -425,7 +539,9 @@ const trackerData = {
       "williamScore": 52,
       "williamNote": "心算加法进位脱节，曾脱口报出0.9+0.1=4.1；必须严格禁止纯心算，要求手写对齐竖式。",
       "errorRefIds": [
-        "err_08"
+        "ERR-SOP-05",
+        "ERR-WIL-04",
+        "ERR-WIL-06"
       ]
     },
     {
@@ -452,8 +568,8 @@ const trackerData = {
       "williamScore": 68,
       "williamNote": "平移方向基本分清，但对0.04×0.05=0.0020=0.002补0去0过程易纠结。",
       "errorRefIds": [
-        "err_08",
-        "err_14"
+        "ERR-SOP-07",
+        "ERR-WIL-05"
       ]
     },
     {
@@ -480,8 +596,7 @@ const trackerData = {
       "williamScore": 54,
       "williamNote": "除法移位常忘扩被除数（5.4÷0.6误答0.9），除以0.5误当乘0.5算成15；需强化商不变模型。",
       "errorRefIds": [
-        "err_09",
-        "err_14"
+        "ERR-WIL-05"
       ]
     },
     {
@@ -510,8 +625,7 @@ const trackerData = {
       "williamScore": 58,
       "williamNote": "常把0.00397当成5位有效数字，认为6与6.0没有任何区别，需用测量尺刻度直观演示。",
       "errorRefIds": [
-        "err_13",
-        "err_14"
+        "ERR-WIL-16"
       ]
     },
     {
@@ -539,7 +653,7 @@ const trackerData = {
       "williamScore": 56,
       "williamNote": "移位位数摇摆不定，0.075曾报出75%或0.75%；需强调乘以100%的本质含义。",
       "errorRefIds": [
-        "err_13"
+        "ERR-SOP-07"
       ]
     },
     {
@@ -567,8 +681,9 @@ const trackerData = {
       "williamScore": 72,
       "williamNote": "理解互化原理，但在带余除法直接化带分数时偶有商余倒置（52÷24=2又4/24需确认商写前面）。",
       "errorRefIds": [
-        "err_07",
-        "err_12"
+        "ERR-SOP-09",
+        "ERR-WIL-10",
+        "ERR-WIL-12"
       ]
     },
     {
@@ -595,8 +710,7 @@ const trackerData = {
       "williamScore": 76,
       "williamNote": "概念能复述，但在通分加法时偶有只乘分母忘乘分子现象。",
       "errorRefIds": [
-        "err_06",
-        "err_12"
+        "ERR-SOP-06"
       ]
     },
     {
@@ -624,7 +738,7 @@ const trackerData = {
       "williamScore": 75,
       "williamNote": "能熟练采用逐步除以2/3的方法约分至最简。",
       "errorRefIds": [
-        "err_04"
+        "ERR-WIL-10"
       ]
     },
     {
@@ -651,8 +765,9 @@ const trackerData = {
       "williamScore": 62,
       "williamNote": "通分容易漏乘分子，异分母加法容易冲动将分子分母各自直接相加；需强制书写中间通分式。",
       "errorRefIds": [
-        "err_06",
-        "err_12"
+        "ERR-SOP-06",
+        "ERR-SOP-08",
+        "ERR-SOP-09"
       ]
     },
     {
@@ -679,9 +794,7 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 78,
       "williamNote": "生活化'谁花的钱少剩得多'理解深刻，但在交叉相乘时偶有上下乘颠倒情况。",
-      "errorRefIds": [
-        "err_06"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "frac_01",
@@ -708,7 +821,8 @@ const trackerData = {
       "williamScore": 70,
       "williamNote": "乘法良好；除法偶尔忘记将除数翻转为倒数，直接进行约分，需牢记'变乘翻转'口诀。",
       "errorRefIds": [
-        "err_12"
+        "ERR-WIL-10",
+        "ERR-WIL-11"
       ]
     },
     {
@@ -736,7 +850,8 @@ const trackerData = {
       "williamScore": 80,
       "williamNote": "因数分解能成对寻找，但偶尔对因数与加数混淆（曾把16的因数说成8个2）。",
       "errorRefIds": [
-        "err_03"
+        "ERR-SOP-03",
+        "ERR-WIL-07"
       ]
     },
     {
@@ -764,7 +879,7 @@ const trackerData = {
       "williamScore": 58,
       "williamNote": "质数定义反复遗忘'只能'二字；依赖直觉判断常误将77、91判为质数，对91=7×13需反复提醒。",
       "errorRefIds": [
-        "err_01"
+        "ERR-WIL-08"
       ]
     },
     {
@@ -792,7 +907,7 @@ const trackerData = {
       "williamScore": 78,
       "williamNote": "掌握2、5、3法则，能正确分解65=5×13得出末位Y=0或5，但在4和8的法则上偶尔遗忘。",
       "errorRefIds": [
-        "err_02"
+        "ERR-WIL-14"
       ]
     },
     {
@@ -820,7 +935,8 @@ const trackerData = {
       "williamScore": 76,
       "williamNote": "掌握短除法，短除求GCD速度快，但有时除数使用了合数未除到质数为止。",
       "errorRefIds": [
-        "err_04"
+        "ERR-SOP-02",
+        "ERR-WIL-17"
       ]
     },
     {
@@ -848,7 +964,7 @@ const trackerData = {
       "williamScore": 82,
       "williamNote": "短除法求GCD非常熟练（如24与88的GCD=8快速算出），但求LCM时有时漏乘底部的互质数。",
       "errorRefIds": [
-        "err_04"
+        "ERR-WIL-09"
       ]
     },
     {
@@ -876,7 +992,7 @@ const trackerData = {
       "williamScore": 55,
       "williamNote": "对平方数缺乏量感，无法迅速写出1~20的平方表，与乘法2倍关系混淆严重。",
       "errorRefIds": [
-        "err_10"
+        "ERR-SOP-01"
       ]
     },
     {
@@ -905,8 +1021,7 @@ const trackerData = {
       "williamScore": 50,
       "williamNote": "能解出Y=0或5，但解出Y后就以为大题已完成，漏解X；缺乏联立方程与多解排查的完整意识。",
       "errorRefIds": [
-        "err_02",
-        "err_11"
+        "ERR-WIL-14"
       ]
     },
     {
@@ -934,7 +1049,7 @@ const trackerData = {
       "williamScore": 48,
       "williamNote": "全课最大薄弱点：1³=3、2³=6、2⁴=8、3⁴=18全错成底数×指数；必须强制要求手写展开式并口诵'几个几相乘'。",
       "errorRefIds": [
-        "err_15"
+        "ERR-WIL-01"
       ]
     },
     {
@@ -962,7 +1077,7 @@ const trackerData = {
       "williamScore": 50,
       "williamNote": "10⁴×10⁵曾脱口算出10²⁰（指数相乘）；经过列式展开4个10乘5个10是9个10后理解，仍需练习巩固。",
       "errorRefIds": [
-        "err_15"
+        "ERR-WIL-02"
       ]
     },
     {
@@ -988,9 +1103,7 @@ const trackerData = {
       "williamMastery": "needs_work",
       "williamScore": 52,
       "williamNote": "直觉容易认为10⁰=0或10，需用连续除以10的阶梯模式图示法引导理解。",
-      "errorRefIds": [
-        "err_13"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "power_04",
@@ -1018,7 +1131,7 @@ const trackerData = {
       "williamScore": 65,
       "williamNote": "大数科学记数法能写，但对微小数值（如0.00035=3.5×10⁻⁴）移动位数的负指数容易数错。",
       "errorRefIds": [
-        "err_13"
+        "ERR-WIL-16"
       ]
     },
     {
@@ -1045,9 +1158,7 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 75,
       "williamNote": "掌握奇偶判定，但在代数推导中偶有忘记质数2是唯一的偶质数。",
-      "errorRefIds": [
-        "err_01"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "frac_02",
@@ -1073,9 +1184,7 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 68,
       "williamNote": "通过长除法能求出小数，但在直接观察分母质因数判定时偶有遗漏需先化简为最简分数的前提。",
-      "errorRefIds": [
-        "err_07"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "frac_03",
@@ -1101,9 +1210,7 @@ const trackerData = {
       "williamMastery": "needs_work",
       "williamScore": 60,
       "williamNote": "审题容易看漏'余下的'三个字，直接用总量乘以第二个分数；需用荧光笔划关键词强化审题。",
-      "errorRefIds": [
-        "err_16"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "geom_01",
@@ -1129,9 +1236,7 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 80,
       "williamNote": "周长公式掌握，但有时和面积公式搞混，需口头强调'周长是一维线长'。",
-      "errorRefIds": [
-        "err_17"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "geom_02",
@@ -1159,7 +1264,7 @@ const trackerData = {
       "williamScore": 56,
       "williamNote": "极易混淆周长与面积、开平方与除以2；必须强制在草稿上写出s×s=36因此s=6的中间式。",
       "errorRefIds": [
-        "err_17"
+        "ERR-SOP-01"
       ]
     },
     {
@@ -1187,9 +1292,7 @@ const trackerData = {
       "williamMastery": "needs_work",
       "williamScore": 54,
       "williamNote": "把体积进率和长度进率混为一谈（曾认为1m³=100cm³）；需用魔方与1立方米大木箱实物模型直观建立空间感。",
-      "errorRefIds": [
-        "err_17"
-      ]
+      "errorRefIds": []
     },
     {
       "id": "word_01",
@@ -1217,7 +1320,7 @@ const trackerData = {
       "williamScore": 50,
       "williamNote": "见到40分钟直接当成0.4小时或直接乘40导致数值荒谬；缺乏对答案常识性检验的习惯。",
       "errorRefIds": [
-        "err_16"
+        "ERR-WIL-15"
       ]
     },
     {
@@ -1246,8 +1349,9 @@ const trackerData = {
       "williamScore": 52,
       "williamNote": "仍有图快直接报数的冲动，后半节课疲劳时解题过程缩水；需采用填空式模板约束。",
       "errorRefIds": [
-        "err_11",
-        "err_16"
+        "ERR-SOP-11",
+        "ERR-WIL-14",
+        "ERR-WIL-15"
       ]
     },
     {
@@ -1274,7 +1378,12 @@ const trackerData = {
       "williamMastery": "mastered",
       "williamScore": 88,
       "williamNote": "本堂课最大亮点！动手折纸极快，能迅速口算推导128→256→512→1024，展现了优秀的直观空间感知力。",
-      "errorRefIds": []
+      "errorRefIds": [
+        "ERR-SOP-04",
+        "ERR-SOP-10",
+        "ERR-SOP-12",
+        "ERR-WIL-13"
+      ]
     },
     {
       "id": "adv_02",
@@ -1306,242 +1415,555 @@ const trackerData = {
   ],
   "errorBank": [
     {
-      "id": "err_01",
-      "student": "William",
-      "nodeId": "div_02",
-      "domain": "number_theory",
+      "id": "ERR-SOP-01",
+      "student": "Sophia",
+      "nodeId": "div_06",
+      "domain": "number_theory_powers",
       "category": "概念混淆类",
-      "source": "G6秋季第1节 (09/12) & 暑期第3节",
-      "title": "质数概念记忆不牢，误判大合数为质数",
-      "originalQuestion": "判断下列各数中哪些是质数（素数），哪些是合数：2, 51, 77, 83, 91, 97",
-      "studentAnswer": "将 77、91 圈为质数，并在定义提问时漏掉'只能'，仅回答'可以被自己整除的数'。",
-      "rootCause": "质数定义内化不深刻，未能牢记'只有1和自身两个因数'；对百以内常见伪装合数（如 7×11=77, 7×13=91, 3×17=51）无因数分解敏感度，凭直觉猜测。",
-      "standardSolution": "1. 质数定义：一个大于1的整数，**只能**被1和它自身整除（即只有2个正因数）。\n2. 逐一验证与分解：\n• 2：因数仅有 1, 2 → 质数（且是唯一的偶质数）\n• 51：各位数之和 5+1=6 能被3整除，分解得 51 = 3 × 17 → 合数\n• 77：明显含有质因数7与11，77 = 7 × 11 → 合数\n• 83：尝试试除 2, 3, 5, 7 均不能整除 → 质数\n• 91：高频易错题！检验 91 ÷ 7 = 13，即 91 = 7 × 13 → 合数\n• 97：尝试试除 2, 3, 5, 7 均不能整除 → 质数\n3. 结论：质数有 2, 83, 97；合数有 51, 77, 91。",
-      "teacherTip": "【避坑口诀】：质数必须带'只能'；7和13要小心，七十三乘九十一（7×13=91），三七二十一（3×17=51），七十一（7×11=77）全是披着羊皮的狼！"
+      "severity": "high",
+      "source": "英数G6暑期第1节 (2026-07-02)",
+      "topic": "完全平方数与平方根",
+      "title": "面积边长求法混淆 & 误认6为完全平方数",
+      "question": "(1) 正方形面积为3，求边长；(2) 判断6是否为完全平方数。",
+      "originalQuestion": "(1) 正方形面积为3，求边长；(2) 判断6是否为完全平方数。",
+      "studentAnswer": "(1) 边长=3÷2=1.5；(2) 认为6是完全平方数，理由是2×3=6。",
+      "rootCause": "混淆周长与面积逆运算公式；未内化完全平方数是相同整数自乘的本质。",
+      "standardSolution": "边长为√3；完全平方数如1,4,9,16，6在4和9之间不是完全平方数。",
+      "mnemonic": "完全平方孪生汉，自己乘自己才算数；面积求边开平方，除以二那是算半边！",
+      "teacherTip": "完全平方孪生汉，自己乘自己才算数；面积求边开平方，除以二那是算半边！",
+      "status": "in_progress"
     },
     {
-      "id": "err_02",
-      "student": "William",
-      "nodeId": "pv_04",
-      "domain": "place_value",
-      "category": "概念混淆类",
-      "source": "小学综合学情报告 & G6暑期第1-5节 & 秋季多次",
-      "title": "乘方本质未内化，反复混淆乘方与乘法",
-      "originalQuestion": "计算并比较下列各组算式的值：(1) 2³ 与 2×3；(2) 2⁴ 与 2×4；(3) 3⁴ 与 3×4；(4) 10⁴ × 10⁵ 的简化形式",
-      "studentAnswer": "(1) 2³ = 6；(2) 2⁴ = 8；(3) 3⁴ = 18；(4) 10⁴ × 10⁵ = 10²⁰（指数相乘）。",
-      "rootCause": "乘方的本质是'相同因数的连乘'，而非底数乘以指数。William思维惰性导致看见上角标数字本能当作乘法乘数；遇到同底数幂相乘时，又误将指数直接相乘而非相加。",
-      "standardSolution": "1. 乘方定义：aⁿ = a × a × ... × a（n个a连乘）\n2. 逐题纠错：\n• (1) 2³ = 2 × 2 × 2 = 8，而 2 × 3 = 6。(8 ≠ 6)\n• (2) 2⁴ = 2 × 2 × 2 × 2 = 16，而 2 × 4 = 8。(16 ≠ 8)\n• (3) 3⁴ = 3 × 3 × 3 × 3 = 81，而 3 × 4 = 12。\n• (4) 同底数幂相乘法则：10⁴ × 10⁵ = (10×10×10×10) × (10×10×10×10×10) = 10⁴⁺⁵ = 10⁹。指数是相加得到9，而不是 4×5=20！",
-      "teacherTip": "【避坑口诀】：指数是'分身术'，底数是本人；右上角是几，本人就乘自己几次！连乘乘方莫当加，同底相乘指数加！"
+      "id": "ERR-SOP-02",
+      "student": "Sophia",
+      "nodeId": "div_04",
+      "domain": "number_theory_powers",
+      "category": "算法步骤类",
+      "severity": "high",
+      "source": "英数G6暑期第4节 (2026-07-05)",
+      "topic": "质因数分解终止条件",
+      "title": "质因数分解未除尽提前终止",
+      "question": "对1080进行质因数分解。",
+      "originalQuestion": "对1080进行质因数分解。",
+      "studentAnswer": "短除法除到商为9即停止，未将9继续分解为3×3。",
+      "rootCause": "终止条件意识薄弱，未坚持'除到商为质数才停'的流程规则。",
+      "standardSolution": "1080 = 2³ × 3³ × 5。",
+      "mnemonic": "短除法分解因数，除到质数才能停；最后商是合数9，必须继续除以3！",
+      "teacherTip": "短除法分解因数，除到质数才能停；最后商是合数9，必须继续除以3！",
+      "status": "mastered"
     },
     {
-      "id": "err_03",
+      "id": "ERR-SOP-03",
+      "student": "Sophia",
+      "nodeId": "div_01",
+      "domain": "number_theory_powers",
+      "category": "概念混淆类",
+      "severity": "medium",
+      "source": "英数G6暑期第5节 (2026-07-06)",
+      "topic": "质因数分解与幂次",
+      "title": "81分解因数计数混淆",
+      "question": "写出81的质因数分解式。",
+      "originalQuestion": "写出81的质因数分解式。",
+      "studentAnswer": "脱口而出说'8个3'。",
+      "rootCause": "把因数9×9与每个9含有2个3的乘加逻辑在大脑中混淆。",
+      "standardSolution": "81 = 9 × 9 = (3×3) × (3×3) = 3⁴（是4个3相乘）。",
+      "mnemonic": "因数拆解两步走，九九八十一是两个九，每个九里两个三，加在一起四个三！",
+      "teacherTip": "因数拆解两步走，九九八十一是两个九，每个九里两个三，加在一起四个三！",
+      "status": "mastered"
+    },
+    {
+      "id": "ERR-SOP-04",
+      "student": "Sophia",
+      "nodeId": "adv_01",
+      "domain": "foundations_arithmetic",
+      "category": "代数变形类",
+      "severity": "high",
+      "source": "英数G6暑期第5节 (2026-07-06)",
+      "topic": "比例等式性质",
+      "title": "比例变形受移项变号机械干扰",
+      "question": "已知比例 C:D = 3:5，将D用含C的代数式表示。",
+      "originalQuestion": "已知比例 C:D = 3:5，将D用含C的代数式表示。",
+      "studentAnswer": "D = C × 3 ÷ 5。",
+      "rootCause": "受机械口诀'移项变号'干扰，未建立天平两边同乘同除的本质理解。",
+      "standardSolution": "C/D = 3/5 ⟹ 3D = 5C ⟹ D = 5C/3。",
+      "mnemonic": "比例先化分数式，交叉相乘稳如山；目标字母留在边，伴身数字两边除！",
+      "teacherTip": "比例先化分数式，交叉相乘稳如山；目标字母留在边，伴身数字两边除！",
+      "status": "needs_consolidation"
+    },
+    {
+      "id": "ERR-SOP-05",
+      "student": "Sophia",
+      "nodeId": "g4_02",
+      "domain": "foundations_arithmetic",
+      "category": "计算规范类",
+      "severity": "high",
+      "source": "英数G6暑期第6节 (2026-07-07)",
+      "topic": "小数四则运算与进位",
+      "title": "小数进位遗漏与四则乱加括号",
+      "question": "列竖式计算小数加法并在四则混合运算中按序计算。",
+      "originalQuestion": "列竖式计算小数加法并在四则混合运算中按序计算。",
+      "studentAnswer": "十分位6+4=10漏进1算出62；四则运算随意加括号破坏运算顺序。",
+      "rootCause": "运算顺序层级意识模糊，做题急躁导致上标进位未标注。",
+      "standardSolution": "十分位满十向个位进1，个位结果加1为63；严格按先乘除后加减顺序运算。",
+      "mnemonic": "四则运算看清级，先乘后除再加减；竖式进位点小点，算完回头验一验！",
+      "teacherTip": "四则运算看清级，先乘后除再加减；竖式进位点小点，算完回头验一验！",
+      "status": "needs_consolidation"
+    },
+    {
+      "id": "ERR-SOP-06",
+      "student": "Sophia",
+      "nodeId": "g5_06",
+      "domain": "fractions",
+      "category": "算法机制类",
+      "severity": "critical",
+      "source": "暑期第9-10节 & 秋季第2节 (2026-09-16)",
+      "topic": "通分与商不变原理",
+      "title": "通分时分子不同步相乘（最顽固问题）",
+      "question": "计算异分母分数加法：2/3 + 1/5。",
+      "originalQuestion": "计算异分母分数加法：2/3 + 1/5。",
+      "studentAnswer": "化公分母15后分子直接抄写：2/15 + 1/15 = 3/15 = 1/5。",
+      "rootCause": "商不变原理未形成自动化肌肉记忆，通分仅操作分母而遗漏分子。",
+      "standardSolution": "2/3 = 10/15, 1/5 = 3/15，10/15 + 3/15 = 13/15。",
+      "mnemonic": "通分三步走：找公分母、分子同步乘、同分母相加；分母变几倍分子紧跟跑！",
+      "teacherTip": "通分三步走：找公分母、分子同步乘、同分母相加；分母变几倍分子紧跟跑！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-07",
+      "student": "Sophia",
+      "nodeId": "g5_04",
+      "domain": "foundations_arithmetic",
+      "category": "数位位移类",
+      "severity": "medium",
+      "source": "英数G6暑期第10节 (2026-07-11)",
+      "topic": "小数与百分数互化",
+      "title": "小数化百分数移位方向搞反",
+      "question": "将小数0.075化为百分数。",
+      "originalQuestion": "将小数0.075化为百分数。",
+      "studentAnswer": "写成75%或0.75%。",
+      "rootCause": "对百分号代表÷100的本质理解不扎实，小数点移位方向与位数混淆。",
+      "standardSolution": "0.075 = 0.075 × 100% = 7.5%。",
+      "mnemonic": "添上百分号，数值要变大，小数点往右跳两步！",
+      "teacherTip": "添上百分号，数值要变大，小数点往右跳两步！",
+      "status": "needs_consolidation"
+    },
+    {
+      "id": "ERR-SOP-08",
+      "student": "Sophia",
+      "nodeId": "g3_03",
+      "domain": "fractions",
+      "category": "严重粗心类",
+      "severity": "critical",
+      "source": "英数G6秋季第2节 (2026-09-16)",
+      "topic": "基础算术监控与估算",
+      "title": "分数通分加法中发生荒谬算术错误 (18+5=90)",
+      "question": "计算带分数加法：2又1/3 + 3又5/6。",
+      "originalQuestion": "计算带分数加法：2又1/3 + 3又5/6。",
+      "studentAnswer": "通分草稿中算分子时出现 18 + 5 = 90，导致最终结果荒诞庞大。",
+      "rootCause": "做题急躁，大脑将加号看成乘号(18×5=90)；完全缺乏算前估算合理性监控。",
+      "standardSolution": "算前估算结果在6~7之间；18+5=23，最终结果为6又1/6。",
+      "mnemonic": "动笔之前先估算，心里先放一把尺；加法莫当乘法算，算完回头验合理！",
+      "teacherTip": "动笔之前先估算，心里先放一把尺；加法莫当乘法算，算完回头验合理！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-09",
+      "student": "Sophia",
+      "nodeId": "g4_03",
+      "domain": "fractions",
+      "category": "概念混淆类",
+      "severity": "high",
+      "source": "英数G6秋季第2节 (2026-09-16)",
+      "topic": "同分母分数加法",
+      "title": "同分母加法分母乱相加",
+      "question": "计算：3/6 + 5/6。",
+      "originalQuestion": "计算：3/6 + 5/6。",
+      "studentAnswer": "算出 (3+5)/(6+6) = 8/12 = 2/3。",
+      "rootCause": "未理解分母是分数单位（等分份数），只有分子在做数量累加。",
+      "standardSolution": "3/6 + 5/6 = (3+5)/6 = 8/6 = 4/3 = 1又1/3。",
+      "mnemonic": "同分母相加减，分母是老祖宗——纹丝不能动，只有分子做运算！",
+      "teacherTip": "同分母相加减，分母是老祖宗——纹丝不能动，只有分子做运算！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-10",
+      "student": "Sophia",
+      "nodeId": "adv_01",
+      "domain": "foundations_arithmetic",
+      "category": "概念混淆类",
+      "severity": "high",
+      "source": "英数G5+AMC8第7节 (2026-06-15)",
+      "topic": "独立事件概率与乘法原理",
+      "title": "独立事件同时发生误用加法",
+      "question": "一枚硬币掷出正面且转盘停在2的概率（硬币正面1/2，转盘2的概率1/3）。",
+      "originalQuestion": "一枚硬币掷出正面且转盘停在2的概率（硬币正面1/2，转盘2的概率1/3）。",
+      "studentAnswer": "用加法算成 1/2 + 1/3 = 2/5。",
+      "rootCause": "混淆'且(and)'与'或(or)'，未理解独立事件同时发生必须用乘法原理。",
+      "standardSolution": "P(正面且2) = 1/2 × 1/3 = 1/6。",
+      "mnemonic": "苛刻条件同时来，乘法原理相乘算；宽松条件二选一，加法原理求总和！",
+      "teacherTip": "苛刻条件同时来，乘法原理相乘算；宽松条件二选一，加法原理求总和！",
+      "status": "mastered"
+    },
+    {
+      "id": "ERR-SOP-11",
+      "student": "Sophia",
+      "nodeId": "g3_02",
+      "domain": "geometry_applications",
+      "category": "审题疏漏类",
+      "severity": "medium",
+      "source": "袋鼠数学C第3节 (2026-03-23)",
+      "topic": "周期循环问题与播放起点定位",
+      "title": "周期循环问题忽略播放起始点",
+      "question": "播放器循环播放5首歌曲A, B, C, D, E。当前正在播放C，问播放完第28首后正在播放哪一首？",
+      "originalQuestion": "播放器循环播放5首歌曲A, B, C, D, E。当前正在播放C，问播放完第28首后正在播放哪一首？",
+      "studentAnswer": "求出 28÷5=5...3 后，直接从歌单第1首A开始数3首答C（漏看起始播放位置C）。",
+      "rootCause": "周期余数模型死记硬背，做题前未在草稿圈出真实起点，忽视题目已知偏移量。",
+      "standardSolution": "当前正在播放C（第3首），后续播放28首即 3+28=31 首；31÷5=6...1，对应第1首歌A（或从C后第1首D数起：28÷5=5...3，第1首D、第2首E、第3首A）。",
+      "mnemonic": "周期问题定起点，余数数序莫抢先；当前哪首做基准，顺次往后数几位！",
+      "teacherTip": "周期问题定起点，余数数序莫抢先；当前哪首做基准，顺次往后数几位！",
+      "status": "mastered"
+    },
+    {
+      "id": "ERR-SOP-12",
+      "student": "Sophia",
+      "nodeId": "g3_03",
+      "domain": "foundations_arithmetic",
+      "category": "符号与规则类",
+      "severity": "medium",
+      "source": "英数G5+AMC8第6节 (2026-06-08)",
+      "topic": "有理数正负数运算与新定义运算",
+      "title": "嵌套新定义运算漏写负号",
+      "question": "定义新运算 a⊕b = 2a + 3b，求 3 ⊕ (-1) 与 2 × (-1) 的值。",
+      "originalQuestion": "定义新运算 a⊕b = 2a + 3b，求 3 ⊕ (-1) 与 2 × (-1) 的值。",
+      "studentAnswer": "在多层括号展开计算中，将 2×(-1) 算成 2，漏写负号导致最终结果符号反转。",
+      "rootCause": "对负数乘法“异号得负”法则心算不严密，在复合嵌套式子中括号脱漏。",
+      "standardSolution": "正负相乘必得负：2 × (-1) = -2；代入新运算得 2(3) + 3(-1) = 6 - 3 = 3。",
+      "mnemonic": "同号相乘得正数，异号相乘必带负；负数带进括号戴，脱掉括号看清楚！",
+      "teacherTip": "同号相乘得正数，异号相乘必带负；负数带进括号戴，脱掉括号看清楚！",
+      "status": "mastered"
+    },
+    {
+      "id": "ERR-WIL-01",
+      "student": "William",
+      "nodeId": "power_01",
+      "domain": "foundations_arithmetic",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "英数G6暑期1~10节全期反复出现",
+      "topic": "乘方本质 vs 乘法",
+      "title": "反复混淆乘方与乘法（全学期第一顽疾）",
+      "question": "计算：2³, 2⁴, 3⁴, 2¹⁰, 10⁰。",
+      "originalQuestion": "计算：2³, 2⁴, 3⁴, 2¹⁰, 10⁰。",
+      "studentAnswer": "2³=6, 2⁴=8, 3⁴=18, 2¹⁰=20, 10⁰=10。",
+      "rootCause": "视觉惰性导致看见角标本能当作乘数相乘，未建立手写连乘展开习惯。",
+      "standardSolution": "2³=2×2×2=8; 2⁴=16; 3⁴=81; 2¹⁰=1024; 10⁰=1。",
+      "mnemonic": "右上角是分身术，底数是本人；角标是几分身几个，连乘起来才是真！连乘乘方莫当加！",
+      "teacherTip": "右上角是分身术，底数是本人；角标是几分身几个，连乘起来才是真！连乘乘方莫当加！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-02",
+      "student": "William",
+      "nodeId": "power_02",
+      "domain": "foundations_arithmetic",
+      "category": "算法机制类",
+      "severity": "critical",
+      "source": "英数G6暑期第4、9节 (2026-07-10)",
+      "topic": "同底数幂乘除法则",
+      "title": "同底数幂相乘指数误相乘",
+      "question": "简化计算：10⁴ × 10⁵。",
+      "originalQuestion": "简化计算：10⁴ × 10⁵。",
+      "studentAnswer": "10⁴ × 10⁵ = 10²⁰（指数4×5=20）。",
+      "rootCause": "死记公式记混，不理解公式代表因数个数相加，将同底相乘与幂的乘方混淆。",
+      "standardSolution": "10⁴ × 10⁵ = 10⁴⁺⁵ = 10⁹。",
+      "mnemonic": "同底相乘把数数，前面几个加后面几个；同底相乘指数加，千万别把指数乘！",
+      "teacherTip": "同底相乘把数数，前面几个加后面几个；同底相乘指数加，千万别把指数乘！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-03",
+      "student": "William",
+      "nodeId": "g4_01",
+      "domain": "foundations_arithmetic",
+      "category": "概念断层类",
+      "severity": "critical",
+      "source": "英数G6暑期第6节 (2026-07-07)",
+      "topic": "十进制数位 (Tens vs Tenths)",
+      "title": "十位与十分位数位全错",
+      "question": "在数值 483.59 中指出数字 8 和 5 所在数位。",
+      "originalQuestion": "在数值 483.59 中指出数字 8 和 5 所在数位。",
+      "studentAnswer": "十分位5答为十位(tens)，十位8答为十分位(tenths)，三道数位题全错。",
+      "rootCause": "四五年级英文数位基础断层，对以个位为中心的对称性及-ths词根缺失语感。",
+      "standardSolution": "8在十位(Tens=10)，5在十分位(Tenths=0.1)。",
+      "mnemonic": "小数点右边带-ths，咬舌尖的分数位；小数点左边无-ths，整数位值大十倍！",
+      "teacherTip": "小数点右边带-ths，咬舌尖的分数位；小数点左边无-ths，整数位值大十倍！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-04",
+      "student": "William",
+      "nodeId": "g4_02",
+      "domain": "foundations_arithmetic",
+      "category": "严重断层类",
+      "severity": "critical",
+      "source": "英数G6暑期第8节 (2026-07-09)",
+      "topic": "小数加法竖式与进位",
+      "title": "小数进位混乱导致荒诞结果 (0.9+0.1=4.1)",
+      "question": "列竖式计算：0.9 + 0.1。",
+      "originalQuestion": "列竖式计算：0.9 + 0.1。",
+      "studentAnswer": "竖式算出 0.9 + 0.1 = 4.1。",
+      "rootCause": "竖式未对齐小数点，进位机制断路，完全丧失生活化数感量感监控。",
+      "standardSolution": "十分位9+1=10，写0向个位进1，点下小数点得 1.0。",
+      "mnemonic": "小数加减点对齐，对齐才能做加减；满十进一头上标，常识估算验一遍！",
+      "teacherTip": "小数加减点对齐，对齐才能做加减；满十进一头上标，常识估算验一遍！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-05",
+      "student": "William",
+      "nodeId": "g5_02",
+      "domain": "foundations_arithmetic",
+      "category": "算法机制类",
+      "severity": "critical",
+      "source": "英数G6暑期第6节 (2026-07-07)",
+      "topic": "小数除法移位规律",
+      "title": "小数除法移位方向搞反 (5.4÷0.6=0.9)",
+      "question": "计算：5.4 ÷ 0.6。",
+      "originalQuestion": "计算：5.4 ÷ 0.6。",
+      "studentAnswer": "答出 0.9。",
+      "rootCause": "不理解商不变性质将除数化为整数的本质，小数点移反方向；未理解除以纯小数商变大。",
+      "standardSolution": "5.4 ÷ 0.6 = 54 ÷ 6 = 9。",
+      "mnemonic": "除数变整数，被除数跟着扩大；除数缩小小，商反而往大跑！",
+      "teacherTip": "除数变整数，被除数跟着扩大；除数缩小小，商反而往大跑！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-06",
+      "student": "William",
+      "nodeId": "g3_03",
+      "domain": "foundations_arithmetic",
+      "category": "严重断层类",
+      "severity": "high",
+      "source": "英数G6暑期第6节 (2026-07-07)",
+      "topic": "四则运算顺序与小数加法",
+      "title": "小数加法说'不会'与四则乱加括号",
+      "question": "计算多步四则混合算式。",
+      "originalQuestion": "计算多步四则混合算式。",
+      "studentAnswer": "面对小数加法宣称'不会做'；四则运算随意加括号破坏先乘除后加减顺序。",
+      "rootCause": "四五年级四则运算基本功严重不扎实，存在畏难逃避心理。",
+      "standardSolution": "严格遵守先乘除、后加减，有括号先算括号内的层级法则。",
+      "mnemonic": "运算顺序不可乱，先乘除来后加减；括号里面先算完，规矩做题不添乱！",
+      "teacherTip": "运算顺序不可乱，先乘除来后加减；括号里面先算完，规矩做题不添乱！",
+      "status": "needs_consolidation"
+    },
+    {
+      "id": "ERR-WIL-07",
       "student": "William",
       "nodeId": "div_01",
-      "domain": "number_theory",
+      "domain": "number_theory_powers",
       "category": "概念混淆类",
-      "source": "学情报告 & G6暑期第10节",
-      "title": "因数概念与加数混淆",
-      "originalQuestion": "写出整数 16 的质因数分解式，并列出 16 的所有正因数。",
-      "studentAnswer": "回答 16 的因数是'8个2'。",
-      "rootCause": "混淆了加法与乘法逻辑，把 2+2+...+2=16（8个2相加）和 2×2×2×2=16（4个2相乘）混为一谈，因数树与累加概念混乱。",
-      "standardSolution": "1. 质因数分解：16 = 2 × 2 × 2 × 2 = 2⁴（是4个2相乘，而不是8个2相加！）\n2. 16 的所有正因数（成对寻找）：\n• 1 × 16 = 16\n• 2 × 8 = 16\n• 4 × 4 = 16\n3. 结论：16 的正因数共有 5 个，分别是：1, 2, 4, 8, 16。",
-      "teacherTip": "【避坑口诀】：因数是乘出来的，不是加出来的！找因数成对找，两头往中间挤，漏掉中间找平方！"
+      "severity": "high",
+      "source": "英数G6暑期第10节 (2026-07-11)",
+      "topic": "因数定义与质因数分解",
+      "title": "因数概念与连加加数混淆",
+      "question": "写出16的质因数分解式并列出所有正因数。",
+      "originalQuestion": "写出16的质因数分解式并列出所有正因数。",
+      "studentAnswer": "回答16的因数是'8个2'。",
+      "rootCause": "混淆加法与乘法逻辑，把 2+2+...+2=16 与 2⁴=16 混为一谈。",
+      "standardSolution": "质因数分解：16 = 2⁴（4个2相乘）；正因数有 1, 2, 4, 8, 16。",
+      "mnemonic": "因数是乘出来的，不是加出来的！找因数成对找，两头往中间挤！",
+      "teacherTip": "因数是乘出来的，不是加出来的！找因数成对找，两头往中间挤！",
+      "status": "needs_consolidation"
     },
     {
-      "id": "err_04",
-      "student": "Sophia",
-      "nodeId": "pv_04",
-      "domain": "place_value",
+      "id": "ERR-WIL-08",
+      "student": "William",
+      "nodeId": "div_02",
+      "domain": "number_theory_powers",
       "category": "概念混淆类",
-      "source": "学情报告 & 春季报告",
-      "title": "面积与边长关系混淆 / 误认6为完全平方数",
-      "originalQuestion": "(1) 已知正方形面积为 3，求其边长；(2) 判断 6 是否为完全平方数。",
-      "studentAnswer": "(1) 边长 = 3 ÷ 2；(2) 认为 6 是完全平方数，理由是 2 × 3 = 6。",
-      "rootCause": "混淆了正方形周长公式与面积公式（周长=4×边长，面积=边长×边长）；将'两个不同数相乘得到合数'误解为'完全平方数'（必须是同一个整数自乘）。",
-      "standardSolution": "1. (1) 正方形面积公式：S = a²（边长为 a），因此边长 a = √S = √3。正方形面积求边长必须开平方，不可除以2（3÷2=1.5，而 1.5²=2.25≠3）。\n2. (2) 完全平方数定义：若一个整数 n = k²（k为整数），则 n 为完全平方数。常见完全平方数表：1, 4, 9, 16, 25, 36... 因为 2²=4 < 6 < 3²=9，所以 6 绝不是完全平方数！2×3 是两个不同整数相乘，不是自乘。",
-      "teacherTip": "【避坑口诀】：完全平方必须自己乘自己（孪生兄弟）！不同因数相乘只是普通合数；面积开方求边长，除以2是求半边！"
+      "severity": "high",
+      "source": "暑期第3节 & 秋季第1节 (2026-09-12)",
+      "topic": "质数合数严格定义",
+      "title": "质数定义漏'只能'，误判77、91为质数",
+      "question": "判断 77、83、91、97 是否为质数。",
+      "originalQuestion": "判断 77、83、91、97 是否为质数。",
+      "studentAnswer": "圈选 77 和 91 为质数；背定义漏'只能'，说'可以被自己整除的数'。",
+      "rootCause": "质数定义不严密；对百以内常见伪装合数（7×11=77, 7×13=91）缺乏敏感度。",
+      "standardSolution": "77=7×11（合数），91=7×13（合数）；83与97为质数。",
+      "mnemonic": "质数必须带'只能'；7和13要小心，七十三乘九十一，三七二十一，全是披羊皮的狼！",
+      "teacherTip": "质数必须带'只能'；7和13要小心，七十三乘九十一，三七二十一，全是披羊皮的狼！",
+      "status": "needs_consolidation"
     },
     {
-      "id": "err_05",
+      "id": "ERR-WIL-09",
       "student": "William",
       "nodeId": "div_05",
-      "domain": "number_theory",
-      "category": "算法步骤类",
-      "source": "学情报告 & 暑期第4节",
-      "title": "HCF与LCM求法混淆，因子指数错误求和",
-      "originalQuestion": "已知 A = 2³ × 3² × 5，B = 2² × 3³ × 7。求 A 与 B 的最大公因数（HCF）和最小公倍数（LCM）。",
-      "studentAnswer": "在求 LCM 时，将 3 的因子写成 3²⁺³ = 3⁵；在求 HCF 时，将共有因子的个数加起来。",
-      "rootCause": "机械套用公式，不理解 HCF 是'交集取少'（两边都必须满足），LCM 是'并集取多'（全部覆盖），误把集合覆盖关系当成了指数加法。",
-      "standardSolution": "1. 分解式对齐比较：\nA = 2³ × 3² × 5¹ × 7⁰\nB = 2² × 3³ × 5⁰ × 7¹\n2. 求最大公因数 HCF（公共质因数取指数较小者）：\n• 质因数 2：min(3, 2) = 2 → 2²\n• 质因数 3：min(2, 3) = 2 → 3²\n• 质因数 5 和 7：非双方共有，不取\nHCF = 2² × 3² = 4 × 9 = 36\n3. 求最小公倍数 LCM（所有出现过的质因数取指数较大者）：\n• 质因数 2：max(3, 2) = 3 → 2³\n• 质因数 3：max(2, 3) = 3 → 3³\n• 质因数 5：max(1, 0) = 1 → 5¹\n• 质因数 7：max(0, 1) = 1 → 7¹\nLCM = 2³ × 3³ × 5 × 7 = 8 × 27 × 35 = 7560。绝不能把质因数 3 的指数相加写成 3⁵！",
-      "teacherTip": "【避坑口诀】：最大公因门槛高，只看公共取小的；最小公倍胃口大，全部质因取大的；两边指数绝不加，谁的幂大选定他！"
+      "domain": "number_theory_powers",
+      "category": "算法机制类",
+      "severity": "high",
+      "source": "英数G6暑期第4节 (2026-07-05)",
+      "topic": "HCF与LCM算法",
+      "title": "HCF与LCM求法指数错误求和",
+      "question": "求 54 和 90 的 LCM 与 HCF。",
+      "originalQuestion": "求 54 和 90 的 LCM 与 HCF。",
+      "studentAnswer": "LCM中将3的指数相加写成 3⁵；HCF中把7个2和3个2相加得10。",
+      "rootCause": "不理解 HCF 是公共取少、LCM 是全覆盖取多，把覆盖关系当成指数加法。",
+      "standardSolution": "54=2×3³, 90=2×3²×5。HCF=2×3²=18; LCM=2×3³×5=270。",
+      "mnemonic": "最大公因门槛高，只看公共取小的；最小公倍胃口大，全部质因取大的；两边指数绝不加！",
+      "teacherTip": "最大公因门槛高，只看公共取小的；最小公倍胃口大，全部质因取大的；两边指数绝不加！",
+      "status": "needs_consolidation"
     },
     {
-      "id": "err_06",
+      "id": "ERR-WIL-10",
       "student": "William",
-      "nodeId": "div_07",
-      "domain": "number_theory",
-      "category": "审题综合类",
-      "source": "G6秋季第2节 (09/16) 压轴题",
-      "title": "大数整除压轴题条件严重遗漏，仅求末位未解首位",
-      "originalQuestion": "已知六位数 91X93Y 能被 65 整除，求未知数字 X 和 Y。",
-      "studentAnswer": "将 65 分解为 5 × 13，得出 Y = 0 或 5，随后便停止解题，没有继续求解 X。",
-      "rootCause": "缺乏多步综合题的完整求解意识，完成第一阶段（末位判断）后产生'做完感'，未能建立将已知条件代入大数、再利用 13 的整除条件列出同余方程求解第二未知数的闭环。",
-      "standardSolution": "1. 质因数分解除数：65 = 5 × 13（5 与 13 互质）。六位数必须同时满足被 5 和被 13 整除。\n2. 第一步判定 Y：由个位数性质知，末位 Y 必须是 0 或 5。\n3. 第二步分情况代入，检验被 13 整除：\n【情况一】：若 Y = 0，六位数为 91X930。大数拆分：91X930 = 910000 + 1000X + 930。因为 91=7×13，910000必被13整除。只需 1000X + 930 能被 13 整除。1000 = 77×13 - 1 ≡ -1 (mod 13)，930 = 71×13 + 7 ≡ 7 (mod 13)。因此 -X + 7 必须是 13 的倍数。由于 0 ≤ X ≤ 9，唯一解为 X = 7。检验：917930 ÷ 65 = 14122，整除成立！\n【情况二】：若 Y = 5，余数 -X + 12 必须是 13 的倍数，在 0 ≤ X ≤ 9 内无整数解。\n4. 综合结论：X = 7，Y = 0。",
-      "teacherTip": "【避坑口诀】：压轴双字母，先拆再联立；解完Y绝不停，代回大数剥洋葱，首尾呼应才算完！"
+      "nodeId": "g4_03",
+      "domain": "fractions",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "英数G6暑期第9节 (2026-07-10)",
+      "topic": "分数本质与除法",
+      "title": "分数除法当乘法 (2/8=16)",
+      "question": "将分数 2/8 化简并转为小数；计算 25 ÷ 100 最简分数。",
+      "originalQuestion": "将分数 2/8 化简并转为小数；计算 25 ÷ 100 最简分数。",
+      "studentAnswer": "2/8 写成 2×8=16；25 ÷ 100 写成 100/25 = 4。",
+      "rootCause": "分数线代表除号的物理代数意义脱节，被除数除数颠倒或当乘法。",
+      "standardSolution": "2/8 = 2 ÷ 8 = 1/4 = 0.25；25 ÷ 100 = 25/100 = 1/4 = 0.25。",
+      "mnemonic": "分子在上被除数，分母在下是除数；分数横线就是除，绝不能够变成乘！",
+      "teacherTip": "分子在上被除数，分母在下是除数；分数横线就是除，绝不能够变成乘！",
+      "status": "in_progress"
     },
     {
-      "id": "err_07",
+      "id": "ERR-WIL-11",
       "student": "William",
       "nodeId": "frac_01",
       "domain": "fractions",
-      "category": "概念混淆类",
-      "source": "学情报告 & G6暑期第9节",
-      "title": "分数除法当乘法，商的物理意义未内化",
-      "originalQuestion": "将分数 2/8 化简并写成小数形式；计算 25 ÷ 100 的最简分数。",
-      "studentAnswer": "将 2/8 写成 2 × 8 = 16；将 25 ÷ 100 倒置为 100/25 = 4。",
-      "rootCause": "分数符号的几何与代数意义脱节，把分数线视作乘号运算，或者在把除法写成分数时被除数与除数位置颠倒。",
-      "standardSolution": "1. 分数基本定义：a/b = a ÷ b（分子 a = 被除数，分母 b = 除数）。\n2. 纠错计算：\n• 2/8 = 2 ÷ 8 = 1/4 = 0.25（绝对不是 2 × 8 = 16）\n• 25 ÷ 100 = 25/100 = 1/4 = 0.25（被除数 25 在上面当分子，除数 100 在下面当分母）。",
-      "teacherTip": "【避坑口诀】：分子在上被除数，分母在下是除数；分数横线就是除，绝不能够变成乘！"
-    },
-    {
-      "id": "err_08",
-      "student": "Sophia",
-      "nodeId": "frac_03",
-      "domain": "fractions",
       "category": "算法步骤类",
-      "source": "学情报告 & G6暑期第9节 & 秋季第2节",
-      "title": "通分时分子不同步相乘，商不变原理遗漏",
-      "originalQuestion": "计算异分母分数加法：2/3 + 1/5",
-      "studentAnswer": "通分时把分母都化成 15，但分子直接写成 2/15 + 1/15 = 3/15 = 1/5。",
-      "rootCause": "对分数基本性质'商不变原理'未形成自动化执行习惯，只关注了分母的公倍数转换，注意力未分配到分子需要同步放大对应倍数。",
-      "standardSolution": "1. 找出分母 3 和 5 的最小公倍数：LCM(3, 5) = 15。\n2. 严格通分三步法（分子分母同乘相同因数）：\n• 对于 2/3：分母 3×5=15，分子必须同步 2×5=10，即 2/3 = 10/15。\n• 对于 1/5：分母 5×3=15，分子必须同步 1×3=3，即 1/5 = 3/15。\n3. 同分母相加分子：2/3 + 1/5 = 10/15 + 3/15 = (10+3)/15 = 13/15。",
-      "teacherTip": "【避坑口诀】：通分三步走：找公分母、分子同步乘、分子相加减！分母变几倍，分子跟着变几倍，千万不能搞差别待遇！"
+      "severity": "high",
+      "source": "英数G6暑期第10节 (2026-07-11)",
+      "topic": "分数除法与倒数法则",
+      "title": "倒数法则两步不同步",
+      "question": "计算：5/12 ÷ 15/16。",
+      "originalQuestion": "计算：5/12 ÷ 15/16。",
+      "studentAnswer": "除数颠倒成 16/15，但中间依然写除号 5/12 ÷ 16/15。",
+      "rootCause": "把'除以一个数等于乘以倒数'割裂开，未形成改除号为乘号与颠倒除数的强绑定。",
+      "standardSolution": "5/12 ÷ 15/16 = 5/12 × 16/15 = (1×4)/(3×3) = 4/9。",
+      "mnemonic": "除号变乘号，除数翻跟头！两步必须一块走，千万别留半边头！",
+      "teacherTip": "除号变乘号，除数翻跟头！两步必须一块走，千万别留半边头！",
+      "status": "needs_consolidation"
     },
     {
-      "id": "err_09",
-      "student": "Sophia",
-      "nodeId": "frac_04",
-      "domain": "fractions",
-      "category": "计算粗心类",
-      "source": "G6秋季第2节 (09/16)",
-      "title": "分数通分加法中发生严重低级算术错误",
-      "originalQuestion": "计算带分数加法：2又1/3 + 3又5/6",
-      "studentAnswer": "在通分过程中出现步骤 18 + 5 = 90，导致最终得出荒谬答案。",
-      "rootCause": "极度低级粗心，计算时由于精力疲惫或急于出结果，在大脑中将加号直接看成了乘号（18 × 5 = 90），且缺乏'估算校验'的检查机制（两数相加大致在 6 左右，绝不可能突变成 90 多的结果）。",
-      "standardSolution": "1. 估算合理性校验：2又1/3 ≈ 2.33，3又5/6 ≈ 3.83，2.33 + 3.83 ≈ 6.16。最终结果必定在 6 到 7 之间！\n2. 正规解法：\n2又1/3 + 3又5/6 = (2 + 3) + (1/3 + 5/6)\n• 通分分数部分：1/3 = 2/6\n• 分数相加：2/6 + 5/6 = 7/6 = 1又1/6\n• 合并整数：5 + 1又1/6 = 6又1/6\n（注意：18+5=23，绝对不是90！）",
-      "teacherTip": "【避坑口诀】：动笔先估算，心里有杆秤；加法莫乘算，写完反向验！"
-    },
-    {
-      "id": "err_10",
-      "student": "Sophia",
-      "nodeId": "frac_04",
+      "id": "ERR-WIL-12",
+      "student": "William",
+      "nodeId": "g3_02",
       "domain": "fractions",
       "category": "概念混淆类",
-      "source": "G6秋季第2节 (09/16)",
-      "title": "同分母加法分母乱相加，混淆带分数假分数",
-      "originalQuestion": "计算：3/6 + 5/6",
-      "studentAnswer": "算出 (3+5)/(6+6) = 8/12 或写成带分数混乱形式。",
-      "rootCause": "未理解分母代表的是'等分的份数（度量单位）'，分子代表的是'份数数量'。同分母加法本质是计数单位相同，直接将计数单位的数量相加，单位本身保持不变。",
-      "standardSolution": "1. 原理剖析：3/6 是 3 个 1/6，5/6 是 5 个 1/6。把 3 个 1/6 和 5 个 1/6 放在一起，一共有 3+5=8 个 1/6。\n2. 规范演算：3/6 + 5/6 = (3+5)/6 = 8/6。\n3. 约分并化为带分数：8/6 = 4/3 = 1又1/3。分母 6 绝不能加成 12！",
-      "teacherTip": "【避坑口诀】：同分母相加减，分母看作老祖宗，分母纹丝不能动，只有分子做运算！"
+      "severity": "high",
+      "source": "英数G6暑期第10节 (2026-07-11)",
+      "topic": "带余除法与带分数",
+      "title": "带余除法商余数除数位置混乱",
+      "question": "计算 52 ÷ 24 并化为带分数最简形式。",
+      "originalQuestion": "计算 52 ÷ 24 并化为带分数最简形式。",
+      "studentAnswer": "写成'24又4/2'。",
+      "rootCause": "对商（整数部分）、余数（新分子）、除数（分母）的空间对应关系完全混乱。",
+      "standardSolution": "52 ÷ 24 = 2 余 4 = 2又4/24 = 2又1/6。",
+      "mnemonic": "带余除法转带分：商当整数站在前，余数顶天当分子，除数趴地当地基！",
+      "teacherTip": "带余除法转带分：商当整数站在前，余数顶天当分子，除数趴地当地基！",
+      "status": "needs_consolidation"
     },
     {
-      "id": "err_11",
+      "id": "ERR-WIL-13",
       "student": "William",
-      "nodeId": "frac_05",
-      "domain": "fractions",
-      "category": "算法步骤类",
-      "source": "学情报告 & 暑期第10节",
-      "title": "分数除法倒数法则执行未同步",
-      "originalQuestion": "计算：5/12 ÷ 15/16",
-      "studentAnswer": "把除数颠倒成 16/15，但中间依然写成除号 5/12 ÷ 16/15；或者直接把分子分母交叉乱乘。",
-      "rootCause": "把'除以一个数等于乘以它的倒数'的两步动作割裂开来，未能形成'改除号为乘号'与'除数分子分母颠倒'的强绑定协同。",
-      "standardSolution": "1. 核心法则：除以一个不为0的数，等于乘以这个数的倒数。\n2. 规范步骤：5/12 ÷ 15/16 = 5/12 × 16/15\n3. 交叉约分：5 与 15 约分除以 5 得 1 和 3；12 与 16 约分除以 4 得 3 和 4。最终结果 = (1×4)/(3×3) = 4/9。",
-      "teacherTip": "【避坑口诀】：除号变乘号，除数翻跟头！两步必须一块走，千万别留半边头！"
+      "nodeId": "adv_01",
+      "domain": "foundations_arithmetic",
+      "category": "代数变形类",
+      "severity": "critical",
+      "source": "英数G6暑期第5节 (2026-07-06)",
+      "topic": "比例性质与代数等式",
+      "title": "比例运算把比号当乘号",
+      "question": "已知比例 C:D = 3:5，求用C表示D的代数式。",
+      "originalQuestion": "已知比例 C:D = 3:5，求用C表示D的代数式。",
+      "studentAnswer": "写成 D = C × 3 ÷ 5，比号当乘号。",
+      "rootCause": "缺乏方程天平思想，背诵口诀但完全不会应用，符号认知混乱。",
+      "standardSolution": "C/D = 3/5 ⟹ 3D = 5C ⟹ D = 5C/3。",
+      "mnemonic": "比例写成分数式，交叉相乘成等式；要留字母在左边，两边同除伴身数！",
+      "teacherTip": "比例写成分数式，交叉相乘成等式；要留字母在左边，两边同除伴身数！",
+      "status": "in_progress"
     },
     {
-      "id": "err_12",
+      "id": "ERR-WIL-14",
       "student": "William",
-      "nodeId": "pv_01",
-      "domain": "place_value",
-      "category": "概念混淆类",
-      "source": "学情报告 & 暑期第6节",
-      "title": "数位名称混淆（Tens vs Tenths）",
-      "originalQuestion": "在数值 483.59 中，指出数字 8 和数字 5 分别位于什么数位，表示什么数值。",
-      "studentAnswer": "将十分位的 5 答为'十位(tens)'，将十位的 8 答为'十分位(tenths)'，数位全错。",
-      "rootCause": "英文数位中以个位(Ones)为中心左右发散的对称规律未建立，对后缀-ths（表示分数）与-s（表示整数十百千）的词根语感缺失。",
-      "standardSolution": "1. 以小数点为界限的数位对照表：\n• 十位 (Tens) → 10¹ = 10（数字 8 所在位置，表示 8 × 10 = 80）\n• 个位 (Ones) → 10⁰ = 1（数字 3 所在位置，表示 3 × 1 = 3）\n• 【小数点 Decimal Point】\n• 十分位 (Tenths) → 10⁻¹ = 0.1（数字 5 所在位置，表示 5 × 0.1 = 0.5）\n• 百分位 (Hundredths) → 10⁻² = 0.01（数字 9 所在位置，表示 9 × 0.01 = 0.09）\n2. 结论：数字 8 在十位 (Tens)，代表 80；数字 5 在十分位 (Tenths)，代表 0.5。",
-      "teacherTip": "【避坑口诀】：小数点右边带-ths，咬舌尖的分数位；小数点左边无-ths，整数位值大十倍！"
-    },
-    {
-      "id": "err_13",
-      "student": "William",
-      "nodeId": "pv_02",
-      "domain": "place_value",
-      "category": "计算粗心类",
-      "source": "学情报告 & 暑期第8节",
-      "title": "小数加法进位混乱，出现反常算术错误",
-      "originalQuestion": "列竖式计算：0.9 + 0.1",
-      "studentAnswer": "答出 0.9 + 0.1 = 4.1。",
-      "rootCause": "竖式未对齐小数点，或在心算过程中进位机制严重短路，缺乏数感直觉（9毛钱加上1毛钱等于1块钱，怎么可能算出4块1毛）。",
-      "standardSolution": "1. 生活常识比对：0.9 是 9 个 0.1，再加 1 个 0.1 是 10 个 0.1，即 1.0。\n2. 列竖式规范对齐：\n  0.9\n+ 0.1\n------\n  1.0\n十分位 9+1=10，写 0 向上进 1；个位 0+0+1=1；点下小数点得 1.0。",
-      "teacherTip": "【避坑口诀】：小数加减小数点对齐，空位补0再运算；逢十进一标小点，算完先拿常识验！"
-    },
-    {
-      "id": "err_14",
-      "student": "William",
-      "nodeId": "pv_03",
-      "domain": "place_value",
-      "category": "计算粗心类",
-      "source": "学情报告 & 暑期第6-8节",
-      "title": "小数除法小数点移位方向搞反",
-      "originalQuestion": "计算：5.4 ÷ 0.6",
-      "studentAnswer": "答出 0.9（将除法扩大反而除小了）。",
-      "rootCause": "不理解除数是小数时需要'商不变性质'将除数变成整数，把被除数和除数的小数点移动方向搞乱，或者计算出 9 后又莫名其妙点上一位小数点。",
-      "standardSolution": "1. 利用商不变的性质：被除数和除数同时乘 10，商不变。5.4 ÷ 0.6 = (5.4 × 10) ÷ (0.6 × 10) = 54 ÷ 6 = 9。\n2. 直观常识验证：5.4 里面有几个 0.6？因为 0.6 × 9 = 5.4，所以显然是 9，绝不是 0.9！",
-      "teacherTip": "【避坑口诀】：除数变整数，被除数跟着跑；除数缩小小，商反而往大跑！"
-    },
-    {
-      "id": "err_15",
-      "student": "Sophia",
-      "nodeId": "pv_03",
-      "domain": "place_value",
-      "category": "计算粗心类",
-      "source": "学情报告 & 暑期第10节",
-      "title": "小数化百分数小数点移位方向混淆",
-      "originalQuestion": "将小数 0.075 化为百分数。",
-      "studentAnswer": "写成 75% 或 0.75%。",
-      "rootCause": "对百分号'%'相当于'× 1/100'的本质理解不扎实，移位时混淆是向左移还是向右移两位。",
-      "standardSolution": "1. 百分数本质：1 = 100%。因此把一个数变成百分数，相当于乘 100%：0.075 = 0.075 × 100% = 7.5%。\n2. 检查：7.5% = 7.5/100 = 0.075，等式完全成立。若写成 75% = 0.75，比原数放大了 10 倍！",
-      "teacherTip": "【避坑口诀】：添上百分号，数值要变大，小数点往右跳两步；去掉百分号，数值要缩小，小数点往左跳两步！"
-    },
-    {
-      "id": "err_16",
-      "student": "William",
-      "nodeId": "rat_01",
-      "domain": "ratios_percent",
-      "category": "概念混淆类",
-      "source": "学情报告 & 暑期第5节",
-      "title": "比例等式变形混淆乘除",
-      "originalQuestion": "已知比例 C : D = 3 : 5，若 C = 12，求 D 的值，并写出将 D 用 C 表示的代数式。",
-      "studentAnswer": "将代数关系写成 D = C × 3 ÷ 5，把比号当乘号。",
-      "rootCause": "代数方程天平思想未建立，死记硬背'同加同减同乘同除'口诀但不会实操，遇到比例变形时乱选运算符号。",
-      "standardSolution": "1. 比例改写为分数等式（交叉相乘）：C/D = 3/5 ⟹ 3 × D = 5 × C。\n2. 两边同时除以 3，解出 D：D = 5C/3 = (5/3)C。\n3. 代入 C = 12：D = (5 × 12)/3 = 20。检验：12 : 20 = 3 : 5，完全吻合！",
-      "teacherTip": "【避坑口诀】：比例写成分数式，交叉相乘成等式；要留字母在左边，两边同除伴身数！"
-    },
-    {
-      "id": "err_17",
-      "student": "William",
-      "nodeId": "adv_02",
-      "domain": "advanced_topics",
+      "nodeId": "div_07",
+      "domain": "foundations_arithmetic",
       "category": "审题综合类",
-      "source": "G6秋季第2节 (09/16)",
-      "title": "行程应用题缺乏分步解题框架，直接空题",
-      "originalQuestion": "小明从家去学校，15 分钟一共步行了 900 米。(1) 求小明的平均速度（米/分）；(2) 小明平均每分钟走了全程的几分之几？",
-      "studentAnswer": "第(1)问和第(2)问均空白未做，在老师分步提问下才勉强作答。",
-      "rootCause": "对两步或复合应用题存在畏难情绪，没有建立'审题 → 明确求什么 → 检索公式 → 代入计算 → 标注单位'的标准化做题流水线。",
-      "standardSolution": "1. 识别核心量与公式：路程 S = 900 米，时间 t = 15 分钟，速度公式 v = S/t。\n2. 第(1)小问解答：v = 900 ÷ 15 = 60 (米/分钟)。答：小明的平均速度是每分钟 60 米。\n3. 第(2)小问解答（考查分率，与具体米数无关）：把全程看作单位'1'，一共走了 15 分钟，每分钟走全程的：1 ÷ 15 = 1/15。答：小明平均每分钟走全程的 1/15。",
-      "teacherTip": "【避坑口诀】：应用题三部曲：第一步画图圈数字，第二步写出路程公式，第三步代入数字求答案，绝不留白空卷子！"
+      "severity": "medium",
+      "source": "英数G6秋季第2节 (2026-09-16)",
+      "topic": "大数同余整除压轴",
+      "title": "大数整除压轴题条件严重遗漏",
+      "question": "六位数 91X93Y 能被 65 整除，求X和Y。",
+      "originalQuestion": "六位数 91X93Y 能被 65 整除，求X和Y。",
+      "studentAnswer": "由65=5×13解出Y=0或5即停笔交卷，完全遗漏X的求解。",
+      "rootCause": "半途满足心理，解题缺乏标准化闭环流水线，未联立13整除条件求解X。",
+      "standardSolution": "Y=0时代入91X930，同余化简-X+7为13倍数解得X=7；Y=5无解。解为X=7, Y=0。",
+      "mnemonic": "压轴大数双字母，先拆条件再联立；解出Y来绝不停，代回大数剥洋葱！",
+      "teacherTip": "压轴大数双字母，先拆条件再联立；解出Y来绝不停，代回大数剥洋葱！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-15",
+      "student": "William",
+      "nodeId": "word_01",
+      "domain": "foundations_arithmetic",
+      "category": "解题规范类",
+      "severity": "medium",
+      "source": "英数G6秋季第2节 (2026-09-16)",
+      "topic": "行程与分率应用题",
+      "title": "行程应用题缺乏分步解题框架直接空题",
+      "question": "小明15分钟走900米，(1)求平均速度；(2)每分钟走全程几分之几？",
+      "originalQuestion": "小明15分钟走900米，(1)求平均速度；(2)每分钟走全程几分之几？",
+      "studentAnswer": "两问全部空白不写，缺乏起步框架。",
+      "rootCause": "应用题畏难情绪，未建立'圈条件→写公式→代入计算'的解题三部曲习惯。",
+      "standardSolution": "(1) v = 900 ÷ 15 = 60米/分；(2) 1 ÷ 15 = 1/15。",
+      "mnemonic": "应用题三部曲：第一步画图圈数字，第二步写出公式，第三步代入求答案！",
+      "teacherTip": "应用题三部曲：第一步画图圈数字，第二步写出公式，第三步代入求答案！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-16",
+      "student": "William",
+      "nodeId": "g5_03",
+      "domain": "decimals_percentages",
+      "category": "规则遗忘类",
+      "severity": "high",
+      "source": "英数G6暑期第7、8节 (2026-07-08/09)",
+      "topic": "有效数字规则与四舍五入近似值",
+      "title": "中间0不算有效数字 & 四舍五入直接抄原数",
+      "question": "(1) 指出 5.208 有几位有效数字；(2) 将 183.9591 精确到整数（或个位）。",
+      "originalQuestion": "(1) 指出 5.208 有几位有效数字；(2) 将 183.9591 精确到整数（或个位）。",
+      "studentAnswer": "(1) 认为 5.208 只有 3 位（跳过中间的 0）；(2) 直接抄写 183（忽略小数十分位 9 的进位）。",
+      "rootCause": "有效数字规则“两非零之间的零全部有效”未内化；四舍五入未形成画看线（看后一位）的条件反射。",
+      "standardSolution": "(1) 5.208 中从第一个非零数字 5 起所有数字均有效，共 4 位有效数字 (5, 2, 0, 8)；(2) 精确到个位看十分位 9，满五进一，183 + 1 = 184。",
+      "mnemonic": "首位非零开始数，中间零和末尾零都算数；四舍五入看后位，满五进一别忘了！",
+      "teacherTip": "首位非零开始数，中间零和末尾零都算数；四舍五入看后位，满五进一别忘了！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-17",
+      "student": "William",
+      "nodeId": "div_04",
+      "domain": "number_theory_powers",
+      "category": "方法不规范类",
+      "severity": "medium",
+      "source": "英数G6暑期第10节 (2026-07-11)",
+      "topic": "短除法质因数分解试商规范",
+      "title": "短除法跳过质数直接试除合数6",
+      "question": "用短除法对 72 进行质因数分解。",
+      "originalQuestion": "用短除法对 72 进行质因数分解。",
+      "studentAnswer": "第一步短除号外直接写 6，试除合数导致质因数不纯粹。",
+      "rootCause": "急于求快，混淆了“短除法求最大公因数”与“质因数分解”的除数限定（分解质因数必须且只能用质数）。",
+      "standardSolution": "分解质因数左侧除数必须为质数（从小到大试除：2, 3, 5, 7...）：72÷2=36, 36÷2=18, 18÷2=9, 9÷3=3，得到 72 = 2³ × 3²。",
+      "mnemonic": "质因数分解用短除，左边除数必须质；二三五七排队试，合数决不上除台！",
+      "teacherTip": "质因数分解用短除，左边除数必须质；二三五七排队试，合数决不上除台！",
+      "status": "mastered"
     }
   ],
   "actionPlans": {

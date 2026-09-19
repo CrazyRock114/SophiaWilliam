@@ -59,7 +59,7 @@
         <span>🕸️</span> 三轨融合知识图谱 (<span id="graph-node-count-badge">36</span>)
       </button>
       <button class="nav-tab" data-view="errors">
-        <span>📕</span> 经典错题与深度解析库 (<span id="error-count-badge">17</span>)
+        <span>📕</span> 经典错题与深度解析库 (<span id="error-count-badge">29</span>)
       </button>
       <button class="nav-tab" data-view="roadmap">
         <span>🎯</span> 教学路线与专属干预方案
@@ -101,20 +101,20 @@
         <div class="card" style="padding: 16px; border-left: 4px solid var(--sophia-color);">
           <div class="card-subtitle">Sophia 累计课时 & 正确率</div>
           <div style="font-size: 20px; font-weight: 800; color: var(--sophia-color); margin-top: 4px;">
-            17 节课 · 80%~85%
+            23 节课 · 80%~85%
           </div>
           <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-            思维敏锐反应快，薄弱在乘方概念与粗心
+            在册19节+袋鼠4节；暑期均分70.5%，秋季提速稳健
           </div>
         </div>
 
         <div class="card" style="padding: 16px; border-left: 4px solid var(--william-color);">
           <div class="card-subtitle">William 累计课时 & 正确率</div>
           <div style="font-size: 20px; font-weight: 800; color: var(--william-color); margin-top: 4px;">
-            16 节课 · 70%~75%
+            17 节课 · 70%~75%
           </div>
           <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-            参与意愿高，薄弱在小数运算断层与乘方混淆
+            在册13节+袋鼠4节(独立于G4 Will)；秋季大幅提振
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
               <div>
                 <h3 style="font-size: 20px; font-weight: 800;">Sophia (协和融合G6)</h3>
                 <div style="font-size: 13px; color: var(--text-muted);">
-                  首次上课：2026年3月 | 课程：英数G5+AMC8 (5节) + G6暑期 (10节) + G6秋季 (2节)
+                  首次上课：2026年3月 | 累计23节 (袋鼠C 4节 + 英数G5/AMC8 7节 + G6暑期 10节 + G6秋季 2节)
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@
               <div>
                 <h3 style="font-size: 20px; font-weight: 800;">William (协和融合G6)</h3>
                 <div style="font-size: 13px; color: var(--text-muted);">
-                  首次上课：2026年3月 | 课程：袋鼠C (4节) + G6暑期 (10节) + G6秋季 (2节)
+                  首次上课：2026年3月 | 累计17节 (袋鼠C 4节 + 英数G5 1节 + G6暑期 10节 + G6秋季 2节 | 独立于G4 Will)
                 </div>
               </div>
             </div>
@@ -303,25 +303,35 @@
     <section id="view-errors" class="view-panel">
       
       <!-- Error Filters -->
-      <div class="graph-control-bar" style="margin-bottom: 20px;">
+      <div class="graph-control-bar" style="margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
         <div class="filter-group">
           <span class="filter-label">学生筛选:</span>
-          <button class="pill-btn active" data-err-student="all">全部学生 (17)</button>
-          <button class="pill-btn" data-err-student="Sophia">🌸 Sophia (5)</button>
-          <button class="pill-btn" data-err-student="William">⚡ William (12)</button>
+          <button class="pill-btn active" data-err-student="all">全部学生 (<span id="err-filter-count-all">29</span>)</button>
+          <button class="pill-btn" data-err-student="Sophia">🌸 Sophia (<span id="err-filter-count-sophia">12</span>)</button>
+          <button class="pill-btn" data-err-student="William">⚡ William (<span id="err-filter-count-william">17</span>)</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">危险等级:</span>
+          <button class="pill-btn active" data-err-severity="all">全部等级 (29)</button>
+          <button class="pill-btn" data-err-severity="critical" style="color: #b91c1c; font-weight: 700;">🔴 极高危/断层级 (9)</button>
+          <button class="pill-btn" data-err-severity="high" style="color: #c2410c; font-weight: 700;">🟠 高危/机制级 (13)</button>
+          <button class="pill-btn" data-err-severity="medium" style="color: #854d0e; font-weight: 700;">🟡 中危/规范级 (7)</button>
         </div>
 
         <div class="filter-group">
           <span class="filter-label">错误类型:</span>
           <button class="pill-btn active" data-err-cat="all">全部类型</button>
           <button class="pill-btn" data-err-cat="概念混淆类">概念混淆类</button>
+          <button class="pill-btn" data-err-cat="运算失控类">运算失控类</button>
           <button class="pill-btn" data-err-cat="计算粗心类">计算粗心类</button>
           <button class="pill-btn" data-err-cat="算法步骤类">算法步骤类</button>
-          <button class="pill-btn" data-err-cat="审题综合类">审题综合类</button>
+          <button class="pill-btn" data-err-cat="审题模型类">审题模型类</button>
+          <button class="pill-btn" data-err-cat="方法不规范类">方法不规范类</button>
         </div>
 
-        <div style="flex: 1; min-width: 200px; max-width: 320px;">
-          <input type="text" id="error-search-input" placeholder="🔍 搜索题干、错因、公式或口诀..." style="width: 100%; padding: 7px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-full); font-size: 13px; outline: none;">
+        <div style="flex: 1; min-width: 220px; max-width: 340px;">
+          <input type="text" id="error-search-input" placeholder="🔍 搜索题干、错因、公式、解法或口诀..." style="width: 100%; padding: 7px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-full); font-size: 13px; outline: none;">
         </div>
       </div>
 
