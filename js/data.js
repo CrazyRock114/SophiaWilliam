@@ -1134,7 +1134,69 @@ const trackerData = {
         "action": "课堂前 35 分钟集中攻坚重点，后半段切换为积木/折纸等动手探究任务；严禁课后用豆包等 AI 工具抄作业答案，建立'错题不怕，过程写清即加星'的激励机制。"
       }
     ]
-  }
+  },
+  "consolidationWorksheets": [
+    {
+      "id": "ws-sophia-01",
+      "targetStudent": "sophia",
+      "studentBadge": "🌸 Sophia 专属",
+      "title": "【Sophia 专属】概念严谨性与运算防粗心攻坚卷（第1期）",
+      "timeLimit": "30 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#ec4899",
+      "targetAreas": "概念反向辨析 · 异分母通分同扩倍 · 双栏草稿防笔误 · 同余整除压轴",
+      "description": "针对完全平方数反向辨析（破解6是平方数错觉）、正方形面积求边长（杜绝除以2）、分数异分母通分同扩倍双步填空、双栏草稿防笔误实操、六位数同余大数整除完整求解。内含详细参考答案与评分标准。",
+      "tags": ["完全平方数", "通分同扩倍", "双栏草稿", "大数同余"],
+      "pdfUrl": "pdf/Sophia_Math_Consolidation_Set1.pdf",
+      "htmlUrl": "worksheets/sophia_practice_set1.html",
+      "fileSize": "1.1 MB"
+    },
+    {
+      "id": "ws-william-01",
+      "targetStudent": "william",
+      "studentBadge": "⚡ William 专属",
+      "title": "【William 专属】四则运算基础复原与乘方本质攻坚卷（第1期）",
+      "timeLimit": "35 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#3b82f6",
+      "targetAreas": "小数四则微特训 · 乘方连乘展开 · 审题三部曲模板 · 巧比分数大小",
+      "description": "针对小学四五年级小数四则运算脱节（0.9+0.1=1.0、5.4÷0.6=9）、乘方连乘手写展开表（杜绝2³=6、3⁴=18）、大题审题“三部曲模板”（完整求出X与Y）、巧比分数大小。内含详细参考答案与评分标准。",
+      "tags": ["小数四则微特训", "乘方连乘展开", "审题三部曲模板", "巧比大小"],
+      "pdfUrl": "pdf/William_Math_Consolidation_Set1.pdf",
+      "htmlUrl": "worksheets/william_practice_set1.html",
+      "fileSize": "1.0 MB"
+    },
+    {
+      "id": "ws-dual-01",
+      "targetStudent": "dual",
+      "studentBadge": "👥 双人合卷",
+      "title": "【双人合卷】协和双语融合班 · 六上期初三轨融合达标测试卷",
+      "timeLimit": "40 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#4f46e5",
+      "targetAreas": "沪教预备第1章收官 · Book A双语考点 · 协和校本思维压轴 · 随堂测验",
+      "description": "沪教预备版第1章《数的整除》全考点精炼（因数倍数、质因数分解、公因数公倍数）+ International Math Book A 英文考点 + 协和校本思维压轴与24点。适合课堂40分钟双人对比测验。附分步评分细则。",
+      "tags": ["三轨教材融合", "随堂40分钟", "数的整除结课", "双语考点"],
+      "pdfUrl": "pdf/SUIS_G6_Integrated_Math_Diagnostic_Test.pdf",
+      "htmlUrl": "worksheets/suis_g6_diagnostic_test.html",
+      "fileSize": "916 KB"
+    },
+    {
+      "id": "ws-flashcards-01",
+      "targetStudent": "all",
+      "studentBadge": "🌟 两人打卡",
+      "title": "【打卡卡包】经典错题变式回访与名师口诀速记卡包",
+      "timeLimit": "每日 5 分钟",
+      "totalPoints": "持续打卡",
+      "badgeColor": "#059669",
+      "targetAreas": "17道典型错题举一反三 · 教师点拨口诀 · 课前5分钟热身 · 周末自主打卡",
+      "description": "精选错题本中的典型错题进行同题型变式，配备朗朗上口的名师记忆口诀与打卡进度栏，适合课前 5 分钟热身或周末自主巩固。附每道题的参考答案与反思提示。",
+      "tags": ["错题变式", "名师口诀", "每日5分钟", "打卡卡包"],
+      "pdfUrl": "pdf/Daily_Error_Review_and_Mnemonics_Cards.pdf",
+      "htmlUrl": "worksheets/error_review_flashcards.html",
+      "fileSize": "523 KB"
+    }
+  ]
 };
 
 if (typeof window !== "undefined") {

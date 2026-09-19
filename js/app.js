@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     errorCategoryFilter: "all",
     errorSearchQuery: "",
     selectedNodeId: null,
+    worksheetFilter: "all",
     graphTransform: { x: 40, y: 30, scale: 0.9 },
     isDragging: false,
     dragStart: { x: 0, y: 0 }
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderGraph();
   renderErrors();
   renderRoadmap();
+  renderWorksheets();
 
   // Try to render KaTeX formulas if library loaded
   renderAllMath();
@@ -91,8 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
           renderTrendChart();
         } else if (targetView === "graph") {
           updateGraphVisuals();
+        } else if (targetView === "worksheets") {
+          renderWorksheets();
         }
         renderAllMath();
+      });
+    });
+
+    // Attach jump-to-worksheets buttons
+    document.querySelectorAll(".jump-to-worksheets-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const wsTab = document.querySelector('.nav-tab[data-view="worksheets"]');
+        if (wsTab) wsTab.click();
       });
     });
   }
@@ -119,6 +131,17 @@ document.addEventListener("DOMContentLoaded", () => {
             targetLabel.innerHTML = "<span style='color: var(--primary);'>👥 双人综合对比图谱</span>";
           }
         }
+
+        // Align worksheet filter with student switcher
+        if (state.currentStudent === "sophia") {
+          state.worksheetFilter = "sophia";
+        } else if (state.currentStudent === "william") {
+          state.worksheetFilter = "william";
+        } else {
+          state.worksheetFilter = "all";
+        }
+        updateWorksheetFilterPills();
+        renderWorksheets();
 
         updateGraphVisuals();
         renderErrors();
@@ -1006,6 +1029,91 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `).join("");
     }
+  }
+
+  // -------------------------------------------------------------
+  // 7. Consolidation Worksheets & PDF Downloads
+  // -------------------------------------------------------------
+  function updateWorksheetFilterPills() {
+    const filterBtns = document.querySelectorAll(".pill-btn[data-ws-filter]");
+    filterBtns.forEach(btn => {
+      if (btn.dataset.wsFilter === state.worksheetFilter) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  }
+
+  function renderWorksheets() {
+    const container = document.getElementById("worksheets-cards-container");
+    if (!container || !data.consolidationWorksheets) return;
+
+    // Attach pill click listeners
+    const filterBtns = document.querySelectorAll(".pill-btn[data-ws-filter]");
+    filterBtns.forEach(btn => {
+      btn.onclick = () => {
+        state.worksheetFilter = btn.dataset.wsFilter;
+        updateWorksheetFilterPills();
+        renderWorksheets();
+      };
+    });
+
+    const filtered = data.consolidationWorksheets.filter(ws => {
+      if (state.worksheetFilter === "all") return true;
+      if (state.worksheetFilter === "sophia") return ws.targetStudent === "sophia";
+      if (state.worksheetFilter === "william") return ws.targetStudent === "william";
+      if (state.worksheetFilter === "dual") return ws.targetStudent === "dual";
+      return true;
+    });
+
+    container.innerHTML = filtered.map(ws => `
+      <div class="card" style="border-top: 4px solid ${ws.badgeColor}; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s ease; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+              <span class="tag" style="background: ${ws.badgeColor}15; color: ${ws.badgeColor}; border: 1px solid ${ws.badgeColor}40; font-weight: 700; font-size: 12px;">
+                ${ws.studentBadge}
+              </span>
+              <span class="tag" style="background: #f1f5f9; color: var(--text-muted); font-size: 11.5px;">
+                ⏱️ 建议用时: ${ws.timeLimit}
+              </span>
+              <span class="tag" style="background: #f1f5f9; color: var(--text-muted); font-size: 11.5px;">
+                💯 满分: ${ws.totalPoints} 分
+              </span>
+            </div>
+            <span style="font-size: 12px; color: var(--text-muted); font-weight: 700; white-space: nowrap;">
+              📦 ${ws.fileSize}
+            </span>
+          </div>
+
+          <h3 style="font-size: 17px; font-weight: 800; color: var(--text-main); margin: 6px 0 8px 0; line-height: 1.4;">
+            ${ws.title}
+          </h3>
+
+          <div style="font-size: 12.5px; color: var(--primary); font-weight: 700; margin-bottom: 10px; line-height: 1.4;">
+            🎯 核心攻坚考点：${ws.targetAreas}
+          </div>
+
+          <p style="font-size: 13px; color: var(--text-sub); line-height: 1.65; margin-bottom: 14px;">
+            ${ws.description}
+          </p>
+
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+            ${ws.tags.map(t => `<span style="font-size: 11.5px; padding: 2px 8px; background: rgba(0,0,0,0.04); border-radius: 4px; color: var(--text-muted); font-weight: 500;">#${t}</span>`).join("")}
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px; margin-top: auto;">
+          <a href="${ws.pdfUrl}" download class="pill-btn active" style="flex: 1; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; font-weight: 700; background: ${ws.badgeColor}; color: #fff; border: none; border-radius: var(--radius-full);">
+            <span>📥</span> 直接下载可打印 PDF
+          </a>
+          <a href="${ws.htmlUrl}" target="_blank" class="pill-btn" style="text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; font-weight: 600; border-radius: var(--radius-full);">
+            <span>🖨️</span> 在线预览打印
+          </a>
+        </div>
+      </div>
+    `).join("");
   }
 
   // Helper: Escape HTML

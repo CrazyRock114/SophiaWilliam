@@ -58,6 +58,9 @@
       <button class="nav-tab" data-view="roadmap">
         <span>🎯</span> 教学路线与专属干预方案
       </button>
+      <button class="nav-tab" data-view="worksheets">
+        <span>📥</span> 针对性练习与 PDF 下载 (<span id="ws-count-badge">4</span>)
+      </button>
     </nav>
   </header>
 
@@ -374,6 +377,55 @@
         </div>
 
       </div>
+
+      <!-- Quick Jump Banner to PDF Downloads -->
+      <div class="card" style="margin-top: 24px; background: linear-gradient(135deg, rgba(79, 70, 229, 0.06) 0%, rgba(236, 72, 153, 0.06) 100%); border: 1.5px solid var(--primary);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+              <span>📥</span> 已生成配套可打印针对性练习卷（含完整分步答案解析与 A4 矢量 PDF）
+            </div>
+            <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+              基于上述针对性方案深度定制：Sophia 概念严谨卷、William 四则与乘方攻坚卷、双人期初达标卷、经典错题打卡卡包。
+            </div>
+          </div>
+          <button class="pill-btn active jump-to-worksheets-btn" style="padding: 9px 20px; font-weight: 700; font-size: 13.5px; background: var(--primary); color: #fff; border: none; border-radius: var(--radius-full); cursor: pointer;">
+            前往下载中心查看全部试卷与 PDF →
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 5: CONSOLIDATION WORKSHEETS & PDF DOWNLOADS -->
+    <section id="view-worksheets" class="view-panel">
+      
+      <!-- Top Banner & Filters -->
+      <div class="card" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%); border-left: 4px solid var(--primary);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div class="card-subtitle">精准教学支持 · 赋能课后自主训练</div>
+            <h2 style="font-size: 20px; font-weight: 800; color: var(--text-main); margin: 4px 0;">
+              📥 针对性巩固特训 · 可打印 A4 练习卷与 PDF 下载中心
+            </h2>
+            <div style="font-size: 13px; color: var(--text-muted); max-width: 700px; line-height: 1.6;">
+              针对 Sophia 与 William 历史 17 节课堂中的薄弱点定制。采用标准 A4 印刷版式、KaTeX 国际标准数学公式高清排版，预留规范答题空间与双栏草稿对齐框，并<strong>附有完整分步解析与名师口诀速记</strong>。支持一键直接下载 PDF 或在线高清打印。
+            </div>
+          </div>
+
+          <div class="graph-control-bar" style="margin: 0; background: rgba(255,255,255,0.7);">
+            <span class="filter-label">试卷分类:</span>
+            <button class="pill-btn active" data-ws-filter="all">全部练习 (4)</button>
+            <button class="pill-btn" data-ws-filter="sophia">🌸 Sophia 专属 (1)</button>
+            <button class="pill-btn" data-ws-filter="william">⚡ William 专属 (1)</button>
+            <button class="pill-btn" data-ws-filter="dual">👥 双人合卷 (1)</button>
+            <button class="pill-btn" data-ws-filter="all">🌟 两人打卡包 (1)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Worksheets Container Grid -->
+      <div id="worksheets-cards-container" class="grid-2" style="gap: 20px;"></div>
 
     </section>
 
