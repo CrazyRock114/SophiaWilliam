@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Sophia Exclusive] Mathematical Conceptual Rigor & Error Elimination Worksheet (Set 1)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13.5px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #ec4899;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(236,72,153,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #db2777; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .school-title {
+      font-size: 14px;
+      color: #64748b;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 8px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #ec4899;
+      padding: 6px 12px;
+      font-size: 14.5px;
+      font-weight: 700;
+      margin: 18px 0 12px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+    }
+    .question {
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .q-desc {
+      color: #64748b;
+      font-size: 12.5px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 52px;
+      padding: 8px;
+      margin-top: 6px;
+    }
+    .answer-box-large {
+      min-height: 95px;
+    }
+    .double-column-draft {
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .calc-col {
+      flex: 3;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 8px;
+      min-height: 100px;
+    }
+    .draft-col {
+      flex: 2;
+      border: 1px dashed #f43f5e;
+      background: #fff1f2;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 12px;
+      color: #9f1239;
+      min-height: 100px;
+    }
+    .col-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: #64748b;
+    }
+    .number-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      margin: 8px 0;
+    }
+    .number-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 36px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-weight: 700;
+      background: #fff;
+    }
+    .fill-blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1.5px solid #0f172a;
+      text-align: center;
+      padding: 0 4px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .answer-key-section {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 24px;
+    }
+    .answer-key-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .tip-box {
+      background: #eff6ff;
+      border-left: 3px solid #3b82f6;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #1e40af;
+      margin-bottom: 12px;
+      border-radius: 0 4px 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ Print Worksheet (PDF)</button>
+
+  <div class="paper-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="school-title">Shanghai United International School (Hongqiao) · G6 Integrated Track Math</div>
+      <div class="paper-title">[Sophia Exclusive] Conceptual Rigor & Careless Mistake Elimination (Set 1)</div>
+      <div class="meta-box">
+        <div>Name: <span class="fill-blank" style="min-width: 80px;">Sophia</span></div>
+        <div>Target: <span class="target-badge">🌸 Focus: Square Numbers / Fraction Expansion / Draft Alignment</span></div>
+        <div>Time: 30 Mins</div>
+        <div>Total: 100 Pts</div>
+        <div>Score: _______</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Teacher's Key Reminders (Read before starting):</strong><br>
+      ① <strong>Square Numbers:</strong> Must be the product of two <em>identical integer twin factors</em> (e.g. $3 \times 3 = 9$). A rectangle $2 \times 3 = 6$ is NOT a square number!<br>
+      ② <strong>Area vs Side Length:</strong> The side length of a square with area $A$ is $\sqrt{A}$. Never divide the area by 2!<br>
+      ③ <strong>Fractions:</strong> When multiplying the denominator to find a common denominator, you MUST multiply the numerator by the exact same number!<br>
+      ④ <strong>Two-Column Work:</strong> Always show vertical calculation steps in the right scratch column to prevent impulsive arithmetic slips like $18+5=90$.
+    </div>
+
+    <!-- PART 1: CONCEPTUAL RIGOR -->
+    <div class="section-title">
+      <span>Section 1: Conceptual Precision & True Meaning (5 pts each, 25 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. Circle all the <strong>Square Numbers (Perfect Squares)</strong> below, and write their base square representations (e.g. $16 = 4^2$):</div>
+      <div class="number-grid">
+        <div class="number-item">1</div>
+        <div class="number-item">4</div>
+        <div class="number-item">6</div>
+        <div class="number-item">9</div>
+        <div class="number-item">12</div>
+        <div class="number-item">16</div>
+        <div class="number-item">18</div>
+        <div class="number-item">24</div>
+        <div class="number-item">25</div>
+        <div class="number-item">36</div>
+        <div class="number-item">48</div>
+        <div class="number-item">49</div>
+        <div class="number-item">64</div>
+        <div class="number-item">72</div>
+        <div class="number-item">81</div>
+      </div>
+      <div class="q-desc">Your recorded square numbers with their base representations:</div>
+      <div class="answer-box">
+        Example: $16 = 4^2$; ____________________________________________________________________________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. [True or False Reasoning] A student argues: <em>"Because $6 = 2 \times 3$, it is the product of two integers, so 6 must be a square number."</em> Is this statement correct? Explain your reasoning in 1-2 sentences:</div>
+      <div class="answer-box">
+        Judgment: __________ (True / False)<br>
+        Reason: ________________________________________________________________________________________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. [Geometry Area Reversal] A square has an area of $36\text{ cm}^2$.</div>
+      <div class="q-desc">(a) What is the side length of this square? (Show your reasoning; DO NOT divide by 2)</div>
+      <div class="q-desc">(b) What is the perimeter of this square?</div>
+      <div class="answer-box">
+        (a) Side length = __________________, because (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br>
+        (b) Perimeter = __________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. A rectangle has length $8\text{ cm}$ and width $2\text{ cm}$.</div>
+      <div class="q-desc">(a) Find its area. (b) Can this rectangle be reshaped into a square with the exact same area? If yes, what is the side length of the square?</div>
+      <div class="answer-box">
+        (a) Rectangle area = __________________<br>
+        (b) Square side length = __________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. [AMC8 Focus · Prime Factors and Powers] The integer $180$ is multiplied by a positive integer $k$ to give a perfect square. Find the smallest possible value of $k$.</div>
+      <div class="q-desc">Hint: Prime factorize $180 = 2^a \times 3^b \times 5^c$. In a perfect square, all prime factor exponents must be EVEN!</div>
+      <div class="answer-box-large">
+        Prime factorization: $180 = $__________________________________________<br><br>
+        To make all exponents even, the missing factor $k = $___________________________
+      </div>
+    </div>
+
+    <!-- PART 2: FRACTIONS EXPANSION -->
+    <div class="section-title">
+      <span>Section 2: Equivalent Fractions & Common Denominators (5 pts each, 25 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. [Dual-Sync Expansion] According to the fundamental property of fractions, the numerator and denominator MUST be multiplied by the same non-zero number. Fill in the blanks:</div>
+      <div style="padding: 8px 12px; background: #f8fafc; border-radius: 6px;">
+        (a) $\dfrac{3}{4} = \dfrac{3 \times \underline{\quad}}{4 \times 5} = \dfrac{\underline{\quad}}{20}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (b) $\dfrac{2}{5} = \dfrac{2 \times \underline{\quad}}{5 \times 4} = \dfrac{\underline{\quad}}{20}$<br><br>
+        (c) Therefore: $\dfrac{3}{4} + \dfrac{2}{5} = \dfrac{\underline{\quad}}{20} + \dfrac{\underline{\quad}}{20} = \dfrac{\underline{\quad}}{20} = \underline{\quad}\dfrac{\underline{\quad}}{20}$
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">7. [Error Diagnosis & Correction] A student solved the following subtraction:</div>
+      <div style="background: #fff1f2; border: 1px solid #fecdd3; padding: 6px 12px; border-radius: 4px; color: #9f1239;">
+        Mistake: $\dfrac{5}{6} - \dfrac{1}{4} = \dfrac{5 - 1}{12} = \dfrac{4}{12} = \dfrac{1}{3}$
+      </div>
+      <div class="q-desc">Point out the conceptual error and show the correct step-by-step calculation:</div>
+      <div class="answer-box-large">
+        Error: ____________________________________________________________________________________<br><br>
+        Correct step-by-step solution:<br>
+        $\dfrac{5}{6} - \dfrac{1}{4} =$
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">8. Evaluate each expression below (Show full common denominator steps; NO skipping):</div>
+      <div class="double-column-draft">
+        <div class="calc-col">
+          <div class="col-title">Formal Solution (Left Column)</div>
+          (a) $\dfrac{5}{8} + \dfrac{1}{6} = $
+        </div>
+        <div class="draft-col">
+          <div class="col-title">Scratch Work (Right Column)</div>
+          Find $\text{LCM}[8, 6]$:<br><br>
+          $8 = 2^3$<br>
+          $6 = 2 \times 3$<br>
+          $\text{LCM}[8, 6] = $
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="double-column-draft">
+        <div class="calc-col">
+          <div class="col-title">Formal Solution (Left Column)</div>
+          (b) $2\dfrac{1}{3} - 1\dfrac{3}{4} = $
+        </div>
+        <div class="draft-col">
+          <div class="col-title">Scratch Work (Right Column)</div>
+          Mixed to improper:<br>
+          $2\dfrac{1}{3} = \dfrac{\quad}{3}$<br><br>
+          $1\dfrac{3}{4} = \dfrac{\quad}{4}$
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">9. [Smart Fraction Comparison] Compare $\dfrac{11}{13}$ and $\dfrac{15}{17}$ (Hint: DO NOT cross-multiply large numbers; use the "distance to 1" benchmark method).</div>
+      <div class="answer-box">
+        $1 - \dfrac{11}{13} = $___________________, $1 - \dfrac{15}{17} = $___________________<br>
+        Because (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;), therefore $\dfrac{11}{13}$ _____ $\dfrac{15}{17}$
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PART 3: TWO-COLUMN WORK -->
+    <div class="section-title">
+      <span>Section 3: Two-Column Scratch Work & Anti-Slip Practice (10 pts each, 20 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="tip-box">
+      ⚠️ <strong>Rule:</strong> The left column must contain the structured algebraic steps. The right column <strong>must</strong> retain vertical scratch calculations. Skipping scratch work deducts 4 points!
+    </div>
+
+    <div class="question">
+      <div class="q-text">10. Evaluate: $18 + 5 \times (14 - 8) \div 3$</div>
+      <div class="double-column-draft">
+        <div class="calc-col" style="min-height: 120px;">
+          <div class="col-title">Step-by-Step Solution</div>
+          $= $ <br><br><br><br>
+          $= $
+        </div>
+        <div class="draft-col" style="min-height: 120px;">
+          <div class="col-title">Scratch Verification Column</div>
+          ① Parentheses: $14 - 8 = $<br>
+          ② Multiplication: $5 \times (\quad) = $<br>
+          ③ Division: $(\quad) \div 3 = $<br>
+          ④ Final addition (Beware of impulsive $18+5$ slip!):<br>
+          $18 + (\quad) = $
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">11. Evaluate: $4.8 \times 2.5 + 5.2 \times 2.5$ using the distributive property.</div>
+      <div class="double-column-draft">
+        <div class="calc-col" style="min-height: 110px;">
+          <div class="col-title">Distributive Property Steps</div>
+          $= $
+        </div>
+        <div class="draft-col" style="min-height: 110px;">
+          <div class="col-title">Scratch Column</div>
+          $4.8 + 5.2 = $<br><br>
+          $10 \times 2.5 = $
+        </div>
+      </div>
+    </div>
+
+    <!-- PART 4: EXTENSION PROBLEMS -->
+    <div class="section-title">
+      <span>Section 4: SUIS Integrated Track Challenge Problems (15 pts each, 30 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">12. [Divisibility & Modulo Dual-Variable Problem] The six-digit number $\overline{91X93Y}$ is divisible by both $8$ and $9$ (i.e. divisible by $72$). Find all possible values of $X$ and $Y$.</div>
+      <div class="q-desc">Follow the standard three-step pipeline. DO NOT stop after solving for $Y$!</div>
+      <div class="answer-box-large" style="min-height: 160px;">
+        <strong>Step 1 (Divisibility by 8 via last 3 digits):</strong><br>
+        For a number to be divisible by 8, its last 3 digits $\overline{93Y}$ must be divisible by 8.<br>
+        $93Y = 930 + Y = 8 \times 116 + (2 + Y)$.<br>
+        Since $2 + Y$ must be a multiple of 8 and $Y \in \{0, 1, \dots, 9\}$, we have $Y = $ ___________.<br><br>
+        <strong>Step 2 (Divisibility by 9 via sum of digits):</strong><br>
+        Now the number is $\overline{91X93Y}$.<br>
+        The sum of digits $S = 9 + 1 + X + 9 + 3 + (\quad) = $ ____________________.<br>
+        For $S$ to be divisible by 9, $X = $ ___________.<br><br>
+        <strong>Step 3 (Final Answer):</strong><br>
+        Answer: $X = $ ___________, $Y = $ ___________, and the six-digit number is _____________________.
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">13. [Paper Folding & Exponential Growth Model] A sheet of paper has thickness $0.1\text{ mm}$. Suppose it can be folded in half repeatedly.</div>
+      <div class="q-desc">(a) Folded 1 time, thickness is $0.1 \times 2 = 0.2\text{ mm}$. Folded 3 times, number of layers is $2^3 = $ _______, thickness is _______ $\text{mm}$.</div>
+      <div class="q-desc">(b) If folded 10 times, what will the thickness be in millimeters and in meters? (Given $2^{10} = 1024$)</div>
+      <div class="answer-box-large">
+        (a) Layers after 3 folds: $2^3 = $ ______________; Thickness = $0.1 \times 2^3 = $ _____________ $\text{mm}$.<br><br>
+        (b) Thickness after 10 folds:<br>
+        $0.1\text{ mm} \times 2^{10} = 0.1 \times 1024 = $ __________________ $\text{mm}$ = _________________ $\text{m}$.
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">📌 [Sophia Set 1] Answer Key & Scoring Guide (For Review)</div>
+
+      <div style="font-size: 13px; line-height: 1.8;">
+        <strong>Section 1: Conceptual Precision (25 pts)</strong><br>
+        1. (8 pts) Square numbers: $1=1^2, 4=2^2, 9=3^2, 16=4^2, 25=5^2, 36=6^2, 49=7^2, 64=8^2, 81=9^2$. Note: $6, 12, 18, 24, 48, 72$ must NOT be circled!<br>
+        2. (5 pts) False (2 pts). Reason: A square number must be the product of two identical integer factors ($a \times a$). For $6 = 2 \times 3$, factors 2 and 3 are different (3 pts).<br>
+        3. (5 pts) (a) $6\text{ cm}$ (2 pts), because $6 \times 6 = 36$ (1 pt). [DO NOT write $36 \div 2 = 18$]. (b) Perimeter $= 4 \times 6 = 24\text{ cm}$ (2 pts).<br>
+        4. (5 pts) (a) Area $= 8 \times 2 = 16\text{ cm}^2$ (2 pts). (b) Yes (1 pt), side length $= 4\text{ cm}$, because $4^2 = 16$ (2 pts).<br>
+        5. (5 pts) $180 = 2^2 \times 3^2 \times 5^1$ (2 pts). To make all exponents even, we need one more 5, so $k = 5$ (3 pts).<br><br>
+
+        <strong>Section 2: Equivalent Fractions (25 pts)</strong><br>
+        6. (5 pts) (a) $\dfrac{3 \times 5}{4 \times 5} = \dfrac{15}{20}$; (b) $\dfrac{2 \times 4}{5 \times 4} = \dfrac{8}{20}$; (c) $\dfrac{15}{20} + \dfrac{8}{20} = \dfrac{23}{20} = 1\dfrac{3}{20}$.<br>
+        7. (5 pts) Error: Only the denominator was multiplied; the numerator was left unchanged (2 pts). Correct: $\dfrac{10}{12} - \dfrac{3}{12} = \dfrac{7}{12}$ (3 pts).<br>
+        8. (10 pts) (a) $\text{LCM}[8,6]=24$; Expression $= \dfrac{15}{24} + \dfrac{4}{24} = \dfrac{19}{24}$ (5 pts). (b) Expression $= \dfrac{7}{3} - \dfrac{7}{4} = \dfrac{28}{12} - \dfrac{21}{12} = \dfrac{7}{12}$ (5 pts).<br>
+        9. (5 pts) $1 - \dfrac{11}{13} = \dfrac{2}{13}$, $1 - \dfrac{15}{17} = \dfrac{2}{17}$. Since $\dfrac{2}{13} > \dfrac{2}{17}$, the distance to 1 is larger, so $\dfrac{11}{13} < \dfrac{15}{17}$.<br><br>
+
+        <strong>Section 3: Two-Column Scratch Work (20 pts)</strong><br>
+        10. (10 pts) Expression $= 18 + 5 \times 6 \div 3 = 18 + 30 \div 3 = 18 + 10 = 28$. Full scratch work earns full credit.<br>
+        11. (10 pts) Expression $= (4.8 + 5.2) \times 2.5 = 10 \times 2.5 = 25$.<br><br>
+
+        <strong>Section 4: Extension Problems (30 pts)</strong><br>
+        12. (15 pts) Step 1: $Y = 6$ (5 pts); Step 2: Sum of digits $S = 9+1+X+9+3+6 = 28+X$. For $S$ to be divisible by 9, $28+X=36 \implies X=8$ (7 pts); Step 3: $X=8, Y=6$, number is $918936$ (3 pts).<br>
+        13. (15 pts) (a) $8$ layers (2 pts), $0.8\text{ mm}$ (3 pts). (b) Thickness $= 0.1 \times 1024 = 102.4\text{ mm} = 0.1024\text{ m}$ (10 pts).
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

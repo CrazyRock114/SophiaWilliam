@@ -42,6 +42,12 @@
           <span>⚡</span> William
         </button>
       </div>
+      
+      <!-- Global Language Switcher -->
+      <div class="lang-switcher" style="display: flex; gap: 4px; background: rgba(0,0,0,0.06); padding: 4px; border-radius: 20px; align-items: center; margin-left: auto;">
+        <button class="pill-btn active lang-btn" data-lang="en" style="font-size: 12px; padding: 4px 10px; font-weight: 700; cursor: pointer;">🇬🇧 English (Default)</button>
+        <button class="pill-btn lang-btn" data-lang="cn" style="font-size: 12px; padding: 4px 10px; font-weight: 700; cursor: pointer;">🇨🇳 中文版 (备用)</button>
+      </div>
     </div>
 
     <!-- Navigation Tabs -->
@@ -50,7 +56,7 @@
         <span>📊</span> 学情全貌与双人对比
       </button>
       <button class="nav-tab" data-view="graph">
-        <span>🕸️</span> 三轨融合知识图谱
+        <span>🕸️</span> 三轨融合知识图谱 (<span id="graph-node-count-badge">36</span>)
       </button>
       <button class="nav-tab" data-view="errors">
         <span>📕</span> 经典错题与深度解析库 (<span id="error-count-badge">17</span>)
@@ -59,7 +65,7 @@
         <span>🎯</span> 教学路线与专属干预方案
       </button>
       <button class="nav-tab" data-view="worksheets">
-        <span>📥</span> 针对性练习与 PDF 下载 (<span id="ws-count-badge">4</span>)
+        <span>📥</span> 针对性练习与 PDF 下载 (<span id="ws-count-badge">8</span>)
       </button>
     </nav>
   </header>
@@ -138,11 +144,11 @@
             </div>
             <div class="stat-item">
               <div class="stat-label">已掌握知识点</div>
-              <div class="stat-value" style="color: var(--mastered);" id="sophia-mastered-count">8 / 20</div>
+              <div class="stat-value" style="color: var(--mastered);" id="sophia-mastered-count">21 / 36</div>
             </div>
             <div class="stat-item">
               <div class="stat-label">待攻坚知识点</div>
-              <div class="stat-value" style="color: var(--needs-work);" id="sophia-needs-count">3 / 20</div>
+              <div class="stat-value" style="color: var(--needs-work);" id="sophia-needs-count">3 / 36</div>
             </div>
           </div>
 
@@ -179,11 +185,11 @@
             </div>
             <div class="stat-item">
               <div class="stat-label">已掌握知识点</div>
-              <div class="stat-value" style="color: var(--mastered);" id="william-mastered-count">2 / 20</div>
+              <div class="stat-value" style="color: var(--mastered);" id="william-mastered-count">1 / 36</div>
             </div>
             <div class="stat-item">
               <div class="stat-label">亟待攻坚知识点</div>
-              <div class="stat-value" style="color: var(--needs-work);" id="william-needs-count">11 / 20</div>
+              <div class="stat-value" style="color: var(--needs-work);" id="william-needs-count">18 / 36</div>
             </div>
           </div>
 
@@ -258,13 +264,13 @@
       <!-- Graph Controls -->
       <div class="graph-control-bar">
         <div class="filter-group">
-          <span class="filter-label">知识模块筛选:</span>
-          <button class="pill-btn active" data-domain="all">全部模块 (20)</button>
-          <button class="pill-btn" data-domain="number_theory">🔢 数的整除 (7)</button>
-          <button class="pill-btn" data-domain="fractions">➗ 分数运算 (5)</button>
-          <button class="pill-btn" data-domain="place_value">🧮 数位与乘方 (4)</button>
-          <button class="pill-btn" data-domain="ratios_percent">📊 比与比例 (2)</button>
-          <button class="pill-btn" data-domain="advanced_topics">🧩 思维综合 (2)</button>
+          <span class="filter-label">学段与核心模块筛选:</span>
+          <button class="pill-btn active" data-domain="all">全部知识模块 (36)</button>
+          <button class="pill-btn" data-domain="foundations_arithmetic">🧱 G3-G4 四则基石 (4)</button>
+          <button class="pill-btn" data-domain="decimals_percentages">🔢 G4-G5 小数数位 (5)</button>
+          <button class="pill-btn" data-domain="fractions">➗ G4-G5 分数运算 (6)</button>
+          <button class="pill-btn" data-domain="number_theory_powers">⚡ G5-G6 数论乘方 (14)</button>
+          <button class="pill-btn" data-domain="geometry_applications">📐 G3-G6 几何应用 (7)</button>
         </div>
 
         <div class="legend-bar">
@@ -402,24 +408,34 @@
       
       <!-- Top Banner & Filters -->
       <div class="card" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%); border-left: 4px solid var(--primary);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-          <div>
-            <div class="card-subtitle">精准教学支持 · 赋能课后自主训练</div>
-            <h2 style="font-size: 20px; font-weight: 800; color: var(--text-main); margin: 4px 0;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+          <div style="flex: 1; min-width: 320px;">
+            <div class="card-subtitle" id="ws-banner-subtitle">精准教学支持 · 赋能课后自主训练 (Default: English Version)</div>
+            <h2 style="font-size: 20px; font-weight: 800; color: var(--text-main); margin: 4px 0;" id="ws-banner-title">
               📥 针对性巩固特训 · 可打印 A4 练习卷与 PDF 下载中心
             </h2>
-            <div style="font-size: 13px; color: var(--text-muted); max-width: 700px; line-height: 1.6;">
-              针对 Sophia 与 William 历史 17 节课堂中的薄弱点定制。采用标准 A4 印刷版式、KaTeX 国际标准数学公式高清排版，预留规范答题空间与双栏草稿对齐框，并<strong>附有完整分步解析与名师口诀速记</strong>。支持一键直接下载 PDF 或在线高清打印。
+            <div style="font-size: 13px; color: var(--text-muted); max-width: 760px; line-height: 1.6;" id="ws-banner-desc">
+              覆盖小学三四五六年级核心薄弱点与初中衔接。<strong>默认全英文排版（国际化融合班标准）</strong>，提供中文对照备用。采用标准 A4 印刷版式、KaTeX 国际数学公式高清排版，附完整分步答案解析与口诀。支持一键下载双语矢量 PDF 或在线预览。
             </div>
           </div>
 
-          <div class="graph-control-bar" style="margin: 0; background: rgba(255,255,255,0.7);">
-            <span class="filter-label">试卷分类:</span>
-            <button class="pill-btn active" data-ws-filter="all">全部练习 (4)</button>
-            <button class="pill-btn" data-ws-filter="sophia">🌸 Sophia 专属 (1)</button>
-            <button class="pill-btn" data-ws-filter="william">⚡ William 专属 (1)</button>
-            <button class="pill-btn" data-ws-filter="dual">👥 双人合卷 (1)</button>
-            <button class="pill-btn" data-ws-filter="all">🌟 两人打卡包 (1)</button>
+          <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
+            <!-- Language Switcher within Worksheets Center -->
+            <div style="display: flex; gap: 6px; align-items: center; background: #fff; padding: 4px 8px; border: 1.5px solid var(--primary); border-radius: 20px; box-shadow: 0 2px 8px rgba(79, 70, 229, 0.15);">
+              <span style="font-size: 11.5px; font-weight: 700; color: var(--primary);">🌐 默认语言:</span>
+              <button class="pill-btn active ws-lang-btn" data-lang="en" style="font-size: 12px; padding: 4px 12px; font-weight: 700; border-radius: 14px; cursor: pointer;">🇬🇧 English (Default)</button>
+              <button class="pill-btn ws-lang-btn" data-lang="cn" style="font-size: 12px; padding: 4px 12px; font-weight: 700; border-radius: 14px; cursor: pointer;">🇨🇳 中文版 (备用)</button>
+            </div>
+
+            <!-- Worksheet Category Filter -->
+            <div class="graph-control-bar" style="margin: 0; background: rgba(255,255,255,0.85); padding: 4px 10px;">
+              <span class="filter-label">分类:</span>
+              <button class="pill-btn active" data-ws-filter="all">全部 (8套)</button>
+              <button class="pill-btn" data-ws-filter="sophia">🌸 Sophia (1)</button>
+              <button class="pill-btn" data-ws-filter="william">⚡ William (3)</button>
+              <button class="pill-btn" data-ws-filter="dual">👥 双人合卷/专练 (3)</button>
+              <button class="pill-btn" data-ws-filter="all_deck">🌟 每日打卡 (1)</button>
+            </div>
           </div>
         </div>
       </div>

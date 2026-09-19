@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>【William 专属】四则运算基础复原与乘方本质攻坚卷（第1期）</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13.5px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(59,130,246,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #2563eb; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .school-title {
+      font-size: 14px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 8px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #3b82f6;
+      padding: 6px 12px;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 18px 0 12px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+    }
+    .tip-box {
+      background: #eff6ff;
+      border-left: 3px solid #3b82f6;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #1e40af;
+      margin-bottom: 12px;
+      border-radius: 0 4px 4px 0;
+    }
+    .question {
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .q-desc {
+      color: #64748b;
+      font-size: 12.5px;
+      margin-bottom: 6px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .calc-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .calc-input {
+      display: inline-block;
+      min-width: 60px;
+      height: 26px;
+      border-bottom: 1.5px solid #0f172a;
+      text-align: center;
+    }
+    .power-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    .power-table th, .power-table td {
+      border: 1px solid #cbd5e1;
+      padding: 8px;
+      text-align: center;
+      font-size: 13px;
+    }
+    .power-table th {
+      background: #f1f5f9;
+      font-weight: 700;
+    }
+    .template-box {
+      border: 2px solid #3b82f6;
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 8px;
+    }
+    .step-badge {
+      background: #3b82f6;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 50px;
+      padding: 8px;
+      margin-top: 6px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .answer-key-section {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 24px;
+    }
+    .answer-key-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ 打印本卷 (Print PDF)</button>
+
+  <div class="paper-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="school-title">上海协和双语学校（虹桥校区）六年级融合班 · 数学个性化针对特训</div>
+      <div class="paper-title">【William 专属】四则运算基础复原与乘方本质攻坚卷（第1期）</div>
+      <div class="meta-box">
+        <div>姓名：<span style="display:inline-block; min-width:80px; border-bottom: 1.5px solid #0f172a; text-align:center;">William</span></div>
+        <div>目标学生：<span class="target-badge">⚡ 针对：小数四则基础 / 乘方连乘展开 / 大题三部曲审题</span></div>
+        <div>建议用时：35 分钟</div>
+        <div>满分：100 分</div>
+        <div>得分：_______</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>名师点拨口诀（William 动笔前大声朗读一遍）：</strong><br>
+      ① <strong>乘方绝不是乘法：</strong> 看到底数和右上角指数，必须先写成“自己乘自己”的连乘展开式！$2^3 = 2 \times 2 \times 2 = 8$（算成 6 是大忌）！<br>
+      ② <strong>小数加法数位对齐：</strong> $0.9 + 0.1 = 1.0$，十个 $0.1$ 进位变整数 $1$！<br>
+      ③ <strong>小数除法同移小数点：</strong> $5.4 \div 0.6$，被除数和除数同时乘 10 变成 $54 \div 6 = 9$！<br>
+      ④ <strong>大题三部曲完整写完：</strong> 算完 $Y$ 决不能扔笔，必须写完第 2 步求 $X$，有始有终才交卷！
+    </div>
+
+    <!-- PART 1: 每日 5 分钟四则运算 -->
+    <div class="section-title">
+      <span>一、 每日 5 分钟小数四则运算微特训卡（每题 2.5 分，共 30 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="q-desc">请认真观察运算符号与小数点位置，直接写出得数（限时 6 分钟）：</div>
+    <div class="grid-3">
+      <div class="calc-card"><span>(1) $0.9 + 0.1 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(2) $3.8 + 0.2 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(3) $1 - 0.25 =$</span><span class="calc-input"></span></div>
+      
+      <div class="calc-card"><span>(4) $5 - 0.8 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(5) $5.4 \div 0.6 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(6) $30 \div 0.5 =$</span><span class="calc-input"></span></div>
+      
+      <div class="calc-card"><span>(7) $0.36 \div 0.09 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(8) $2.5 \times 0.4 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(9) $1.2 \times 0.5 =$</span><span class="calc-input"></span></div>
+      
+      <div class="calc-card"><span>(10) $0.7 \times 0.8 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(11) $4.2 \div 0.7 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(12) $100 \times 0.035 =$</span><span class="calc-input"></span></div>
+    </div>
+
+    <!-- PART 2: 乘方连乘手写展开打卡卡 -->
+    <div class="section-title">
+      <span>二、 乘方连乘手写展开与本质特训（共 25 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 【强制手写连乘展开表】（每空 1 分，共 15 分）</div>
+      <div class="q-desc">⚠️ 必须把“连乘展开过程”写在中间栏，禁止直接跳步写结果！</div>
+      <table class="power-table">
+        <thead>
+          <tr>
+            <th style="width: 20%;">幂的形式</th>
+            <th style="width: 50%;">连乘展开式（底数自己乘自己）</th>
+            <th style="width: 30%;">最终计算结果</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$2^1$</td>
+            <td>$2$</td>
+            <td>$2$</td>
+          </tr>
+          <tr>
+            <td>$2^2$</td>
+            <td>$2 \times 2$</td>
+            <td>$4$</td>
+          </tr>
+          <tr>
+            <td>$2^3$</td>
+            <td>$2 \times 2 \times 2$</td>
+            <td><strong>8</strong> （⚠️ 绝不是 6！）</td>
+          </tr>
+          <tr>
+            <td>$2^4$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$2^5$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$3^2$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$3^3$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$3^4$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$4^3$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$5^3$</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【乘方与乘法配对辨析】在横线上填写“$>$”、“$<$”或“$=$”：（每题 2 分，共 6 分）</div>
+      <div class="grid-3" style="margin-top: 8px;">
+        <div class="calc-card"><span>$2^3$ _____ $2 \times 3$</span></div>
+        <div class="calc-card"><span>$3^4$ _____ $3 \times 4$</span></div>
+        <div class="calc-card"><span>$5^2$ _____ $5 \times 2$</span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. 【同底数幂相乘辨析】计算 $10^4 \times 10^5$。（4 分）</div>
+      <div class="q-desc">提示：$10^4$ 表示 4 个 10 相乘，$10^5$ 表示 5 个 10 相乘，总共有多少个 10 相乘？是相加还是相乘？</div>
+      <div class="answer-box">
+        $10^4 \times 10^5 = 10^{\underline{\quad} + \underline{\quad}} = 10^{\underline{\quad}}$。<br>
+        （⚠️ 警惕：指数是相加，绝不能算成 $10^{4 \times 5} = 10^{20}$！）
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PART 3: 大题审题三部曲模板特训 -->
+    <div class="section-title">
+      <span>三、 大题审题与书写“三部曲模板”特训（每题 12.5 分，共 25 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="tip-box">
+      📋 <strong>“三部曲解题流水线”规范：</strong><br>
+      <span class="step-badge">第 1 步</span> 圈出已知条件，写出判定定理；<br>
+      <span class="step-badge">第 2 步</span> 分步联立求解，每求出一个未知数在旁边打勾；<br>
+      <span class="step-badge">第 3 步</span> 验算并规范写出“答”。全部做完才算胜利！
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. 【六位数整除压轴题·三部曲满分挑战】</div>
+      <div class="q-desc">六位数 $\overline{91X93Y}$ 能同时被 $8$ 和 $9$ 整除。请严格按下列三部曲写出全部求解过程：</div>
+      
+      <div class="template-box">
+        <div><span class="step-badge">第一步</span> <strong>抓末三位求 Y：</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; color: #334155; margin-top: 4px;">
+          因为六位数能被 8 整除，所以末三位 $\overline{93Y}$ 必须是 8 的倍数。<br>
+          $930 \div 8 = 116 \dots\dots 2$，所以后两位必须加上余数能被 8 整除。<br>
+          $20 + Y$ 是 8 的倍数，在一位数中，$20 + Y = 24$，<br>
+          因此解得：$Y = $ ____________________（✅ 已求出 Y）
+        </div>
+
+        <div style="margin-top: 14px;"><span class="step-badge">第二步</span> <strong>抓各位数字和求 X（William 重点突破：绝不能停笔！）：</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; color: #334155; margin-top: 4px;">
+          此时六位数是 $\overline{91X93\underline{\quad\quad}}$。<br>
+          因为六位数能被 9 整除，所以它的各位数字之和必须是 9 的倍数。<br>
+          数字和 $= 9 + 1 + X + 9 + 3 + (\quad) = $ ____________________<br>
+          因为 $X$ 只能是 0~9 的整数，要使和能被 9 整除，<br>
+          因此解得：$X = $ ____________________（✅ 已求出 X）
+        </div>
+
+        <div style="margin-top: 14px;"><span class="step-badge">第三步</span> <strong>综合写出答案：</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; color: #334155; margin-top: 4px;">
+          答：$X =$ ____________， $Y =$ ____________，这个六位数是 _____________________。
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. 【英数应用题·三部曲应用】</div>
+      <div class="q-desc">Leo cycles at an average speed of $15\text{ km/h}$. He rides for $40\text{ minutes}$. How far does he ride?（小明平均骑车速度为 $15\text{ km/h}$，骑行了 $40$ 分钟，求他骑行的距离）</div>
+      
+      <div class="template-box">
+        <div><span class="step-badge">第一步</span> <strong>找单位与换算：</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; margin-top: 4px;">
+          速度单位是 $\text{km/h}$，时间是 $40\text{ 分钟}$，必须把时间转化为【小时】！<br>
+          时间 $t = 40\text{ 分钟} = \dfrac{40}{60}\text{ 小时} = \dfrac{\underline{\quad}}{\underline{\quad}}\text{ 小时}$。
+        </div>
+
+        <div style="margin-top: 10px;"><span class="step-badge">第二步</span> <strong>列公式计算：</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; margin-top: 4px;">
+          公式：距离 $\text{Distance} = \text{Speed} \times \text{Time}$<br>
+          $S = 15 \times \dfrac{\underline{\quad}}{\underline{\quad}} = $ ____________________ $\text{km}$。
+        </div>
+
+        <div style="margin-top: 10px;"><span class="step-badge">第三步</span> <strong>答题写结论：</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; margin-top: 4px;">
+          答：He rides ____________________ $\text{km}$。
+        </div>
+      </div>
+    </div>
+
+    <!-- PART 4: 巧比分数大小 -->
+    <div class="section-title">
+      <span>四、 巧比分数大小（告别暴力通分）（每题 5 分，共 20 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. 在横线上填入“$>$”或“$<$”，并在下方写出一句话理由：</div>
+      <div class="grid-2">
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          （1） $\dfrac{7}{12}$ ______ $\dfrac{7}{15}$<br>
+          理由（分子相同）：_________________________________
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          （2） $\dfrac{5}{9}$ ______ $\dfrac{7}{9}$<br>
+          理由（分母相同）：_________________________________
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top: 10px;">
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          （3） $\dfrac{13}{15}$ ______ $\dfrac{17}{19}$<br>
+          理由（与 1 比较相差法）：________________________
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          （4） $\dfrac{5}{8}$ ______ $\dfrac{7}{12}$<br>
+          理由（找最小公倍数 24 通分）：___________________
+        </div>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">📌 【William 专属卷】参考答案与评分标准（供批改与反思）</div>
+
+      <div style="font-size: 13px; line-height: 1.8;">
+        <strong>一、 每日 5 分钟小数四则运算微特训（30分，每题2.5分）</strong><br>
+        (1) $1.0$ (或 $1$) &nbsp;&nbsp;&nbsp; (2) $4.0$ (或 $4$) &nbsp;&nbsp;&nbsp; (3) $0.75$ &nbsp;&nbsp;&nbsp; (4) $4.2$ &nbsp;&nbsp;&nbsp; (5) $9$（⚠️ 严禁写成 0.9！） &nbsp;&nbsp;&nbsp; (6) $60$<br>
+        (7) $4$ &nbsp;&nbsp;&nbsp; (8) $1.0$ (或 $1$) &nbsp;&nbsp;&nbsp; (9) $0.6$ &nbsp;&nbsp;&nbsp; (10) $0.56$ &nbsp;&nbsp;&nbsp; (11) $6$ &nbsp;&nbsp;&nbsp; (12) $3.5$<br><br>
+
+        <strong>二、 乘方连乘手写展开与本质特训（25分）</strong><br>
+        1. （每空 1 分，共 14 分）<br>
+        - $2^4 = 2 \times 2 \times 2 \times 2 = 16$<br>
+        - $2^5 = 2 \times 2 \times 2 \times 2 \times 2 = 32$<br>
+        - $3^2 = 3 \times 3 = 9$<br>
+        - $3^3 = 3 \times 3 \times 3 = 27$<br>
+        - $3^4 = 3 \times 3 \times 3 \times 3 = 81$（⚠️ 绝不是 18！）<br>
+        - $4^3 = 4 \times 4 \times 4 = 64$<br>
+        - $5^3 = 5 \times 5 \times 5 = 125$<br>
+        2. （6分） $2^3 > 2 \times 3$（$8 > 6$）； $3^4 > 3 \times 4$（$81 > 12$）； $5^2 > 5 \times 2$（$25 > 10$）。<br>
+        3. （5分） $10^4 \times 10^5 = 10^{4+5} = 10^9$。<br><br>
+
+        <strong>三、 大题审题与书写“三部曲模板”特训（25分）</strong><br>
+        4. （12.5分）<br>
+        第一步：$Y = 6$（4分）；<br>
+        第二步：数字和 $= 9+1+X+9+3+6 = 28+X$。要能被 9 整除，$28+X=36 \implies X=8$（5.5分）；<br>
+        第三步：结论：$X=8, Y=6$，六位数为 $918936$（3分）。<br>
+        5. （12.5分）<br>
+        第一步：时间 $t = \dfrac{40}{60} = \dfrac{2}{3}\text{ 小时}$（4分）；<br>
+        第二步：$S = 15 \times \dfrac{2}{3} = 10\text{ km}$（5.5分）；<br>
+        第三步：答：$10\text{ km}$（3分）。<br><br>
+
+        <strong>四、 巧比分数大小（20分，每题5分）</strong><br>
+        （1） $>$。理由：分子相同，分母越小分数值越大（12份比15份大）。<br>
+        （2） $<$。理由：分母相同，分子越大分数值越大。<br>
+        （3） $<$。理由：$1 - \dfrac{13}{15} = \dfrac{2}{15}$，$1 - \dfrac{17}{19} = \dfrac{2}{19}$。因为 $\dfrac{2}{15} > \dfrac{2}{19}$，差的大本身小。<br>
+        （4） $>$。理由：通分为公分母 24，$\dfrac{5}{8} = \dfrac{15}{24}$，$\dfrac{7}{12} = \dfrac{14}{24}$，因为 $\dfrac{15}{24} > \dfrac{14}{24}$，所以 $\dfrac{5}{8} > \dfrac{7}{12}$。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

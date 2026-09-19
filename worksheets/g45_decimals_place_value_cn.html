@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>【基础专练一】四五年级小数数位、移位除法与百分数攻坚卷</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 14mm 14mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b; line-height: 1.5; font-size: 13.5px; background: #fff; margin: 0; padding: 0;
+    }
+    .no-print {
+      position: fixed; top: 16px; right: 16px; z-index: 999; background: #0284c7; color: #fff;
+      border: none; padding: 10px 18px; border-radius: 20px; font-weight: 700; font-size: 14px;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(2,132,199,0.35); transition: all 0.2s;
+    }
+    .no-print:hover { background: #0369a1; transform: translateY(-1px); }
+    @media print { .no-print { display: none !important; } }
+    .paper-container { max-width: 820px; margin: 0 auto; padding: 10px; }
+    .header { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 16px; }
+    .school-title { font-size: 14px; color: #64748b; letter-spacing: 0.5px; font-weight: 600; }
+    .paper-title { font-size: 19.5px; font-weight: 800; color: #0f172a; margin: 4px 0 8px 0; }
+    .meta-box {
+      display: flex; justify-content: space-between; background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: #334155;
+    }
+    .target-badge {
+      display: inline-block; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;
+      padding: 2px 8px; border-radius: 12px; font-size: 12px;
+    }
+    .section-title {
+      background: #f1f5f9; border-left: 4px solid #0284c7; padding: 6px 12px; font-size: 14.5px;
+      font-weight: 700; margin: 18px 0 12px 0; color: #0f172a; display: flex; justify-content: space-between;
+    }
+    .tip-box {
+      background: #f0f9ff; border-left: 3px solid #0284c7; padding: 8px 12px; font-size: 12px;
+      color: #0369a1; margin-bottom: 12px; border-radius: 0 4px 4px 0;
+    }
+    .question { margin-bottom: 16px; page-break-inside: avoid; }
+    .q-text { font-weight: 600; color: #1e293b; margin-bottom: 6px; }
+    .q-desc { color: #64748b; font-size: 12.5px; margin-bottom: 6px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .calc-card {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 12px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 600;
+    }
+    .calc-input { display: inline-block; min-width: 50px; height: 24px; border-bottom: 1.5px solid #0f172a; text-align: center; }
+    .answer-box { border: 1px dashed #cbd5e1; background: #fafafa; border-radius: 4px; min-height: 50px; padding: 8px; margin-top: 6px; }
+    .page-break { page-break-before: always; }
+    .answer-key-section { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-top: 24px; }
+    .answer-key-title { font-size: 16px; font-weight: 800; color: #0f172a; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px; margin-bottom: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ 打印本卷 (Print PDF)</button>
+
+  <div class="paper-container">
+    <div class="header">
+      <div class="school-title">上海协和双语学校（虹桥校区）六年级融合班 · 小学基础概念补漏特训</div>
+      <div class="paper-title">【基础专练一】四五年级小数数位、移位除法与百分数攻坚卷</div>
+      <div class="meta-box">
+        <div>学生姓名：<span style="display:inline-block; min-width:80px; border-bottom:1.5px solid #0f172a;">&nbsp;</span></div>
+        <div>攻坚重点：<span class="target-badge">⚡ 十位与十分位 / 小数点移动 / 小数除法 / 百分数换算</span></div>
+        <div>建议用时：35 分钟</div>
+        <div>满分：100 分</div>
+        <div>得分：_______</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>核心考点口诀速记：</strong><br>
+      ① <strong>十位与十分位：</strong> 小数点左边是十位（tens），小数点右边第一位是十分位（tenths）！绝不能混淆！<br>
+      ② <strong>小数除法移位：</strong> $5.4 \div 0.6$ 被除数除数同时扩大 10 倍变成 $54 \div 6 = 9$！除以 $0.5$ 相当于乘 2（$30 \div 0.5 = 60$）！<br>
+      ③ <strong>百分数换算：</strong> 小数点向右移动两位加上 $\%$：$0.075 = 7.5\%$（严禁写成 $75\%$ 或 $0.75\%$）！<br>
+      ④ <strong>有效数字：</strong> 前面的 0 都不算有效数字！$0.00397$ 只有 3 位有效数字。
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">
+      <span>一、 数位认知与有效数字（每题 4 分，共 20 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 对于数 $348.529$：</div>
+      <div class="q-desc">
+        （1）在<strong>十位 (tens)</strong> 上的数字是：_________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        （2）在<strong>十分位 (tenths)</strong> 上的数字是：_________<br>
+        （3）在<strong>百分位 (hundredths)</strong> 上的数字是：_________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        （4）数字 9 所代表的数值是：_________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【有效数字与前导零】判断下列各数分别有几位有效数字：</div>
+      <div class="grid-2">
+        <div class="calc-card"><span>(1) $0.00397$ 有 _______ 位有效数字</span></div>
+        <div class="calc-card"><span>(2) $50.04$ 有 _______ 位有效数字</span></div>
+        <div class="calc-card"><span>(3) $0.075$ 有 _______ 位有效数字</span></div>
+        <div class="calc-card"><span>(4) $6.00$ 有 _______ 位有效数字</span></div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">
+      <span>二、 小数加减法与数位对齐计算（每题 3 分，共 24 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="q-desc">务必把小数点对齐后再计算，杜绝进位错误：</div>
+    <div class="grid-2">
+      <div class="calc-card"><span>(1) $0.9 + 0.1 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(2) $3.95 + 0.05 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(3) $12.8 + 4.35 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(4) $0.07 + 0.93 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(5) $1 - 0.25 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(6) $5 - 0.08 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(7) $10.4 - 3.85 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(8) $0.5 - 0.05 =$</span><span class="calc-input"></span></div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">
+      <span>三、 小数乘除法与小数点移动法则（每题 4 分，共 28 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. 口算速练（按照小数点移动法则迅速计算）：</div>
+      <div class="grid-2">
+        <div class="calc-card"><span>(1) $5.4 \div 0.6 = 54 \div 6 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(2) $30 \div 0.5 = 30 \times 2 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(3) $0.36 \div 0.09 = 36 \div 9 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(4) $4.8 \div 0.12 = 480 \div 12 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(5) $2.5 \times 0.04 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(6) $1.2 \times 0.5 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(7) $40 \div 0.2 =$</span><span class="calc-input"></span></div>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title">
+      <span>四、 小数、百分数互化与除法商0（每题 4 分，共 28 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. 将下列小数转化为百分数（乘 $100\%$）：</div>
+      <div class="grid-2">
+        <div class="calc-card"><span>(1) $0.075 \to$ _____________ %</span></div>
+        <div class="calc-card"><span>(2) $0.75 \to$ _____________ %</span></div>
+        <div class="calc-card"><span>(3) $0.008 \to$ _____________ %</span></div>
+        <div class="calc-card"><span>(4) $1.25 \to$ _____________ %</span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. 【近似精度与范围辨析】某物体的测量长度记为 $6.0\text{ cm}$（精确到十分位）。</div>
+      <div class="q-desc">
+        （1）请解释：为什么在科学测量中写 $6.0\text{ cm}$ 和写 $6\text{ cm}$ 的精度含义截然不同？<br>
+        （2）求出这个物体真实长度的取值范围（即原始下限与上限）。
+      </div>
+      <div class="answer-box">
+        （1）理由：____________________________________________________________________________________<br><br>
+        （2）下限（最小值）= _____________ $\text{cm}$； &nbsp;&nbsp;&nbsp;&nbsp; 上限（最大值）= _____________ $\text{cm}$
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. 【除法竖式商0规则】计算 $40 \div 42$（保留两位小数），请在下方写出完整的长除法竖式：</div>
+      <div class="answer-box" style="min-height: 90px;">
+        竖式计算过程（注意：40比42小，整数部分商0并点小数点）：<br>
+        $40 \div 42 \approx $ ____________________
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">📌 【基础专练一】参考答案与评分标准</div>
+
+      <div style="font-size: 13px; line-height: 1.8;">
+        <strong>一、 数位认知与有效数字（20分）</strong><br>
+        1. （1）4；（2）5；（3）2；（4）千分之九（或 $0.009$）。<br>
+        2. （1）3位（3, 9, 7）；（2）4位（5, 0, 0, 4）；（3）2位（7, 5）；（4）3位（6, 0, 0）。<br><br>
+
+        <strong>二、 小数加减法计算（24分）</strong><br>
+        (1) $1.0$；(2) $4.00$；(3) $17.15$；(4) $1.00$；(5) $0.75$；(6) $4.92$；(7) $6.55$；(8) $0.45$。<br><br>
+
+        <strong>三、 小数乘除法与移动法则（28分）</strong><br>
+        (1) $9$（⚠️ 严禁写 0.9！）；(2) $60$；(3) $4$；(4) $40$；(5) $0.1$；(6) $0.6$；(7) $200$。<br><br>
+
+        <strong>四、 小数百分数互化与精度（28分）</strong><br>
+        4. (1) $7.5\%$（严禁写成 $75\%$ 或 $0.75\%$）；(2) $75\%$；(3) $0.8\%$；(4) $125\%$。<br>
+        5. （1）$6\text{ cm}$ 精确到个位（范围 $5.5 \le x < 6.5$），而 $6.0\text{ cm}$ 精确到十分位（范围 $5.95 \le x < 6.05$），后者的测量精度比前者高 10 倍。<br>
+        （2）下限 $= 5.95\text{ cm}$；上限 $= 6.05\text{ cm}$。<br>
+        6. 长除法：$40.000 \div 42 = 0.952... \approx 0.95$。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

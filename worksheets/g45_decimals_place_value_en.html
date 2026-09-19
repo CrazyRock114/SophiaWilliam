@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Foundational Clinic 1] Grade 4-5 Decimals, Place Value & Percentages Mastery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 14mm 14mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b; line-height: 1.5; font-size: 13.5px; background: #fff; margin: 0; padding: 0;
+    }
+    .no-print {
+      position: fixed; top: 16px; right: 16px; z-index: 999; background: #0284c7; color: #fff;
+      border: none; padding: 10px 18px; border-radius: 20px; font-weight: 700; font-size: 14px;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(2,132,199,0.35); transition: all 0.2s;
+    }
+    .no-print:hover { background: #0369a1; transform: translateY(-1px); }
+    @media print { .no-print { display: none !important; } }
+    .paper-container { max-width: 820px; margin: 0 auto; padding: 10px; }
+    .header { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 16px; }
+    .school-title { font-size: 14px; color: #64748b; letter-spacing: 0.5px; font-weight: 600; }
+    .paper-title { font-size: 19.5px; font-weight: 800; color: #0f172a; margin: 4px 0 8px 0; }
+    .meta-box {
+      display: flex; justify-content: space-between; background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: #334155;
+    }
+    .target-badge {
+      display: inline-block; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;
+      padding: 2px 8px; border-radius: 12px; font-size: 12px;
+    }
+    .section-title {
+      background: #f1f5f9; border-left: 4px solid #0284c7; padding: 6px 12px; font-size: 14.5px;
+      font-weight: 700; margin: 18px 0 12px 0; color: #0f172a; display: flex; justify-content: space-between;
+    }
+    .tip-box {
+      background: #f0f9ff; border-left: 3px solid #0284c7; padding: 8px 12px; font-size: 12px;
+      color: #0369a1; margin-bottom: 12px; border-radius: 0 4px 4px 0;
+    }
+    .question { margin-bottom: 16px; page-break-inside: avoid; }
+    .q-text { font-weight: 600; color: #1e293b; margin-bottom: 6px; }
+    .q-desc { color: #64748b; font-size: 12.5px; margin-bottom: 6px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .calc-card {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 12px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 600;
+    }
+    .calc-input { display: inline-block; min-width: 50px; height: 24px; border-bottom: 1.5px solid #0f172a; text-align: center; }
+    .answer-box { border: 1px dashed #cbd5e1; background: #fafafa; border-radius: 4px; min-height: 50px; padding: 8px; margin-top: 6px; }
+    .table-custom { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+    .table-custom th, .table-custom td { border: 1px solid #cbd5e1; padding: 6px 8px; text-align: center; }
+    .table-custom th { background: #f1f5f9; font-weight: 700; }
+    .page-break { page-break-before: always; }
+    .answer-key-section { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-top: 24px; }
+    .answer-key-title { font-size: 16px; font-weight: 800; color: #0f172a; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px; margin-bottom: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ Print Worksheet (PDF)</button>
+
+  <div class="paper-container">
+    <div class="header">
+      <div class="school-title">Shanghai United International School (Hongqiao) · Foundational Remediation Series</div>
+      <div class="paper-title">[Foundational Clinic 1] Grade 4-5 Decimals, Place Value & Percentages</div>
+      <div class="meta-box">
+        <div>Student Name: <span style="display:inline-block; min-width:80px; border-bottom:1.5px solid #0f172a;">&nbsp;</span></div>
+        <div>Target: <span class="target-badge">⚡ Tens vs Tenths / Decimal Shift / Division by Decimals / Percentages</span></div>
+        <div>Time: 35 Mins</div>
+        <div>Total: 100 Pts</div>
+        <div>Score: _______</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Key Conceptual Anchors:</strong><br>
+      ① <strong>Tens vs. Tenths:</strong> "Tens" are to the LEFT of the decimal point ($10$). "Tenths" are immediately to the RIGHT ($\frac{1}{10} = 0.1$). Never confuse them!<br>
+      ② <strong>Decimal Shift in Division:</strong> $5.4 \div 0.6 \to$ Multiply both by 10 to get $54 \div 6 = 9$. Dividing by $0.5$ means dividing by $\frac{1}{2}$, which is MULTIPLYING by 2 ($30 \div 0.5 = 60$)!<br>
+      ③ <strong>Percentages:</strong> Multiply by 100 to convert a decimal to a percent: $0.075 \times 100\% = 7.5\%$ (NOT $75\%$ or $0.75\%$).<br>
+      ④ <strong>Significant Figures:</strong> Leading zeros are never significant! $0.00397$ has 3 significant figures.
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">
+      <span>Section 1: Place Value & Identification (4 pts each, 20 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. For the number $348.529$:</div>
+      <div class="q-desc">
+        (a) Which digit is in the <strong>tens</strong> place? _________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (b) Which digit is in the <strong>tenths</strong> place? _________<br>
+        (c) Which digit is in the <strong>hundredths</strong> place? _________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (d) What is the place value represented by the digit $9$? _________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. [Leading Zeros & Significant Figures] State the number of significant figures in each value:</div>
+      <div class="grid-2">
+        <div class="calc-card"><span>(a) $0.00397$ has _______ sig figs</span></div>
+        <div class="calc-card"><span>(b) $50.04$ has _______ sig figs</span></div>
+        <div class="calc-card"><span>(c) $0.075$ has _______ sig figs</span></div>
+        <div class="calc-card"><span>(d) $6.00$ has _______ sig figs</span></div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">
+      <span>Section 2: Decimal Addition, Subtraction & Alignment (3 pts each, 24 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="q-desc">Line up the decimal points vertically before calculating. Do not guess!</div>
+    <div class="grid-2">
+      <div class="calc-card"><span>(a) $0.9 + 0.1 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(b) $3.95 + 0.05 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(c) $12.8 + 4.35 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(d) $0.07 + 0.93 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(e) $1 - 0.25 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(f) $5 - 0.08 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(g) $10.4 - 3.85 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(h) $0.5 - 0.05 =$</span><span class="calc-input"></span></div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">
+      <span>Section 3: Decimal Multiplication, Division & Shift Rules (4 pts each, 28 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. Mental Sprint: Move the decimal point according to division and multiplication rules:</div>
+      <div class="grid-2">
+        <div class="calc-card"><span>(a) $5.4 \div 0.6 = 54 \div 6 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(b) $30 \div 0.5 = 30 \times 2 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(c) $0.36 \div 0.09 = 36 \div 9 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(d) $4.8 \div 0.12 = 480 \div 12 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(e) $2.5 \times 0.04 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(f) $1.2 \times 0.5 =$</span><span class="calc-input"></span></div>
+        <div class="calc-card"><span>(g) $40 \div 0.2 =$</span><span class="calc-input"></span></div>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title">
+      <span>Section 4: Decimals, Fractions & Percentages Conversions (4 pts each, 28 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. Convert each decimal to a percentage (Multiply by $100\%$):</div>
+      <div class="grid-2">
+        <div class="calc-card"><span>(a) $0.075 \to$ _____________ %</span></div>
+        <div class="calc-card"><span>(b) $0.75 \to$ _____________ %</span></div>
+        <div class="calc-card"><span>(c) $0.008 \to$ _____________ %</span></div>
+        <div class="calc-card"><span>(d) $1.25 \to$ _____________ %</span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. [Rounding & Precision Limits] A length is measured as $6.0\text{ cm}$ rounded to 1 decimal place.</div>
+      <div class="q-desc">
+        (a) Explain why writing $6\text{ cm}$ is NOT the same as writing $6.0\text{ cm}$ in terms of measurement precision.<br>
+        (b) What is the lower bound and upper bound for the true value of this length?
+      </div>
+      <div class="answer-box">
+        (a) Explanation: ____________________________________________________________________________________<br><br>
+        (b) Lower bound = _____________ $\text{cm}$; &nbsp;&nbsp;&nbsp;&nbsp; Upper bound = _____________ $\text{cm}$
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. [Division with Zero in Quotient] Solve $40 \div 42$ to 2 decimal places using standard long division. Show all steps:</div>
+      <div class="answer-box" style="min-height: 90px;">
+        Show your long division here (Remember: when 40 is smaller than 42, the first digit after decimal point is 0):<br>
+        $40 \div 42 \approx $ ____________________
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">📌 [Foundational Clinic 1] Answer Key & Scoring Guide</div>
+
+      <div style="font-size: 13px; line-height: 1.8;">
+        <strong>Section 1: Place Value & Identification (20 pts)</strong><br>
+        1. (a) 4; (b) 5; (c) 2; (d) Thousandths ($\frac{9}{1000} = 0.009$).<br>
+        2. (a) 3 (3, 9, 7); (b) 4 (5, 0, 0, 4); (c) 2 (7, 5); (d) 3 (6, 0, 0).<br><br>
+
+        <strong>Section 2: Decimal Addition & Subtraction (24 pts)</strong><br>
+        (a) $1.0$; (b) $4.00$; (c) $17.15$; (d) $1.00$; (e) $0.75$; (f) $4.92$; (g) $6.55$; (h) $0.45$.<br><br>
+
+        <strong>Section 3: Multiplication & Division Rules (28 pts)</strong><br>
+        (a) $9$ (⚠️ NOT 0.9!); (b) $60$; (c) $4$; (d) $40$; (e) $0.1$; (f) $0.6$; (g) $200$.<br><br>
+
+        <strong>Section 4: Decimals & Percentages (28 pts)</strong><br>
+        4. (a) $7.5\%$ (NOT $75\%$ or $0.75\%$); (b) $75\%$; (c) $0.8\%$; (d) $125\%$.<br>
+        5. (a) $6\text{ cm}$ means precision to the nearest whole unit (interval $5.5 \le x < 6.5$), while $6.0\text{ cm}$ means precision to the nearest tenth (interval $5.95 \le x < 6.05$). $6.0$ is ten times more precise.<br>
+        (b) Lower bound $= 5.95\text{ cm}$; Upper bound $= 6.05\text{ cm}$.<br>
+        6. Long division: $40.000 \div 42 = 0.952... \approx 0.95$.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

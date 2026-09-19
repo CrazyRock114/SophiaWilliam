@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Foundational Clinic 4] Grade 3-5 Order of Operations, Geometry Measurement & Word Problems</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 14mm 14mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b; line-height: 1.5; font-size: 13px; background: #fff; margin: 0; padding: 0;
+    }
+    .no-print {
+      position: fixed; top: 16px; right: 16px; z-index: 999; background: #0284c7; color: #fff;
+      border: none; padding: 10px 18px; border-radius: 20px; font-weight: 700; font-size: 14px;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(2,132,199,0.35); transition: all 0.2s;
+    }
+    .no-print:hover { background: #0369a1; transform: translateY(-1px); }
+    @media print { .no-print { display: none !important; } }
+    .paper-container { max-width: 820px; margin: 0 auto; padding: 10px; }
+    .header { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 14px; }
+    .school-title { font-size: 13.5px; color: #64748b; letter-spacing: 0.5px; font-weight: 600; }
+    .paper-title { font-size: 18.5px; font-weight: 800; color: #0f172a; margin: 4px 0 6px 0; }
+    .meta-box {
+      display: flex; justify-content: space-between; background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 6px; padding: 8px 14px; font-size: 12.5px; font-weight: 600; color: #334155;
+    }
+    .target-badge {
+      display: inline-block; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0;
+      padding: 2px 8px; border-radius: 12px; font-size: 11.5px;
+    }
+    .section-title {
+      background: #f1f5f9; border-left: 4px solid #0284c7; padding: 5px 12px; font-size: 14px;
+      font-weight: 700; margin: 16px 0 10px 0; color: #0f172a; display: flex; justify-content: space-between;
+    }
+    .tip-box {
+      background: #f0fdf4; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 12px;
+      color: #065f46; margin-bottom: 12px; border-radius: 0 4px 4px 0;
+    }
+    .question { margin-bottom: 14px; page-break-inside: avoid; }
+    .q-text { font-weight: 600; color: #1e293b; margin-bottom: 4px; }
+    .q-desc { color: #64748b; font-size: 12px; margin-bottom: 6px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .calc-card {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600;
+    }
+    .calc-input { display: inline-block; min-width: 50px; height: 22px; border-bottom: 1.5px solid #0f172a; text-align: center; }
+    .answer-box { border: 1px dashed #cbd5e1; background: #fafafa; border-radius: 4px; min-height: 52px; padding: 6px 10px; margin-top: 4px; }
+    .page-break { page-break-before: always; }
+    .answer-key-section { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-top: 20px; }
+    .answer-key-title { font-size: 15px; font-weight: 800; color: #0f172a; border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; margin-bottom: 12px; text-align: center; }
+    .answer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12px; }
+    .ans-item { background: #fff; border: 1px solid #e2e8f0; padding: 6px 10px; border-radius: 4px; }
+    .ans-item strong { color: #0284c7; }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ Print Worksheet (PDF)</button>
+
+  <div class="paper-container">
+    <div class="header">
+      <div class="school-title">Shanghai United International School (Hongqiao) · Foundational Remediation Series</div>
+      <div class="paper-title">[Foundational Clinic 4] Grade 3-5 Order of Operations, Geometry Measurement & Word Problems</div>
+      <div class="meta-box">
+        <div>Student Name: <span style="display:inline-block; min-width:80px; border-bottom:1.5px solid #0f172a;">&nbsp;</span></div>
+        <div>Target: <span class="target-badge">🌸 Sophia & ⚡ William · BODMAS / Square Side from Area / Unit Scale / Speed Time</span></div>
+        <div>Time: 35 Mins</div>
+        <div>Total: 100 Pts</div>
+        <div>Score: _______</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Key Rules & Common Mistake Prevention:</strong><br>
+      ① <strong>Order of Operations (BODMAS):</strong> Brackets $\to$ Orders/Powers $\to$ Division & Multiplication (left to right) $\to$ Addition & Subtraction (left to right). Never add brackets randomly or do addition before multiplication without brackets!<br>
+      ② <strong>Square Area vs. Side Length:</strong> Area $= \text{Side} \times \text{Side} = s^2$. To find side length from area: $s = \sqrt{\text{Area}}$, <strong>NEVER $\text{Area} \div 2$</strong>! If Area $= 36\text{ cm}^2$, side $= 6\text{ cm}$ (since $6 \times 6 = 36$), NOT $18\text{ cm}$!<br>
+      ③ <strong>Metric Volume & Area Scale Factors:</strong> $1\text{ m} = 100\text{ cm} \implies 1\text{ m}^2 = 10,000\text{ cm}^2 \implies 1\text{ m}^3 = 1,000,000\text{ cm}^3$. $1\text{ Liter} = 1,000\text{ mL} = 1,000\text{ cm}^3$.<br>
+      ④ <strong>Speed, Distance, Time Units:</strong> 40 minutes is $\frac{40}{60} = \frac{2}{3}$ of an hour, <strong>NEVER 0.4 hours</strong>! When speed is in km/h, time must be in hours!
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">
+      <span>Section 1: Order of Operations & Mental Arithmetic Rigor (4 pts each, 24 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="q-desc">Calculate step-by-step strictly following BODMAS. Do NOT skip intermediate steps:</div>
+    <div class="grid-2">
+      <div class="calc-card">
+        <div>
+          <div>(a) $18 + 5 \times 4 = $</div>
+          <div style="font-size:11px; color:#64748b;">Multiply first! (Check: $18+5 \neq 90$!)</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(b) $(18 + 5) \times 4 = $</div>
+          <div style="font-size:11px; color:#64748b;">Brackets first!</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(c) $48 \div 6 \times 2 + 3^2 = $</div>
+          <div style="font-size:11px; color:#64748b;">Powers first, then division/mult left-to-right.</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(d) $50 - 2 \times (12 - 3 \times 2) = $</div>
+          <div style="font-size:11px; color:#64748b;">Inside the brackets: $3 \times 2$ first.</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(e) $24 \div (2 + 6) \times 5 = $</div>
+          <div style="font-size:11px; color:#64748b;">Brackets first: $(2+6) = 8$.</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(f) $100 - [40 - (15 + 5)] \div 4 = $</div>
+          <div style="font-size:11px; color:#64748b;">Innermost brackets first.</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">
+      <span>Section 2: Perimeter, Area & Square Side Recovery (4 pts each, 20 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="q-desc">Pay close attention to units and formulas. Recall: Area of square $= s^2$, Perimeter $= 4s$:</div>
+    <div class="grid-2">
+      <div class="calc-card">
+        <div>
+          <div>(a) A square has an area of $49\text{ cm}^2$.</div>
+          <div style="font-size:11px; color:#64748b;">Side length $= $ _______ cm (NOT $49 \div 2$!)</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(b) A square has an area of $81\text{ cm}^2$.</div>
+          <div style="font-size:11px; color:#64748b;">What is its perimeter?</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(c) A rectangle has perimeter $36\text{ cm}$ and width $6\text{ cm}$.</div>
+          <div style="font-size:11px; color:#64748b;">Length $= $ _______ cm; Area $= $ _______ $\text{cm}^2$.</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(d) A square garden has perimeter $48\text{ m}$.</div>
+          <div style="font-size:11px; color:#64748b;">What is its area in $\text{m}^2$?</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card" style="grid-column: span 2;">
+        <div>
+          <div>(e) A wire of length $40\text{ cm}$ is bent into a rectangle with width $8\text{ cm}$. Another identical wire is bent into a square.</div>
+          <div style="font-size:11px; color:#64748b;">Which shape has the greater area, and by how many $\text{cm}^2$?</div>
+        </div>
+        <span class="calc-input" style="min-width:120px;"></span>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">
+      <span>Section 3: Metric Measurement & Scale Factor Conversions (3 pts each, 18 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="q-desc">Convert accurately. Remember: 1D is $\times 10^1$, 2D is $\times 10^2$, 3D is $\times 10^3$:</div>
+    <div class="grid-3">
+      <div class="calc-card"><span>(a) $3.5\text{ m} = $ _______ cm</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(b) $2.4\text{ m}^2 = $ _______ $\text{cm}^2$</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(c) $0.05\text{ m}^3 = $ _______ $\text{cm}^3$</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(d) $4,500\text{ mL} = $ _______ L</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(e) $1.8\text{ L} = $ _______ $\text{cm}^3$</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(f) $150\text{ minutes} = $ _______ hours</span> <span class="calc-input"></span></div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title">
+      <span>Section 4: Speed, Distance & Time Precision (6 pts each, 18 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. [Time Conversion & Distance]</div>
+      <div class="q-desc">
+        A school bus travels from SUIS Hongqiao to the sports stadium at an average speed of $45\text{ km/h}$. The trip takes $40\text{ minutes}$.<br>
+        (a) Express $40\text{ minutes}$ as a fraction of an hour in simplest form: _________ hour.<br>
+        (b) How many kilometers did the bus travel? Show formula and working:
+      </div>
+      <div class="answer-box">
+        $\text{Distance} = \text{Speed} \times \text{Time} = $
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. [Speed Comparison]</div>
+      <div class="q-desc">
+        Sophia runs $600\text{ meters}$ in $2\text{ minutes } 30\text{ seconds}$. William cycles $3.6\text{ kilometers}$ in $12\text{ minutes}$.<br>
+        (a) Find Sophia's speed in $\text{meters per second (m/s)}$.<br>
+        (b) Find William's speed in $\text{meters per second (m/s)}$. Who is faster?
+      </div>
+      <div class="answer-box">
+        <strong>Working:</strong>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section-title">
+      <span>Section 5: Structured Problem-Solving Clinic (10 pts each, 20 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. [Water Tank Capacity & Volume]</div>
+      <div class="q-desc">
+        A rectangular aquarium has a base measuring $80\text{ cm}$ long and $50\text{ cm}$ wide. It contains water to a depth of $30\text{ cm}$.<br>
+        (a) Calculate the volume of water in the tank in $\text{cm}^3$.<br>
+        (b) Convert this volume to Liters ($1\text{ L} = 1,000\text{ cm}^3$).<br>
+        (c) If a decorative rock with volume $8,000\text{ cm}^3$ is submerged completely in the aquarium, by how many centimeters will the water level rise?
+      </div>
+      <div class="answer-box">
+        <strong>Structured 3-Step Working:</strong>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. [Money & Ratio Allocation]</div>
+      <div class="q-desc">
+        Sophia and William received a total of ¥360 for helping set up the SUIS Science Fair. Sophia worked for 5 hours and William worked for 4 hours. They agreed to split the money in proportion to the hours worked.<br>
+        (a) How much money does each person receive per hour?<br>
+        (b) How much money does Sophia receive, and how much does William receive?<br>
+        (c) Check: Does the sum of their shares equal ¥360?
+      </div>
+      <div class="answer-box">
+        <strong>Working & Reality Check:</strong>
+      </div>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">🔑 Complete Answer Key & Pedagogical Notes</div>
+      <div class="answer-grid">
+        <div class="ans-item">
+          <strong>Section 1 (BODMAS):</strong><br>
+          (a) $18 + 20 = 38$ (not 90!); (b) $23 \times 4 = 92$;<br>
+          (c) $8 \times 2 + 9 = 16 + 9 = 25$;<br>
+          (d) $50 - 2 \times (12 - 6) = 50 - 2 \times 6 = 50 - 12 = 38$;<br>
+          (e) $24 \div 8 \times 5 = 3 \times 5 = 15$;<br>
+          (f) $100 - [40 - 20] \div 4 = 100 - 20 \div 4 = 100 - 5 = 95$.
+        </div>
+        <div class="ans-item">
+          <strong>Section 2 (Geometry):</strong><br>
+          (a) Side $= \sqrt{49} = 7\text{ cm}$ ($7 \times 7 = 49$, not $24.5$!);<br>
+          (b) Side $= \sqrt{81} = 9\text{ cm} \implies \text{Perimeter} = 4 \times 9 = 36\text{ cm}$;<br>
+          (c) Length $+ 6 = 36 \div 2 = 18 \implies \text{Length} = 12\text{ cm}$; Area $= 12 \times 6 = 72\text{ cm}^2$;<br>
+          (d) Side $= 48 \div 4 = 12\text{ m} \implies \text{Area} = 12^2 = 144\text{ m}^2$;<br>
+          (e) Rect: $l = 20 - 8 = 12\text{ cm}$, Area $= 12 \times 8 = 96\text{ cm}^2$. Square: side $= 10\text{ cm}$, Area $= 100\text{ cm}^2$. The square has greater area by $4\text{ cm}^2$.
+        </div>
+        <div class="ans-item">
+          <strong>Section 3 (Units):</strong><br>
+          (a) $350\text{ cm}$; (b) $2.4 \times 10,000 = 24,000\text{ cm}^2$;<br>
+          (c) $0.05 \times 1,000,000 = 50,000\text{ cm}^3$;<br>
+          (d) $4.5\text{ L}$; (e) $1,800\text{ cm}^3$; (f) $150 \div 60 = 2.5$ or $2\frac{1}{2}\text{ hours}$.
+        </div>
+        <div class="ans-item">
+          <strong>Section 4 & 5 (Speed & Applications):</strong><br>
+          Sec 4: 1. (a) $\frac{40}{60} = \frac{2}{3}\text{ hr}$; (b) $45 \times \frac{2}{3} = 30\text{ km}$.<br>
+          2. (a) $2\text{ min } 30\text{ s} = 150\text{ s} \implies 600 \div 150 = 4\text{ m/s}$.<br>
+          (b) $3,600\text{ m} \div (12 \times 60\text{ s}) = 3,600 \div 720 = 5\text{ m/s}$. William is faster.<br>
+          Sec 5: 1. (a) $80 \times 50 \times 30 = 120,000\text{ cm}^3$; (b) $120,000 \div 1000 = 120\text{ L}$; (c) $\text{Base Area} = 80 \times 50 = 4,000\text{ cm}^2$. Rise $= 8,000 \div 4,000 = 2\text{ cm}$.<br>
+          2. (a) Total hours $= 5 + 4 = 9\text{ h}$. Rate $= 360 \div 9 = ¥40/\text{h}$; (b) Sophia: $5 \times 40 = ¥200$; William: $4 \times 40 = ¥160$; (c) $200 + 160 = 360$ (Verified).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ],
+        throwOnError : false
+      });
+    });
+  </script>
+</body>
+</html>

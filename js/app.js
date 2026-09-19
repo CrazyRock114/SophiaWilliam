@@ -20,40 +20,60 @@ document.addEventListener("DOMContentLoaded", () => {
     errorSearchQuery: "",
     selectedNodeId: null,
     worksheetFilter: "all",
-    graphTransform: { x: 40, y: 30, scale: 0.9 },
+    worksheetLang: "en", // "en" (default) | "cn" (backup)
+    graphTransform: { x: 30, y: 15, scale: 0.72 },
     isDragging: false,
     dragStart: { x: 0, y: 0 }
   };
 
-  // Pre-calculate positions for the 20 nodes
+  // Pre-calculate positions for the 36 nodes across 5 progressive stages
   const nodePositions = {
-    // Stage 1: Number Basics & Place Value (Col 1: x = 120)
-    pv_01: { x: 120, y: 140 },
-    pv_02: { x: 120, y: 280 },
-    pv_03: { x: 120, y: 420 },
-    pv_04: { x: 120, y: 560 },
+    // Stage 1: 小学三四年级·数感与四则运算基石 (Col 1: x = 120)
+    g3_01: { x: 120, y: 140 },
+    g3_02: { x: 120, y: 280 },
+    g3_03: { x: 120, y: 420 },
+    g4_01: { x: 120, y: 560 },
 
-    // Stage 2: Number Theory & Divisibility (Col 2: x = 400)
-    div_01: { x: 400, y: 100 },
-    div_02: { x: 400, y: 220 },
-    div_03: { x: 400, y: 340 },
-    div_04: { x: 400, y: 460 },
-    div_05: { x: 400, y: 580 },
-    div_06: { x: 400, y: 700 },
+    // Stage 2: 小学四五年级·小数概念与四则深造 (Col 2: x = 390)
+    g4_02: { x: 390, y: 140 },
+    g5_01: { x: 390, y: 280 },
+    g5_02: { x: 390, y: 420 },
+    g5_03: { x: 390, y: 560 },
+    g5_04: { x: 390, y: 700 },
 
-    // Stage 3: Fractions Operations (Col 3: x = 700)
-    div_07: { x: 680, y: 120 },
-    frac_01: { x: 700, y: 260 },
-    frac_02: { x: 700, y: 380 },
-    frac_03: { x: 700, y: 500 },
-    frac_04: { x: 700, y: 640 },
-    frac_05: { x: 700, y: 770 },
+    // Stage 3: 小学四五年级·分数意义与通分约分 (Col 3: x = 670)
+    g4_03: { x: 670, y: 120 },
+    g4_04: { x: 670, y: 240 },
+    g5_05: { x: 670, y: 360 },
+    g5_06: { x: 670, y: 480 },
+    g5_07: { x: 670, y: 600 },
+    frac_01: { x: 670, y: 720 },
 
-    // Stage 4: Ratios & Advanced Topics (Col 4: x = 980)
-    adv_01: { x: 980, y: 140 },
-    adv_02: { x: 980, y: 280 },
-    rat_01: { x: 980, y: 450 },
-    rat_02: { x: 980, y: 600 }
+    // Stage 4: 小学五六年级·因数倍数与方幂代数衔接 (Col 4a: x = 960, Col 4b: x = 1220)
+    div_01: { x: 960, y: 100 },
+    div_02: { x: 960, y: 210 },
+    div_03: { x: 960, y: 320 },
+    div_04: { x: 960, y: 430 },
+    div_05: { x: 960, y: 540 },
+    div_06: { x: 960, y: 650 },
+    div_07: { x: 960, y: 760 },
+
+    power_01: { x: 1220, y: 120 },
+    power_02: { x: 1220, y: 240 },
+    power_03: { x: 1220, y: 360 },
+    power_04: { x: 1220, y: 480 },
+    power_05: { x: 1220, y: 600 },
+    frac_02: { x: 1220, y: 720 },
+    frac_03: { x: 1220, y: 840 },
+
+    // Stage 5: 三至六年级·几何度量、单位与思维建模 (Col 5: x = 1500)
+    geom_01: { x: 1500, y: 120 },
+    geom_02: { x: 1500, y: 240 },
+    geom_03: { x: 1500, y: 360 },
+    word_01: { x: 1500, y: 480 },
+    word_02: { x: 1500, y: 600 },
+    adv_01: { x: 1500, y: 720 },
+    adv_02: { x: 1500, y: 840 }
   };
 
   // --- Initialization ---
@@ -105,6 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         const wsTab = document.querySelector('.nav-tab[data-view="worksheets"]');
         if (wsTab) wsTab.click();
+      });
+    });
+
+    // Attach global and worksheet language toggle listeners
+    document.querySelectorAll(".lang-btn, .ws-lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        updateWorksheetLanguage(lang);
       });
     });
   }
@@ -187,6 +215,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (recText) {
       recText.innerHTML = data.mutualAnalysis.recommendations.join(" ");
     }
+
+    // Dynamic Mastery Counts
+    const totalNodes = data.knowledgeNodes.length;
+    const sMastered = data.knowledgeNodes.filter(n => n.sophiaMastery === 'mastered').length;
+    const sNeeds = data.knowledgeNodes.filter(n => n.sophiaMastery === 'needs_work').length;
+    const wMastered = data.knowledgeNodes.filter(n => n.williamMastery === 'mastered').length;
+    const wNeeds = data.knowledgeNodes.filter(n => n.williamMastery === 'needs_work').length;
+
+    const sMEl = document.getElementById("sophia-mastered-count");
+    if (sMEl) sMEl.textContent = `${sMastered} / ${totalNodes}`;
+    const sNEl = document.getElementById("sophia-needs-count");
+    if (sNEl) sNEl.textContent = `${sNeeds} / ${totalNodes}`;
+    const wMEl = document.getElementById("william-mastered-count");
+    if (wMEl) wMEl.textContent = `${wMastered} / ${totalNodes}`;
+    const wNEl = document.getElementById("william-needs-count");
+    if (wNEl) wNEl.textContent = `${wNeeds} / ${totalNodes}`;
+    const gBadge = document.getElementById("graph-node-count-badge");
+    if (gBadge) gBadge.textContent = totalNodes;
+    const wsBadge = document.getElementById("ws-count-badge");
+    if (wsBadge) wsBadge.textContent = data.consolidationWorksheets ? data.consolidationWorksheets.length : 8;
 
     // Render charts
     setTimeout(() => {
@@ -500,6 +548,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const mainGroup = document.getElementById("graph-main-group");
 
+    // 0. Stage Column Headers
+    const stageGuides = [
+      { name: "阶段一：G3-G4 运算基石", x: 120, color: "#0284c7" },
+      { name: "阶段二：G4-G5 小数数位", x: 390, color: "#0ea5e9" },
+      { name: "阶段三：G4-G5 分数运算", x: 670, color: "#ec4899" },
+      { name: "阶段四：G5-G6 数论乘方", x: 1090, color: "#8b5cf6" },
+      { name: "阶段五：G3-G6 几何应用", x: 1500, color: "#10b981" }
+    ];
+
+    const stagesGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    stagesGroup.id = "graph-stages";
+    stageGuides.forEach(s => {
+      const bannerBg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      bannerBg.setAttribute("x", s.x - 95);
+      bannerBg.setAttribute("y", "25");
+      bannerBg.setAttribute("width", "190");
+      bannerBg.setAttribute("height", "32");
+      bannerBg.setAttribute("rx", "16");
+      bannerBg.setAttribute("fill", `${s.color}15`);
+      bannerBg.setAttribute("stroke", `${s.color}50`);
+      bannerBg.setAttribute("stroke-width", "1.5");
+      stagesGroup.appendChild(bannerBg);
+
+      const bannerText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      bannerText.setAttribute("x", s.x);
+      bannerText.setAttribute("y", "46");
+      bannerText.setAttribute("text-anchor", "middle");
+      bannerText.setAttribute("font-size", "12");
+      bannerText.setAttribute("font-weight", "800");
+      bannerText.setAttribute("fill", s.color);
+      bannerText.textContent = s.name;
+      stagesGroup.appendChild(bannerText);
+    });
+    mainGroup.appendChild(stagesGroup);
+
     // 1. Draw Links
     const linksGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
     linksGroup.id = "graph-links";
@@ -704,13 +787,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const domain = data.knowledgeDomains.find(d => d.id === node.domain);
 
-    // Get linked errors
-    const linkedErrors = data.errorBank.filter(e => e.nodeId === nodeId);
+    // Get linked errors by nodeId or errorRefIds
+    const linkedErrors = data.errorBank.filter(e => e.nodeId === nodeId || (node.errorRefIds && node.errorRefIds.includes(e.id)));
 
     content.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
         <span style="font-size: 20px;">${domain ? domain.icon : "•"}</span>
         <span class="tag category-tag">${domain ? domain.name : ""}</span>
+        ${node.stage ? `<span class="tag" style="background: #e0f2fe; color: #0369a1; font-weight: 700;">${node.stage}</span>` : ""}
         <span class="tag" style="background: ${node.currentPhase === 'completed' ? '#dcfce7; color: #15803d;' : node.currentPhase === 'current' ? '#fee2e2; color: #b91c1c;' : '#f1f5f9; color: #64748b;'}">
           ${node.currentPhase === 'completed' ? '已学完' : node.currentPhase === 'current' ? '开学半个月正学' : '后续阶段'}
         </span>
@@ -1045,6 +1129,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function updateWorksheetLanguage(lang) {
+    state.worksheetLang = lang;
+    document.querySelectorAll(".lang-btn, .ws-lang-btn").forEach(btn => {
+      if (btn.dataset.lang === lang) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+
+    const sub = document.getElementById("ws-banner-subtitle");
+    const title = document.getElementById("ws-banner-title");
+    const desc = document.getElementById("ws-banner-desc");
+    if (lang === "en") {
+      if (sub) sub.textContent = "Targeted Academic Remediation · Autonomous Practice Center (English Default)";
+      if (title) title.innerHTML = "📥 Targeted Practice Worksheets & Printable A4 PDF Center";
+      if (desc) desc.innerHTML = "Covering Grades 3-6 conceptual gaps rooted in historical classroom notes. <strong>Defaulted to Full English (SUIS Bilingual Track standard)</strong> with Chinese backups. Formatted in standard A4 with vector KaTeX math, step-by-step solutions, and mnemonics.";
+    } else {
+      if (sub) sub.textContent = "精准教学支持 · 赋能课后自主训练 (中文备用版)";
+      if (title) title.innerHTML = "📥 针对性巩固特训 · 可打印 A4 练习卷与 PDF 下载中心";
+      if (desc) desc.innerHTML = "针对 Sophia 与 William 历史 17 节课堂中三四五年级基础欠账定制。<strong>提供全套中文对照与备用打印版</strong>。采用标准 A4 印刷版式、KaTeX 国际数学公式高清排版，附完整分步解析与名师口诀。";
+    }
+
+    renderWorksheets();
+  }
+
   function renderWorksheets() {
     const container = document.getElementById("worksheets-cards-container");
     if (!container || !data.consolidationWorksheets) return;
@@ -1059,61 +1169,83 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     });
 
+    const isEn = state.worksheetLang === "en";
     const filtered = data.consolidationWorksheets.filter(ws => {
       if (state.worksheetFilter === "all") return true;
       if (state.worksheetFilter === "sophia") return ws.targetStudent === "sophia";
       if (state.worksheetFilter === "william") return ws.targetStudent === "william";
       if (state.worksheetFilter === "dual") return ws.targetStudent === "dual";
+      if (state.worksheetFilter === "all_deck") return ws.id === "ws-flashcards-01";
       return true;
     });
 
-    container.innerHTML = filtered.map(ws => `
-      <div class="card" style="border-top: 4px solid ${ws.badgeColor}; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s ease; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
-            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
-              <span class="tag" style="background: ${ws.badgeColor}15; color: ${ws.badgeColor}; border: 1px solid ${ws.badgeColor}40; font-weight: 700; font-size: 12px;">
-                ${ws.studentBadge}
-              </span>
-              <span class="tag" style="background: #f1f5f9; color: var(--text-muted); font-size: 11.5px;">
-                ⏱️ 建议用时: ${ws.timeLimit}
-              </span>
-              <span class="tag" style="background: #f1f5f9; color: var(--text-muted); font-size: 11.5px;">
-                💯 满分: ${ws.totalPoints} 分
+    container.innerHTML = filtered.map(ws => {
+      const badge = isEn ? ws.studentBadge_en : ws.studentBadge_cn;
+      const title = isEn ? ws.title_en : ws.title_cn;
+      const target = isEn ? ws.targetAreas_en : ws.targetAreas_cn;
+      const desc = isEn ? ws.desc_en : ws.desc_cn;
+      const time = isEn ? ws.timeLimit_en : ws.timeLimit_cn;
+      const tags = isEn ? ws.tags_en : ws.tags_cn;
+      const primaryPdfUrl = isEn ? ws.pdfUrl_en : ws.pdfUrl_cn;
+      const secondaryPdfUrl = isEn ? ws.pdfUrl_cn : ws.pdfUrl_en;
+      const primaryPdfLabel = isEn ? "📥 Download English PDF (Default)" : "📥 下载中文版 PDF (推荐)";
+      const secondaryPdfLabel = isEn ? "📄 中文版 PDF (备用)" : "🇬🇧 English PDF (原版)";
+      const onlineHtmlUrl = isEn ? ws.htmlUrl_en : ws.htmlUrl_cn;
+      const onlinePreviewLabel = isEn ? "🖨️ Online Interactive Preview & Print" : "🖨️ 在线交互预览与打印";
+
+      return `
+        <div class="card" style="border-top: 4px solid ${ws.badgeColor}; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s ease; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                <span class="tag" style="background: ${ws.badgeColor}15; color: ${ws.badgeColor}; border: 1px solid ${ws.badgeColor}40; font-weight: 700; font-size: 12px;">
+                  ${badge}
+                </span>
+                <span class="tag" style="background: #f1f5f9; color: var(--text-muted); font-size: 11.5px;">
+                  ⏱️ ${isEn ? 'Time' : '用时'}: ${time}
+                </span>
+                <span class="tag" style="background: #f1f5f9; color: var(--text-muted); font-size: 11.5px;">
+                  💯 ${isEn ? 'Total' : '满分'}: ${ws.totalPoints} ${isEn ? 'Pts' : '分'}
+                </span>
+              </div>
+              <span style="font-size: 11.5px; color: var(--text-muted); font-weight: 700; white-space: nowrap;">
+                📦 ${ws.fileSize}
               </span>
             </div>
-            <span style="font-size: 12px; color: var(--text-muted); font-weight: 700; white-space: nowrap;">
-              📦 ${ws.fileSize}
-            </span>
+
+            <h3 style="font-size: 16.5px; font-weight: 800; color: var(--text-main); margin: 6px 0 8px 0; line-height: 1.4;">
+              ${title}
+            </h3>
+
+            <div style="font-size: 12.5px; color: var(--primary); font-weight: 700; margin-bottom: 10px; line-height: 1.4;">
+              🎯 ${isEn ? 'Target Areas' : '核心攻坚考点'}：${target}
+            </div>
+
+            <p style="font-size: 13px; color: var(--text-sub); line-height: 1.65; margin-bottom: 14px;">
+              ${desc}
+            </p>
+
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              ${tags.map(t => `<span style="font-size: 11.5px; padding: 2px 8px; background: rgba(0,0,0,0.04); border-radius: 4px; color: var(--text-muted); font-weight: 500;">#${t}</span>`).join("")}
+            </div>
           </div>
 
-          <h3 style="font-size: 17px; font-weight: 800; color: var(--text-main); margin: 6px 0 8px 0; line-height: 1.4;">
-            ${ws.title}
-          </h3>
-
-          <div style="font-size: 12.5px; color: var(--primary); font-weight: 700; margin-bottom: 10px; line-height: 1.4;">
-            🎯 核心攻坚考点：${ws.targetAreas}
-          </div>
-
-          <p style="font-size: 13px; color: var(--text-sub); line-height: 1.65; margin-bottom: 14px;">
-            ${ws.description}
-          </p>
-
-          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-            ${ws.tags.map(t => `<span style="font-size: 11.5px; padding: 2px 8px; background: rgba(0,0,0,0.04); border-radius: 4px; color: var(--text-muted); font-weight: 500;">#${t}</span>`).join("")}
+          <div style="border-top: 1px solid var(--border-color); padding-top: 14px; margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <a href="${primaryPdfUrl}" download class="pill-btn active" style="flex: 1.2; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 12px; font-weight: 700; font-size: 12.5px; background: ${ws.badgeColor}; color: #fff; border: none; border-radius: var(--radius-full);">
+                ${primaryPdfLabel}
+              </a>
+              <a href="${secondaryPdfUrl}" download class="pill-btn" style="flex: 0.8; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 9px 10px; font-weight: 600; font-size: 12px; border-radius: var(--radius-full); background: #f8fafc; border: 1px solid #cbd5e1; color: var(--text-main);">
+                ${secondaryPdfLabel}
+              </a>
+            </div>
+            <a href="${onlineHtmlUrl}" target="_blank" class="pill-btn" style="width: 100%; box-sizing: border-box; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; font-weight: 600; font-size: 12.5px; border-radius: var(--radius-full); background: #fff; border: 1px solid var(--border-color); color: var(--primary);">
+              ${onlinePreviewLabel}
+            </a>
           </div>
         </div>
-
-        <div style="display: flex; gap: 10px; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px; margin-top: auto;">
-          <a href="${ws.pdfUrl}" download class="pill-btn active" style="flex: 1; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; font-weight: 700; background: ${ws.badgeColor}; color: #fff; border: none; border-radius: var(--radius-full);">
-            <span>📥</span> 直接下载可打印 PDF
-          </a>
-          <a href="${ws.htmlUrl}" target="_blank" class="pill-btn" style="text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; font-weight: 600; border-radius: var(--radius-full);">
-            <span>🖨️</span> 在线预览打印
-          </a>
-        </div>
-      </div>
-    `).join("");
+      `;
+    }).join("");
   }
 
   // Helper: Escape HTML

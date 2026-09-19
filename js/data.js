@@ -1,6 +1,7 @@
 /**
  * Sophia & William 专属数学知识图谱追踪网站核心数据库
- * 自动生成于: 2026-09-18T17:25:43.493Z
+ * 升级包含三四五六年级全景知识图谱（36节点）与8套全英文默认针对性练习
+ * 更新时间: 2026-09-19T01:41:47.055Z
  */
 
 const trackerData = {
@@ -251,40 +252,469 @@ const trackerData = {
   },
   "knowledgeDomains": [
     {
-      "id": "number_theory",
-      "name": "数的整除与数论",
+      "id": "foundations_arithmetic",
+      "name": "基础数感与四则运算",
+      "icon": "🧱",
+      "color": "#0284c7"
+    },
+    {
+      "id": "decimals_percentages",
+      "name": "小数概念与数位百分数",
       "icon": "🔢",
-      "color": "#6366f1"
+      "color": "#0ea5e9"
     },
     {
       "id": "fractions",
-      "name": "分数与小数运算",
+      "name": "分数意义与通分运算",
       "icon": "➗",
       "color": "#ec4899"
     },
     {
-      "id": "place_value",
-      "name": "数位与基础四则运算",
-      "icon": "🧮",
-      "color": "#f59e0b"
-    },
-    {
-      "id": "ratios_percent",
-      "name": "比、比例与百分数",
-      "icon": "📊",
-      "color": "#10b981"
-    },
-    {
-      "id": "advanced_topics",
-      "name": "高阶思维与综合建模",
-      "icon": "🧩",
+      "id": "number_theory_powers",
+      "name": "因数倍数与方幂代数",
+      "icon": "⚡",
       "color": "#8b5cf6"
+    },
+    {
+      "id": "geometry_applications",
+      "name": "几何度量与应用建模",
+      "icon": "📐",
+      "color": "#10b981"
     }
   ],
   "knowledgeNodes": [
     {
+      "id": "g3_01",
+      "domain": "foundations_arithmetic",
+      "stage": "Stage 1 (G3-G4)",
+      "title": "万以内加减法与竖式对齐",
+      "bilingual": "Multi-digit Addition & Subtraction Alignment",
+      "shanghaiChapter": "沪教版三年级上册 万以内加减法",
+      "englishChapter": "International Maths G3 Addition & Subtraction",
+      "terms": [
+        "Carry Over (进位)",
+        "Borrowing (退位)",
+        "Column Alignment (竖式对齐)"
+      ],
+      "description": "多位数竖式加减法规则、数位精准垂直对齐、连续进位与退位借一当十运算，建立严密数位感。",
+      "prerequisites": [],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 92,
+      "sophiaNote": "进退位熟练，计算速度快，但偶有草稿字迹潦草跳步导致抄写数字看错。",
+      "williamMastery": "proficient",
+      "williamScore": 78,
+      "williamNote": "整数加减能算，但在小数进位时习惯未完全迁移，需持续规范数位对齐意识。",
+      "errorRefIds": [
+        "err_05"
+      ]
+    },
+    {
+      "id": "g3_02",
+      "domain": "foundations_arithmetic",
+      "stage": "Stage 1 (G3-G4)",
+      "title": "乘法口诀与带余除法本质",
+      "bilingual": "Multiplication Table & Division with Remainder",
+      "shanghaiChapter": "沪教版三年级 表内乘除法与有余数除法",
+      "englishChapter": "International Maths G3 Division with Remainder",
+      "terms": [
+        "Quotient (商)",
+        "Remainder (余数)",
+        "Divisor (除数)",
+        "Dividend (被除数)"
+      ],
+      "description": "九九乘法口诀逆用、带余除法本质（被除数=商×除数+余数，余数必小于除数），披萨切片与份数实操。",
+      "prerequisites": [
+        "g3_01"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 95,
+      "sophiaNote": "表内乘除极其熟练，能迅速根据余数范围判断除数的最小可能值。",
+      "williamMastery": "proficient",
+      "williamScore": 74,
+      "williamNote": "带余除法能算，但商与余数写为假分数或带分数时偶有倒置（如52÷24写成24又4分之2）。",
+      "errorRefIds": [
+        "err_07",
+        "err_12"
+      ]
+    },
+    {
+      "id": "g3_03",
+      "domain": "foundations_arithmetic",
+      "stage": "Stage 1 (G3-G4)",
+      "title": "四则运算顺序与括号法则 (BODMAS)",
+      "bilingual": "Order of Operations & BODMAS Rules",
+      "shanghaiChapter": "沪教版三年级下册 四则混合运算",
+      "englishChapter": "International Maths G3-G4 BODMAS / PEMDAS",
+      "terms": [
+        "Brackets (括号)",
+        "Order/Powers (乘方)",
+        "Division/Multiplication (乘除)",
+        "Addition/Subtraction (加减)"
+      ],
+      "description": "四则混合运算绝对优先级：先括号、再乘方、乘除从左往右、加减从左往右。严禁无括号时擅自调换顺序。",
+      "prerequisites": [
+        "g3_01",
+        "g3_02"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 82,
+      "sophiaNote": "清楚优先级，但心算草稿时偶尔出现18+5=90这类草稿脱缰低级笔误，需坚持双栏草稿规程。",
+      "williamMastery": "needs_work",
+      "williamScore": 60,
+      "williamNote": "运算顺序受视觉吸引容易冲动先算加法，需强制画出运算顺序辅助下划线。",
+      "errorRefIds": [
+        "err_05",
+        "err_15"
+      ]
+    },
+    {
+      "id": "g4_01",
+      "domain": "foundations_arithmetic",
+      "stage": "Stage 1 (G3-G4)",
+      "title": "十进制位值与数位对照 (Tens vs Tenths)",
+      "bilingual": "Place Value & Tens vs. Tenths System",
+      "shanghaiChapter": "沪教版四年级上册 大数的认识与数位顺序表",
+      "englishChapter": "International Maths G4 Place Value & Decimals",
+      "terms": [
+        "Tens (十位)",
+        "Tenths (十分位)",
+        "Hundreds (百位)",
+        "Hundredths (百分位)",
+        "Decimal Point (小数点)"
+      ],
+      "description": "以个位/小数点为基准的十进制数位对称系统。左侧为整数十百千，右侧为分数十分位百分位千分位。",
+      "prerequisites": [
+        "g3_01"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 90,
+      "sophiaNote": "已能准确辨析英文中-s与-ths后缀所代表的位置和量级差异。",
+      "williamMastery": "needs_work",
+      "williamScore": 55,
+      "williamNote": "极易混淆tens与tenths，听到tenth仍本能往十位去写；需使用色块数位对照板辅助固定。",
+      "errorRefIds": [
+        "err_13"
+      ]
+    },
+    {
+      "id": "g4_02",
+      "domain": "decimals_percentages",
+      "stage": "Stage 2 (G4-G5)",
+      "title": "小数加减法与进退位法则",
+      "bilingual": "Decimal Addition & Subtraction Alignment",
+      "shanghaiChapter": "沪教版四年级下册 小数的加法和减法",
+      "englishChapter": "International Maths G4-G5 Decimal Arithmetic",
+      "terms": [
+        "Decimal Alignment (小数点对齐)",
+        "Carrying into Units (向个位进位)",
+        "Trailing Zeros (末尾补零)"
+      ],
+      "description": "小数点垂直对齐、低位不足补0、向个位进位加法（0.9+0.1=1.0杜绝4.1）与借位减法。",
+      "prerequisites": [
+        "g4_01"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 94,
+      "sophiaNote": "加减法竖式非常规范，对齐与进位零失误。",
+      "williamMastery": "needs_work",
+      "williamScore": 52,
+      "williamNote": "心算加法进位脱节，曾脱口报出0.9+0.1=4.1；必须严格禁止纯心算，要求手写对齐竖式。",
+      "errorRefIds": [
+        "err_08"
+      ]
+    },
+    {
+      "id": "g5_01",
+      "domain": "decimals_percentages",
+      "stage": "Stage 2 (G4-G5)",
+      "title": "小数乘法与小数点位置移动",
+      "bilingual": "Decimal Multiplication & Position Shift",
+      "shanghaiChapter": "沪教版五年级上册 小数乘法",
+      "englishChapter": "International Maths G5 Multiplying Decimals",
+      "terms": [
+        "Decimal Places (小数位数)",
+        "Power of Ten Shift (10的幂次移位)"
+      ],
+      "description": "小数乘法先按整数相乘，积的小数位数等于因数小数位数之和；乘10/100/1000小数点向右平移。",
+      "prerequisites": [
+        "g4_02"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 86,
+      "sophiaNote": "位数统计准确，偶有乘积末尾有0时去0时机把握过早的粗心。",
+      "williamMastery": "proficient",
+      "williamScore": 68,
+      "williamNote": "平移方向基本分清，但对0.04×0.05=0.0020=0.002补0去0过程易纠结。",
+      "errorRefIds": [
+        "err_08",
+        "err_14"
+      ]
+    },
+    {
+      "id": "g5_02",
+      "domain": "decimals_percentages",
+      "stage": "Stage 2 (G4-G5)",
+      "title": "小数除法与除数整数化",
+      "bilingual": "Decimal Division & Divisor Integer Shift",
+      "shanghaiChapter": "沪教版五年级上册 小数除法",
+      "englishChapter": "International Maths G5 Dividing by Decimals",
+      "terms": [
+        "Divisor Integer Shift (除数整数化)",
+        "Dividend Scaling (被除数同步扩倍)"
+      ],
+      "description": "除数是小数时先平移小数点化为整数，被除数同步平移；除以0.5即乘2（30÷0.5=60而非15）。",
+      "prerequisites": [
+        "g5_01"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 88,
+      "sophiaNote": "能清晰阐明除以小于1的数商反而变大的数学原理。",
+      "williamMastery": "needs_work",
+      "williamScore": 54,
+      "williamNote": "除法移位常忘扩被除数（5.4÷0.6误答0.9），除以0.5误当乘0.5算成15；需强化商不变模型。",
+      "errorRefIds": [
+        "err_09",
+        "err_14"
+      ]
+    },
+    {
+      "id": "g5_03",
+      "domain": "decimals_percentages",
+      "stage": "Stage 2 (G4-G5)",
+      "title": "有效数字与近似值精度 (6 vs 6.0)",
+      "bilingual": "Significant Figures & Precision Bounds",
+      "shanghaiChapter": "沪教版五年级/六年级 四舍五入与近似数",
+      "englishChapter": "International Maths G6 Ch08 Significant Figures",
+      "terms": [
+        "Significant Figures (有效数字)",
+        "Leading Zeros (前导零)",
+        "Precision Level (精确度)",
+        "Bounds (取值范围)"
+      ],
+      "description": "前导零不计入有效数字（0.00397为3位）；末尾零体现精度（6表示[5.5, 6.5)，6.0表示[5.95, 6.05)）。",
+      "prerequisites": [
+        "g5_02"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 80,
+      "sophiaNote": "有效数字辨识良好，但在物理测量精度范围上限（如6.5是否可取）偶有模糊。",
+      "williamMastery": "needs_work",
+      "williamScore": 58,
+      "williamNote": "常把0.00397当成5位有效数字，认为6与6.0没有任何区别，需用测量尺刻度直观演示。",
+      "errorRefIds": [
+        "err_13",
+        "err_14"
+      ]
+    },
+    {
+      "id": "g5_04",
+      "domain": "decimals_percentages",
+      "stage": "Stage 2 (G4-G5)",
+      "title": "小数与百分数互化 (0.075 to 7.5%)",
+      "bilingual": "Decimals to Percentages Conversion",
+      "shanghaiChapter": "沪教版六年级上册 百分数的意义与互化",
+      "englishChapter": "International Maths G5-G6 Decimals to Percentages",
+      "terms": [
+        "Percentage (百分数)",
+        "Shift 2 Places (小数点右移两位)",
+        "Hundredth (百分之一)"
+      ],
+      "description": "小数化百分数小数点右移两位加%（0.075=7.5%，杜绝75%或0.75%）；百分数化小数逆向左移两位。",
+      "prerequisites": [
+        "g5_01"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 90,
+      "sophiaNote": "转化速度极快，常用基准分数对应百分数（1/8=12.5%）张口就来。",
+      "williamMastery": "needs_work",
+      "williamScore": 56,
+      "williamNote": "移位位数摇摆不定，0.075曾报出75%或0.75%；需强调乘以100%的本质含义。",
+      "errorRefIds": [
+        "err_13"
+      ]
+    },
+    {
+      "id": "g4_03",
+      "domain": "fractions",
+      "stage": "Stage 3 (G4-G5)",
+      "title": "分数意义与真假带分数互化",
+      "bilingual": "Proper, Improper & Mixed Fractions",
+      "shanghaiChapter": "沪教版四年级下册 分数的初步认识",
+      "englishChapter": "International Maths G4-G5 Fractions Basics",
+      "terms": [
+        "Proper Fraction (真分数)",
+        "Improper Fraction (假分数)",
+        "Mixed Number (带分数)"
+      ],
+      "description": "分数的整体与部分含义；分子分母大小关系分类；带余除法商为整数、余数为分子的假带互化。",
+      "prerequisites": [
+        "g3_02"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 94,
+      "sophiaNote": "假带互化速度快且准确，披萨图形建模清晰。",
+      "williamMastery": "proficient",
+      "williamScore": 72,
+      "williamNote": "理解互化原理，但在带余除法直接化带分数时偶有商余倒置（52÷24=2又4/24需确认商写前面）。",
+      "errorRefIds": [
+        "err_07",
+        "err_12"
+      ]
+    },
+    {
+      "id": "g4_04",
+      "domain": "fractions",
+      "stage": "Stage 3 (G4-G5)",
+      "title": "分数基本性质与商不变原理",
+      "bilingual": "Equivalent Fractions Principle",
+      "shanghaiChapter": "沪教版四年级下册 / 六年级上册 2.1 分数的基本性质",
+      "englishChapter": "International Maths G5 Equivalent Fractions",
+      "terms": [
+        "Equivalent Fractions (等值分数)",
+        "Multiply/Divide Same Non-zero (同乘同除不为0)"
+      ],
+      "description": "分数的分子和分母同时乘或除以相同的非零数，分数大小不变；等价于除法商不变定律。",
+      "prerequisites": [
+        "g4_03"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 92,
+      "sophiaNote": "性质理解透彻，能自如应用在复杂比例化简中。",
+      "williamMastery": "proficient",
+      "williamScore": 76,
+      "williamNote": "概念能复述，但在通分加法时偶有只乘分母忘乘分子现象。",
+      "errorRefIds": [
+        "err_06",
+        "err_12"
+      ]
+    },
+    {
+      "id": "g5_05",
+      "domain": "fractions",
+      "stage": "Stage 3 (G4-G5)",
+      "title": "最简分数与公因数约分",
+      "bilingual": "Simplifying Fractions & HCF Reduction",
+      "shanghaiChapter": "沪教版五年级下册 / 六年级上册 2.2 约分与最简分数",
+      "englishChapter": "International Maths G5-G6 Simplifying Fractions",
+      "terms": [
+        "Simplest Form (最简分数)",
+        "Coprime Numerator/Denominator (分子分母互质)",
+        "Cancel Down (约分)"
+      ],
+      "description": "分子分母互质即最简分数；提取最大公因数（HCF）一步约分法与短除分步法。",
+      "prerequisites": [
+        "g4_04"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 90,
+      "sophiaNote": "能敏锐捕捉大公因数，约分一步到位。",
+      "williamMastery": "proficient",
+      "williamScore": 75,
+      "williamNote": "能熟练采用逐步除以2/3的方法约分至最简。",
+      "errorRefIds": [
+        "err_04"
+      ]
+    },
+    {
+      "id": "g5_06",
+      "domain": "fractions",
+      "stage": "Stage 3 (G4-G5)",
+      "title": "异分母通分与分子同步扩倍",
+      "bilingual": "Common Denominator & Fraction Addition",
+      "shanghaiChapter": "沪教版六年级上册 2.3 分数的加减法",
+      "englishChapter": "International Maths G6 Ch09 Fraction Addition",
+      "terms": [
+        "Lowest Common Denominator (最小公分母 LCD)",
+        "Synchronous Expansion (分子同步扩倍)"
+      ],
+      "description": "异分母加减必须通分求LCD；分母扩倍几倍分子严格扩倍几倍，严禁直接分子相加（3/4+2/5≠5/20）。",
+      "prerequisites": [
+        "g5_05"
+      ],
+      "currentPhase": "in_progress",
+      "sophiaMastery": "needs_work",
+      "sophiaScore": 68,
+      "sophiaNote": "曾出现通分时只乘分母、分子抄原数的粗心失误；经双步模板训练已纠正，需持续巩固。",
+      "williamMastery": "needs_work",
+      "williamScore": 62,
+      "williamNote": "通分容易漏乘分子，异分母加法容易冲动将分子分母各自直接相加；需强制书写中间通分式。",
+      "errorRefIds": [
+        "err_06",
+        "err_12"
+      ]
+    },
+    {
+      "id": "g5_07",
+      "domain": "fractions",
+      "stage": "Stage 3 (G4-G5)",
+      "title": "巧比分数大小 (残差法与同分子法)",
+      "bilingual": "Comparing Fractions: Same Numerator & Residual",
+      "shanghaiChapter": "沪教版六年级上册 2.4 分数的大小比较",
+      "englishChapter": "International Maths G6 Fraction Comparison",
+      "terms": [
+        "Cross Multiplication (交叉相乘)",
+        "Residual Method (残差法 1-x)",
+        "Same Numerator (同分子比分母)"
+      ],
+      "description": "通分比较、同分子比分母、化小数比较、残差法（比谁距离1更近，11/12与12/13）及花钱生活化模型。",
+      "prerequisites": [
+        "g5_06"
+      ],
+      "currentPhase": "in_progress",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 84,
+      "sophiaNote": "残差法领悟极快，能自如应用生活化花钱模型解释11/12与12/13的大小差异。",
+      "williamMastery": "proficient",
+      "williamScore": 78,
+      "williamNote": "生活化'谁花的钱少剩得多'理解深刻，但在交叉相乘时偶有上下乘颠倒情况。",
+      "errorRefIds": [
+        "err_06"
+      ]
+    },
+    {
+      "id": "frac_01",
+      "domain": "fractions",
+      "stage": "Stage 3 (G4-G5)",
+      "title": "分数乘除法与倒数法则",
+      "bilingual": "Fraction Multiplication, Division & Reciprocal",
+      "shanghaiChapter": "沪教版六年级上册 2.5-2.6 分数乘法与除法",
+      "englishChapter": "International Maths G6 Ch09 Fraction Operations",
+      "terms": [
+        "Reciprocal (倒数)",
+        "Keep-Change-Flip (除法变乘倒数)",
+        "Cross Cancel (交叉约分)"
+      ],
+      "description": "乘法分子乘分子分母乘分母且先约后乘；除法变乘倒数（乘除互逆）；带分数先化假分数再乘除。",
+      "prerequisites": [
+        "g5_06"
+      ],
+      "currentPhase": "in_progress",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 90,
+      "sophiaNote": "倒数法则运用准确，先约分后计算习惯好。",
+      "williamMastery": "proficient",
+      "williamScore": 70,
+      "williamNote": "乘法良好；除法偶尔忘记将除数翻转为倒数，直接进行约分，需牢记'变乘翻转'口诀。",
+      "errorRefIds": [
+        "err_12"
+      ]
+    },
+    {
       "id": "div_01",
-      "domain": "number_theory",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
       "title": "整除与因数倍数",
       "bilingual": "Divisibility, Factors & Multiples",
       "shanghaiChapter": "沪教版六上 1.1-1.2 节",
@@ -295,7 +725,9 @@ const trackerData = {
         "Multiple (倍数)"
       ],
       "description": "整数整除的定义、因数与倍数的相互依存关系、找一个数的所有因数（成对寻找）。",
-      "prerequisites": [],
+      "prerequisites": [
+        "g3_02"
+      ],
       "currentPhase": "completed",
       "sophiaMastery": "mastered",
       "sophiaScore": 92,
@@ -309,7 +741,8 @@ const trackerData = {
     },
     {
       "id": "div_02",
-      "domain": "number_theory",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
       "title": "质数与合数本质",
       "bilingual": "Prime & Composite Numbers",
       "shanghaiChapter": "沪教版六上 1.4 节",
@@ -329,489 +762,546 @@ const trackerData = {
       "sophiaNote": "准确用'光棍'比喻质数本质，能快速识别83、97等大质数，100以内质数判断准确。",
       "williamMastery": "needs_work",
       "williamScore": 58,
-      "williamNote": "质数定义讲了4遍仍记不住'只能'二字；依赖直觉判断常误将77、91判为质数，对91=7×13需反复提醒。",
+      "williamNote": "质数定义反复遗忘'只能'二字；依赖直觉判断常误将77、91判为质数，对91=7×13需反复提醒。",
       "errorRefIds": [
         "err_01"
       ]
     },
     {
       "id": "div_03",
-      "domain": "number_theory",
-      "title": "整除特征判定法",
-      "bilingual": "Divisibility Rules (2/3/4/5/8/9/25/125)",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "整除特征判定法 (2/3/5/9/4/8)",
+      "bilingual": "Divisibility Rules & Characteristics",
       "shanghaiChapter": "沪教版六上 1.3 节",
-      "englishChapter": "International Maths Ch01 & Handout",
+      "englishChapter": "International Maths Ch01 Divisibility Tests",
       "terms": [
-        "Divisibility Rule (整除判定)",
-        "Last Digits (末几位)",
-        "Sum of Digits (数字之和)"
+        "Last Digit Rule (末尾法则)",
+        "Digit Sum Rule (数位和法则)",
+        "Last 2/3 Digits (末两位/末三位)"
       ],
-      "description": "基于十进制原理：2/5看末1位；4/25看末2位(100=4×25)；8/125看末3位(1000=8×125)；3/9看各位数字之和。",
+      "description": "2和5看末位，4和25看末两位，8看末三位；3和9看各位数字之和。整除性质的组合应用。",
       "prerequisites": [
         "div_01"
       ],
       "currentPhase": "completed",
       "sophiaMastery": "mastered",
       "sophiaScore": 90,
-      "sophiaNote": "深度理解10、100、1000的质因数分解原理，熟练判定2、3、4、5、8倍数。",
+      "sophiaNote": "熟练掌握各数判定法则，能自如应用到六位数整除综合题中。",
       "williamMastery": "proficient",
-      "williamScore": 75,
-      "williamNote": "2和5熟练；4和8能跟随规则，但3的倍数特征在秋季第1节初期有遗忘，需提示数字之和。",
-      "errorRefIds": []
+      "williamScore": 78,
+      "williamNote": "掌握2、5、3法则，能正确分解65=5×13得出末位Y=0或5，但在4和8的法则上偶尔遗忘。",
+      "errorRefIds": [
+        "err_02"
+      ]
     },
     {
       "id": "div_04",
-      "domain": "number_theory",
-      "title": "分解素因数与短除法",
-      "bilingual": "Prime Factorization & Short Division",
-      "shanghaiChapter": "沪教版六上 1.4 节",
-      "englishChapter": "International Maths Ch02 Prime Factorization",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "质因数分解与短除法",
+      "bilingual": "Prime Factorization & Factor Trees",
+      "shanghaiChapter": "沪教版六上 1.5 节",
+      "englishChapter": "International Maths Ch03 Prime Factorization",
       "terms": [
-        "Prime Factor (质因数/素因数)",
-        "Short Division (短除法)",
-        "Factor Tree (因数树)"
+        "Prime Factor (质因数)",
+        "Factor Tree (因数树)",
+        "Short Division (短除法)"
       ],
-      "description": "每个大于1的合数都能唯一分解为素数乘积；从小到大试除质数，商为素数时终止。",
+      "description": "合数写成质数连乘积的形式；树状分解与短除法规范操作；分解质因数结果用指数形式表达。",
       "prerequisites": [
         "div_02"
       ],
       "currentPhase": "completed",
       "sophiaMastery": "mastered",
       "sophiaScore": 95,
-      "sophiaNote": "短除法非常熟练，能规范除到商为素数，指数形式书写工整。",
+      "sophiaNote": "因数树与短除法运用娴熟，质因数连乘书写规范（如36=2²×3²）。",
       "williamMastery": "proficient",
-      "williamScore": 78,
-      "williamNote": "短除法操作基本规范，偶有试商顺序混乱（跳过2直接试3，或试除非质数6）。",
+      "williamScore": 76,
+      "williamNote": "掌握短除法，短除求GCD速度快，但有时除数使用了合数未除到质数为止。",
       "errorRefIds": [
         "err_04"
       ]
     },
     {
       "id": "div_05",
-      "domain": "number_theory",
-      "title": "最大公因数 (HCF/GCD)",
-      "bilingual": "Highest Common Factor / Greatest Common Divisor",
-      "shanghaiChapter": "沪教版六上 1.5 节",
-      "englishChapter": "International Maths Ch02 HCF",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "最大公因数与最小公倍数 (GCD / LCM)",
+      "bilingual": "HCF & LCM via Prime Powers",
+      "shanghaiChapter": "沪教版六上 1.6-1.7 节",
+      "englishChapter": "International Maths Ch03 HCF and LCM",
       "terms": [
-        "Common Factor (公因数)",
-        "HCF / GCD (最大公因数)"
+        "GCD / HCF (最大公因数)",
+        "LCM (最小公倍数)",
+        "Index Extraction (指数法提取)"
       ],
-      "description": "两个数公共因数中最大的一个；短除法左侧公共质因数连乘，或分解式中公共质因数指数取较小者。",
+      "description": "短除法与指数形式提取GCD（公共质因数最低次幂之积）和LCM（所有质因数最高次幂之积）。",
       "prerequisites": [
         "div_04"
       ],
       "currentPhase": "completed",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 85,
-      "sophiaNote": "短除法求GCD操作正确（如60和105的GCD=15），但在质因数指数取多还是取少上偶有犹豫。",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 90,
+      "sophiaNote": "能自如在短除法和指数法之间切换，准确理解GCD和LCM的本质区别。",
       "williamMastery": "proficient",
-      "williamScore": 76,
-      "williamNote": "能熟练用短除法求出24与88的GCD=8、48与120的GCD=24；但曾出现将因子相加而非相乘的严重混淆。",
+      "williamScore": 82,
+      "williamNote": "短除法求GCD非常熟练（如24与88的GCD=8快速算出），但求LCM时有时漏乘底部的互质数。",
       "errorRefIds": [
-        "err_05"
+        "err_04"
       ]
     },
     {
       "id": "div_06",
-      "domain": "number_theory",
-      "title": "最小公倍数 (LCM)",
-      "bilingual": "Lowest Common Multiple",
-      "shanghaiChapter": "沪教版六上 1.6 节",
-      "englishChapter": "International Maths Ch03 LCM",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "完全平方数特性与辨析",
+      "bilingual": "Square Numbers vs. Factor Pairs",
+      "shanghaiChapter": "沪教版六上 拓展专题",
+      "englishChapter": "International Maths Ch08 Square Numbers",
       "terms": [
-        "Common Multiple (公倍数)",
-        "LCM (最小公倍数)"
+        "Square Number (完全平方数)",
+        "Odd Factors (奇数个因数)",
+        "Factor Recombination (因数重组)"
       ],
-      "description": "公共倍数中最小的一个；短除法中L型（左侧与底端）所有因数连乘，或分解式中各质因数指数取较大者。",
+      "description": "完全平方数质因数分解中所有指数均为偶数；因数个数为奇数；严格区分平方数（1,4,9,16,25...）与合数因数分解（6=2×3非平方数）。",
       "prerequisites": [
-        "div_04",
-        "div_05"
+        "div_04"
       ],
       "currentPhase": "completed",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 82,
-      "sophiaNote": "能够正确计算LCM，理解两数互质时LCM等于两数之积。",
-      "williamMastery": "needs_work",
-      "williamScore": 50,
-      "williamNote": "核心概念易混淆：常将LCM'取多'理解为'加起来'（如将54和90的LCM中3的因子加起来算成3⁵）。",
-      "errorRefIds": [
-        "err_05"
-      ]
-    },
-    {
-      "id": "div_07",
-      "domain": "number_theory",
-      "title": "同余性质与大数整除压轴",
-      "bilingual": "Modular Congruence & Multi-digit Divisibility",
-      "shanghaiChapter": "沪教版六上 第1章压轴拓展",
-      "englishChapter": "校本综合思维挑战",
-      "terms": [
-        "Remainder (余数)",
-        "Congruence (同余)",
-        "Combined Divisibility"
-      ],
-      "description": "合数倍数整除须同时满足各互质因数条件（如65=5×13）；大数拆分同余化简法解决六位数填空题（如91X93Y能被65整除）。",
-      "prerequisites": [
-        "div_02",
-        "div_03"
-      ],
-      "currentPhase": "current",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 78,
-      "sophiaNote": "能理解拆分为5和13的倍数，能跟随同余化简推导，但独立解题时对13的试除不够熟练。",
-      "williamMastery": "needs_work",
-      "williamScore": 45,
-      "williamNote": "严重条件遗漏：秋季第2节压轴题仅解出Y=0或5即停止，完全忽略13的整除条件，导致X未解。",
-      "errorRefIds": [
-        "err_06"
-      ]
-    },
-    {
-      "id": "frac_01",
-      "domain": "fractions",
-      "title": "分数的意义与商的关系",
-      "bilingual": "Concept of Fractions & Division Relationship",
-      "shanghaiChapter": "沪教版六上 2.1 节",
-      "englishChapter": "International Maths Ch09 Fractions",
-      "terms": [
-        "Numerator (分子)",
-        "Denominator (分母)",
-        "Fraction as Division (a/b = a÷b)"
-      ],
-      "description": "分数表示把单位1平均分成若干份取其中几份；分子相当于被除数，分母相当于除数，分数线相当于除号。",
-      "prerequisites": [],
-      "currentPhase": "current",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 82,
-      "sophiaNote": "理解较好，能用披萨分切比喻分子分母的物理含义。",
-      "williamMastery": "needs_work",
-      "williamScore": 50,
-      "williamNote": "底层概念未内化：曾将分数除法当乘法（2/8写成2×8=16），且常将25/100混写为25÷100反向混淆。",
-      "errorRefIds": [
-        "err_07"
-      ]
-    },
-    {
-      "id": "frac_02",
-      "domain": "fractions",
-      "title": "分数大小比较与花钱法",
-      "bilingual": "Comparing Fractions & Real-life Analogy",
-      "shanghaiChapter": "沪教版六上 2.2 节",
-      "englishChapter": "International Maths Ch09 Comparing",
-      "terms": [
-        "Common Denominator (同分母)",
-        "Comparing Fractions (比大小)",
-        "Benchmark Method"
-      ],
-      "description": "同分母比分子；同分子比分母；异分母通分或找中间量1/2比较；校本'花钱法'（减去大数后剩下相同，说明原数更大）。",
-      "prerequisites": [
-        "frac_01"
-      ],
-      "currentPhase": "current",
-      "sophiaMastery": "mastered",
-      "sophiaScore": 90,
-      "sophiaNote": "秋季第2节表现亮点，'花钱类比'一点即通，能快速判断异分母相对大小。",
-      "williamMastery": "proficient",
-      "williamScore": 72,
-      "williamNote": "在花钱类比引导下能选对，但尚未内化'同分子看分母'的通用通式，脱离类比后容易犹豫。",
-      "errorRefIds": []
-    },
-    {
-      "id": "frac_03",
-      "domain": "fractions",
-      "title": "通分与商不变基本性质",
-      "bilingual": "Finding Common Denominator & Invariance Property",
-      "shanghaiChapter": "沪教版六上 2.2 节",
-      "englishChapter": "International Maths Ch09 Equivalent Fractions",
-      "terms": [
-        "Equivalent Fraction (等值分数)",
-        "Reduce/Simplify (约分)",
-        "Common Denominator (通分)"
-      ],
-      "description": "分数的分子和分母同时乘以或除以同一个不为0的数，分数大小不变；通分必须分子分母同步操作。",
-      "prerequisites": [
-        "div_06",
-        "frac_01"
-      ],
-      "currentPhase": "current",
       "sophiaMastery": "needs_work",
       "sophiaScore": 65,
-      "sophiaNote": "通分时常出现'分子不同步'低级错误（分母×5，分子忘记同步×5），商不变原理未形成自动化肌肉记忆。",
-      "williamMastery": "needs_work",
-      "williamScore": 48,
-      "williamNote": "通分概念不牢固，找公分母困难，分子经常不同步操作；约分找到GCD后仍习惯性再去重复试除。",
-      "errorRefIds": [
-        "err_08"
-      ]
-    },
-    {
-      "id": "frac_04",
-      "domain": "fractions",
-      "title": "异分母分数加减与带假互化",
-      "bilingual": "Addition/Subtraction of Fractions & Mixed Numbers",
-      "shanghaiChapter": "沪教版六上 2.3 节",
-      "englishChapter": "International Maths Ch09 Fractions Operations",
-      "terms": [
-        "Improper Fraction (假分数)",
-        "Mixed Number (带分数)",
-        "Common Denominator Addition"
-      ],
-      "description": "异分母加减必须先通分再计算分子；带分数加减先化假分数或整数部分与真分数部分分别结合。",
-      "prerequisites": [
-        "frac_03"
-      ],
-      "currentPhase": "current",
-      "sophiaMastery": "needs_work",
-      "sophiaScore": 60,
-      "sophiaNote": "秋季第2节暴露双重严重问题：①18+5=90超低级粗心；②将3/6+5/6误算为8/6混淆带分数与假分数运算机制。",
+      "sophiaNote": "在判断'6是否为完全平方数'时曾直觉误判为'是'（把6=2×3的两个因数误当成了平方），需用几何正方形拼图加深感知。",
       "williamMastery": "needs_work",
       "williamScore": 55,
-      "williamNote": "带余除法商/余数/除数混乱（52÷24写成'24又4/2'）；四则运算缺乏分步规范，跳步出错严重。",
+      "williamNote": "对平方数缺乏量感，无法迅速写出1~20的平方表，与乘法2倍关系混淆严重。",
       "errorRefIds": [
-        "err_09",
         "err_10"
       ]
     },
     {
-      "id": "frac_05",
-      "domain": "fractions",
-      "title": "分数乘除法与倒数法则",
-      "bilingual": "Multiplication, Division & Reciprocal Law",
-      "shanghaiChapter": "沪教版六上 2.4 节",
-      "englishChapter": "International Maths Ch09 Fractions Multiplication",
+      "id": "div_07",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "同余与大数整除 (AMC8思维题)",
+      "bilingual": "Remainder Modulo & Large Number Divisibility",
+      "shanghaiChapter": "沪教版六上 压轴思维拓展",
+      "englishChapter": "International Maths AMC8 Number Theory",
       "terms": [
-        "Reciprocal (倒数)",
-        "Cross Cancel (交叉约分)",
-        "Multiply Fractions"
+        "Modulo Arithmetic (同余)",
+        "Split Remainder (同余拆分)",
+        "Constraint System (约束联立)"
       ],
-      "description": "除以一个分数等于乘它的倒数；带分数必须先化假分数；交叉约分简化计算；分子乘分子、分母乘分母。",
+      "description": "大数整除（如六位数91X93Y能被65整除）：拆解为5和13的倍数，末位Y取0或5，分别代入同余检验求解X。",
       "prerequisites": [
-        "frac_04"
+        "div_03",
+        "div_05"
       ],
-      "currentPhase": "upcoming",
+      "currentPhase": "in_progress",
       "sophiaMastery": "proficient",
-      "sophiaScore": 70,
-      "sophiaNote": "能理解除法变乘法的倒数翻转，但在复杂带分数乘法时容易漏约分。",
+      "sophiaScore": 78,
+      "sophiaNote": "能理解同余拆分思想，但在代入13检验时计算过程跳步，易出现算错余数情况。",
       "williamMastery": "needs_work",
-      "williamScore": 40,
-      "williamNote": "倒数法则两步不同步（颠倒了分母分子却忘记把÷改成×）；分数乘法本能套用分配律强行展开。",
+      "williamScore": 50,
+      "williamNote": "能解出Y=0或5，但解出Y后就以为大题已完成，漏解X；缺乏联立方程与多解排查的完整意识。",
       "errorRefIds": [
+        "err_02",
         "err_11"
       ]
     },
     {
-      "id": "pv_01",
-      "domain": "place_value",
-      "title": "十进制数位与位值概念",
-      "bilingual": "Decimal Place Value (Tens vs Tenths)",
-      "shanghaiChapter": "小学四五年级基础回溯 / 沪教六上预备",
-      "englishChapter": "International Maths Ch04 Decimals",
+      "id": "power_01",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "乘方概念与连乘展开式",
+      "bilingual": "Powers as Repeated Multiplication",
+      "shanghaiChapter": "沪教版六上 拓展 / 预备代数初步",
+      "englishChapter": "International Maths Ch08 Indices and Powers",
       "terms": [
-        "Place Value (位值)",
-        "Tens (十位)",
-        "Tenths (十分位)",
-        "Hundredths (百分位)"
+        "Base (底数)",
+        "Exponent / Index (指数)",
+        "Repeated Multiplication (连乘展开)"
       ],
-      "description": "十进制小数点对称性；th后缀代表几分之一（tenths=十分位=0.1，tens=十位=10）。",
-      "prerequisites": [],
-      "currentPhase": "completed",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 78,
-      "sophiaNote": "数位概念基本清楚，但快速做题时偶将十位(tens)与十分位(tenths)看混。",
-      "williamMastery": "needs_work",
-      "williamScore": 35,
-      "williamNote": "四五年级严重断层：G6暑期第6节tens/tenths三道题目全错；无法分清十分位与十位的精度量级差。",
-      "errorRefIds": [
-        "err_12"
-      ]
-    },
-    {
-      "id": "pv_02",
-      "domain": "place_value",
-      "title": "小数竖式加减与进位对齐",
-      "bilingual": "Decimal Addition/Subtraction & Alignment",
-      "shanghaiChapter": "小学四五年级基础回溯",
-      "englishChapter": "International Maths Ch04 Decimals",
-      "terms": [
-        "Decimal Point Alignment (小数点对齐)",
-        "Carry Over (进位)",
-        "Column Addition"
-      ],
-      "description": "小数加减法核心是小数点必须上下严格对齐；进位与退位必须做好上标标记，不可心算盲进。",
+      "description": "乘方的本质是相同因数的连乘积（2³=2×2×2=8，绝不是2×3=6；3⁴=81绝不是3×4=12）。严格区分乘法与乘方。",
       "prerequisites": [
-        "pv_01"
+        "div_01"
       ],
       "currentPhase": "completed",
       "sophiaMastery": "mastered",
       "sophiaScore": 88,
-      "sophiaNote": "竖式计算规范，偶尔进位遗漏，整体运算质量稳定。",
+      "sophiaNote": "概念清晰，但在快速抢答时偶尔被William带偏，需保持定力。",
       "williamMastery": "needs_work",
-      "williamScore": 42,
-      "williamNote": "重大隐患：进位计算极度混乱（出现0.9+0.1=4.1惊人错误），对位不清，需每日强制竖式巩固。",
+      "williamScore": 48,
+      "williamNote": "全课最大薄弱点：1³=3、2³=6、2⁴=8、3⁴=18全错成底数×指数；必须强制要求手写展开式并口诵'几个几相乘'。",
+      "errorRefIds": [
+        "err_15"
+      ]
+    },
+    {
+      "id": "power_02",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "指数加法法则与方幂运算",
+      "bilingual": "Index Laws: Multiplication & Powers",
+      "shanghaiChapter": "沪教版预备数学 指数法则初步",
+      "englishChapter": "International Maths Ch08 Laws of Indices",
+      "terms": [
+        "Product of Powers (同底数幂乘法)",
+        "Add Indices (指数相加)",
+        "Power of a Power (幂的乘方)"
+      ],
+      "description": "同底数幂相乘，底数不变指数相加：aᵐ · aⁿ = aᵐ⁺ⁿ（如10⁴ × 10⁵ = 10⁹，严禁算成10²⁰）。",
+      "prerequisites": [
+        "power_01"
+      ],
+      "currentPhase": "in_progress",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 82,
+      "sophiaNote": "掌握指数相加法则，对(2³)²=2⁶能通过展开验证理解。",
+      "williamMastery": "needs_work",
+      "williamScore": 50,
+      "williamNote": "10⁴×10⁵曾脱口算出10²⁰（指数相乘）；经过列式展开4个10乘5个10是9个10后理解，仍需练习巩固。",
+      "errorRefIds": [
+        "err_15"
+      ]
+    },
+    {
+      "id": "power_03",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "0指数与负整数指数初步",
+      "bilingual": "Zero & Negative Exponents",
+      "shanghaiChapter": "沪教版预备数学 指数拓展",
+      "englishChapter": "International Maths Ch08 Zero and Negative Powers",
+      "terms": [
+        "Zero Exponent a⁰=1 (0指数为1)",
+        "Negative Exponent (负整数指数倒数)"
+      ],
+      "description": "任何非零数的0次幂等于1（a⁰=1，10⁰=1绝不是10或0）；负整数指数为倒数（10⁻¹=1/10=0.1，10⁻²=0.01）。",
+      "prerequisites": [
+        "power_02"
+      ],
+      "currentPhase": "preview",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 78,
+      "sophiaNote": "能用除法模式规律推导10⁰=1与10⁻¹=0.1，逻辑严密。",
+      "williamMastery": "needs_work",
+      "williamScore": 52,
+      "williamNote": "直觉容易认为10⁰=0或10，需用连续除以10的阶梯模式图示法引导理解。",
       "errorRefIds": [
         "err_13"
       ]
     },
     {
-      "id": "pv_03",
-      "domain": "place_value",
-      "title": "小数乘除与小数点位移规律",
-      "bilingual": "Decimal Multiplication/Division & Scaling",
-      "shanghaiChapter": "小学四五年级基础回溯 / 六上预备",
-      "englishChapter": "International Maths Ch04 & Ch08",
-      "terms": [
-        "Decimal Shift (小数点移位)",
-        "Scaling (乘除因数缩放)",
-        "Estimation (估算)"
-      ],
-      "description": "乘10/100向右移位；除以10/100向左移位；除数是小数时转化为除数是整数的等价除法（商不变）。",
-      "prerequisites": [
-        "pv_01"
-      ],
-      "currentPhase": "completed",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 75,
-      "sophiaNote": "在百分数化小数时偶尔将小数点移位方向搞反（如0.075误写为75%）。",
-      "williamMastery": "needs_work",
-      "williamScore": 38,
-      "williamNote": "移位方向频繁混淆（5.4÷0.6算成0.9，移反方向）；除数缩小商扩大的反比规律未能建立条件反射。",
-      "errorRefIds": [
-        "err_14"
-      ]
-    },
-    {
-      "id": "pv_04",
-      "domain": "place_value",
-      "title": "乘方本质与幂次指数规律",
-      "bilingual": "Exponents, Powers of 2 & Order of Operations",
-      "shanghaiChapter": "沪教六上综合与初中衔接",
+      "id": "power_04",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "科学记数法与十进制展开",
+      "bilingual": "Scientific Notation & Standard Form",
+      "shanghaiChapter": "沪教版预备数学 / 英语数学 Book A",
       "englishChapter": "International Maths Ch08 Scientific Notation",
       "terms": [
-        "Exponent/Power (指数/幂)",
-        "Base (底数)",
-        "Repeated Multiplication (连乘本质)"
+        "Scientific Notation (科学记数法)",
+        "Coefficient 1≤a<10 (有效系数)",
+        "Order of Magnitude (数量级)"
       ],
-      "description": "乘方是相同因数的连乘：aⁿ=a×a×...×a（n个a相乘）；乘方≠乘法；同底数幂相乘指数相加而非相乘。",
+      "description": "大数与微小数值规范书写：a × 10ⁿ，其中1 ≤ a < 10，n为整数；结合宇宙天体与微观尺度应用。",
       "prerequisites": [
-        "pv_01"
+        "power_03",
+        "g5_03"
       ],
-      "currentPhase": "current",
+      "currentPhase": "preview",
       "sophiaMastery": "proficient",
-      "sophiaScore": 78,
-      "sophiaNote": "折纸实验快速理解2ⁿ幂次增长，但曾把6当完全平方数，混淆过面积÷2=边长。",
-      "williamMastery": "needs_work",
-      "williamScore": 30,
-      "williamNote": "全学期最顽固核心错误：反复将乘方写成乘法（1³=3, 2³=6, 2⁴=8, 3⁴=18），且将10⁴×10⁵算成10²⁰（指数相乘）。",
+      "sophiaScore": 85,
+      "sophiaNote": "熟练书写标准形式，系数有效数字统计准确。",
+      "williamMastery": "proficient",
+      "williamScore": 65,
+      "williamNote": "大数科学记数法能写，但对微小数值（如0.00035=3.5×10⁻⁴）移动位数的负指数容易数错。",
       "errorRefIds": [
-        "err_02",
-        "err_15"
+        "err_13"
       ]
     },
     {
-      "id": "rat_01",
-      "domain": "ratios_percent",
-      "title": "比的意义与比例等式性质",
-      "bilingual": "Ratios, Proportions & Equality Properties",
-      "shanghaiChapter": "沪教版六上 第3章 3.1-3.2 节",
-      "englishChapter": "International Maths Ch15-17 Ratios",
+      "id": "power_05",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "奇数偶数同余与奇偶性分析",
+      "bilingual": "Parity & Modulo 2 in AMC8",
+      "shanghaiChapter": "沪教版六上 奇数与偶数性质",
+      "englishChapter": "International Maths Number Theory Parity",
       "terms": [
-        "Ratio (比)",
-        "Proportion (比例)",
-        "Cross Multiplication (交叉相乘)"
+        "Odd & Even (奇数与偶数)",
+        "Parity Invariance (奇偶性不变性)",
+        "Prime 2 Uniqueness (质数2的唯一性)"
       ],
-      "description": "比表示两个数相除；比例表示两个比相等的等式；等式基本性质（两边同乘同除）。",
+      "description": "加减乘法奇偶性规律（奇+奇=偶，奇×奇=奇）；质数与奇偶性交叉（如果两质数之和为奇数，必有其一为2）。",
+      "prerequisites": [
+        "div_02"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 92,
+      "sophiaNote": "能敏锐运用奇偶性排除竞赛题中的不可能情况，逻辑严密。",
+      "williamMastery": "proficient",
+      "williamScore": 75,
+      "williamNote": "掌握奇偶判定，但在代数推导中偶有忘记质数2是唯一的偶质数。",
+      "errorRefIds": [
+        "err_01"
+      ]
+    },
+    {
+      "id": "frac_02",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "分数化小数与循环小数",
+      "bilingual": "Fractions to Recurring & Terminating Decimals",
+      "shanghaiChapter": "沪教版六年级上册 2.7 分数与小数的互化",
+      "englishChapter": "International Maths G6 Recurring Decimals",
+      "terms": [
+        "Terminating Decimal (有限小数)",
+        "Recurring Decimal (循环小数)",
+        "Denominator Factors 2 and 5 (分母质因数只含2和5)"
+      ],
+      "description": "最简分数分母质因数只含2或5可化为有限小数；含其他质因数必化为无限循环小数；循环节记号与互化。",
+      "prerequisites": [
+        "g5_05"
+      ],
+      "currentPhase": "in_progress",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 88,
+      "sophiaNote": "快速识别分母质因数结构判断有限还是循环小数，掌握1/7的循环节序列。",
+      "williamMastery": "proficient",
+      "williamScore": 68,
+      "williamNote": "通过长除法能求出小数，但在直接观察分母质因数判定时偶有遗漏需先化简为最简分数的前提。",
+      "errorRefIds": [
+        "err_07"
+      ]
+    },
+    {
+      "id": "frac_03",
+      "domain": "number_theory_powers",
+      "stage": "Stage 4 (G5-G6)",
+      "title": "分数实际应用题与工程行程率",
+      "bilingual": "Fraction Word Problems & Work/Speed Rates",
+      "shanghaiChapter": "沪教版六年级上册 2.8 分数的应用",
+      "englishChapter": "International Maths G6 Fraction Applications",
+      "terms": [
+        "Unit 1 (单位'1')",
+        "Fraction of Remainder (剩余量的几分之几)",
+        "Work Rate (工效)"
+      ],
+      "description": "找准单位'1'、区分分率与具体数量、多步分数的剩余量计算（第一天用去3/8，第二天用去余下的2/5）。",
       "prerequisites": [
         "frac_01"
       ],
-      "currentPhase": "upcoming",
+      "currentPhase": "in_progress",
       "sophiaMastery": "proficient",
-      "sophiaScore": 72,
-      "sophiaNote": "能理解比即除法，但在比例等式变形时偶尔受机械'移项变号'干扰（应为除以3误写为乘3）。",
+      "sophiaScore": 82,
+      "sophiaNote": "线段图画法规范，能准确区分第2天所乘的分数基底是余量而非总量。",
       "williamMastery": "needs_work",
-      "williamScore": 35,
-      "williamNote": "代数等式变形严重薄弱：将比号当乘号（C:D=3:5写成C×3÷5），能背口诀但完全不会操作。",
+      "williamScore": 60,
+      "williamNote": "审题容易看漏'余下的'三个字，直接用总量乘以第二个分数；需用荧光笔划关键词强化审题。",
       "errorRefIds": [
         "err_16"
       ]
     },
     {
-      "id": "rat_02",
-      "domain": "ratios_percent",
-      "title": "百分数与简单利息应用",
-      "bilingual": "Percentages, Discounts & Simple Interest",
-      "shanghaiChapter": "沪教版六上 第3章 3.4 节",
-      "englishChapter": "International Maths Ch10-14 Percentage & Interest",
+      "id": "geom_01",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "周长概念与长正方形周长",
+      "bilingual": "Perimeter of Rectangles & Squares",
+      "shanghaiChapter": "沪教版三年级下册 周长",
+      "englishChapter": "International Maths G3-G4 Perimeter",
       "terms": [
-        "Percentage (百分比)",
-        "Simple Interest (单利息 I=P·r·t)",
-        "Principal (本金)"
+        "Perimeter (周长)",
+        "Boundary Length (边框总长)",
+        "Formula 2(l+w) (长方形周长公式)"
       ],
-      "description": "百分数是分母为100的特殊比；简单利息公式I=P·r·t；折旧与增长率应用题分析。",
+      "description": "封闭图形一周的长度；长方形周长P=2(长+宽)；正方形周长P=4×边长；等长铁丝围成不同图形周长不变。",
       "prerequisites": [
-        "rat_01",
-        "pv_03"
+        "g3_01"
       ],
-      "currentPhase": "upcoming",
-      "sophiaMastery": "upcoming",
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 95,
+      "sophiaNote": "概念清晰，计算准确，能灵活处理复杂拼图的周长变化。",
+      "williamMastery": "proficient",
+      "williamScore": 80,
+      "williamNote": "周长公式掌握，但有时和面积公式搞混，需口头强调'周长是一维线长'。",
+      "errorRefIds": [
+        "err_17"
+      ]
+    },
+    {
+      "id": "geom_02",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "面积概念与正方形面积反求边长",
+      "bilingual": "Area vs. Perimeter: Sqrt(A) vs. A/2",
+      "shanghaiChapter": "沪教版四年级上册 / 预备几何 面积与平方根",
+      "englishChapter": "International Maths G4-G5 Area of Squares & Rectangles",
+      "terms": [
+        "Area (面积)",
+        "Square Root (平方根)",
+        "Common Error A/2 (除以2致命误区)"
+      ],
+      "description": "面积是二维平面的覆盖大小；正方形面积A=s²；已知面积反求边长必须开方s=√A，严禁写成A/2（如36cm²边长为6cm不是18cm）！",
+      "prerequisites": [
+        "geom_01",
+        "div_06"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "needs_work",
       "sophiaScore": 65,
-      "sophiaNote": "待后续教学深入推进，目前已初步接触百分数互化。",
-      "williamMastery": "upcoming",
-      "williamScore": 40,
-      "williamNote": "待后续教学深入推进，需提前巩固百分数与小数转换基准量。",
-      "errorRefIds": []
+      "sophiaNote": "曾把正方形面积36cm²反求边长误算为18cm（除以2）；经正方形方格网拼图纠错后已深刻警醒。",
+      "williamMastery": "needs_work",
+      "williamScore": 56,
+      "williamNote": "极易混淆周长与面积、开平方与除以2；必须强制在草稿上写出s×s=36因此s=6的中间式。",
+      "errorRefIds": [
+        "err_17"
+      ]
+    },
+    {
+      "id": "geom_03",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "度量衡单位换算与维度进率",
+      "bilingual": "Metric Units Scale: cm³ to m³ & Litres",
+      "shanghaiChapter": "沪教版五年级 体积与容积单位",
+      "englishChapter": "International Maths G5-G6 Metric Conversions",
+      "terms": [
+        "Linear 100 (一维百进制)",
+        "Area 10000 (二维万进制)",
+        "Volume 1000000 (三维百万进制)",
+        "Capacity Litre (容积升)"
+      ],
+      "description": "长度1m=100cm，面积1m²=10000cm²，体积1m³=1000000cm³（三维进率是三次方！）；1升=1000毫升=1000cm³。",
+      "prerequisites": [
+        "geom_02"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 82,
+      "sophiaNote": "清楚100³=1,000,000的推导逻辑，但在快速答题时偶尔少写一个0。",
+      "williamMastery": "needs_work",
+      "williamScore": 54,
+      "williamNote": "把体积进率和长度进率混为一谈（曾认为1m³=100cm³）；需用魔方与1立方米大木箱实物模型直观建立空间感。",
+      "errorRefIds": [
+        "err_17"
+      ]
+    },
+    {
+      "id": "word_01",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "行程问题与速度时间单位对齐",
+      "bilingual": "Speed, Distance, Time: 40 min = 2/3 hr",
+      "shanghaiChapter": "沪教版四年级/五年级 行程问题",
+      "englishChapter": "International Maths G5-G6 Speed, Distance, Time",
+      "terms": [
+        "Speed = Distance / Time (速度公式)",
+        "Unit Consistency (单位一致性)",
+        "Minutes to Fraction Hours (分钟化分数小时)"
+      ],
+      "description": "速度=路程÷时间；计算时单位必须严格匹配；40分钟必须化为40/60=2/3小时（严禁写成0.4小时！）再与千米/小时相乘。",
+      "prerequisites": [
+        "g4_02",
+        "frac_01"
+      ],
+      "currentPhase": "completed",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 86,
+      "sophiaNote": "单位转换严谨，能自如将分钟折算为最简真分数参与相乘。",
+      "williamMastery": "needs_work",
+      "williamScore": 50,
+      "williamNote": "见到40分钟直接当成0.4小时或直接乘40导致数值荒谬；缺乏对答案常识性检验的习惯。",
+      "errorRefIds": [
+        "err_16"
+      ]
+    },
+    {
+      "id": "word_02",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "大题审题三部曲与规范解题",
+      "bilingual": "Three-Step Structured Problem Solving",
+      "shanghaiChapter": "协和双语融合班特色 解题规程",
+      "englishChapter": "SUIS Integrated Math Problem Solving Template",
+      "terms": [
+        "Step 1 Identify (第一步列已知与未知)",
+        "Step 2 Multi-step Working (第二步完整推导)",
+        "Step 3 Check & Reality Test (第三步验算与常识检验)"
+      ],
+      "description": "针对两人'抢报答案、不写过程、漏解第二问'的顽疾推行解题三部曲：设列已知→分步演算→单位与生活常识排查。",
+      "prerequisites": [
+        "g3_03",
+        "word_01"
+      ],
+      "currentPhase": "in_progress",
+      "sophiaMastery": "proficient",
+      "sophiaScore": 80,
+      "sophiaNote": "开始主动分步写草稿，答题完整度明显提升，漏题现象杜绝。",
+      "williamMastery": "needs_work",
+      "williamScore": 52,
+      "williamNote": "仍有图快直接报数的冲动，后半节课疲劳时解题过程缩水；需采用填空式模板约束。",
+      "errorRefIds": [
+        "err_11",
+        "err_16"
+      ]
     },
     {
       "id": "adv_01",
-      "domain": "advanced_topics",
-      "title": "折纸实验与指数爆破模型",
-      "bilingual": "Paper Folding & Exponential Explosion",
-      "shanghaiChapter": "校本探究课程 / 沪教拓展",
-      "englishChapter": "Hands-on Modeling & Powers",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "折纸指数模型与AMC8思维拓展",
+      "bilingual": "Paper Folding 2ⁿ & AMC8 Thinking",
+      "shanghaiChapter": "协和校本思维探究",
+      "englishChapter": "International Maths AMC8 Exponents",
       "terms": [
-        "Exponential Growth (指数增长)",
-        "Linear vs Exponential (线性vs指数)",
-        "Layers (层数)"
+        "Exponential Growth (指数爆炸)",
+        "Doubling Sequence (翻倍数列)",
+        "Spatial Reasoning (空间折叠)"
       ],
-      "description": "每对折一次，层数翻倍（对折n次为2ⁿ层）；区分线性增长(+2)与指数增长(×2)的巨大差异。",
+      "description": "折纸1次2层、2次4层、n次2ⁿ层；推导对折42次厚度超过地月距离；培养指数增长直觉与空间推理能力。",
       "prerequisites": [
-        "pv_04"
+        "power_01"
       ],
       "currentPhase": "completed",
       "sophiaMastery": "mastered",
       "sophiaScore": 92,
-      "sophiaNote": "折纸操作非常积极，能迅速推导出折6次=64格=2⁶，模型建构清晰完整。",
+      "sophiaNote": "不仅能算出2ⁿ各层厚度，还能主动追问'为什么对折超过8次实际纸张折不动'的物理边界，思维活跃。",
       "williamMastery": "mastered",
       "williamScore": 88,
-      "williamNote": "动手实操极具优势，对折纸层数翻倍反应敏捷，能快速推算至512层，当堂表现优异。",
+      "williamNote": "本堂课最大亮点！动手折纸极快，能迅速口算推导128→256→512→1024，展现了优秀的直观空间感知力。",
       "errorRefIds": []
     },
     {
       "id": "adv_02",
-      "domain": "advanced_topics",
-      "title": "双语应用题分步建模（行程与分数）",
-      "bilingual": "Multi-step Word Problems (Speed & Fractions)",
-      "shanghaiChapter": "沪教六上 2.6 分数应用题",
-      "englishChapter": "International Maths Word Problems",
+      "domain": "geometry_applications",
+      "stage": "Stage 5 (G3-G6)",
+      "title": "24点逆向因数重组与算筹",
+      "bilingual": "24-Point Game Factor Recombination",
+      "shanghaiChapter": "协和校本数学活动",
+      "englishChapter": "International Maths Mathematical Games",
       "terms": [
-        "Average Speed (平均速度)",
-        "Distance-Time (路程时间)",
-        "Step-by-step Modeling"
+        "Factor Pairs of 24 (24的因数对)",
+        "3×8, 4×6, 2×12 Target",
+        "Inverse Thinking (逆向思维)"
       ],
-      "description": "平均速度=总路程÷总时间；把具体量转化为占全长几分之几的分率；多步文字题结构化拆解。",
+      "description": "利用给定的4张牌通过加减乘除括号凑出24；本质是将目标24分解为3×8、4×6、2×12或25-1、48/2等逆向因数结构。",
       "prerequisites": [
-        "frac_01"
+        "g3_03",
+        "div_01"
       ],
-      "currentPhase": "current",
-      "sophiaMastery": "proficient",
-      "sophiaScore": 80,
-      "sophiaNote": "能理解题目情境并列式，计算稳定。",
-      "williamMastery": "needs_work",
-      "williamScore": 45,
-      "williamNote": "缺乏分步解题意识：秋季第2节行程问题第6题直接空着，在老师引导下才能写出1000÷20=50米/分。",
-      "errorRefIds": [
-        "err_17"
-      ]
+      "currentPhase": "completed",
+      "sophiaMastery": "mastered",
+      "sophiaScore": 96,
+      "sophiaNote": "速度极快，能同时在脑海中并列构建3×8和4×6两条路线，多次秒杀胜出。",
+      "williamMastery": "proficient",
+      "williamScore": 78,
+      "williamNote": "积极上台参与，能找到常见的3×8组合，但在遇到需要利用分数或先乘除后加减的较难牌面时容易急躁。",
+      "errorRefIds": []
     }
   ],
   "errorBank": [
@@ -1139,62 +1629,274 @@ const trackerData = {
     {
       "id": "ws-sophia-01",
       "targetStudent": "sophia",
-      "studentBadge": "🌸 Sophia 专属",
-      "title": "【Sophia 专属】概念严谨性与运算防粗心攻坚卷（第1期）",
-      "timeLimit": "30 分钟",
+      "studentBadge_en": "🌸 Sophia Exclusive",
+      "studentBadge_cn": "🌸 Sophia 专属",
+      "title_en": "[Sophia Exclusive] Concept Rigor & Careless Mistake Elimination (Set 1)",
+      "title_cn": "【Sophia 专属】概念严谨性与运算防粗心攻坚卷（第1期）",
+      "timeLimit_en": "30 Mins",
+      "timeLimit_cn": "30 分钟",
       "totalPoints": 100,
       "badgeColor": "#ec4899",
-      "targetAreas": "概念反向辨析 · 异分母通分同扩倍 · 双栏草稿防笔误 · 同余整除压轴",
-      "description": "针对完全平方数反向辨析（破解6是平方数错觉）、正方形面积求边长（杜绝除以2）、分数异分母通分同扩倍双步填空、双栏草稿防笔误实操、六位数同余大数整除完整求解。内含详细参考答案与评分标准。",
-      "tags": ["完全平方数", "通分同扩倍", "双栏草稿", "大数同余"],
-      "pdfUrl": "pdf/Sophia_Math_Consolidation_Set1.pdf",
-      "htmlUrl": "worksheets/sophia_practice_set1.html",
-      "fileSize": "1.1 MB"
+      "targetAreas_en": "Square Number Fallacies · Equivalent Fractions Synchronous Expansion · Double-column Draft · Modulo Divisibility",
+      "targetAreas_cn": "概念反向辨析 · 异分母通分同扩倍 · 双栏草稿防笔误 · 同余整除压轴",
+      "desc_en": "Tailored to eliminate careless calculation errors and conceptual traps: square numbers (6 is NOT square), finding side from square area (sqrt(A) vs A/2), expanding numerators synchronously when finding common denominators, and 6-digit divisibility.",
+      "desc_cn": "针对完全平方数反向辨析（破解6是平方数错觉）、正方形面积求边长（杜绝除以2）、分数异分母通分同扩倍双步填空、双栏草稿防笔误实操、六位数同余大数整除完整求解。内含详细参考答案与评分标准。",
+      "tags_en": [
+        "Square Numbers",
+        "Equivalent Fractions",
+        "Draft Discipline",
+        "Modulo Divisibility"
+      ],
+      "tags_cn": [
+        "完全平方数",
+        "通分同扩倍",
+        "双栏草稿",
+        "大数同余"
+      ],
+      "pdfUrl_en": "pdf/WS01_Sophia_Concept_Rigor_EN.pdf",
+      "pdfUrl_cn": "pdf/WS01_Sophia_Concept_Rigor_CN.pdf",
+      "htmlUrl_en": "worksheets/sophia_practice_set1_en.html",
+      "htmlUrl_cn": "worksheets/sophia_practice_set1_cn.html",
+      "fileSize": "711 KB / 1.1 MB"
     },
     {
       "id": "ws-william-01",
       "targetStudent": "william",
-      "studentBadge": "⚡ William 专属",
-      "title": "【William 专属】四则运算基础复原与乘方本质攻坚卷（第1期）",
-      "timeLimit": "35 分钟",
+      "studentBadge_en": "⚡ William Exclusive",
+      "studentBadge_cn": "⚡ William 专属",
+      "title_en": "[William Exclusive] Basic Arithmetic Recovery & Powers Foundation (Set 1)",
+      "title_cn": "【William 专属】四则运算基础复原与乘方本质攻坚卷（第1期）",
+      "timeLimit_en": "35 Mins",
+      "timeLimit_cn": "35 分钟",
       "totalPoints": 100,
       "badgeColor": "#3b82f6",
-      "targetAreas": "小数四则微特训 · 乘方连乘展开 · 审题三部曲模板 · 巧比分数大小",
-      "description": "针对小学四五年级小数四则运算脱节（0.9+0.1=1.0、5.4÷0.6=9）、乘方连乘手写展开表（杜绝2³=6、3⁴=18）、大题审题“三部曲模板”（完整求出X与Y）、巧比分数大小。内含详细参考答案与评分标准。",
-      "tags": ["小数四则微特训", "乘方连乘展开", "审题三部曲模板", "巧比大小"],
-      "pdfUrl": "pdf/William_Math_Consolidation_Set1.pdf",
-      "htmlUrl": "worksheets/william_practice_set1.html",
-      "fileSize": "1.0 MB"
+      "targetAreas_en": "Decimal Arithmetic Clinic · Powers as Repeated Multiplication · Three-Step Word Problem Template · Comparing Fractions",
+      "targetAreas_cn": "小数四则微特训 · 乘方连乘展开 · 审题三部曲模板 · 巧比分数大小",
+      "desc_en": "Systematic remediation of Grade 4-5 arithmetic gaps: decimal alignment (0.9+0.1=1.0, 5.4/0.6=9, 30/0.5=60), repeated multiplication tables to cure 2^3=6 & 3^4=18, structured 3-step word problem template, and residual fraction comparison.",
+      "desc_cn": "针对小学四五年级小数四则运算脱节（0.9+0.1=1.0、5.4÷0.6=9）、乘方连乘手写展开表（杜绝2³=6、3⁴=18）、大题审题“三部曲模板”（完整求出X与Y）、巧比分数大小。内含详细参考答案与评分标准。",
+      "tags_en": [
+        "Decimal Clinic",
+        "Powers Expansion",
+        "3-Step Template",
+        "Fraction Comparison"
+      ],
+      "tags_cn": [
+        "小数四则微特训",
+        "乘方连乘展开",
+        "审题三部曲模板",
+        "巧比大小"
+      ],
+      "pdfUrl_en": "pdf/WS02_William_Arithmetic_Recovery_EN.pdf",
+      "pdfUrl_cn": "pdf/WS02_William_Arithmetic_Recovery_CN.pdf",
+      "htmlUrl_en": "worksheets/william_practice_set1_en.html",
+      "htmlUrl_cn": "worksheets/william_practice_set1_cn.html",
+      "fileSize": "576 KB / 969 KB"
     },
     {
       "id": "ws-dual-01",
       "targetStudent": "dual",
-      "studentBadge": "👥 双人合卷",
-      "title": "【双人合卷】协和双语融合班 · 六上期初三轨融合达标测试卷",
-      "timeLimit": "40 分钟",
+      "studentBadge_en": "👥 Dual Integrated",
+      "studentBadge_cn": "👥 双人合卷",
+      "title_en": "[Dual Track] SUIS G6 Integrated Math Diagnostic Test",
+      "title_cn": "【双人合卷】协和双语融合班 · 六上期初三轨融合达标测试卷",
+      "timeLimit_en": "40 Mins",
+      "timeLimit_cn": "40 分钟",
       "totalPoints": 100,
       "badgeColor": "#4f46e5",
-      "targetAreas": "沪教预备第1章收官 · Book A双语考点 · 协和校本思维压轴 · 随堂测验",
-      "description": "沪教预备版第1章《数的整除》全考点精炼（因数倍数、质因数分解、公因数公倍数）+ International Math Book A 英文考点 + 协和校本思维压轴与24点。适合课堂40分钟双人对比测验。附分步评分细则。",
-      "tags": ["三轨教材融合", "随堂40分钟", "数的整除结课", "双语考点"],
-      "pdfUrl": "pdf/SUIS_G6_Integrated_Math_Diagnostic_Test.pdf",
-      "htmlUrl": "worksheets/suis_g6_diagnostic_test.html",
-      "fileSize": "916 KB"
+      "targetAreas_en": "Shanghai Prep Ch1 Concluding · International Book A Terms · SUIS School-based Thinking · 40-Min Test",
+      "targetAreas_cn": "沪教预备第1章收官 · Book A双语考点 · 协和校本思维压轴 · 随堂测验",
+      "desc_en": "Covers all key testing points from Shanghai Ch1 Divisibility (factors, prime factorization, GCD/LCM) + International Maths Book A terms + SUIS school-based thinking (24-point factor recombination). Ideal for in-class 40-minute diagnostic comparison.",
+      "desc_cn": "沪教预备版第1章《数的整除》全考点精炼（因数倍数、质因数分解、公因数公倍数）+ International Math Book A 英文考点 + 协和校本思维压轴与24点。适合课堂40分钟双人对比测验。附分步评分细则。",
+      "tags_en": [
+        "Tri-Track Integration",
+        "40-Min Quiz",
+        "Divisibility Mastery",
+        "Bilingual Math"
+      ],
+      "tags_cn": [
+        "三轨教材融合",
+        "随堂40分钟",
+        "数的整除结课",
+        "双语考点"
+      ],
+      "pdfUrl_en": "pdf/WS03_SUIS_G6_Diagnostic_Test_EN.pdf",
+      "pdfUrl_cn": "pdf/WS03_SUIS_G6_Diagnostic_Test_CN.pdf",
+      "htmlUrl_en": "worksheets/suis_g6_diagnostic_test_en.html",
+      "htmlUrl_cn": "worksheets/suis_g6_diagnostic_test_cn.html",
+      "fileSize": "564 KB / 889 KB"
     },
     {
       "id": "ws-flashcards-01",
       "targetStudent": "all",
-      "studentBadge": "🌟 两人打卡",
-      "title": "【打卡卡包】经典错题变式回访与名师口诀速记卡包",
-      "timeLimit": "每日 5 分钟",
-      "totalPoints": "持续打卡",
+      "studentBadge_en": "🌟 Daily Flashcards",
+      "studentBadge_cn": "🌟 两人打卡",
+      "title_en": "[Daily Deck] Historical Error Review & Pedagogical Mnemonics Cards",
+      "title_cn": "【打卡卡包】经典错题变式回访与名师口诀速记卡包",
+      "timeLimit_en": "5 Mins Daily",
+      "timeLimit_cn": "每日 5 分钟",
+      "totalPoints": "Continuous",
       "badgeColor": "#059669",
-      "targetAreas": "17道典型错题举一反三 · 教师点拨口诀 · 课前5分钟热身 · 周末自主打卡",
-      "description": "精选错题本中的典型错题进行同题型变式，配备朗朗上口的名师记忆口诀与打卡进度栏，适合课前 5 分钟热身或周末自主巩固。附每道题的参考答案与反思提示。",
-      "tags": ["错题变式", "名师口诀", "每日5分钟", "打卡卡包"],
-      "pdfUrl": "pdf/Daily_Error_Review_and_Mnemonics_Cards.pdf",
-      "htmlUrl": "worksheets/error_review_flashcards.html",
-      "fileSize": "523 KB"
+      "targetAreas_en": "17 Historical Error Variations · Rhyming Mnemonics · 5-Min Warmup · Weekend Review",
+      "targetAreas_cn": "17道典型错题举一反三 · 教师点拨口诀 · 课前5分钟热身 · 周末自主打卡",
+      "desc_en": "Selected from classroom error archives with parallel variations of all 17 classic mistakes, catchy English & Chinese teacher mnemonics, and habit check-in boxes. Ideal for 5-minute pre-class warmups.",
+      "desc_cn": "精选错题本中的典型错题进行同题型变式，配备朗朗上口的名师记忆口诀与打卡进度栏，适合课前 5 分钟热身或周末自主巩固。附每道题的参考答案与反思提示。",
+      "tags_en": [
+        "Error Variations",
+        "Mnemonics",
+        "5-Min Drill",
+        "Check-in Cards"
+      ],
+      "tags_cn": [
+        "错题变式",
+        "名师口诀",
+        "每日5分钟",
+        "打卡卡包"
+      ],
+      "pdfUrl_en": "pdf/WS04_Daily_Error_Flashcards_EN.pdf",
+      "pdfUrl_cn": "pdf/WS04_Daily_Error_Flashcards_CN.pdf",
+      "htmlUrl_en": "worksheets/error_review_flashcards_en.html",
+      "htmlUrl_cn": "worksheets/error_review_flashcards_cn.html",
+      "fileSize": "345 KB / 502 KB"
+    },
+    {
+      "id": "ws-foundation-01",
+      "targetStudent": "william",
+      "studentBadge_en": "⚡ Foundational Clinic 1",
+      "studentBadge_cn": "⚡ 基础专练一",
+      "title_en": "[Clinic 1] Grade 4-5 Decimals, Place Value & Percentages Mastery",
+      "title_cn": "【基础专练一】四五年级小数位值、对齐进位与百分数换算特训",
+      "timeLimit_en": "35 Mins",
+      "timeLimit_cn": "35 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#0ea5e9",
+      "targetAreas_en": "Tens vs Tenths · Decimal Carrying · Divisor Integer Shift · Percentage Conversion (0.075 to 7.5%) · Sig Figs (6 vs 6.0)",
+      "targetAreas_cn": "Tens与Tenths辨析 · 小数进位加法 · 小数除法移位 · 百分数互化(0.075化7.5%) · 有效数字与精度",
+      "desc_en": "Root-cause remediation for G4-5 decimals: column alignment for addition, integer shift for decimal division (5.4/0.6=9, 30/0.5=60), shifting 2 decimal places to percentages (0.075=7.5% not 75%), and precision bounds (6 vs 6.0).",
+      "desc_cn": "针对四五年级小数核心断层：Tens与Tenths数位板对照、带零竖式除法商0占位、小数加减垂直进位、小数除法除数整数化（30÷0.5=60）、百分数换算（0.075=7.5%杜绝75%或0.75%）、有效数字前导零辨析。",
+      "tags_en": [
+        "Place Value",
+        "Tens vs Tenths",
+        "Decimal Division",
+        "Percentages",
+        "Sig Figs"
+      ],
+      "tags_cn": [
+        "数位对照",
+        "Tens与Tenths",
+        "小数除法移位",
+        "百分数换算",
+        "有效数字"
+      ],
+      "pdfUrl_en": "pdf/WS05_G45_Decimals_Place_Value_EN.pdf",
+      "pdfUrl_cn": "pdf/WS05_G45_Decimals_Place_Value_CN.pdf",
+      "htmlUrl_en": "worksheets/g45_decimals_place_value_en.html",
+      "htmlUrl_cn": "worksheets/g45_decimals_place_value_cn.html",
+      "fileSize": "497 KB / 734 KB"
+    },
+    {
+      "id": "ws-foundation-02",
+      "targetStudent": "william",
+      "studentBadge_en": "⚡ Foundational Clinic 2",
+      "studentBadge_cn": "⚡ 基础专练二",
+      "title_en": "[Clinic 2] Grade 4-5 Powers, Exponents & Multiplication Clinic",
+      "title_cn": "【基础专练二】四五年级乘方本质、指数法则与连乘展开特训",
+      "timeLimit_en": "35 Mins",
+      "timeLimit_cn": "35 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#8b5cf6",
+      "targetAreas_en": "Powers as Repeated Multiplication · Dispel 2^3=6 & 3^4=18 · Index Law a^m * a^n · Zero Power a^0=1 · Prime Factorization",
+      "targetAreas_cn": "乘方连乘本质 · 破除2³=6与3⁴=18乘法混淆 · 指数相加法则 · 0指数a⁰=1 · 质因数指数形式",
+      "desc_en": "Eradicates the chronic confusion between multiplication and powers: handwritten repeated expansion tables (2^3=8 vs 2*3=6; 3^4=81 vs 3*4=12), factor pairs vs repeated factors (16 is 2^4, not 8 twos), index laws (10^4 * 10^5 = 10^9), and 10^0=1.",
+      "desc_cn": "根除William乘方全错顽疾：手写连乘展开表（2³=8不是6；3⁴=81不是12）、因数相乘与因数相加区别（16是4个2相乘不是8个2）、同底数幂乘法指数相加（10⁴×10⁵=10⁹杜绝10²⁰）、10⁰=1模式推导。",
+      "tags_en": [
+        "Powers Clinic",
+        "Repeated Multiplication",
+        "Index Laws",
+        "Zero Exponents",
+        "Prime Powers"
+      ],
+      "tags_cn": [
+        "乘方特训",
+        "连乘展开表",
+        "指数法则",
+        "零指数",
+        "质因数分解"
+      ],
+      "pdfUrl_en": "pdf/WS06_G45_Powers_Multiplication_EN.pdf",
+      "pdfUrl_cn": "pdf/WS06_G45_Powers_Multiplication_CN.pdf",
+      "htmlUrl_en": "worksheets/g45_powers_multiplication_en.html",
+      "htmlUrl_cn": "worksheets/g45_powers_multiplication_cn.html",
+      "fileSize": "570 KB / 820 KB"
+    },
+    {
+      "id": "ws-foundation-03",
+      "targetStudent": "dual",
+      "studentBadge_en": "🌸 Sophia & ⚡ William",
+      "studentBadge_cn": "🌸 Sophia & ⚡ William",
+      "title_en": "[Clinic 3] Grade 4-5 Fraction Basics, Equivalent Fractions & Operations",
+      "title_cn": "【基础专练三】四五年级分数基本性质、通分约分与假带互化特训",
+      "timeLimit_en": "35 Mins",
+      "timeLimit_cn": "35 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#ec4899",
+      "targetAreas_en": "Equivalent Fractions · Synchronous Expansion · Division with Remainder to Mixed Number · Borrowing Subtraction · Division Reciprocal",
+      "targetAreas_cn": "分数基本性质 · 通分分子同步扩倍 · 带余除法化带分数 · 带分数借位减法 · 倒数除法",
+      "desc_en": "Focuses on common fraction traps from classroom notes: invariant ratio principle (expand both numerator and denominator), quotient-remainder conversion (52/24 = 2 4/24 = 2 1/6, not 24 4/2), borrowing 1 in mixed subtraction, and Keep-Change-Flip division.",
+      "desc_cn": "针对分数核心痛点：商不变原理与通分同扩倍（分母乘几分子必须乘几，杜绝3/4+2/5=5/20）、有余数除法写带分数（52÷24=2又4/24杜绝24又4/2）、带分数减法借位转化为假分数、分数除法倒数两步走、残差法巧比大小。",
+      "tags_en": [
+        "Equivalent Fractions",
+        "Common Denominator",
+        "Mixed Numbers",
+        "Fraction Division",
+        "Residual Comparison"
+      ],
+      "tags_cn": [
+        "分数基本性质",
+        "通分同扩倍",
+        "假带互化",
+        "倒数除法",
+        "残差比大小"
+      ],
+      "pdfUrl_en": "pdf/WS07_G45_Fractions_Operations_EN.pdf",
+      "pdfUrl_cn": "pdf/WS07_G45_Fractions_Operations_CN.pdf",
+      "htmlUrl_en": "worksheets/g45_fractions_operations_en.html",
+      "htmlUrl_cn": "worksheets/g45_fractions_operations_cn.html",
+      "fileSize": "471 KB / 719 KB"
+    },
+    {
+      "id": "ws-foundation-04",
+      "targetStudent": "dual",
+      "studentBadge_en": "🌸 Sophia & ⚡ William",
+      "studentBadge_cn": "🌸 Sophia & ⚡ William",
+      "title_en": "[Clinic 4] Grade 3-5 Order of Operations, Geometry Measurement & Word Problems",
+      "title_cn": "【基础专练四】三四五年级运算优先级(BODMAS)、几何周长面积与行程应用题",
+      "timeLimit_en": "35 Mins",
+      "timeLimit_cn": "35 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#10b981",
+      "targetAreas_en": "BODMAS Order · Square Side from Area (sqrt(A) not A/2) · Metric Scale Factors (cm3 to m3) · Speed Time Unit Alignment (40 min = 2/3 hr)",
+      "targetAreas_cn": "运算优先级(BODMAS) · 正方形面积反求边长(杜绝除以2) · 度量衡进率换算 · 行程问题单位对齐(40分化2/3小时)",
+      "desc_en": "Addresses fundamental order of operations and measurement gaps: BODMAS strict priority (avoiding 18+5=90 slip), square side length sqrt(Area) not Area/2, 3D metric scale factors (1m3 = 1,000,000 cm3), and converting 40 minutes to 2/3 hr (not 0.4 hr).",
+      "desc_cn": "攻克三四五年级综合应用痛点：四则混合运算顺序BODMAS、正方形面积反求边长（边长=√面积绝不能除以2）、长正方形周长与面积辨析、度量衡高低阶进率（1m³=1,000,000cm³）、速度时间单位统一（40分钟=2/3小时绝非0.4小时）、水箱水深上升三步法。",
+      "tags_en": [
+        "BODMAS",
+        "Square Area vs Side",
+        "Metric Units",
+        "Speed Distance Time",
+        "Aquarium Volume"
+      ],
+      "tags_cn": [
+        "运算顺序BODMAS",
+        "面积反求边长",
+        "度量衡进率",
+        "行程时间单位",
+        "水箱容积模型"
+      ],
+      "pdfUrl_en": "pdf/WS08_G35_BODMAS_Geometry_Word_Problems_EN.pdf",
+      "pdfUrl_cn": "pdf/WS08_G35_BODMAS_Geometry_Word_Problems_CN.pdf",
+      "htmlUrl_en": "worksheets/g35_bodmas_geometry_word_problems_en.html",
+      "htmlUrl_cn": "worksheets/g35_bodmas_geometry_word_problems_cn.html",
+      "fileSize": "504 KB / 837 KB"
     }
   ]
 };
@@ -1205,4 +1907,3 @@ if (typeof window !== "undefined") {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = trackerData;
 }
-
