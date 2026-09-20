@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>【Sophia 专属】五年级上册（5A）练习册错题靶向修复与总复习盲区攻坚卷</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #ec4899;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(236,72,153,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #db2777; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 6px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11.5px;
+    }
+    .mnemonic-box {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 6px 12px;
+      border-radius: 0 4px 4px 0;
+      margin: 8px 0;
+      font-size: 12px;
+      color: #92400e;
+    }
+    .mnemonic-title {
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #ec4899;
+      padding: 5px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 16px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .q-subtext {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 50px;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .answer-box-large {
+      min-height: 90px;
+    }
+    .fill-blank {
+      display: inline-block;
+      min-width: 65px;
+      border-bottom: 1.5px solid #0f172a;
+      text-align: center;
+      padding: 0 4px;
+      margin: 0 2px;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .bar-model {
+      font-family: monospace;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 6px 0;
+      font-size: 12px;
+    }
+    .answer-key-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ 打印试卷 / 另存为 PDF</button>
+
+  <div class="paper-container">
+    <!-- 头部信息 -->
+    <div class="header">
+      <div class="school-title">上海协和双语学校（虹桥校区）初中预备融合班 · 橡心国际专属数学教研</div>
+      <div class="paper-title">【Sophia 专属】五年级上册（5A）练习册错题靶向修复与总复习盲区攻坚卷</div>
+      <div class="meta-box">
+        <div>学生姓名：<span class="fill-blank" style="min-width:70px">Sophia</span></div>
+        <div>建议用时：45 ~ 50 分钟</div>
+        <div>满分：100 分</div>
+        <div>测试目标：<span class="target-badge">5A 错题靶向 + 第6单元空白攻坚</span></div>
+      </div>
+    </div>
+
+    <div class="mnemonic-box">
+      <div class="mnemonic-title">💡 考前避坑心法：</div>
+      <div>① 审题动笔先圈划，数字单位配成对； ② 算前心中估一把，加减乘除莫颠倒； ③ 字母常数不乱混，三角面积必除二！</div>
+    </div>
+
+    <!-- 第一部分 -->
+    <div class="section-title">
+      <span>第一部分：概念与数感火眼金睛（填空与比大小）</span>
+      <span style="font-size:12px;color:#64748b;">共 5 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 【靶向 ERR-SOP-13】商的变化规律与小数点位移（4分）</div>
+      <div class="q-subtext">口诀：除数纹丝未曾动，被除数缩商同缩；小数除以大整数，商必零点莫反扩！</div>
+      <div>已知 $48 \div 16 = 3$，请直接利用商的变化规律写出下列各题的商：</div>
+      <div style="margin-top:6px; display:flex; gap:20px; flex-wrap:wrap;">
+        <div>(1) $4.8 \div 16 =$ <span class="fill-blank"></span></div>
+        <div>(2) $0.48 \div 16 =$ <span class="fill-blank"></span></div>
+        <div>(3) $0.048 \div 16 =$ <span class="fill-blank"></span></div>
+        <div>(4) $480 \div 16 =$ <span class="fill-blank"></span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【靶向 ERR-SOP-15】纯小数乘除大小比较（4分）</div>
+      <div class="q-subtext">口诀：乘纯小数越乘越小，除纯小数越除越大；别拿整数旧经验，套进小数闹笑话！</div>
+      <div>在 $\square$ 内填入“$>$”、“$<$”或“$=$”，不计算直接依据性质判断：</div>
+      <div style="margin-top:6px; display:flex; gap:24px; flex-wrap:wrap;">
+        <div>(1) $6.4 \times 0.8 \ \ \square \ \ 6.4 \div 0.8$</div>
+        <div>(2) $12.5 \div 0.5 \ \ \square \ \ 12.5 \times 0.5$</div>
+        <div>(3) $0.95 \times 1.02 \ \ \square \ \ 0.95 \div 1.02$</div>
+        <div>(4) $8.4 \div 1 \ \ \square \ \ 8.4 \times 1$</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. 【靶向 ERR-SOP-18】循环小数与周期余数模型（4分）</div>
+      <div class="q-subtext">口诀：循环展开比多位，末尾添零见高低；周期整除看余数，余几就是第几个！</div>
+      <div>(1) 比较大小：$0.714714 \ \ \square \ \ 0.\dot{7}1\dot{4}$ （提示：展开写出第 7 位小数）。</div>
+      <div style="margin-top:4px;">(2) 分数 $\frac{1}{7} = 0.\dot{1}4285\dot{7}$，它的循环节由 <span class="fill-blank"></span> 个数字组成；小数点后第 $100$ 位上的数字是 <span class="fill-blank"></span>。</div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. 【靶向 ERR-SOP-24】代数符号的普遍性（4分）</div>
+      <div class="q-subtext">口诀：字母代表万千数，公式莫填特例数！</div>
+      <div>一个正方形的边长是 $a\text{ cm}$：</div>
+      <div style="margin-top:4px;">(1) 它的周长是 <span class="fill-blank"></span> $\text{cm}$； (2) 它的面积是 <span class="fill-blank"></span> $\text{cm}^2$； (3) 当 $a = 6$ 时，面积为 <span class="fill-blank"></span> $\text{cm}^2$。</div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. 【靶向 ERR-SOP-27】双语数学倍数句式（4分）</div>
+      <div class="q-subtext">口诀：times 谁谁就是除数，圈画主语找基准！</div>
+      <div>(1) "How many times 15 is 45?" 列式：<span class="fill-blank" style="min-width:110px"></span>，结果：<span class="fill-blank"></span></div>
+      <div style="margin-top:4px;">(2) "A car traveled 240 km, which is 3 times the distance a bike traveled." 自行车行驶的距离是 <span class="fill-blank"></span> $\text{km}$。</div>
+    </div>
+
+    <!-- 第二部分 -->
+    <div class="section-title">
+      <span>第二部分：代数化简与符号法则基本功（判断与化简）</span>
+      <span style="font-size:12px;color:#64748b;">共 3 题，满分 15 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. 【靶向 ERR-SOP-21】同类项与常数项合并辨析（5分）</div>
+      <div class="q-subtext">口诀：代数化简分类别，同类才能并一家；字母同胞系数加，孤单常数别乱拉！</div>
+      <div>判断正误：代数式 $4x + 7 + 2x$ 可以化简合并为 $13x$。 （<span class="fill-blank" style="min-width:40px"></span>）</div>
+      <div class="answer-box">
+        <div>请写出正确化简过程：$4x + 7 + 2x =$ </div>
+        <div style="margin-top:4px;color:#64748b;font-size:12px;">理由说明：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">7. 【靶向 ERR-SOP-22】正负号性质与相反数相消（5分）</div>
+      <div class="q-subtext">口诀：加减符号随身走，一正一负抵成空；减去再加等于零，莫把相消当翻倍！</div>
+      <div>判断正误：等式 $x + x - y + y = 2x - 2y$ 是恒成立的。 （<span class="fill-blank" style="min-width:40px"></span>）</div>
+      <div class="answer-box">
+        <div>请写出标准分步化简过程：$x + x - y + y =$ </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">8. 【靶向 ERR-SOP-24】严格执行“先化简再求值”规范（5分）</div>
+      <div class="q-subtext">口诀：先化简来后求值，轻舟已过万重山！</div>
+      <div>已知 $y = 3.5$，求代数式 $15y - 7y + 20$ 的值（<strong>严禁直接展开硬代入</strong>）。</div>
+      <div class="answer-box">
+        <div>第一步（合并同类项化简）：$15y - 7y + 20 =$ </div>
+        <div style="margin-top:6px;">第二步（代入数值计算）：当 $y = 3.5$ 时，原式 $=$ </div>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 第三部分 -->
+    <div class="section-title">
+      <span>第三部分：严谨竖式与四则混合运算</span>
+      <span style="font-size:12px;color:#64748b;">共 3 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">9. 【靶向 ERR-SOP-14】除数是小数竖式除法与商对齐（6分）</div>
+      <div class="q-subtext">口诀：除数有小同移位，商点跟着新点走；算前先估算，小数点莫点错！</div>
+      <div>计算：$197.6 \div 5.2$</div>
+      <div style="margin:4px 0;">(1) <strong>算前估算</strong>：把 $197.6$ 估成 <span class="fill-blank"></span>，$5.2$ 估成 <span class="fill-blank"></span>，估算商约为 <span class="fill-blank"></span>。</div>
+      <div>(2) <strong>列竖式完整计算</strong>（清晰标出小数点移动与对齐痕迹）：</div>
+      <div class="answer-box answer-box-large">
+        <div style="display:flex; justify-content:space-between;">
+          <div style="width:55%;">
+            <br>
+            $\quad 5.2\overline{\smash{\big)}\,197.6\phantom{)}}$
+          </div>
+          <div style="width:40%;border-left:1px dashed #cbd5e1;padding-left:10px;font-size:12px;color:#64748b;">
+            核验区：<br>
+            商为整数还是小数？<br>
+            最终计算结果 = 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">10. 【靶向 ERR-SOP-20】三角形面积公式严谨推导（6分）</div>
+      <div class="q-subtext">口诀：三角梯形亲兄弟，算完面积必除二；平四矩形才直接，丢了除二全白费！</div>
+      <div>一个直角三角形的两条直角边分别为底 $b = 0.36\text{ m}$，高 $h = 0.25\text{ m}$。</div>
+      <div style="margin:4px 0;">(1) 写出三角形面积计算公式：$\text{Area} =$ <span class="fill-blank" style="min-width:120px"></span></div>
+      <div>(2) 列式计算该三角形面积（写出分步计算与单位）：</div>
+      <div class="answer-box">
+        <div>算式与过程：</div>
+        <div style="margin-top:16px;">答：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">11. 【靶向 ERR-SOP-26】小数四则混合脱式计算（8分）</div>
+      <div class="q-subtext">口诀：小数相乘数位数，一位加一得两位；除号莫当减号看，巧用结合算得快！</div>
+      <div style="display:flex; gap:16px;">
+        <div style="flex:1;">
+          <div>(1) $0.4 \times (3.2 - 0.8) \div 1.2$</div>
+          <div class="answer-box answer-box-large">
+            $=$ <br><br>
+            $=$ <br><br>
+            $=$ 
+          </div>
+        </div>
+        <div style="flex:1;">
+          <div>(2) $7.4 \times 1.3 - 4.68 \div 0.9$</div>
+          <div class="answer-box answer-box-large">
+            $=$ <br><br>
+            $=$ <br><br>
+            $=$ 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第四部分 -->
+    <div class="section-title">
+      <span>第四部分：解决问题（Word Problems）圈题眼综合建模</span>
+      <span style="font-size:12px;color:#64748b;">共 4 题，满分 25 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">12. 【靶向 ERR-SOP-16】两步均分与扣除剩余量（6分）</div>
+      <div class="q-subtext">口诀：应用题里有剩余，先减剩余再平均；动笔之前先划句，单步两步分清明！</div>
+      <div>烘焙工坊制作了一批总重为 $9.2\text{ kg}$ 的曲奇饼干。糕点师把这些饼干平均装入 $4$ 个精美礼盒后，案板上还剩下 $0.4\text{ kg}$ 饼干。平均每个礼盒里装了多少千克曲奇饼干？</div>
+      <div style="font-size:12px;color:#64748b;margin:3px 0;">引导思考：实际装入礼盒的饼干总质量是 <span class="fill-blank"></span> $\text{kg}$。</div>
+      <div class="answer-box">
+        <div>列式解答：</div>
+        <div style="margin-top:20px;">答：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">13. 【靶向 ERR-SOP-17】多变量数据匹配与量纲对齐（6分）</div>
+      <div class="q-subtext">口诀：单价数量配成对，鸡对鸡来牛对牛；公斤绝不乘公斤，量纲对齐不出糗！</div>
+      <div>水果超市里，苹果的单价是每千克 $6.8$ 元，香蕉的单价是每千克 $4.5$ 元。学校食堂采购员王阿姨买了 $15\text{ kg}$ 苹果和 $24\text{ kg}$ 香蕉。王阿姨一共需要支付多少元？</div>
+      <div class="answer-box">
+        <div>列式解答：</div>
+        <div style="margin-top:20px;">答：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">14. 【靶向 ERR-SOP-23】平均数实际问题总量差模型（6分）</div>
+      <div class="q-subtext">口诀：平均数题总量求，均乘场数总分留；两期总分做减法，后段得分立刻出！</div>
+      <div>校女子篮球队参加锦标赛，前 $6$ 场比赛的平均得分为 $42$ 分。随后又打了 $2$ 场比赛，这 $8$ 场比赛的总平均得分提高到了 $45$ 分。</div>
+      <div>(1) 这支球队在后 $2$ 场比赛中一共得到了多少分？ (2) 后 $2$ 场比赛的平均得分是多少分？</div>
+      <div class="answer-box answer-box-large">
+        <div>分步列式计算：</div>
+        <div style="margin-top:35px;">答：(1) 后两场共得分：<span class="fill-blank"></span> 分； (2) 后两场平均分：<span class="fill-blank"></span> 分。</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">15. 【靶向 ERR-SOP-19 & ERR-SOP-27】双语分物陷阱与整体分率（7分）</div>
+      <div class="q-subtext">口诀：问占整体几分几，单位是一不是块；herself 出现必加一，双语题眼不马虎！</div>
+      <div>"Emma bought a large pizza for lunch and cut it into 8 equal slices. She wants to share the pizza evenly between <strong>herself</strong> and <strong>three</strong> of her best friends."</div>
+      <div style="margin-top:6px;">(1) How many people are sharing the pizza altogether? <span class="fill-blank" style="min-width:50px"></span> people.</div>
+      <div>(2) What <strong>fraction</strong> of the whole pizza will each person receive? <span class="fill-blank"></span> (fraction) $=$ <span class="fill-blank"></span> (decimal).</div>
+      <div>(3) How many <strong>slices</strong> of pizza will each person get? <span class="fill-blank"></span> slices.</div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 第五部分 -->
+    <div class="section-title">
+      <span>第五部分：5A 第 6 单元总复习空白盲区专项攻坚</span>
+      <span style="font-size:12px;color:#64748b;">共 4 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">16. 【靶向 5A P44 ERR-SOP-25】条形线段模型总长守恒方程（5分）</div>
+      <div class="q-subtext">口诀：条形等长总长定，解出 x 算全长；全长守恒挂在心，第二变量迎刃解！</div>
+      <div>三条完全等长的彩带条形模型如下：第 1 条为 $3x$，第 2 条为 $x + 8$，第 3 条为 $4y$。</div>
+      <div class="bar-model">
+        [Tier 1] |---- x ----|---- x ----|---- x ----|  (总长 3x)<br>
+        [Tier 2] |---- x ----|---------- 8 ----------|  (总长 x + 8)<br>
+        [Tier 3] |-- y --|-- y --|-- y --|-- y --|      (总长 4y)
+      </div>
+      <div>(1) 根据第 1 条与第 2 条等长，列出求 $x$ 的方程并求解：</div>
+      <div style="margin:4px 0;">方程：<span class="fill-blank" style="min-width:140px"></span> $\implies x =$ <span class="fill-blank"></span></div>
+      <div>(2) 求出彩带总长，并列出求 $y$ 的方程解出 $y$：</div>
+      <div style="margin:4px 0;">彩带总长 $=$ <span class="fill-blank"></span> $\text{dm}$； 求 $y$ 方程：<span class="fill-blank" style="min-width:140px"></span> $\implies y =$ <span class="fill-blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">17. 【靶向 5A P47 工程合作空白题】两队合作工程应用题（5分）</div>
+      <div>甲、乙两支工程队共同修筑一条全长 $125\text{ km}$ 的公路。甲队每天修 $3.5\text{ km}$，乙队每天修 $4.5\text{ km}$。甲队因调度原因先单独施工了 $6$ 天，随后乙队加入，两队共同施工。问：乙队加入后，还需要多少天才能修完全部公路？</div>
+      <div class="answer-box">
+        <div>解答过程：</div>
+        <div style="margin-top:25px;">答：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">18. 【靶向 5A P49 相遇行程空白题】列方程解决两地相向而行问题（5分）</div>
+      <div>A、B 两座城市相距 $540\text{ km}$。一辆客车和一辆货车分别从 A、B 两城同时出发，相向而行，经过 $4.5$ 小时两车在途中相遇。已知客车的平均速度是 $64\text{ km/h}$。请设货车的平均速度为 $x\text{ km/h}$，<strong>列出方程并求解</strong>。</div>
+      <div class="answer-box">
+        <div>解：设货车的平均速度为 $x\text{ km/h}$。</div>
+        <div>方程：</div>
+        <div style="margin-top:25px;">答：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">19. 【靶向 5A P51 租船盈亏方程压轴题】双重假设与盈亏问题（5分）</div>
+      <div>协和学校组织五年级师生去公园划船。若每条船坐 $4$ 人，则多出 $6$ 人没有船坐；若每条船多坐 $2$ 人（即每船坐 $6$ 人），则正好空出 $1$ 条船。问：原计划一共租了多少条船？参加划船的师生共有多少人？</div>
+      <div class="answer-box answer-box-large">
+        <div>解：设原计划租了 $x$ 条船。</div>
+        <div>第一种方案师生总人数表示为：<span class="fill-blank" style="min-width:100px"></span>； 第二种方案师生总人数表示为：<span class="fill-blank" style="min-width:100px"></span></div>
+        <div style="margin-top:8px;">列方程求解：</div>
+        <div style="margin-top:25px;">答：</div>
+      </div>
+    </div>
+
+    <!-- 教师参考答案与评分标准 -->
+    <div class="answer-key-box">
+      <div style="font-weight:800;font-size:14px;color:#0f172a;margin-bottom:8px;border-bottom:1px solid #cbd5e1;padding-bottom:4px;">
+        📋 【参考答案与评分细则】（教师批改参考）
+      </div>
+      <div style="font-size:12px;line-height:1.6;color:#334155;">
+        <strong>第一部分（20分）</strong>：1. (1) 0.3 (2) 0.03 (3) 0.003 (4) 30（各1分）； 2. (1) &lt; (2) &gt; (3) &lt; (4) =（各1分）； 3. (1) &lt; (2分) (2) 6, 8 (各1分)； 4. (1) 4a (2) a² (3) 36（1+1+2分）； 5. (1) 45÷15, 3 (2分) (2) 80 (2分)。<br>
+        <strong>第二部分（15分）</strong>：6. 判× (2分)；化简为 $6x+7$ (2分)；理由：同类项才能合并系数，常数项不能加给字母 (1分)。 7. 判× (2分)；步骤：$(x+x)+(-y+y)=2x+0=2x$ (3分)。 8. 化简：$8y+20$ (2分)；代入：$8×3.5+20 = 28+20 = 48$ (3分)。<br>
+        <strong>第三部分（20分）</strong>：9. (1) 估算 200÷5=40 (2分)； (2) 竖式商为整数 38 (4分，标错小数点扣3分)。 10. (1) $S=\frac{1}{2}bh$ (2分)； (2) $0.36×0.25÷2 = 0.045\text{ m}^2$ (4分，漏除以2扣3分)。 11. (1) $0.4×2.4÷1.2 = 0.96÷1.2 = 0.8$ (4分)； (2) $9.62 - 5.2 = 4.42$ (4分)。<br>
+        <strong>第四部分（25分）</strong>：12. 引导 8.8kg (1分)；$(9.2-0.4)÷4 = 2.2\text{ kg}$ (4分)；答语 (1分)。 13. $6.8×15 + 4.5×24 = 102 + 108 = 210\text{ 元}$ (6分)。 14. (1) $45×8 - 42×6 = 360-252 = 108\text{ 分}$ (4分)； (2) $108÷2 = 54\text{ 分}$ (2分)。 15. (1) 4人 (2分)； (2) 1/4, 0.25 (2分)； (3) 2 slices (3分)。<br>
+        <strong>第五部分（20分）</strong>：16. (1) $3x=x+8 \implies 2x=8 \implies x=4$ (2分)； (2) 总长 12dm (1分)，$4y=12 \implies y=3$ (2分)。 17. 剩余 $125 - 3.5×6 = 104\text{ km}$；$104÷(3.5+4.5) = 13\text{ 天}$ (5分)。 18. 方程 $(64+x)×4.5 = 540 \implies 64+x = 120 \implies x = 56\text{ km/h}$ (5分)。 19. 表达：$4x+6$ 与 $6(x-1)$ (2分)；方程 $4x+6 = 6(x-1) \implies 2x=12 \implies x=6\text{ 条}$ (2分)；师生 $4×6+6 = 30\text{ 人}$ (1分)。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ],
+        throwOnError : false
+      });
+    });
+  </script>
+</body>
+</html>

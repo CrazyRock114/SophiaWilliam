@@ -28,6 +28,8 @@ const tasks = [
   { html: 'g45_fractions_operations_cn.html', pdf: 'WS07_G45_Fractions_Operations_CN.pdf' },
   { html: 'g35_bodmas_geometry_word_problems_en.html', pdf: 'WS08_G35_BODMAS_Geometry_Word_Problems_EN.pdf' },
   { html: 'g35_bodmas_geometry_word_problems_cn.html', pdf: 'WS08_G35_BODMAS_Geometry_Word_Problems_CN.pdf' },
+  { html: 'sophia_5a_consolidation_test_en.html', pdf: 'WS09_Sophia_5A_Consolidation_Test_EN.pdf' },
+  { html: 'sophia_5a_consolidation_test_cn.html', pdf: 'WS09_Sophia_5A_Consolidation_Test_CN.pdf' },
 ];
 
 console.log(`Starting generation of ${tasks.length} PDFs...`);

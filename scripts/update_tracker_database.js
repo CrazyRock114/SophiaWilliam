@@ -956,6 +956,41 @@ const consolidationWorksheets = [
     htmlUrl_en: "worksheets/g35_bodmas_geometry_word_problems_en.html",
     htmlUrl_cn: "worksheets/g35_bodmas_geometry_word_problems_cn.html",
     fileSize: "504 KB / 837 KB"
+  },
+  {
+    id: "ws-sophia-5a-01",
+    targetStudent: "sophia",
+    studentBadge_en: "🌸 Sophia Exclusive",
+    studentBadge_cn: "🌸 Sophia 专属",
+    title_en: "[Sophia Exclusive] Grade 5A Workbook Error Remediation & Ch6 Review Mastery",
+    title_cn: "【Sophia 专属】五年级上册（5A）练习册错题靶向修复与总复习盲区攻坚卷",
+    timeLimit_en: "45-50 Mins",
+    timeLimit_cn": "45-50 分钟",
+    totalPoints: 100,
+    badgeColor: "#ec4899",
+    targetAreas_en: "Quotient Scaling · Combining Like Terms & Sign Rules · Strict Column Division · Triangle Area Halving · Ch6 Review Gaps",
+    targetAreas_cn: "商的变化与小数位移 · 代数同类项与符号抵消 · 严谨竖式商对齐 · 三角面积必除二 · 第6单元总复习盲区",
+    desc_en: "Full-spectrum targeted remediation developed from Sophia's complete 5A workbook error audit (16 diagnostic cards) and Chapter 6 unsupervised blank pages: decimal division scaling, pure decimal comparisons, recurring decimal cycles, algebraic combining like terms (avoiding 4x+7=11x), additive inverse cancellation, triangle area (halving), multi-variable shopping, average score delta, bar-model length conservation, work collaboration, opposite-direction travel, and boat rental surplus/deficit.",
+    desc_cn: "基于Sophia校内5A练习册52页作业全量审计（16张专属错题诊断卡）与第6单元总复习空白盲区定制：全面攻克除数是小数列竖式移位对齐、商的变化规律、代数同类项与常数项严禁合并（杜绝4x+7+2x=13x）、符号法则与相反数相消、三角形面积必除以2、双语分物分率辨析、彩带条形总长守恒方程、两队合作工程、相向而行相遇方程、租船盈亏压轴题。附名师避坑口诀与完整评分细则。",
+    tags_en: [
+      "5A Workbook Audit",
+      "Algebraic Rigor",
+      "Decimal Division",
+      "Triangle Area",
+      "Ch6 Review Blind Spots"
+    ],
+    tags_cn: [
+      "5A练习册全册审计",
+      "代数同类项规范",
+      "小数除法严谨竖式",
+      "三角面积除以二",
+      "第6单元总复习攻坚"
+    ],
+    pdfUrl_en: "pdf/WS09_Sophia_5A_Consolidation_Test_EN.pdf",
+    pdfUrl_cn: "pdf/WS09_Sophia_5A_Consolidation_Test_CN.pdf",
+    htmlUrl_en: "worksheets/sophia_5a_consolidation_test_en.html",
+    htmlUrl_cn: "worksheets/sophia_5a_consolidation_test_cn.html",
+    fileSize: "709 KB / 1.2 MB"
   }
 ];
 
