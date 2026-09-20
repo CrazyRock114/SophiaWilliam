@@ -1,8 +1,9 @@
 /**
  * Sophia & William 专属数学知识图谱追踪网站核心数据库
  * 完整同步最新重建学生档案（Sophia 23节 / William 17节）
- * 与29道结构化高危错题库（Sophia 12题 / William 17题，含极高危/高危/中危分级）
- * 更新时间: 2026-09-19T01:54:17.938Z
+ * 与53道结构化高危错题库（Sophia 33题 / William 20题，含极高危/高危/中危分级）
+ * 全面整合 4B练习册、5A练习册、5B练习册 及 6A校本教材全景审计资产
+ * 更新时间: 2026-09-20T10:10:42.636Z
  */
 
 const trackerData = {
@@ -11,7 +12,7 @@ const trackerData = {
     "track": "融合班 (Integrated / Bilingual Track)",
     "grade": "小学六年级（初中预备班）第一学期",
     "semesterProgress": "开学半个月（第2周刚结束）",
-    "asOfDate": "2026年9月18日",
+    "asOfDate": "2026年9月20日",
     "curricula": [
       {
         "id": "shanghai",
@@ -481,7 +482,8 @@ const trackerData = {
         "ERR-SOP-05",
         "ERR-SOP-08",
         "ERR-SOP-12",
-        "ERR-WIL-06"
+        "ERR-WIL-06",
+        "ERR-SOP-22"
       ]
     },
     {
@@ -511,7 +513,8 @@ const trackerData = {
       "williamScore": 55,
       "williamNote": "极易混淆tens与tenths，听到tenth仍本能往十位去写；需使用色块数位对照板辅助固定。",
       "errorRefIds": [
-        "ERR-WIL-03"
+        "ERR-WIL-03",
+        "ERR-WIL-19"
       ]
     },
     {
@@ -569,7 +572,9 @@ const trackerData = {
       "williamNote": "平移方向基本分清，但对0.04×0.05=0.0020=0.002补0去0过程易纠结。",
       "errorRefIds": [
         "ERR-SOP-07",
-        "ERR-WIL-05"
+        "ERR-WIL-05",
+        "ERR-SOP-26",
+        "ERR-SOP-30"
       ]
     },
     {
@@ -596,7 +601,8 @@ const trackerData = {
       "williamScore": 54,
       "williamNote": "除法移位常忘扩被除数（5.4÷0.6误答0.9），除以0.5误当乘0.5算成15；需强化商不变模型。",
       "errorRefIds": [
-        "ERR-WIL-05"
+        "ERR-WIL-05",
+        "ERR-SOP-13"
       ]
     },
     {
@@ -625,7 +631,9 @@ const trackerData = {
       "williamScore": 58,
       "williamNote": "常把0.00397当成5位有效数字，认为6与6.0没有任何区别，需用测量尺刻度直观演示。",
       "errorRefIds": [
-        "ERR-WIL-16"
+        "ERR-WIL-16",
+        "ERR-SOP-14",
+        "ERR-SOP-15"
       ]
     },
     {
@@ -653,7 +661,8 @@ const trackerData = {
       "williamScore": 56,
       "williamNote": "移位位数摇摆不定，0.075曾报出75%或0.75%；需强调乘以100%的本质含义。",
       "errorRefIds": [
-        "ERR-SOP-07"
+        "ERR-SOP-07",
+        "ERR-SOP-18"
       ]
     },
     {
@@ -822,7 +831,8 @@ const trackerData = {
       "williamNote": "乘法良好；除法偶尔忘记将除数翻转为倒数，直接进行约分，需牢记'变乘翻转'口诀。",
       "errorRefIds": [
         "ERR-WIL-10",
-        "ERR-WIL-11"
+        "ERR-WIL-11",
+        "ERR-SOP-19"
       ]
     },
     {
@@ -851,7 +861,8 @@ const trackerData = {
       "williamNote": "因数分解能成对寻找，但偶尔对因数与加数混淆（曾把16的因数说成8个2）。",
       "errorRefIds": [
         "ERR-SOP-03",
-        "ERR-WIL-07"
+        "ERR-WIL-07",
+        "ERR-WIL-18"
       ]
     },
     {
@@ -964,7 +975,8 @@ const trackerData = {
       "williamScore": 82,
       "williamNote": "短除法求GCD非常熟练（如24与88的GCD=8快速算出），但求LCM时有时漏乘底部的互质数。",
       "errorRefIds": [
-        "ERR-WIL-09"
+        "ERR-WIL-09",
+        "ERR-SOP-31"
       ]
     },
     {
@@ -1049,7 +1061,8 @@ const trackerData = {
       "williamScore": 48,
       "williamNote": "全课最大薄弱点：1³=3、2³=6、2⁴=8、3⁴=18全错成底数×指数；必须强制要求手写展开式并口诵'几个几相乘'。",
       "errorRefIds": [
-        "ERR-WIL-01"
+        "ERR-WIL-01",
+        "ERR-SOP-29"
       ]
     },
     {
@@ -1131,7 +1144,9 @@ const trackerData = {
       "williamScore": 65,
       "williamNote": "大数科学记数法能写，但对微小数值（如0.00035=3.5×10⁻⁴）移动位数的负指数容易数错。",
       "errorRefIds": [
-        "ERR-WIL-16"
+        "ERR-WIL-16",
+        "ERR-SOP-21",
+        "ERR-SOP-24"
       ]
     },
     {
@@ -1158,7 +1173,9 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 75,
       "williamNote": "掌握奇偶判定，但在代数推导中偶有忘记质数2是唯一的偶质数。",
-      "errorRefIds": []
+      "errorRefIds": [
+        "ERR-SOP-32"
+      ]
     },
     {
       "id": "frac_02",
@@ -1236,7 +1253,9 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 80,
       "williamNote": "周长公式掌握，但有时和面积公式搞混，需口头强调'周长是一维线长'。",
-      "errorRefIds": []
+      "errorRefIds": [
+        "ERR-SOP-20"
+      ]
     },
     {
       "id": "geom_02",
@@ -1264,7 +1283,8 @@ const trackerData = {
       "williamScore": 56,
       "williamNote": "极易混淆周长与面积、开平方与除以2；必须强制在草稿上写出s×s=36因此s=6的中间式。",
       "errorRefIds": [
-        "ERR-SOP-01"
+        "ERR-SOP-01",
+        "ERR-SOP-33"
       ]
     },
     {
@@ -1320,7 +1340,12 @@ const trackerData = {
       "williamScore": 50,
       "williamNote": "见到40分钟直接当成0.4小时或直接乘40导致数值荒谬；缺乏对答案常识性检验的习惯。",
       "errorRefIds": [
-        "ERR-WIL-15"
+        "ERR-WIL-15",
+        "ERR-SOP-16",
+        "ERR-SOP-17",
+        "ERR-SOP-25",
+        "ERR-SOP-27",
+        "ERR-WIL-20"
       ]
     },
     {
@@ -1351,7 +1376,8 @@ const trackerData = {
       "errorRefIds": [
         "ERR-SOP-11",
         "ERR-WIL-14",
-        "ERR-WIL-15"
+        "ERR-WIL-15",
+        "ERR-SOP-23"
       ]
     },
     {
@@ -1410,7 +1436,9 @@ const trackerData = {
       "williamMastery": "proficient",
       "williamScore": 78,
       "williamNote": "积极上台参与，能找到常见的3×8组合，但在遇到需要利用分数或先乘除后加减的较难牌面时容易急躁。",
-      "errorRefIds": []
+      "errorRefIds": [
+        "ERR-SOP-28"
+      ]
     }
   ],
   "errorBank": [
@@ -1641,6 +1669,405 @@ const trackerData = {
       "mnemonic": "同号相乘得正数，异号相乘必带负；负数带进括号戴，脱掉括号看清楚！",
       "teacherTip": "同号相乘得正数，异号相乘必带负；负数带进括号戴，脱掉括号看清楚！",
       "status": "mastered"
+    },
+    {
+      "id": "ERR-SOP-13",
+      "student": "Sophia",
+      "nodeId": "g5_02",
+      "domain": "decimals_percentages",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "5A 练习册 P13 (2.7)",
+      "topic": "商的变化规律与小数点位移",
+      "title": "商的变化规律与小数点位移百倍偏差",
+      "question": "基于 54÷24=2.25，口算 5.4÷24, 0.54÷24, 0.054÷24, 0.0054÷24。",
+      "originalQuestion": "基于 54÷24=2.25，口算 5.4÷24, 0.54÷24, 0.054÷24, 0.0054÷24。",
+      "studentAnswer": "填入 22.5, 2.25, 0.225, 0.0225，结果系统性扩大100倍。",
+      "rootCause": "混淆移位规则，将向左缩小误做向右扩大，且严重缺乏基本估算感。",
+      "standardSolution": "除数不变，被除数缩小多少倍商同步缩小：0.225, 0.0225, 0.00225, 0.000225。",
+      "mnemonic": "除数纹丝未曾动，被除数缩商同缩；小数除以大整数，商必零点莫反扩！",
+      "teacherTip": "除数纹丝未曾动，被除数缩商同缩；小数除以大整数，商必零点莫反扩！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-14",
+      "student": "Sophia",
+      "nodeId": "g5_03",
+      "domain": "decimals_percentages",
+      "category": "算法步骤类",
+      "severity": "critical",
+      "source": "5A 练习册 P20 (2.11)",
+      "topic": "除数是小数竖式商对齐",
+      "title": "除数是小数竖式商小数点对齐原位置",
+      "question": "276.5 km 耗油 7.9 L，求每升油行驶公里数。",
+      "originalQuestion": "276.5 km 耗油 7.9 L，求每升油行驶公里数。",
+      "studentAnswer": "竖式化为 2765÷79=35，但商的小数点对齐原被除数写成 3.5 km。",
+      "rootCause": "算法对齐规则断漏，商的小数点未与移动后的新位置对齐，缺少估算校验。",
+      "standardSolution": "同扩10倍为 2765÷79=35 km/L，商为整数35。",
+      "mnemonic": "除数有小同移位，商点跟着新点走；算前先估三百除八，三十五来莫点错！",
+      "teacherTip": "除数有小同移位，商点跟着新点走；算前先估三百除八，三十五来莫点错！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-15",
+      "student": "Sophia",
+      "nodeId": "g5_03",
+      "domain": "decimals_percentages",
+      "category": "概念混淆类",
+      "severity": "high",
+      "source": "5A 练习册 P16 (2.9)",
+      "topic": "乘除纯小数的大小规律",
+      "title": "纯小数乘除大小比较思维定势倒置",
+      "question": "不计算填入比较符号：7.2 × 0.9 [ ] 7.2 ÷ 0.9。",
+      "originalQuestion": "不计算填入比较符号：7.2 × 0.9 [ ] 7.2 ÷ 0.9。",
+      "studentAnswer": "填入 >，认为乘法结果必然大于除法。",
+      "rootCause": "整数经验负迁移，不知乘纯小数结果变小、除以纯小数结果变大。",
+      "standardSolution": "7.2×0.9 = 6.48 < 7.2，7.2÷0.9 = 8 > 7.2，故 6.48 < 8，填 <。",
+      "mnemonic": "乘纯小数越乘越小，除纯小数越除越大；别拿整数旧经验，套进小数闹笑话！",
+      "teacherTip": "乘纯小数越乘越小，除纯小数越除越大；别拿整数旧经验，套进小数闹笑话！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-16",
+      "student": "Sophia",
+      "nodeId": "word_01",
+      "domain": "geometry_applications",
+      "category": "审题综合类",
+      "severity": "critical",
+      "source": "5A 练习册 P17 (2.10)",
+      "topic": "多步应用题前置条件",
+      "title": "均分问题遗漏剩余量降维列式",
+      "question": "8.6 kg白糖均分入5个瓶子，剩下0.35 kg，求每瓶装糖质量。",
+      "originalQuestion": "8.6 kg白糖均分入5个瓶子，剩下0.35 kg，求每瓶装糖质量。",
+      "studentAnswer": "直接计算 8.6÷5=1.72 kg，完全忽视剩余0.35 kg条件。",
+      "rootCause": "冲动做题，抓取表面数字直接相除，将两步应用题降维为一步题。",
+      "standardSolution": "(8.6 - 0.35) ÷ 5 = 8.25 ÷ 5 = 1.65 kg。",
+      "mnemonic": "应用题里有剩余，先减剩余再平均；动笔之前先划句，单步两步分清明！",
+      "teacherTip": "应用题里有剩余，先减剩余再平均；动笔之前先划句，单步两步分清明！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-17",
+      "student": "Sophia",
+      "nodeId": "word_01",
+      "domain": "geometry_applications",
+      "category": "审题综合类",
+      "severity": "critical",
+      "source": "5A 练习册 P18 (2.10)",
+      "topic": "多元数据匹配与量纲",
+      "title": "多变量应用题数据错位（重量乘重量）",
+      "question": "鸡肉5.75元/kg买14kg，牛肉7.45元/kg买21kg，共花多少钱？",
+      "originalQuestion": "鸡肉5.75元/kg买14kg，牛肉7.45元/kg买21kg，共花多少钱？",
+      "studentAnswer": "计算牛肉总价写成 21×14=294（牛肉重量乘鸡肉重量），合计374.5元。",
+      "rootCause": "多元数据处理超载，注意力漂移，量纲物理意义完全丧失。",
+      "standardSolution": "14×5.75 + 21×7.45 = 80.5 + 156.45 = 236.95 元。",
+      "mnemonic": "单价数量配成对，鸡对鸡来牛对牛；公斤绝不乘公斤，量纲对齐不出糗！",
+      "teacherTip": "单价数量配成对，鸡对鸡来牛对牛；公斤绝不乘公斤，量纲对齐不出糗！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-18",
+      "student": "Sophia",
+      "nodeId": "g5_04",
+      "domain": "decimals_percentages",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "5A 练习册 P22 (2.13)",
+      "topic": "循环小数与周期性规律",
+      "title": "循环小数有限性混淆与第100位余数错位",
+      "question": "(1) 比较 0.825825 与 0.825(循环)；(2) 12÷37=0.324(循环)，求第100位小数。",
+      "originalQuestion": "(1) 比较 0.825825 与 0.825(循环)；(2) 12÷37=0.324(循环)，求第100位小数。",
+      "studentAnswer": "(1) 填 =；(2) 第100位填2，数字总和填324。",
+      "rootCause": "忽视无限循环小数延展性；100÷3=33...1 余数1误对应第2位数字。",
+      "standardSolution": "(1) 0.8258250... < 0.8258258...，填 <；(2) 余数1对应首位3，前100位和为300。",
+      "mnemonic": "循环展开比多位，末尾添零见高低；周期整除看余数，余几就是第几个！",
+      "teacherTip": "循环展开比多位，末尾添零见高低；周期整除看余数，余几就是第几个！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-19",
+      "student": "Sophia",
+      "nodeId": "frac_01",
+      "domain": "fractions",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "5A 练习册 P29 (3.5)",
+      "topic": "整体单位1与切片单位",
+      "title": "整体1与切片混淆（每人得1.5个完整蛋糕）",
+      "question": "1个大蛋糕切成12片分给8位客人，每人分得整个蛋糕的几分之几？",
+      "originalQuestion": "1个大蛋糕切成12片分给8位客人，每人分得整个蛋糕的几分之几？",
+      "studentAnswer": "计算 12÷8=1.5，答语写 Each guest will get 1.5 cake。",
+      "rootCause": "混淆分率与切片数，将1.5片错安上蛋糕单位，违背生活常识常理。",
+      "standardSolution": "每人分得整个蛋糕的 1÷8 = 1/8 = 0.125 个蛋糕（片数为1.5片）。",
+      "mnemonic": "问占整体几分几，单位是一不是块；分物常识验大小，哪能一人一整个！",
+      "teacherTip": "问占整体几分几，单位是一不是块；分物常识验大小，哪能一人一整个！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-20",
+      "student": "Sophia",
+      "nodeId": "geom_01",
+      "domain": "geometry_applications",
+      "category": "算法步骤类",
+      "severity": "critical",
+      "source": "5A 练习册 P32 (4.2)",
+      "topic": "三角形面积公式与除以2",
+      "title": "三角形面积漏除以2及二次数位失误",
+      "question": "三角形底0.44m，高0.15m，求面积。",
+      "originalQuestion": "三角形底0.44m，高0.15m，求面积。",
+      "studentAnswer": "算成 0.44×0.15=0.066 m²；订正除以2时又算成 0.33 m²。",
+      "rootCause": "平行四边形公式负迁移遗漏除以2；小数除法十分位漏商0占位。",
+      "standardSolution": "S = 0.44 × 0.15 ÷ 2 = 0.22 × 0.15 = 0.033 m²。",
+      "mnemonic": "三角梯形亲兄弟，算完面积必除二；平四矩形才直接，丢了除二全白费！",
+      "teacherTip": "三角梯形亲兄弟，算完面积必除二；平四矩形才直接，丢了除二全白费！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-21",
+      "student": "Sophia",
+      "nodeId": "power_04",
+      "domain": "number_theory_powers",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "5A 练习册 P39 (5.4)",
+      "topic": "同类项与常数项合并",
+      "title": "混淆同类项与常数项（强行合并为10x）",
+      "question": "判断正误：5x + 4 + x = 10x。",
+      "originalQuestion": "判断正误：5x + 4 + x = 10x。",
+      "studentAnswer": "判断为正确 (√)。",
+      "rootCause": "违背代数运算法则，将未知数系数5,1与常数项4相加（5+4+1=10）。",
+      "standardSolution": "5x + 4 + x = (5x + 1x) + 4 = 6x + 4 ≠ 10x，命题为假 (X)。",
+      "mnemonic": "代数化简分类别，同类才能并一家；字母同胞系数加，孤单常数别乱拉！",
+      "teacherTip": "代数化简分类别，同类才能并一家；字母同胞系数加，孤单常数别乱拉！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-22",
+      "student": "Sophia",
+      "nodeId": "g3_03",
+      "domain": "foundations_arithmetic",
+      "category": "运算性质类",
+      "severity": "critical",
+      "source": "5A 练习册 P39 (5.4)",
+      "topic": "正负号性质与相反数相消",
+      "title": "相反数相消概念缺失（-m+m算成-2m）",
+      "question": "判断正误：n + n - m + m = 2n - 2m。",
+      "originalQuestion": "判断正误：n + n - m + m = 2n - 2m。",
+      "studentAnswer": "判断为正确 (√)。",
+      "rootCause": "符号法则混淆，未掌握互为相反数的项相加抵消为0（-m+m=0）。",
+      "standardSolution": "n + n - m + m = 2n + (-m + m) = 2n + 0 = 2n ≠ 2n - 2m，命题为假 (X)。",
+      "mnemonic": "加减符号随身走，一正一负抵成空；减去再加等于零，莫把相消当翻倍！",
+      "teacherTip": "加减符号随身走，一正一负抵成空；减去再加等于零，莫把相消当翻倍！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-23",
+      "student": "Sophia",
+      "nodeId": "word_02",
+      "domain": "geometry_applications",
+      "category": "审题综合类",
+      "severity": "critical",
+      "source": "5A 练习册 P40背 (3.7)",
+      "topic": "平均数总量差逻辑",
+      "title": "平均数应用题总量差逻辑缺失",
+      "question": "8场均分27，10场均分31，求最后2场总得分。",
+      "originalQuestion": "8场均分27，10场均分31，求最后2场总得分。",
+      "studentAnswer": "列式 31÷2=15.5 分，完全遗漏前8场均分27的条件。",
+      "rootCause": "把均分当总分，缺乏后2场总分=10场总分-8场总分的总量差模型。",
+      "standardSolution": "(31 × 10) - (27 × 8) = 310 - 216 = 94 分。",
+      "mnemonic": "平均数题总量求，均乘场数总分留；两期总分做减法，后段得分立刻出！",
+      "teacherTip": "平均数题总量求，均乘场数总分留；两期总分做减法，后段得分立刻出！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-24",
+      "student": "Sophia",
+      "nodeId": "power_04",
+      "domain": "number_theory_powers",
+      "category": "解题规范类",
+      "severity": "critical",
+      "source": "5A 练习册 P40 (5.5)",
+      "topic": "代数符号抽象与化简指令",
+      "title": "代数符号特例替代与抗拒先化简",
+      "question": "(1) 正方形边长a求面积；(2) 先化简再求值：x=2.5时求 18x-8x。",
+      "originalQuestion": "(1) 正方形边长a求面积；(2) 先化简再求值：x=2.5时求 18x-8x。",
+      "studentAnswer": "(1) 填具体算式 4x4=16；(2) 不化简直接代入 18×2.5-8×2.5 算出35。",
+      "rootCause": "抽象符号障碍，用特例逃避代数式；漠视题目指令抗拒化简。",
+      "standardSolution": "(1) S = a²；(2) 18x - 8x = 10x，代入得 10×2.5 = 25。",
+      "mnemonic": "字母代表万千数，公式莫填特例数；先化简来后求值，轻舟已过万重山！",
+      "teacherTip": "字母代表万千数，公式莫填特例数；先化简来后求值，轻舟已过万重山！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-25",
+      "student": "Sophia",
+      "nodeId": "word_01",
+      "domain": "geometry_applications",
+      "category": "解题规范类",
+      "severity": "high",
+      "source": "5A 练习册 P44 (5.9)",
+      "topic": "条形线段模型等量关系",
+      "title": "条形线段模型总长守恒断裂（3y=0荒唐赋值）",
+      "question": "三层等长条形：4x = x + 4.5，第三层为3y，求y的方程。",
+      "originalQuestion": "三层等长条形：4x = x + 4.5，第三层为3y，求y的方程。",
+      "studentAnswer": "解出x=1.5后，第二问写 3y=0, y=0。",
+      "rootCause": "缺乏总长守恒意识，面对第二未知数跨行时思维卡壳。",
+      "standardSolution": "总长 4×1.5 = 6，第三层 3y = 6，解得 y = 2。",
+      "mnemonic": "条形等长总长定，解出 x 算全长；全长守恒挂在心，第二变量迎刃解！",
+      "teacherTip": "条形等长总长定，解出 x 算全长；全长守恒挂在心，第二变量迎刃解！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-26",
+      "student": "Sophia",
+      "nodeId": "g5_01",
+      "domain": "decimals_percentages",
+      "category": "算法步骤类",
+      "severity": "critical",
+      "source": "5A 练习册 P46 (6.2)",
+      "topic": "小数四则混合运算",
+      "title": "混合运算乘法漏小数位且除法混同减法",
+      "question": "计算：0.4 × (3.2 - 0.8) ÷ 1.2。",
+      "originalQuestion": "计算：0.4 × (3.2 - 0.8) ÷ 1.2。",
+      "studentAnswer": "写出 = 0.4×2.4÷1.2 = 9.6÷1.2 = 9.3。",
+      "rootCause": "乘法漏点小数位（0.4×2.4算成9.6），急躁将除法看成减法（9.6-0.3=9.3）。",
+      "standardSolution": "0.4 × 2.4 ÷ 1.2 = 0.96 ÷ 1.2 = 0.8（或 0.4 × 2 = 0.8）。",
+      "mnemonic": "小数相乘数位数，一位加一得两位；除号莫当减号看，巧用结合算得快！",
+      "teacherTip": "小数相乘数位数，一位加一得两位；除号莫当减号看，巧用结合算得快！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-27",
+      "student": "Sophia",
+      "nodeId": "word_01",
+      "domain": "geometry_applications",
+      "category": "审题综合类",
+      "severity": "high",
+      "source": "5A 练习册 P13/P14",
+      "topic": "双语数学审题与句式陷阱",
+      "title": "英文倍数句式倒置与分物遗漏自身",
+      "question": "(1) How many times 26 is 65? (2) 73.85 between herself and 4 friends。",
+      "originalQuestion": "(1) How many times 26 is 65? (2) 73.85 between herself and 4 friends。",
+      "studentAnswer": "(1) 列 26÷65=0.4；(2) 直接除以4算成 18.4625。",
+      "rootCause": "语序定势机械套用；只抓数字four漏看代词herself（实为5人）。",
+      "standardSolution": "(1) 65÷26 = 2.5；(2) 73.85 ÷ (1+4) = 73.85 ÷ 5 = 14.77。",
+      "mnemonic": "times 谁谁就是除数，herself 出现必加一；圈画主语找基准，双语题眼不马虎！",
+      "teacherTip": "times 谁谁就是除数，herself 出现必加一；圈画主语找基准，双语题眼不马虎！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-28",
+      "student": "Sophia",
+      "nodeId": "adv_02",
+      "domain": "geometry_applications",
+      "category": "解题规范类",
+      "severity": "critical",
+      "source": "5A 练习册 P25 (3.1)",
+      "topic": "统计图坐标刻度与趋势外推",
+      "title": "折线图纵轴刻度不均与昼夜温差外推谬误",
+      "question": "根据白天温差数据画折线图，并预测未来几天气温。",
+      "originalQuestion": "根据白天温差数据画折线图，并预测未来几天气温。",
+      "studentAnswer": "纵轴0~2画1格、2~4画2格；傍晚降温机械预测未来降到4~5°C。",
+      "rootCause": "坐标轴刻度均匀性认知缺失；单日昼夜温差误当长期天气走势。",
+      "standardSolution": "每格代表1°C则0~2必须画2格；未来几天气温呈日周期在6~14°C波动。",
+      "mnemonic": "坐标轴上线段齐，一格几度定死规；单日升降是昼夜，跨日预测莫妄推！",
+      "teacherTip": "坐标轴上线段齐，一格几度定死规；单日升降是昼夜，跨日预测莫妄推！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-29",
+      "student": "Sophia",
+      "nodeId": "power_01",
+      "domain": "number_theory_powers",
+      "category": "概念混淆类",
+      "severity": "high",
+      "source": "6A校本讲义 P.3 (Photo 74)",
+      "topic": "平方数的奇偶性",
+      "title": "平方运算奇偶性认知倒置",
+      "question": "计算各式并判断结果是Odd还是Even：(1) 3²；(2) 4²。",
+      "originalQuestion": "计算各式并判断结果是Odd还是Even：(1) 3²；(2) 4²。",
+      "studentAnswer": "算出 3²=9 填 even；算出 4²=16 填 odd，两题奇偶判断完全颠倒。",
+      "rootCause": "高认知负荷下偶数/奇数英文概念瞬时反转，注意力被指数运算占满导致基础概念断路。",
+      "standardSolution": "3²=9是Odd（奇数）；4²=16是Even（偶数）。奇数的平方必为奇，偶数的平方必为偶。",
+      "mnemonic": "平方奇偶看底数，底奇平方也是奇；Even偶数双双对，Odd奇数单个立！",
+      "teacherTip": "平方奇偶看底数，底奇平方也是奇；Even偶数双双对，Odd奇数单个立！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-30",
+      "student": "Sophia",
+      "nodeId": "g5_01",
+      "domain": "decimals_percentages",
+      "category": "算法步骤类",
+      "severity": "critical",
+      "source": "5B练习册 P.34 (Photo 36)",
+      "topic": "小数简便运算与数位量感",
+      "title": "小数简算乘积位值与基数错乱",
+      "question": "(1) (1.25+2.5)×4；(2) 0.5×1.6×125；(3) 8.4×2.5 与 0.05×0.23。",
+      "originalQuestion": "(1) (1.25+2.5)×4；(2) 0.5×1.6×125；(3) 8.4×2.5 与 0.05×0.23。",
+      "studentAnswer": "(1) 展开写成 1.25×4+2.5×4=2+1=3；(2) 0.5×0.4算成2得2000；(3) 8.4×2.5算成1700；0.05×0.23算成0.0125。",
+      "rootCause": "分配律公式掌握但基数乘积分项位值严重崩溃，估算监控系统失灵产生百倍偏差。",
+      "standardSolution": "(1) 1.25×4+2.5×4=5+10=15；(2) (0.5×0.2)×(8×125)=0.1×1000=100；(3) 8.4×2.5=21；0.05×0.23=0.0115。",
+      "mnemonic": "简算分配律很棒，分项乘积莫慌张；一点二五乘四是五，算前算后估一估！",
+      "teacherTip": "简算分配律很棒，分项乘积莫慌张；一点二五乘四是五，算前算后估一估！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-31",
+      "student": "Sophia",
+      "nodeId": "div_05",
+      "domain": "number_theory_powers",
+      "category": "方法不规范类",
+      "severity": "critical",
+      "source": "6A校本讲义 P.6 (Photo 77)",
+      "topic": "指数形式求HCF与LCM",
+      "title": "质因数指数幂形式HCF降维转化失效",
+      "question": "已知 E=2¹⁰×3⁴，F=2⁶×3×5⁵，求E和F的HCF并用index form表示。",
+      "originalQuestion": "已知 E=2¹⁰×3⁴，F=2⁶×3×5⁵，求E和F的HCF并用index form表示。",
+      "studentAnswer": "试图在草稿纸上暴力硬算E=1024×81和F的大数乘积，因计算量过大崩溃放弃留白。",
+      "rootCause": "对指数形式即质因数清单的结构认知缺失，未掌握求HCF公共底数取最小指数min法则。",
+      "standardSolution": "公共底数为2和3；底数2取最小指数6，底数3取最小指数1，HCF = 2⁶ × 3。",
+      "mnemonic": "质因数幂求公因，切莫展开算大数；公共底数挑出来，指数选小即是真！",
+      "teacherTip": "质因数幂求公因，切莫展开算大数；公共底数挑出来，指数选小即是真！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-32",
+      "student": "Sophia",
+      "nodeId": "power_05",
+      "domain": "number_theory_powers",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "6A校本讲义 P.8 (Photo 79)",
+      "topic": "科学记数法与负指数",
+      "title": "科学记数法负指数前导零与标准型系数规范",
+      "question": "(1) 3.04×10⁻³写成普通小数；(2) 0.0000000901用科学记数法表示；(3) 65200用科学记数法表示。",
+      "originalQuestion": "(1) 3.04×10⁻³写成普通小数；(2) 0.0000000901用科学记数法表示；(3) 65200用科学记数法表示。",
+      "studentAnswer": "(1) 写成 0.0000304（多移2位）；(2) 写成 1×10⁻¹⁰（忽略901数错指数）；(3) 写成 652×10²（系数不规范）。",
+      "rootCause": "负指数平移机制混淆；标准形式 a×10ⁿ 中 1≤a<10 刚性规范意识缺失。",
+      "standardSolution": "(1) 小数点左移3位得 0.00304；(2) 右移8位得 9.01 × 10⁻⁸；(3) 6.52 × 10⁴。",
+      "mnemonic": "科学记数标准型，系数一至十之间；负指小数往左跳，几次方就跳几步！",
+      "teacherTip": "科学记数标准型，系数一至十之间；负指小数往左跳，几次方就跳几步！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-SOP-33",
+      "student": "Sophia",
+      "nodeId": "geom_02",
+      "domain": "geometry_applications",
+      "category": "算法步骤类",
+      "severity": "medium",
+      "source": "5B练习册 P.17 (Photo 19)",
+      "topic": "复合立体图形小正方体体积",
+      "title": "阶梯复合立体体积数积漏格",
+      "question": "棱长1cm小正方体拼成的阶梯状复合立体图形，求总体积。",
+      "originalQuestion": "棱长1cm小正方体拼成的阶梯状复合立体图形，求总体积。",
+      "studentAnswer": "拆块计算得 96 cm³，比实际体积漏算 4 cm³。",
+      "rootCause": "三维视角遮挡盲区，底层被遮挡的小正方体在视线盲区中被遗漏，缺乏自下而上的分层标数法。",
+      "standardSolution": "采用自下而上分层计数法或立面标数法，底层25个，逐层汇总共100个小正方体，总体积为 100 cm³。",
+      "mnemonic": "立体直观易遮挡，底层基石莫漏掉；自下而上分层数，标数汇总最靠谱！",
+      "teacherTip": "立体直观易遮挡，底层基石莫漏掉；自下而上分层数，标数汇总最靠谱！",
+      "status": "in_progress"
     },
     {
       "id": "ERR-WIL-01",
@@ -1964,6 +2391,63 @@ const trackerData = {
       "mnemonic": "质因数分解用短除，左边除数必须质；二三五七排队试，合数决不上除台！",
       "teacherTip": "质因数分解用短除，左边除数必须质；二三五七排队试，合数决不上除台！",
       "status": "mastered"
+    },
+    {
+      "id": "ERR-WIL-18",
+      "student": "William",
+      "nodeId": "div_01",
+      "domain": "number_theory_powers",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "6A校本教材 P.1-P.4 (2026-09)",
+      "topic": "因数完备性与整除多分支",
+      "title": "因数边界遗漏与整除多分支漏解",
+      "question": "(1) 写出28所有因数；(2) 集合{105,232,510,895,901}找被5整除的数；(3) 六位数5A342B被3和5整除求A和B。",
+      "originalQuestion": "(1) 写出28所有因数；(2) 集合{105,232,510,895,901}找被5整除的数；(3) 六位数5A342B被3和5整除求A和B。",
+      "studentAnswer": "(1) 漏最大因数28；(2) 漏510；(3) 仅做B=0分支，完全遗漏B=5分支导致大面积漏解。",
+      "rootCause": "因数未成对列举；对被5整除末位为0或5存在盲区；多元整除缺乏穷尽分支的分类讨论习惯。",
+      "standardSolution": "(1) 1, 2, 4, 7, 14, 28；(2) 105, 510, 895；(3) B=0时A=1,4,7；B=5时A=2,5,8，共6组解。",
+      "mnemonic": "因数成对两头找，一与本身少不了；个位零五五整除，分类讨论两头堵！",
+      "teacherTip": "因数成对两头找，一与本身少不了；个位零五五整除，分类讨论两头堵！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-19",
+      "student": "William",
+      "nodeId": "g4_01",
+      "domain": "decimals_percentages",
+      "category": "概念混淆类",
+      "severity": "critical",
+      "source": "4B练习册 P.35 (2025-S2)",
+      "topic": "小数位值与大小比较",
+      "title": "小数数位逆序混淆与量感倒置",
+      "question": "在横线上填入合适的小数使不等式成立：33.6 > ____。",
+      "originalQuestion": "在横线上填入合适的小数使不等式成立：33.6 > ____。",
+      "studentAnswer": "填入 34.01，写成 33.6 > 34.01 产生荒谬逆转。",
+      "rootCause": "大于小于符号方向混淆，孤立比对十分位忽视整数部分，缺乏生活化量感监控。",
+      "standardSolution": "开口向左左大右小，右边必须填小于33.6的数，如33.5、32等。",
+      "mnemonic": "大于开口朝左边，左大右小记心间；先看整数谁威风，整数大来全盘赢！",
+      "teacherTip": "大于开口朝左边，左大右小记心间；先看整数谁威风，整数大来全盘赢！",
+      "status": "in_progress"
+    },
+    {
+      "id": "ERR-WIL-20",
+      "student": "William",
+      "nodeId": "word_01",
+      "domain": "geometry_applications",
+      "category": "解题规范类",
+      "severity": "high",
+      "source": "6A校本教材 P.6-P.7 (2026-09)",
+      "topic": "代数方程整除与公因数建模",
+      "title": "字母代数盲猜与实际应用题留白",
+      "question": "(1) 正整数解 mnp=5(m+n+p)；(2) 48cm×36cm纸板裁最大相同正方形无剩余求边长和块数。",
+      "originalQuestion": "(1) 正整数解 mnp=5(m+n+p)；(2) 48cm×36cm纸板裁最大相同正方形无剩余求边长和块数。",
+      "studentAnswer": "(1) 方程不推导盲猜填 1111；(2) 文字应用题直接完全留白交卷。",
+      "rootCause": "代数整除分析能力薄弱，退化为乱猜；应用题阅读畏难，未能抽象为求最大公因数模型。",
+      "standardSolution": "(1) 5整除mnp设m=5，分解(n-1)(p-1)=6解得(5,3,4)；(2) HCF(48,36)=12cm，总块数(48÷12)×(36÷12)=12块。",
+      "mnemonic": "字母方程看倍数，分解因式设主元；文字长题别害怕，长宽裁剪求公因！",
+      "teacherTip": "字母方程看倍数，分解因式设主元；文字长题别害怕，长宽裁剪求公因！",
+      "status": "in_progress"
     }
   ],
   "actionPlans": {
