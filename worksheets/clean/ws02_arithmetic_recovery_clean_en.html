@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade 6 Arithmetic Recovery & Powers Foundation Exam (Set 2)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13.5px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(59,130,246,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #2563eb; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .school-title {
+      font-size: 14px;
+      color: #64748b;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 8px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #3b82f6;
+      padding: 6px 12px;
+      font-size: 14.5px;
+      font-weight: 700;
+      margin: 18px 0 12px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .question {
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .q-desc {
+      color: #64748b;
+      font-size: 12.5px;
+      margin-bottom: 6px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .calc-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .calc-input {
+      display: inline-block;
+      min-width: 60px;
+      height: 26px;
+      border-bottom: 1.5px solid #0f172a;
+      text-align: center;
+    }
+    .power-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    .power-table th, .power-table td {
+      border: 1px solid #cbd5e1;
+      padding: 8px;
+      text-align: center;
+      font-size: 13px;
+    }
+    .power-table th {
+      background: #f1f5f9;
+      font-weight: 700;
+    }
+    .template-box {
+      border: 2px solid #3b82f6;
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 8px;
+    }
+    .step-badge {
+      background: #3b82f6;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 50px;
+      padding: 8px;
+      margin-top: 6px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .answer-key-section { page-break-before: always; 
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 24px;
+    }
+    .answer-key-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ Print Clean Exam / Save as PDF</button>
+
+  <div class="paper-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="school-title">Middle School Mathematics Comprehensive Practice Series</div>
+      <div class="paper-title">Grade 6 Arithmetic Recovery & Powers Foundation Exam (Set 2)</div>
+      <div class="meta-box">
+        <div>Name: <span class="fill-blank" style="min-width: 80px;"></span></div>
+        <div>Class: <span class="fill-blank" style="min-width: 80px;"></span></div>
+        <div>Student ID: <span class="fill-blank" style="min-width: 60px;"></span></div>
+        <div>Time: 35 Mins</div>
+        <div>Total: 100 Pts</div>
+        <div>Score: <span class="fill-blank" style="min-width: 50px;"></span></div>
+      </div>
+      
+    </div>
+
+    
+
+    <!-- PART 1: 5-MIN DRILL -->
+    <div class="section-title">
+      <span>Section 1: Daily 5-Minute Decimal Arithmetic Sprint (2.5 pts each, 30 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="q-desc">Observe the operators and decimal points carefully. Write your answers directly (Time limit: 6 mins):</div>
+    <div class="grid-3">
+      <div class="calc-card"><span>(1) $0.9 + 0.1 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(2) $3.8 + 0.2 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(3) $1 - 0.25 =$</span><span class="calc-input"></span></div>
+      
+      <div class="calc-card"><span>(4) $5 - 0.8 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(5) $5.4 \div 0.6 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(6) $30 \div 0.5 =$</span><span class="calc-input"></span></div>
+      
+      <div class="calc-card"><span>(7) $0.36 \div 0.09 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(8) $2.5 \times 0.4 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(9) $1.2 \times 0.5 =$</span><span class="calc-input"></span></div>
+      
+      <div class="calc-card"><span>(10) $0.7 \times 0.8 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(11) $4.2 \div 0.7 =$</span><span class="calc-input"></span></div>
+      <div class="calc-card"><span>(12) $100 \times 0.035 =$</span><span class="calc-input"></span></div>
+    </div>
+
+    <!-- PART 2: POWERS EXPANSION -->
+    <div class="section-title">
+      <span>Section 2: Powers as Repeated Multiplication (25 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. [Mandatory Expanded Form Table] (1 pt per blank, 15 pts total)</div>
+      <div class="q-desc">⚠️ You MUST write the expanded repeated multiplication in the middle column!</div>
+      <table class="power-table">
+        <thead>
+          <tr>
+            <th style="width: 20%;">Index Form</th>
+            <th style="width: 50%;">Expanded Form (Repeated Multiplication)</th>
+            <th style="width: 30%;">Final Evaluated Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$2^1$</td>
+            <td>$2$</td>
+            <td>$2$</td>
+          </tr>
+          <tr>
+            <td>$2^2$</td>
+            <td>$2 \times 2$</td>
+            <td>$4$</td>
+          </tr>
+          <tr>
+            <td>$2^3$</td>
+            <td>$2 \times 2 \times 2$</td>
+            <td><strong>8</strong> (⚠️ NOT 6!)</td>
+          </tr>
+          <tr>
+            <td>$2^4$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$2^5$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$3^2$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$3^3$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$3^4$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$4^3$</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>$5^3$</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. [Powers vs Multiplication Comparison] Fill in each blank with "$>$", "$<$", or "$=$": (2 pts each, 6 pts total)</div>
+      <div class="grid-3" style="margin-top: 8px;">
+        <div class="calc-card"><span>$2^3$ _____ $2 \times 3$</span></div>
+        <div class="calc-card"><span>$3^4$ _____ $3 \times 4$</span></div>
+        <div class="calc-card"><span>$5^2$ _____ $5 \times 2$</span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. [Product of Powers Rule] Simplify $10^4 \times 10^5$. (4 pts)</div>
+      
+      <div class="answer-box">
+        $10^4 \times 10^5 = 10^{\underline{\quad} + \underline{\quad}} = 10^{\underline{\quad}}$.<br>
+        (⚠️ Warning: Exponents are added! Never multiply them to get $10^{4 \times 5} = 10^{20}$!)
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PART 3: THREE-STEP PIPELINE -->
+    <div class="section-title">
+      <span>Section 3: Three-Step Structured Problem Solving (12.5 pts each, 25 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    
+
+    <div class="question">
+      <div class="q-text">4. [Six-Digit Divisibility Problem · Three-Step Full Solution]</div>
+      <div class="q-desc">The six-digit number $\overline{91X93Y}$ is divisible by both $8$ and $9$. Write the complete solution:</div>
+      
+      <div class="template-box">
+        <div><span class="step-badge">Step 1</span> <strong>Use the last 3 digits to find Y:</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; color: #334155; margin-top: 4px;">
+          Because the number is divisible by 8, its last 3 digits $\overline{93Y}$ must be divisible by 8.<br>
+          $930 \div 8 = 116 \text{ remainder } 2$.<br>
+          So $20 + Y$ must be a multiple of 8. For a single digit $Y$, $20 + Y = 24$,<br>
+          Therefore: $Y = $ ____________________ (✅ Y is solved!)
+        </div>
+
+        <div style="margin-top: 14px;"><span class="step-badge">Step 2</span> <strong>Use the sum of digits to find X (Student B's Focus: DO NOT STOP HERE!):</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; color: #334155; margin-top: 4px;">
+          Now the six-digit number is $\overline{91X93Y}$.<br>
+          Because the number is divisible by 9, the sum of all digits must be a multiple of 9.<br>
+          Sum of digits $= 9 + 1 + X + 9 + 3 + (\quad) = $ ____________________<br>
+          Since $X \in \{0, 1, \dots, 9\}$, for the sum to be divisible by 9,<br>
+          Therefore: $X = $ ____________________ (✅ X is solved!)
+        </div>
+
+        <div style="margin-top: 14px;"><span class="step-badge">Step 3</span> <strong>State the final answer:</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; color: #334155; margin-top: 4px;">
+          Answer: $X =$ ____________, $Y =$ ____________, the six-digit number is _____________________.
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. [Bilingual Word Problem · Speed and Distance]</div>
+      <div class="q-desc">Leo cycles at an average speed of $15\text{ km/h}$. He rides for $40\text{ minutes}$. How far does he ride?</div>
+      
+      <div class="template-box">
+        <div><span class="step-badge">Step 1</span> <strong>Identify units and convert:</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; margin-top: 4px;">
+          Speed is in $\text{km/h}$, but time is given as $40\text{ minutes}$. You MUST convert minutes to hours!<br>
+          Time $t = 40\text{ minutes} = \dfrac{40}{60}\text{ hours} = \dfrac{\underline{\quad}}{\underline{\quad}}\text{ hours}$.
+        </div>
+
+        <div style="margin-top: 10px;"><span class="step-badge">Step 2</span> <strong>Apply the distance formula:</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; margin-top: 4px;">
+          Formula: $\text{Distance} = \text{Speed} \times \text{Time}$<br>
+          $S = 15 \times \dfrac{\underline{\quad}}{\underline{\quad}} = $ ____________________ $\text{km}$.
+        </div>
+
+        <div style="margin-top: 10px;"><span class="step-badge">Step 3</span> <strong>Conclude with units:</strong></div>
+        <div style="padding-left: 20px; font-size: 13px; margin-top: 4px;">
+          Answer: Leo rides ____________________ $\text{km}$.
+        </div>
+      </div>
+    </div>
+
+    <!-- PART 4: COMPARING FRACTIONS -->
+    <div class="section-title">
+      <span>Section 4: Smart Fraction Comparison (5 pts each, 20 pts total)</span>
+      <span>Score: _____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. Fill in each blank with "$>$" or "$<$", and write a one-sentence reason:</div>
+      <div class="grid-2">
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          (a) $\dfrac{7}{12}$ ______ $\dfrac{7}{15}$<br>
+          Reason (Same numerators): ____________________________
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          (b) $\dfrac{5}{9}$ ______ $\dfrac{7}{9}$<br>
+          Reason (Same denominators): __________________________
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top: 10px;">
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          (c) $\dfrac{13}{15}$ ______ $\dfrac{17}{19}$<br>
+          Reason (Distance to 1 benchmark): ____________________
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px;">
+          (d) $\dfrac{5}{8}$ ______ $\dfrac{7}{12}$<br>
+          Reason (Common denominator 24): ______________________
+        </div>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">📌 [Student B Set 1] Answer Key & Scoring Guide (For Review)</div>
+
+      <div style="font-size: 13px; line-height: 1.8;">
+        <strong>Section 1: Daily Decimal Sprint (30 pts, 2.5 pts each)</strong><br>
+        (1) $1.0$ (or $1$) &nbsp;&nbsp;&nbsp; (2) $4.0$ (or $4$) &nbsp;&nbsp;&nbsp; (3) $0.75$ &nbsp;&nbsp;&nbsp; (4) $4.2$ &nbsp;&nbsp;&nbsp; (5) $9$  &nbsp;&nbsp;&nbsp; (6) $60$<br>
+        (7) $4$ &nbsp;&nbsp;&nbsp; (8) $1.0$ (or $1$) &nbsp;&nbsp;&nbsp; (9) $0.6$ &nbsp;&nbsp;&nbsp; (10) $0.56$ &nbsp;&nbsp;&nbsp; (11) $6$ &nbsp;&nbsp;&nbsp; (12) $3.5$<br><br>
+
+        <strong>Section 2: Powers as Repeated Multiplication (25 pts)</strong><br>
+        1. (14 pts)<br>
+        - $2^4 = 2 \times 2 \times 2 \times 2 = 16$<br>
+        - $2^5 = 2 \times 2 \times 2 \times 2 \times 2 = 32$<br>
+        - $3^2 = 3 \times 3 = 9$<br>
+        - $3^3 = 3 \times 3 \times 3 = 27$<br>
+        - $3^4 = 3 \times 3 \times 3 \times 3 = 81$ (⚠️ NOT 18!)<br>
+        - $4^3 = 4 \times 4 \times 4 = 64$<br>
+        - $5^3 = 5 \times 5 \times 5 = 125$<br>
+        2. (6 pts) $2^3 > 2 \times 3$ ($8 > 6$); $3^4 > 3 \times 4$ ($81 > 12$); $5^2 > 5 \times 2$ ($25 > 10$).<br>
+        3. (5 pts) $10^4 \times 10^5 = 10^{4+5} = 10^9$.<br><br>
+
+        <strong>Section 3: Three-Step Structured Solving (25 pts)</strong><br>
+        4. (12.5 pts)<br>
+        Step 1: $Y = 6$ (4 pts);<br>
+        Step 2: Sum of digits $= 9+1+X+9+3+6 = 28+X$. For $28+X$ to be divisible by 9, $X = 8$ (5.5 pts);<br>
+        Step 3: Answer: $X=8, Y=6$, number is $918936$ (3 pts).<br>
+        5. (12.5 pts)<br>
+        Step 1: Time $t = \dfrac{40}{60} = \dfrac{2}{3}\text{ hours}$ (4 pts);<br>
+        Step 2: $S = 15 \times \dfrac{2}{3} = 10\text{ km}$ (5.5 pts);<br>
+        Step 3: Answer: $10\text{ km}$ (3 pts).<br><br>
+
+        <strong>Section 4: Smart Fraction Comparison (20 pts, 5 pts each)</strong><br>
+        (a) $>$. Reason: With identical numerators, smaller denominators represent larger parts.<br>
+        (b) $<$. Reason: With identical denominators, greater numerators indicate greater values.<br>
+        (c) $<$. Reason: $1 - \dfrac{13}{15} = \dfrac{2}{15}$, $1 - \dfrac{17}{19} = \dfrac{2}{19}$. Since $\dfrac{2}{15} > \dfrac{2}{19}$, the distance to 1 is larger, so the value is smaller.<br>
+        (d) $>$. Reason: With common denominator 24, $\dfrac{5}{8} = \dfrac{15}{24}$ and $\dfrac{7}{12} = \dfrac{14}{24}$. Since $15 > 14$, $\dfrac{5}{8} > \dfrac{7}{12}$.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

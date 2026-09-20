@@ -1326,6 +1326,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="${onlineHtmlUrl}" target="_blank" class="pill-btn" style="width: 100%; box-sizing: border-box; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; font-weight: 600; font-size: 12.5px; border-radius: var(--radius-full); background: #fff; border: 1px solid var(--border-color); color: var(--primary);">
               ${onlinePreviewLabel}
             </a>
+            ${ws.cleanPdfUrl_cn ? `
+              <div style="display: flex; gap: 8px; align-items: center; margin-top: 2px;">
+                <a href="${isEn ? ws.cleanPdfUrl_en : ws.cleanPdfUrl_cn}" download class="pill-btn" style="flex: 1.2; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 7px 10px; font-weight: 700; font-size: 11.5px; border-radius: var(--radius-full); background: #f0fdf4; border: 1.5px solid #22c55e; color: #15803d;">
+                  🌱 ${isEn ? 'Clean Test PDF (Blind Test)' : '纯净版 PDF (学生盲测专用)'}
+                </a>
+                <a href="${isEn ? ws.cleanHtmlUrl_en : ws.cleanHtmlUrl_cn}" target="_blank" class="pill-btn" style="flex: 0.8; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 7px 8px; font-weight: 600; font-size: 11.5px; border-radius: var(--radius-full); background: #f8fafc; border: 1px solid #cbd5e1; color: var(--text-muted);">
+                  👁️ ${isEn ? 'Clean Web' : '纯净网页'}
+                </a>
+              </div>
+            ` : ''}
           </div>
         </div>
       `;

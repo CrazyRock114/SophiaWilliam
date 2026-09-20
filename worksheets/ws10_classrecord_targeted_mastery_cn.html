@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>【课堂实录全量靶向】六年级开学两周高频易错与认知盲区综合攻坚卷（WS10）</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #8b5cf6;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(139,92,246,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #7c3aed; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 6px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #ede9fe;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11.5px;
+    }
+    .mnemonic-box {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 8px 14px;
+      border-radius: 0 4px 4px 0;
+      margin: 10px 0;
+      font-size: 12px;
+      color: #92400e;
+    }
+    .mnemonic-title {
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #8b5cf6;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 18px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question {
+      margin-bottom: 15px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .q-subtext {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 52px;
+      padding: 8px 10px;
+      margin-top: 5px;
+    }
+    .answer-box-large {
+      min-height: 85px;
+    }
+    .fill-blank {
+      display: inline-block;
+      min-width: 65px;
+      border-bottom: 1.5px solid #0f172a;
+      text-align: center;
+      padding: 0 4px;
+      margin: 0 2px;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .dialogue-quote {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: #f8fafc;
+      border-left: 3px solid #64748b;
+      padding: 5px 10px;
+      margin: 4px 0 6px 0;
+      font-size: 11.5px;
+      color: #475569;
+      border-radius: 0 4px 4px 0;
+    }
+    .answer-key-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ 打印试卷 / 另存为 PDF</button>
+
+  <div class="paper-container">
+    <!-- 头部信息 -->
+    <div class="header">
+      <div class="school-title">上海协和双语学校（虹桥校区）初中预备融合班 · 橡心国际数学教研</div>
+      <div class="paper-title">【课堂实录全量靶向】六年级开学两周高频易错与认知盲区综合攻坚卷（WS10）</div>
+      <div class="meta-box">
+        <div>学生姓名：<span class="fill-blank" style="min-width:90px">Sophia / William</span></div>
+        <div>建议用时：50 ~ 60 分钟</div>
+        <div>试卷满分：100 分</div>
+        <div>靶向来源：<span class="target-badge">9月12~20日 4次课堂转录实录 + 53张错题卡</span></div>
+      </div>
+    </div>
+
+    <div class="mnemonic-box">
+      <div class="mnemonic-title">💡 课堂真实错点反思与名师心法：</div>
+      <div>
+        ① <strong>维度升降记心间</strong>：体积除以一条长，必得二维垂直面；粘合立体算表面，重叠隐匿减两面！<br>
+        ② <strong>乘方规律看周期</strong>：$2^n$ 周期 2,4,8,6 莫猜单，指数分解因式找最小最大，拒做万级大草稿！<br>
+        ③ <strong>同余大题分步解</strong>：$1001 = 7 \times 11 \times 13$，末位先定 $Y$，整除 13 验单数，绝不半途弃大题！
+      </div>
+    </div>
+
+    <!-- 第一部分 -->
+    <div class="section-title">
+      <span>第一部分：概念辨析与真伪命题判断（客观题）</span>
+      <span style="font-size:12px;color:#64748b;">共 5 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 【实录 0912 · 整除判定与 10 的幂次方本质】十进制进率原理（4分）</div>
+      <div class="dialogue-quote">课堂回溯：“为什么判断 4 和 25 看末两位？因为 100=4×25！那 8 和 125 为什么看末三位？”</div>
+      <div>(1) 一个整数能被 $8$ 或 $125$ 整除，只需要检验该数的末 <span class="fill-blank" style="min-width:35px"></span> 位，其核心原理是因为 $1000 = $ <span class="fill-blank" style="min-width:90px"></span>。</div>
+      <div style="margin-top:4px;">(2) 请写出 $1000$ 以内所有能被 $125$ 整除的非零三位数（共7个）：</div>
+      <div style="margin-top:3px;"><span class="fill-blank" style="min-width:95%;"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【实录 0912 · 质数与合数命题辨析】反例证伪与逻辑严谨性（4分）</div>
+      <div class="q-subtext">判断下列陈述是否正确（填“正确”或“错误”），若错误，请写出一个明确的反例：</div>
+      <div>(1) “所有 5 的倍数都是合数。” （判断：<span class="fill-blank" style="min-width:45px"></span>，反例：<span class="fill-blank" style="min-width:70px"></span>）</div>
+      <div style="margin-top:4px;">(2) “合数一定比质数大。” （判断：<span class="fill-blank" style="min-width:45px"></span>，反例：<span class="fill-blank" style="min-width:70px"></span>）</div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. 【实录 0919 · 循环小数与统计极差概念】纯循环与统计特征辨析（4分）</div>
+      <div class="dialogue-quote">课堂回溯：“众数是最多的数还是最大的数？极差 (Range) 告诉我们什么信息？”</div>
+      <div>(1) 比较大小：$1.2\dot{3}$ <span class="fill-blank" style="min-width:45px"></span> $1.\dot{2}\dot{3}$。（填“&gt;”、“&lt;”或“=”）</div>
+      <div style="margin-top:4px;">(2) 某班数学测试，最高分为 $98$ 分，最低分为 $62$ 分，则该班分数的极差 (Range) 是 <span class="fill-blank" style="min-width:50px"></span> 分。若有 $18$ 名同学都考了 $85$ 分且人数最多，则这组数据的众数 (Mode) 是 <span class="fill-blank" style="min-width:50px"></span>。</div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. 【实录 0919 · 几何缩放效应模型】披萨面积与立方体蛋糕体积之谜（4分）</div>
+      <div class="dialogue-quote">课堂回溯：“12寸的披萨卖完了，服务员给你换两个6寸的，你换不换？为什么不换？”</div>
+      <div>(1) 披萨的“12寸”指其直径。一个 $12$ 寸圆形披萨的面积是一个 $6$ 寸圆形披萨面积的 <span class="fill-blank" style="min-width:40px"></span> 倍。因此两个 $6$ 寸披萨合起来只有原来一个 $12$ 寸披萨的 <span class="fill-blank" style="min-width:40px"></span>（填分数）。</div>
+      <div style="margin-top:4px;">(2) 店内有一款边长为 $8$ 寸的立方体大蛋糕，若改换成边长为 $4$ 寸的立方体小蛋糕，需要 <span class="fill-blank" style="min-width:40px"></span> 个小蛋糕的总体积才等于一个大蛋糕。</div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. 【实录 0912 · 乘方本质与周期性末位】末位数字循环推导（4分）</div>
+      <div class="dialogue-quote">课堂回溯：“2的2026次方末位是几？William 说 6.5？除以4余数是2，不是6.5！”</div>
+      <div>(1) $2^4 = $ <span class="fill-blank" style="min-width:50px"></span>。（严禁误写为 $8$）</div>
+      <div style="margin-top:4px;">(2) 正整数 $2^n$ 的个位数字按 $2, 4, 8, 6$ 呈 $4$ 个一循环周期。因为 $2026 \div 4 = 506 \dots$ 余 <span class="fill-blank" style="min-width:30px"></span>，所以 $2^{2026}$ 的个位数字是 <span class="fill-blank" style="min-width:40px"></span>；同理，$3^{2026}$ 的个位数字是 <span class="fill-blank" style="min-width:40px"></span>。</div>
+    </div>
+
+    <!-- 第二部分 -->
+    <div class="section-title">
+      <span>第二部分：维度升降与度量衡单位进率换算（计算与推演）</span>
+      <span style="font-size:12px;color:#64748b;">共 4 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. 【实录 0919/0920 · 进率陷阱】一维、二维与三维单位换算（5分）</div>
+      <div class="q-subtext">口诀：长度差10进率单，面积两维乘百翻，立体三维千倍变，落笔单位绝不漏！</div>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:4px;">
+        <div>(1) $7.04\text{ m}^2 = $ <span class="fill-blank" style="min-width:70px"></span> $\text{dm}^2$</div>
+        <div>(2) $240\text{ cm}^2 = $ <span class="fill-blank" style="min-width:70px"></span> $\text{dm}^2$</div>
+        <div>(3) $1\text{ m}^3 = $ <span class="fill-blank" style="min-width:70px"></span> $\text{dm}^3 = $ <span class="fill-blank" style="min-width:90px"></span> $\text{cm}^3$</div>
+        <div>(4) $6\text{ 吨 } 60\text{ kg} = $ <span class="fill-blank" style="min-width:70px"></span> $\text{吨}$</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">7. 【实录 0920 · 体积除以长度的降维物理意义】空间几何定向推演（5分）</div>
+      <div class="dialogue-quote">课堂回溯：“体积 24cm³ 除以高 3cm 得到 8cm²，这个 8 是周长、边长还是面积？到底是哪一个面？”</div>
+      <div>已知一个长方体的体积是 $24\text{ cm}^3$，它的高（垂直上下方向）是 $3\text{ cm}$。</div>
+      <div>(1) 列式计算：$24\text{ cm}^3 \div 3\text{ cm} = $ <span class="fill-blank" style="min-width:60px"></span>。（必须包含正确单位）</div>
+      <div>(2) 结合物理与几何空间维度，请详细说明：为什么除法会产生“降维”？这个计算结果具体代表该长方体的哪几个面的面积？为什么不是正面或侧面？</div>
+      <div class="answer-box">
+        <div>说明理由：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">8. 【实录 0919 · 科学记数法与十进制快速估算】小数移位防粗心检验（5分）</div>
+      <div class="dialogue-quote">课堂回溯：“1.5×36 估算成 2×30=60，算出来 5.4 差了一个数量级，怎么可能对？”</div>
+      <div>(1) 直接口算：$240 \times 3.5 = $ <span class="fill-blank" style="min-width:70px"></span>。</div>
+      <div style="margin-top:4px;">(2) 利用 $10$ 的幂次方（科学记数法）规律，写出 $2,400,000 \times 0.000035$ 的简算过程：</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>$2,400,000 \times 0.000035 = (240 \times 10^{\text{___}}) \times (3.5 \times 10^{\text{___}}) = $</div>
+      </div>
+      <div style="margin-top:4px;">(3) William 在计算 $1.5 \times 36$ 时由于点错小数点误算为 $5.4$。请写出如何利用“估算检验法”一眼识破该错误：</div>
+      <div class="answer-box" style="min-height:40px;">
+        <div>估算检验分析：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">9. 【实录 0919 · 几何公式的乘法分配律本质】梯形面积公式推导（5分）</div>
+      <div>如图，一条对角线将一个上底为 $a$、下底为 $b$、高为 $h$ 的梯形分割成两个三角形。</div>
+      <div>(1) 下方三角形的面积 $S_1 = $ <span class="fill-blank" style="min-width:100px"></span>； 上方三角形的面积 $S_2 = $ <span class="fill-blank" style="min-width:100px"></span>。</div>
+      <div>(2) 请根据“提取公因式”（乘法分配律逆运算），写出梯形面积公式 $S = \frac{1}{2}(a+b)h$ 的完整推导过程：</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>推导过程：$S = S_1 + S_2 = $</div>
+      </div>
+    </div>
+
+    <!-- 第三部分 -->
+    <div class="section-title">
+      <span>第三部分：严谨运算、数论与裂项技巧（算理与技巧）</span>
+      <span style="font-size:12px;color:#64748b;">共 4 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">10. 【实录 0916/0920 · 分数通分与假带互化防滑手】异分母加法运算（5分）</div>
+      <div class="dialogue-quote">课堂回溯：“Sophia 算 3 又 5/6 化假分数，18+5 居然写成了 90！通分切蛋糕，切成一样的碎块才能加！”</div>
+      <div>(1) 计算：$2\frac{1}{3} + 3\frac{5}{6}$ （要求写出完整的通分与化简步骤，严防 $18+5=90$ 乘加混淆）：</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>解：原式 $=$</div>
+      </div>
+      <div style="margin-top:4px;">(2) 计算：$\frac{1}{6} + \frac{1}{8}$ （要求寻找最小公倍数通分，禁止直接盲目乘成 $48$）：</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>解：原式 $=$</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">11. 【实录 0912 · 指数形式求 HCF 与 LCM】因式指数极值法（5分）</div>
+      <div class="dialogue-quote">课堂回溯：“Sophia 看到 2¹⁰×3⁴ 居然想在草稿纸上算出 1024 强行硬乘！指数形式直接挑最小和最大幂！”</div>
+      <div>已知两个正整数用质因数分解表示为：$E = 2^{10} \times 3^4$，$F = 2^6 \times 3 \times 5^5$。</div>
+      <div>(1) $E$ 与 $F$ 的最大公因数（HCF，用底数的质因数指数形式表示）$=$ <span class="fill-blank" style="min-width:140px"></span>。</div>
+      <div>(2) $E$ 与 $F$ 的最小公倍数（LCM，用底数的质因数指数形式表示）$=$ <span class="fill-blank" style="min-width:180px"></span>。</div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">12. 【实录 0920 · 两数相乘与 GCD/LCM 恒等定理】短除法规律探究（5分）</div>
+      <div class="dialogue-quote">课堂回溯：“12和28直接乘起来，是它们最小公倍数的几倍？是最大公因数的倍数！”</div>
+      <div>已知整数 $12$ 与 $28$：</div>
+      <div>(1) 用短除法求得它们的最大公因数 $\text{GCD}(12, 28) = $ <span class="fill-blank" style="min-width:40px"></span>，最小公倍数 $\text{LCM}(12, 28) = $ <span class="fill-blank" style="min-width:40px"></span>。</div>
+      <div>(2) 计算：$12 \times 28 = $ <span class="fill-blank" style="min-width:60px"></span>； $\text{GCD}(12, 28) \times \text{LCM}(12, 28) = $ <span class="fill-blank" style="min-width:60px"></span>。</div>
+      <div>(3) 请用一两句话解释：为什么任意两数之积必然等于它们的最大公因数与最小公倍数的乘积？</div>
+      <div class="answer-box" style="min-height:35px;">
+        <div>原理解析：</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">13. 【实录 0920 · 裂项相消经典模型】分数减法化乘法的逆向思维（5分）</div>
+      <div class="dialogue-quote">课堂回溯：“1/(1×2) + 1/(2×3) + ... + 1/(2025×2026)，中间全部正负抵消，只留首项和尾项！”</div>
+      <div>(1) 验证恒等式：请证明 $\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}$ （写出通分验证过程）：</div>
+      <div class="answer-box" style="min-height:35px;">
+        <div>证明：$\frac{1}{n} - \frac{1}{n+1} =$</div>
+      </div>
+      <div>(2) 利用裂项相消法计算下列算式的值：</div>
+      <div style="text-align:center; margin:4px 0; font-weight:600;">
+        $$\frac{1}{1 \times 2} + \frac{1}{2 \times 3} + \frac{1}{3 \times 4} + \dots + \frac{1}{2025 \times 2026}$$
+      </div>
+      <div class="answer-box" style="min-height:60px;">
+        <div>计算过程：原式 $=$</div>
+        <div style="margin-top:20px;">最终结果 $=$</div>
+      </div>
+    </div>
+
+    <!-- 第四部分 -->
+    <div class="section-title">
+      <span>第四部分：立体几何与粘合表面积全量攻坚（重点大题）</span>
+      <span style="font-size:12px;color:#64748b;">共 2 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">14. 【实录 0920 · 长方体与正方体粘合涂色表面积】重叠面双倍扣除模型（10分）</div>
+      <div class="dialogue-quote">课堂回溯：“大长方体 3×4×5 粘上小正方体 2×2×2，重叠扣除几个面？扣两个！Sophia 扣了一次又扣一次变成86，William 居然写出四维单位！”</div>
+      <div>现有一个长、宽、高分别为 $5\text{ cm}$、$4\text{ cm}$、$3\text{ cm}$ 的大长方体木块，以及一个棱长为 $2\text{ cm}$ 的小正方体木块。将小正方体的一个面粘在大长方体的顶面中心，组合成一个新的立体模型，并对露出的所有外表面喷涂防护漆。</div>
+      <div>(1) 粘合前，大长方体的独立表面积是 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$； 小正方体的独立表面积是 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$。（2分）</div>
+      <div>(2) 两个物体粘合时，相互重叠遮挡的面有 <span class="fill-blank" style="min-width:30px"></span> 个，重叠部分的总面积为 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$。（2分）</div>
+      <div>(3) 请列出算式，求出该组合立体模型的实际外表面积：（3分）</div>
+      <div class="answer-box" style="min-height:55px;">
+        <div>列式计算：</div>
+        <div style="margin-top:15px;">答：外表面积为 <span class="fill-blank" style="min-width:80px"></span> $\text{cm}^2$。</div>
+      </div>
+      <div>(4) 若每 $1\text{ cm}^2$ 的表面需要消耗颜料 $200\text{ mg}$，则喷涂该组合体共需颜料多少克（$\text{g}$）？（3分）</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>列式计算：</div>
+        <div style="margin-top:10px;">答：共需颜料 <span class="fill-blank" style="min-width:80px"></span> 克。</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">15. 【实录 0920 · 双长方体三种拼叠对比与错题纠正】极值与校本批改勘误（10分）</div>
+      <div class="dialogue-quote">课堂回溯：“Sophia 作业本上老师打了两个104勾！威廉瞪眼法：重叠面越小，露出的表面积越大！112才是最大的！”</div>
+      <div>有两个完全相同的长方体木块，长、宽、高分别为 $5\text{ cm}$、$3\text{ cm}$、$2\text{ cm}$。现将它们完全重合地粘拼成一个大长方体，共有三种不同的拼法。</div>
+      <div>(1) 单个长方体的独立表面积是 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$，两个长方体独立表面积之和为 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$。（2分）</div>
+      <div>(2) <strong>拼法一（粘合 $3 \times 5$ 面）</strong>：重叠扣除面积为 <span class="fill-blank" style="min-width:50px"></span> $\text{cm}^2$，拼成后表面积为 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$。（2分）</div>
+      <div>(3) <strong>拼法二（粘合 $2 \times 5$ 面）</strong>：重叠扣除面积为 <span class="fill-blank" style="min-width:50px"></span> $\text{cm}^2$，拼成后表面积为 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$。（2分）</div>
+      <div>(4) <strong>拼法三（粘合 $2 \times 3$ 面）</strong>：重叠扣除面积为 <span class="fill-blank" style="min-width:50px"></span> $\text{cm}^2$，拼成后表面积为 <span class="fill-blank" style="min-width:60px"></span> $\text{cm}^2$。（2分）</div>
+      <div>(5) 在校内作业批改中，老师曾将拼法二和拼法三都批注为 $104\text{ cm}^2$。请你写出理由，纠正这一批改误区，并总结“重叠面积与组合体表面积大小”的反向规律：（2分）</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>纠错分析与规律总结：</div>
+      </div>
+    </div>
+
+    <!-- 第五部分 -->
+    <div class="section-title">
+      <span>第五部分：综合应用题与同余整除压轴（思维应用与突破）</span>
+      <span style="font-size:12px;color:#64748b;">共 3 题，满分 20 分</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">16. 【实录 0916 · 行程应用题与单位分率】克服畏难与审题模板（6分）</div>
+      <div class="dialogue-quote">课堂回溯：“William 看到文字应用题就直接留空！一共 1000 米走了 20 分钟，最后 7 分钟占几分之几怎么可能不会？”</div>
+      <div>一名跑步爱好者在环形跑道上匀速跑步。他跑完 $1000\text{ m}$ 的路程一共耗时 $20\text{ 分钟}$。</div>
+      <div>(1) 该跑步爱好者的跑步速度是每分钟多少米？合每小时多少千米？（3分）</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>列式计算：</div>
+        <div style="margin-top:10px;">答：速度为 <span class="fill-blank" style="min-width:60px"></span> $\text{m/min}$； 合 <span class="fill-blank" style="min-width:60px"></span> $\text{km/h}$。</div>
+      </div>
+      <div>(2) 他在最后 $7\text{ 分钟}$ 内跑过的路程，占全程总路程的几分之几？（3分）</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>列式计算：</div>
+        <div style="margin-top:10px;">答：占全程的 <span class="fill-blank" style="min-width:60px"></span>。</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">17. 【实录 0916 · 生活化“花钱法”与代数代换】数量大小比较模型（6分）</div>
+      <div class="dialogue-quote">课堂回溯：“A-2020 = B+2021 = C-2022 = D+2023，花钱最多还和别人一样多的谁最有钱？C！”</div>
+      <div>已知四个不相等的正数 $A, B, C, D$ 满足下列恒等关系：</div>
+      <div style="text-align:center; margin:4px 0; font-weight:700;">
+        $$A - 2020 = B + 2021 = C - 2022 = D + 2023 = k \quad (k > 0)$$
+      </div>
+      <div>(1) 请运用课堂上的“花钱与收钱”通俗思维模型，直接解释为什么 $C$ 最大而 $D$ 最小：（3分）</div>
+      <div class="answer-box" style="min-height:40px;">
+        <div>直观思维解释：</div>
+      </div>
+      <div>(2) 请用代数表达法分别用含 $k$ 的式子表示 $A, B, C, D$，并用“&gt;”连接它们：（3分）</div>
+      <div class="answer-box" style="min-height:45px;">
+        <div>代数表示：$A = $ <span class="fill-blank" style="min-width:70px"></span>, $B = $ <span class="fill-blank" style="min-width:70px"></span>, $C = $ <span class="fill-blank" style="min-width:70px"></span>, $D = $ <span class="fill-blank" style="min-width:70px"></span><br>
+        大小排序：<span class="fill-blank" style="min-width:200px"></span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">18. 【实录 0916 · 同余与大数整除压轴大题】六位数同余完整破解（8分）</div>
+      <div class="dialogue-quote">课堂回溯：“91X93Y 能被 65 整除！William 只算出 Y=0, 5 就停下来了！1001=7×11×13，利用模13同余继续求X！”</div>
+      <div>已知一个六位数 $\overline{91X93Y}$（其中 $X, Y$ 分别为千位和个位上的未知数字，$0 \le X, Y \le 9$）能够被 $65$ 整除。</div>
+      <div>(1) 因为 $65 = 5 \times 13$，且 $5$ 与 $13$ 互质，所以该数必须同时能被 $5$ 和 $13$ 整除。根据能被 $5$ 整除的特征，未知数 $Y$ 的可能取值只能是 <span class="fill-blank" style="min-width:80px"></span>。（1分）</div>
+      <div>(2) 已知 $1001 = 7 \times 11 \times 13$ 能被 $13$ 整除。请证明：$1000X \equiv -X \pmod{13}$。（2分）</div>
+      <div class="answer-box" style="min-height:40px;">
+        <div>证明：$1000X = 1001X - X = $</div>
+      </div>
+      <div>(3) 将六位数拆解为：$\overline{91X93Y} = 910000 + 1000X + 930 + Y$。已知 $910000 = 13 \times 70000$ 能被 $13$ 整除，且 $930 \div 13 = 71 \dots$ 余 <span class="fill-blank" style="min-width:30px"></span>。因此，该数能被 $13$ 整除的充分必要条件为：式子（<span class="fill-blank" style="min-width:140px"></span>）能被 $13$ 整除。（2分）</div>
+      <div>(4) 分类讨论求解未知数（严防半途而废）：（3分）</div>
+      <div class="answer-box answer-box-large">
+        <div><strong>分支一</strong>：若 $Y = 0$，则：</div>
+        <div style="margin-top:20px;"><strong>分支二</strong>：若 $Y = 5$，则：</div>
+        <div style="margin-top:20px;"><strong>结论</strong>：唯一解为 $X = $ <span class="fill-blank" style="min-width:35px"></span>，$Y = $ <span class="fill-blank" style="min-width:35px"></span>，该六位数为 <span class="fill-blank" style="min-width:80px"></span>。</div>
+      </div>
+    </div>
+
+    <!-- 教师参考答案与评分标准 -->
+    <div class="answer-key-box">
+      <div style="font-weight:800;font-size:14px;color:#0f172a;margin-bottom:8px;border-bottom:1px solid #cbd5e1;padding-bottom:4px;">
+        📋 【参考答案与评分细则】（教师批改与家长备课专用）
+      </div>
+      <div style="font-size:12px;line-height:1.6;color:#334155;">
+        <strong>第一部分：客观概念题（20分）</strong><br>
+        1. (1) 3， $8 \times 125$ （各1分）； (2) 125, 250, 375, 500, 625, 750, 875（写全得2分，少1个扣1分）。<br>
+        2. (1) 错误，反例：5 是质数也是 5 的倍数（2分）； (2) 错误，反例：合数 4 小于质数 5（或合数 9 小于质数 11）（2分）。<br>
+        3. (1) &gt;（展开得 1.2333... &gt; 1.2323...，2分）； (2) 36， 85（各1分）。<br>
+        4. (1) 4， $1/2$（各1分）； (2) 8（2分，体积比为 $(8/4)^3 = 8$）。<br>
+        5. (1) 16（2分）； (2) 2， 4， 9（余数得1分，末位各0.5分）。<br><br>
+
+        <strong>第二部分：维度升降与单位换算（20分）</strong><br>
+        6. (1) 704； (2) 2.4； (3) 1000， 1,000,000； (4) 6.06（每空1分，漏写或错写小数位不得分）。<br>
+        7. (1) $8\text{ cm}^2$（1分，单位错扣1分）； (2) 理由：体积是三维（长×宽×高），除以垂直方向的高度（一维），去除了上下高度维度，剩下的两维是前后左右构成的水平面，即顶面或底面；正面和侧面均包含了高，因而高被去除后不可能代表正面或侧面（4分）。若除以长 4cm，结果为 $6\text{ cm}^2$，代表左右侧面。<br>
+        8. (1) 840（1分）； (2) $240 \times 10^4 \times 3.5 \times 10^{-5} = 840 \times 10^{-1} = 84$（2分）； (3) 估算：将 1.5 放大到 2，36 缩小到 30，乘积约 60；5.4 与 60 相差整整一个数量级（10倍），故必点错小数点（2分）。<br>
+        9. (1) $\frac{1}{2}bh$， $\frac{1}{2}ah$（各1分）； (2) $S = \frac{1}{2}ah + \frac{1}{2}bh = \frac{1}{2}(a+b)h$（逆用乘法分配律提取公共因子 $\frac{1}{2}h$，3分）。<br><br>
+
+        <strong>第三部分：严谨运算与数论技巧（20分）</strong><br>
+        10. (1) 原式 $= 2\frac{2}{6} + 3\frac{5}{6} = 5\frac{7}{6} = 6\frac{1}{6}$ 或 $\frac{37}{6}$（3分，若 $3\times 6+5$ 算错扣2分）； (2) $\frac{4}{24} + \frac{3}{24} = \frac{7}{24}$（2分，若通分成 48 未化简扣1分）。<br>
+        11. (1) $\text{HCF} = 2^6 \times 3$（2分）； (2) $\text{LCM} = 2^{10} \times 3^4 \times 5^5$（3分，展开硬算不得分）。<br>
+        12. (1) 4， 84（各1分）； (2) 336， 336（各1分）； (3) 解析：两数直接相乘，其公共质因数部分（即最大公因数）被重复乘了两次；故将乘积除以一份最大公因数就刚好得到最小公倍数，即 $a \times b = \text{GCD} \times \text{LCM}$（1分）。<br>
+        13. (1) $\frac{1}{n} - \frac{1}{n+1} = \frac{(n+1)-n}{n(n+1)} = \frac{1}{n(n+1)}$（2分）； (2) 原式 $= (1 - \frac{1}{2}) + (\frac{1}{2} - \frac{1}{3}) + \dots + (\frac{1}{2025} - \frac{1}{2026}) = 1 - \frac{1}{2026} = \frac{2025}{2026}$（3分）。<br><br>
+
+        <strong>第四部分：立体几何与表面积（20分）</strong><br>
+        14. (1) 94， 24（各1分）； (2) 2， 8（各1分）； (3) $94 + 24 - 2 \times 4 = 118 - 8 = 110\text{ cm}^2$（3分，只减4扣1.5分，减三次扣2分）； (4) $110 \times 200\text{ mg} = 22000\text{ mg} = 22\text{ g}$（3分，单位换算错扣1分）。<br>
+        15. (1) 62， 124（各1分）； (2) 30， 94（各1分）； (3) 20， 104（各1分）； (4) 12， 112（各1分）； (5) 纠错分析：拼法二遮挡面积为 $2 \times (2 \times 5) = 20\text{ cm}^2$，拼后面积为 104；拼法三遮挡面积为 $2 \times (2 \times 3) = 12\text{ cm}^2$，拼后面积为 112，绝非 104。规律：遮挡重叠面越小，露出的组合体外表面积越大（2分）。<br><br>
+
+        <strong>第五部分：综合应用题与同余整除压轴（20分）</strong><br>
+        16. (1) 速度 $= 1000 \div 20 = 50\text{ m/min}$； $50\text{ m/min} = 3000\text{ m/h} = 3\text{ km/h}$（3分）； (2) $7 \times 50 \div 1000 = 350/1000 = 7/20$（或直接 $7 \div 20 = 7/20$，3分）。<br>
+        17. (1) 直观解释：$C$ 扣除的最多（花钱最多）后依然和大家相等，说明其原本持有金额最多；$D$ 加上最多（受助最多）才勉强赶上大家，说明其原本最少（3分）； (2) $A = k + 2020, B = k - 2021, C = k + 2022, D = k - 2023$（1.5分）；排序：$C > A > B > D$（1.5分）。<br>
+        18. (1) 0 或 5（1分）； (2) $1000X = 1001X - X = 13 \times 77X - X \equiv -X \pmod{13}$（2分）； (3) 余 7； 需满足 $7 + Y - X$ 能被 13 整除（2分）； (4) 分类求解（3分）：<br>
+        分支一：若 $Y = 0$，则 $7 - X \equiv 0 \pmod{13}$，因 $0 \le X \le 9$，解得唯一数字 $X = 7$；<br>
+        分支二：若 $Y = 5$，则 $12 - X \equiv 0 \pmod{13} \implies X = 12$（非单数字）或 $12 - X = 13 \implies X = -1$（舍去），无解；<br>
+        最终解：$X = 7, Y = 0$，六位数为 $917930$。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ],
+        throwOnError : false
+      });
+    });
+  </script>
+</body>
+</html>

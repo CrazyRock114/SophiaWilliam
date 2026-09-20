@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>六年级数学思维与运算严谨性巩固检测卷（一）</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13.5px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #ec4899;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(236,72,153,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #db2777; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .school-title {
+      font-size: 14px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 8px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #ec4899;
+      padding: 6px 12px;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 18px 0 12px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+    }
+    .question {
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .q-desc {
+      color: #64748b;
+      font-size: 12.5px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 52px;
+      padding: 8px;
+      margin-top: 6px;
+    }
+    .answer-box-large {
+      min-height: 95px;
+    }
+    .double-column-draft {
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .calc-col {
+      flex: 3;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 8px;
+      min-height: 100px;
+    }
+    .draft-col {
+      flex: 2;
+      border: 1px dashed #f43f5e;
+      background: #fff1f2;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 12px;
+      color: #9f1239;
+      min-height: 100px;
+    }
+    .col-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: #64748b;
+    }
+    .number-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      margin: 8px 0;
+    }
+    .number-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 36px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-weight: 700;
+      background: #fff;
+    }
+    .fill-blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1.5px solid #0f172a;
+      text-align: center;
+      padding: 0 4px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .answer-key-section { page-break-before: always; 
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 24px;
+    }
+    .answer-key-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ 打印纯净版试卷 / 另存为 PDF</button>
+
+  <div class="paper-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="school-title">中小学数学核心素养与思维能力拓展系列 · 强化检测卷</div>
+      <div class="paper-title">六年级数学思维与运算严谨性巩固检测卷（一）</div>
+      <div class="meta-box">
+        <div>姓名：<span class="fill-blank" style="min-width: 80px;"></span></div>
+        <div>班级：<span class="fill-blank" style="min-width: 80px;"></span></div>
+        <div>学号：<span class="fill-blank" style="min-width: 60px;"></span></div>
+        <div>测试用时：30 分钟</div>
+        <div>满分：100 分</div>
+        <div>得分：<span class="fill-blank" style="min-width: 50px;"></span></div>
+      </div>
+      
+    </div>
+
+    
+
+    <!-- PART 1: 概念反向透镜 -->
+    <div class="section-title">
+      <span>一、 概念反向辨析与本质透视（每题 5 分，共 25 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 下列数中，请圈出所有的【完全平方数 (Square Numbers)】，并在横线上写出它的底数平方形式：</div>
+      <div class="number-grid">
+        <div class="number-item">1</div>
+        <div class="number-item">4</div>
+        <div class="number-item">6</div>
+        <div class="number-item">9</div>
+        <div class="number-item">12</div>
+        <div class="number-item">16</div>
+        <div class="number-item">18</div>
+        <div class="number-item">24</div>
+        <div class="number-item">25</div>
+        <div class="number-item">36</div>
+        <div class="number-item">48</div>
+        <div class="number-item">49</div>
+        <div class="number-item">64</div>
+        <div class="number-item">72</div>
+        <div class="number-item">81</div>
+      </div>
+      <div class="q-desc">你的书写记录区（写出你圈出的数及其底数平方形式）：</div>
+      <div class="answer-box">
+        例如：$16 = 4^2$； ____________________________________________________________________________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【辨析判断题】小明说："因为 $6 = 2 \times 3$，能分解成两个整数的积，所以 6 是一个完全平方数。" 请问小明的说法正确吗？请用一两句话写出你的反驳理由：</div>
+      <div class="answer-box">
+        判断：__________（正确 / 错误）<br>
+        理由：________________________________________________________________________________________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">3. 【几何面积反求】一个正方形的面积为 $36\text{ cm}^2$。</div>
+      <div class="q-desc">（1）这个正方形的边长是多少厘米？（写出计算思路，禁止直接除以 2）</div>
+      <div class="q-desc">（2）这个正方形的周长是多少厘米？</div>
+      <div class="answer-box">
+        （1）边长 = __________________，因为 （&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;）<br>
+        （2）周长 = __________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">4. 一个长方形的长是 $8\text{ cm}$，宽是 $2\text{ cm}$。</div>
+      <div class="q-desc">（1）它的面积是多少？（2）它能否拼成一个正方形？如果能，拼成的正方形边长是多少？</div>
+      <div class="answer-box">
+        （1）长方形面积 = __________________<br>
+        （2）拼成正方形边长 = __________________
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">5. 【AMC8 考点·质因数与方幂】整数 $180$ 乘以一个正整数 $k$，得到的结果是一个完全平方数。求正整数 $k$ 的最小值。</div>
+      <div class="q-desc">提示：先对 $180$ 进行质因数分解 $180 = 2^a \times 3^b \times 5^c$，完全平方数的质因数指数必须全为偶数！</div>
+      <div class="answer-box-large">
+        分解质因数：$180 = $__________________________________________<br><br>
+        要使指数全为偶数，需补充的质因数 $k = $___________________________
+      </div>
+    </div>
+
+    <!-- PART 2: 分数通分与同扩倍 -->
+    <div class="section-title">
+      <span>二、 异分母分数通分与同扩倍特训（每题 5 分，共 25 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">6. 【通分同扩倍填空】根据分数的基本性质，分子分母必须同时扩大相同倍数，请填出方框内的数：</div>
+      <div style="padding: 8px 12px; background: #f8fafc; border-radius: 6px;">
+        （1） $\dfrac{3}{4} = \dfrac{3 \times \underline{\quad}}{4 \times 5} = \dfrac{\underline{\quad}}{20}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        （2） $\dfrac{2}{5} = \dfrac{2 \times \underline{\quad}}{5 \times 4} = \dfrac{\underline{\quad}}{20}$<br><br>
+        （3） 因此： $\dfrac{3}{4} + \dfrac{2}{5} = \dfrac{\underline{\quad}}{20} + \dfrac{\underline{\quad}}{20} = \dfrac{\underline{\quad}}{20} = \underline{\quad}\dfrac{\underline{\quad}}{20}$
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">7. 【找错与纠错】某同学在做计算题时的解答如下：</div>
+      <div style="background: #fff1f2; border: 1px solid #fecdd3; padding: 6px 12px; border-radius: 4px; color: #9f1239;">
+        错解： $\dfrac{5}{6} - \dfrac{1}{4} = \dfrac{5 - 1}{12} = \dfrac{4}{12} = \dfrac{1}{3}$
+      </div>
+      <div class="q-desc">请指出他错在哪里，并在下方写出规范正确的解题过程：</div>
+      <div class="answer-box-large">
+        错因：____________________________________________________________________________________<br><br>
+        正确计算过程：<br>
+        $\dfrac{5}{6} - \dfrac{1}{4} =$
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">8. 计算下列各题（必须写出通分过程，严禁跳步）：</div>
+      <div class="double-column-draft">
+        <div class="calc-col">
+          <div class="col-title">计算过程（左栏）</div>
+          （1） $\dfrac{5}{8} + \dfrac{1}{6} = $
+        </div>
+        <div class="draft-col">
+          <div class="col-title">草稿区（右栏）</div>
+          求 $[8, 6]$ 最小公倍数：<br><br>
+          $8 = 2^3$<br>
+          $6 = 2 \times 3$<br>
+          $[8, 6] = $
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="double-column-draft">
+        <div class="calc-col">
+          <div class="col-title">计算过程（左栏）</div>
+          （2） $2\dfrac{1}{3} - 1\dfrac{3}{4} = $
+        </div>
+        <div class="draft-col">
+          <div class="col-title">草稿区（右栏）</div>
+          带分数化假分数：<br>
+          $2\dfrac{1}{3} = \dfrac{\quad}{3}$<br><br>
+          $1\dfrac{3}{4} = \dfrac{\quad}{4}$
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">9. 【分数大小巧妙比较】比较 $\dfrac{11}{13}$ 与 $\dfrac{15}{17}$ 的大小（提示：不要盲目通分大分母，可用“与 1 相比相差多少”的相差法）。</div>
+      <div class="answer-box">
+        $1 - \dfrac{11}{13} = $___________________， $1 - \dfrac{15}{17} = $___________________<br>
+        因为 （&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;），所以 $\dfrac{11}{13}$ _____ $\dfrac{15}{17}$
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PART 3: 双栏草稿防笔误运算 -->
+    <div class="section-title">
+      <span>三、 双栏草稿防笔误实操（每题 10 分，共 20 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    
+
+    <div class="question">
+      <div class="q-text">10. 计算： $18 + 5 \times (14 - 8) \div 3$</div>
+      <div class="double-column-draft">
+        <div class="calc-col" style="min-height: 120px;">
+          <div class="col-title">解题步骤（必须分步）</div>
+          原式 = <br><br><br><br>
+          = 
+        </div>
+        <div class="draft-col" style="min-height: 120px;">
+          <div class="col-title">右侧草稿区（保留加减乘除过程）</div>
+          ① 括号内：$14 - 8 = $<br>
+          ② 乘法：$5 \times (\quad) = $<br>
+          ③ 除法：$(\quad) \div 3 = $<br>
+          ④ 最终加法（警惕 $18+5$ 笔误！）：<br>
+          $18 + (\quad) = $
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">11. 计算： $4.8 \times 2.5 + 5.2 \times 2.5$ （尝试用乘法分配律简算）</div>
+      <div class="double-column-draft">
+        <div class="calc-col" style="min-height: 110px;">
+          <div class="col-title">简便计算步骤</div>
+          原式 = 
+        </div>
+        <div class="draft-col" style="min-height: 110px;">
+          <div class="col-title">草稿区</div>
+          $4.8 + 5.2 = $<br><br>
+          $10 \times 2.5 = $
+        </div>
+      </div>
+    </div>
+
+    <!-- PART 4: 学校校本思维拓展压轴题 -->
+    <div class="section-title">
+      <span>四、 学校融合班特色思维拓展压轴题（每题 15 分，共 30 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">12. 【整除与同余双变量大题】已知六位数 $\overline{91X93Y}$ 能同时被 $8$ 和 $9$ 整除（即能被 $72$ 整除）。请完整求出数字 $X$ 和 $Y$ 的值。</div>
+      <div class="q-desc">请按照标准三步法完整书写，严禁求出 $Y$ 后漏解 $X$：</div>
+      <div class="answer-box-large" style="min-height: 160px;">
+        <strong>第 1 步（利用被 8 整除特性求 Y）：</strong><br>
+        若六位数能被 8 整除，只需其末三位 $\overline{93Y}$ 能被 8 整除。<br>
+        因为 $93Y = 930 + Y = 8 \times 116 + (2 + Y)$，<br>
+        所以 $2 + Y$ 必须是 8 的倍数，又因为 $Y$ 是 0~9 的一位数，故 $Y = $ ___________。<br><br>
+        <strong>第 2 步（利用被 9 整除特性求 X）：</strong><br>
+        此时该六位数为 $\overline{91X93Y}$。<br>
+        若其能被 9 整除，则各个数位上的数字之和必须是 9 的倍数。<br>
+        数字和 $S = 9 + 1 + X + 9 + 3 + (\quad) = $ ____________________<br>
+        要使 $S$ 能被 9 整除，则 $X = $ ___________。<br><br>
+        <strong>第 3 步（写出结论）：</strong><br>
+        答：$X = $ ___________，$Y = $ ___________，该六位数是 _____________________。
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">13. 【折纸模型与指数增长探究】一张厚度为 $0.1\text{ mm}$ 的超薄韧性纸，假设可以无限对折。</div>
+      <div class="q-desc">（1）对折 1 次，厚度为 $0.1 \times 2 = 0.2\text{ mm}$；对折 3 次，层数是 $2^3 = $ _______ 层，厚度是 _______ $\text{mm}$。</div>
+      <div class="q-desc">（2）如果连续对折 10 次，厚度将达到多少毫米？合多少米？（已知 $2^{10} = 1024$）</div>
+      <div class="answer-box-large">
+        （1）对折 3 次层数：$2^3 = $ ______________ 层； 厚度 = $0.1 \times 2^3 = $ _____________ $\text{mm}$。<br><br>
+        （2）对折 10 次厚度计算：<br>
+        $0.1\text{ mm} \times 2^{10} = 0.1 \times 1024 = $ __________________ $\text{mm}$ = _________________ $\text{m}$。
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">📌 【纯净测试版卷】参考答案与评分标准（供批改与反思）</div>
+
+      <div style="font-size: 13px; line-height: 1.8;">
+        <strong>一、 概念反向辨析（25分）</strong><br>
+        1. （每空 1 分，共 8 分）完全平方数有：$1=1^2, 4=2^2, 9=3^2, 16=4^2, 25=5^2, 36=6^2, 49=7^2, 64=8^2, 81=9^2$。注：$6, 12, 18, 24, 48, 72$ 绝不能圈！<br>
+        2. （5分）错误（2分）。理由：完全平方数必须由【两个完全相同的整数】相乘得到。$6=2 \times 3$，因数 2 和 3 不相同，所以 6 不是平方数（3分）。<br>
+        3. （5分）（1）$6\text{ cm}$（2分），因为 $6 \times 6 = 36$（或 $6^2=36$）（1分）。【严禁写 $36 \div 2 = 18$】。（2）周长 $= 4 \times 6 = 24\text{ cm}$（2分）。<br>
+        4. （5分）（1）面积 $= 8 \times 2 = 16\text{ cm}^2$（2分）。（2）能（1分），边长为 $4\text{ cm}$，因为 $4^2 = 16$（2分）。<br>
+        5. （5分）质因数分解：$180 = 2^2 \times 3^2 \times 5$（2分）。质因数 2 的指数是 2（偶数），3 的指数是 2（偶数），5 的指数是 1（奇数）。要使指数全为偶数，需补一个 5，故 $k = 5$（3分）。<br><br>
+
+        <strong>二、 分数通分与同扩倍（25分）</strong><br>
+        6. （5分）（1）$\dfrac{3 \times 5}{4 \times 5} = \dfrac{15}{20}$；（2）$\dfrac{2 \times 4}{5 \times 4} = \dfrac{8}{20}$；（3）$\dfrac{15}{20} + \dfrac{8}{20} = \dfrac{23}{20} = 1\dfrac{3}{20}$。<br>
+        7. （5分）错因：通分时只把分母扩大了，分子没有跟着同乘扩倍（2分）。正确过程：原式 $= \dfrac{10}{12} - \dfrac{3}{12} = \dfrac{7}{12}$（3分）。<br>
+        8. （10分）（1）$[8,6]=24$；原式 $= \dfrac{15}{24} + \dfrac{4}{24} = \dfrac{19}{24}$（5分）。（2）原式 $= \dfrac{7}{3} - \dfrac{7}{4} = \dfrac{28}{12} - \dfrac{21}{12} = \dfrac{7}{12}$（5分）。<br>
+        9. （5分）$1 - \dfrac{11}{13} = \dfrac{2}{13}$，$1 - \dfrac{15}{17} = \dfrac{2}{17}$。因为 $\dfrac{2}{13} > \dfrac{2}{17}$（分子相同分母小的分数值大），所以差值大意味着自身小，故 $\dfrac{11}{13} < \dfrac{15}{17}$。<br><br>
+
+        <strong>三、 双栏草稿防笔误实操（20分）</strong><br>
+        10. （10分）原式 $= 18 + 5 \times 6 \div 3 = 18 + 30 \div 3 = 18 + 10 = 28$。（草稿保留完整得满分，若算成 90 或草稿为空扣 4 分）。<br>
+        11. （10分）原式 $= (4.8 + 5.2) \times 2.5 = 10 \times 2.5 = 25$。<br><br>
+
+        <strong>四、 学校思维拓展压轴题（30分）</strong><br>
+        12. （15分）第1步求得 $Y=6$（5分）；第2步数字和 $S=9+1+X+9+3+6 = 28+X$。要被 9 整除，$28+X=36 \implies X=8$（7分）；第3步结论：$X=8, Y=6$，六位数为 $918936$（3分）。<br>
+        13. （15分）（1）$8$ 层（2分），$0.8\text{ mm}$（3分）。（2）厚度 $= 0.1 \times 1024 = 102.4\text{ mm} = 0.1024\text{ m}$（10分）。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

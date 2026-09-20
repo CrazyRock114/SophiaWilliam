@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>小学综合应用微特训：运算顺序、几何度量与行程应用（八）</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 14mm 14mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b; line-height: 1.5; font-size: 13px; background: #fff; margin: 0; padding: 0;
+    }
+    .no-print {
+      position: fixed; top: 16px; right: 16px; z-index: 999; background: #0284c7; color: #fff;
+      border: none; padding: 10px 18px; border-radius: 20px; font-weight: 700; font-size: 14px;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(2,132,199,0.35); transition: all 0.2s;
+    }
+    .no-print:hover { background: #0369a1; transform: translateY(-1px); }
+    @media print { .no-print { display: none !important; } }
+    .paper-container { max-width: 820px; margin: 0 auto; padding: 10px; }
+    .header { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 14px; }
+    .school-title { font-size: 13.5px; color: #64748b; letter-spacing: 0.5px; font-weight: 600; }
+    .paper-title { font-size: 18.5px; font-weight: 800; color: #0f172a; margin: 4px 0 6px 0; }
+    .meta-box {
+      display: flex; justify-content: space-between; background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 6px; padding: 8px 14px; font-size: 12.5px; font-weight: 600; color: #334155;
+    }
+    .target-badge {
+      display: inline-block; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0;
+      padding: 2px 8px; border-radius: 12px; font-size: 11.5px;
+    }
+    .section-title {
+      background: #f1f5f9; border-left: 4px solid #0284c7; padding: 5px 12px; font-size: 14px;
+      font-weight: 700; margin: 16px 0 10px 0; color: #0f172a; display: flex; justify-content: space-between;
+    }
+    
+    .question { margin-bottom: 14px; page-break-inside: avoid; }
+    .q-text { font-weight: 600; color: #1e293b; margin-bottom: 4px; }
+    .q-desc { color: #64748b; font-size: 12px; margin-bottom: 6px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .calc-card {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600;
+    }
+    .calc-input { display: inline-block; min-width: 50px; height: 22px; border-bottom: 1.5px solid #0f172a; text-align: center; }
+    .answer-box { border: 1px dashed #cbd5e1; background: #fafafa; border-radius: 4px; min-height: 52px; padding: 6px 10px; margin-top: 4px; }
+    .page-break { page-break-before: always; }
+    .answer-key-section { page-break-before: always;  background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-top: 20px; }
+    .answer-key-title { font-size: 15px; font-weight: 800; color: #0f172a; border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; margin-bottom: 12px; text-align: center; }
+    .answer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12px; }
+    .ans-item { background: #fff; border: 1px solid #e2e8f0; padding: 6px 10px; border-radius: 4px; }
+    .ans-item strong { color: #0284c7; }
+  </style>
+</head>
+<body>
+
+  <button class="no-print" onclick="window.print()">🖨️ 打印纯净版试卷 / 另存为 PDF</button>
+
+  <div class="paper-container">
+    <div class="header">
+      <div class="school-title">中小学数学核心素养与思维能力拓展系列 · 强化检测卷</div>
+      <div class="paper-title">小学综合应用微特训：运算顺序、几何度量与行程应用（八）</div>
+      <div class="meta-box">
+        <div>姓名：<span class="fill-blank" style="min-width: 80px;"></span></div>
+        <div>班级：<span class="fill-blank" style="min-width: 80px;"></span></div>
+        <div>学号：<span class="fill-blank" style="min-width: 60px;"></span></div>
+        <div>测试用时：35 分钟</div>
+        <div>满分：100 分</div>
+        <div>得分：<span class="fill-blank" style="min-width: 50px;"></span></div>
+      </div>
+      
+    </div>
+
+    
+
+    <!-- 第一部分 -->
+    <div class="section-title">
+      <span>第一部分：运算顺序(BODMAS)与心算防错特训（每题 4 分，共 24 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="q-desc">严格遵循运算顺序，草稿纸上写明递等式每一步，杜绝跳步错漏：</div>
+    <div class="grid-2">
+      <div class="calc-card">
+        <div>
+          <div>(a) $18 + 5 \times 4 = $</div>
+          <div style="font-size:11px; color:#64748b;">先乘后加！（牢记：$18+5 \neq 90$）</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(b) $(18 + 5) \times 4 = $</div>
+          <div style="font-size:11px; color:#64748b;">有括号，必须先算括号内！</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(c) $48 \div 6 \times 2 + 3^2 = $</div>
+          <div style="font-size:11px; color:#64748b;">先算乘方，同级乘除从左往右算。</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(d) $50 - 2 \times (12 - 3 \times 2) = $</div>
+          <div style="font-size:11px; color:#64748b;">括号内先算乘法 $3 \times 2$。</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(e) $24 \div (2 + 6) \times 5 = $</div>
+          <div style="font-size:11px; color:#64748b;">先算括号内 $(2+6)=8$。</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(f) $100 - [40 - (15 + 5)] \div 4 = $</div>
+          <div style="font-size:11px; color:#64748b;">先小括号，再中括号，最后除法加减。</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+    </div>
+
+    <!-- 第二部分 -->
+    <div class="section-title">
+      <span>第二部分：几何周长面积与正方形边长反求（每题 4 分，共 20 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="q-desc">注意公式区别：正方形面积 $= s^2$，周长 $= 4s$；长方形周长 $= 2(a+b)$，面积 $= a \times b$：</div>
+    <div class="grid-2">
+      <div class="calc-card">
+        <div>
+          <div>(a) 一个正方形的面积是 $49\text{ cm}^2$。</div>
+          <div style="font-size:11px; color:#64748b;">它的边长是 _______ cm（严禁写 $49 \div 2$！）</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(b) 一个正方形的面积是 $81\text{ cm}^2$。</div>
+          <div style="font-size:11px; color:#64748b;">求它的周长：</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(c) 一个长方形周长是 $36\text{ cm}$，宽是 $6\text{ cm}$。</div>
+          <div style="font-size:11px; color:#64748b;">长 $= $ _______ cm；面积 $= $ _______ $\text{cm}^2$。</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card">
+        <div>
+          <div>(d) 一个正方形花园的周长是 $48\text{ 米}$。</div>
+          <div style="font-size:11px; color:#64748b;">它的占地面积是多少平方米？</div>
+        </div>
+        <span class="calc-input"></span>
+      </div>
+      <div class="calc-card" style="grid-column: span 2;">
+        <div>
+          <div>(e) 一根长 $40\text{ cm}$ 的铁丝围成一个宽为 $8\text{ cm}$ 的长方形；另一根完全相同的铁丝围成一个正方形。</div>
+          <div style="font-size:11px; color:#64748b;">哪个图形的面积更大？大多少平方厘米？</div>
+        </div>
+        <span class="calc-input" style="min-width:120px;"></span>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 第三部分 -->
+    <div class="section-title">
+      <span>第三部分：度量衡单位与高低阶进率换算（每题 3 分，共 18 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="q-desc">单位换算关键：一维进率 100，二维平方 10000，三维立方 1000000：</div>
+    <div class="grid-3">
+      <div class="calc-card"><span>(a) $3.5\text{ 米} = $ _______ 厘米</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(b) $2.4\text{ 平方米} = $ _______ $\text{cm}^2$</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(c) $0.05\text{ 立方米} = $ _______ $\text{cm}^3$</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(d) $4,500\text{ 毫升} = $ _______ 升</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(e) $1.8\text{ 升} = $ _______ $\text{cm}^3$</span> <span class="calc-input"></span></div>
+      <div class="calc-card"><span>(f) $150\text{ 分钟} = $ _______ 小时</span> <span class="calc-input"></span></div>
+    </div>
+
+    <!-- 第四部分 -->
+    <div class="section-title">
+      <span>第四部分：行程问题中时间与速度单位对齐（每题 6 分，共 18 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 【时间转化与路程求解】</div>
+      <div class="q-desc">
+        一辆校车从学校开往运动场，平均速度为 $45\text{ 千米/小时}$。全程用时 $40\text{ 分钟}$。<br>
+        (a) 将 $40\text{ 分钟}$ 化为最简分数形式的小时数：_________ 小时。<br>
+        (b) 校车行驶了多少千米？列出算式并计算：
+      </div>
+      <div class="answer-box">
+        $\text{路程} = \text{速度} \times \text{时间} = $
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【速度换算与对比】</div>
+      <div class="q-desc">
+        小明 在操场跑 $600\text{ 米}$ 用时 $2\text{ 分 } 30\text{ 秒}$。小华 骑自行车行进了 $3.6\text{ 千米}$ 用时 $12\text{ 分钟}$。<br>
+        (a) 计算 小明 的平均速度（米/秒）。<br>
+        (b) 计算 小华 的平均速度（米/秒），两人谁的速度更快？
+      </div>
+      <div class="answer-box">
+        <strong>计算过程：</strong>
+      </div>
+    </div>
+
+    <!-- 第五部分 -->
+    <div class="section-title">
+      <span>第五部分：三步审题与思维建模大题（每题 10 分，共 20 分）</span>
+      <span>得分：_____</span>
+    </div>
+
+    <div class="question">
+      <div class="q-text">1. 【水箱容积与水深上升经典题】</div>
+      <div class="q-desc">
+        一个长方体玻璃水族箱，底面长 $80\text{ cm}$，宽 $50\text{ cm}$。水箱中原有的水深为 $30\text{ cm}$。<br>
+        (a) 计算水箱中现存水的体积（单位：$\text{cm}^3$）。<br>
+        (b) 将该水量折算为多少升（$1\text{ 升} = 1,000\text{ cm}^3$）。<br>
+        (c) 若向水箱中完全浸入一块体积为 $8,000\text{ cm}^3$ 的景观假山石，水箱水面将上升多少厘米？
+      </div>
+      <div class="answer-box">
+        <strong>大题规范三步法解答：</strong>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-text">2. 【按工时比例分配与常识验算】</div>
+      <div class="q-desc">
+        小明和小华 协助校园科技节布展，共获得劳务奖励 360 元。小明 工作了 5 个小时，小华 工作了 4 个小时。他们约定按照各自投入的工作时间按劳分配这笔奖金。<br>
+        (a) 每人每小时应分配多少元？<br>
+        (b) 小明和小华 分别应分得多少元？<br>
+        (c) 验算：两人分得的金额之和是否正好等于 360 元？
+      </div>
+      <div class="answer-box">
+        <strong>解答与常识验算：</strong>
+      </div>
+    </div>
+
+    <!-- 答案解析 -->
+    <div class="answer-key-section">
+      <div class="answer-key-title">🔑 参考答案与避坑教学指南</div>
+      <div class="answer-grid">
+        <div class="ans-item">
+          <strong>第一部分（BODMAS）：</strong><br>
+          (a) $18 + 20 = 38$（先乘后加，牢记不是 90！）；(b) $23 \times 4 = 92$；<br>
+          (c) $8 \times 2 + 9 = 16 + 9 = 25$；<br>
+          (d) $50 - 2 \times (12 - 6) = 50 - 2 \times 6 = 50 - 12 = 38$；<br>
+          (e) $24 \div 8 \times 5 = 3 \times 5 = 15$；<br>
+          (f) $100 - [40 - 20] \div 4 = 100 - 20 \div 4 = 100 - 5 = 95$。
+        </div>
+        <div class="ans-item">
+          <strong>第二部分（几何反求）：</strong><br>
+          (a) 边长 $= \sqrt{49} = 7\text{ cm}$（因为 $7 \times 7 = 49$，绝不能除以2！）；<br>
+          (b) 边长 $= \sqrt{81} = 9\text{ cm} \implies \text{周长} = 4 \times 9 = 36\text{ cm}$；<br>
+          (c) 长 $+ 6 = 36 \div 2 = 18 \implies \text{长} = 12\text{ cm}$；面积 $= 12 \times 6 = 72\text{ cm}^2$；<br>
+          (d) 边长 $= 48 \div 4 = 12\text{ 米} \implies \text{面积} = 12^2 = 144\text{ 平方米}$；<br>
+          (e) 长方形：长 $= 20 - 8 = 12\text{ cm}$，面积 $= 12 \times 8 = 96\text{ cm}^2$；正方形：边长 $= 10\text{ cm}$，面积 $= 100\text{ cm}^2$。正方形面积大，大 $4\text{ cm}^2$。
+        </div>
+        <div class="ans-item">
+          <strong>第三部分（度量衡进率）：</strong><br>
+          (a) $350\text{ cm}$；(b) $2.4 \times 10,000 = 24,000\text{ cm}^2$；<br>
+          (c) $0.05 \times 1,000,000 = 50,000\text{ cm}^3$；<br>
+          (d) $4.5\text{ 升}$；(e) $1,800\text{ cm}^3$；(f) $150 \div 60 = 2.5$ 或 $2\frac{1}{2}\text{ 小时}$。
+        </div>
+        <div class="ans-item">
+          <strong>第四与第五部分：</strong><br>
+          第四部分：1. (a) $\frac{40}{60} = \frac{2}{3}\text{ 小时}$；(b) $45 \times \frac{2}{3} = 30\text{ 千米}$。<br>
+          2. (a) $2\text{ 分 } 30\text{ 秒} = 150\text{ 秒} \implies 600 \div 150 = 4\text{ 米/秒}$；<br>
+          (b) $3,600\text{ 米} \div (12 \times 60\text{ 秒}) = 3,600 \div 720 = 5\text{ 米/秒}$。小华 速度更快。<br>
+          第五部分：1. (a) $80 \times 50 \times 30 = 120,000\text{ cm}^3$；(b) $120,000 \div 1000 = 120\text{ 升}$；(c) 底面积 $= 80 \times 50 = 4,000\text{ cm}^2$。水面上升 $= 8,000 \div 4,000 = 2\text{ cm}$。<br>
+          2. (a) 总工时 $= 5 + 4 = 9$ 小时，时薪 $= 360 \div 9 = 40$ 元/小时；(b) 小明: $5 \times 40 = 200$ 元；小华: $4 \times 40 = 160$ 元；(c) $200 + 160 = 360$ 元（验算一致）。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ],
+        throwOnError : false
+      });
+    });
+  </script>
+</body>
+</html>

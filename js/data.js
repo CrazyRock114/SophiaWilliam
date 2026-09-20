@@ -2563,7 +2563,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS01_Sophia_Concept_Rigor_CN.pdf",
       "htmlUrl_en": "worksheets/sophia_practice_set1_en.html",
       "htmlUrl_cn": "worksheets/sophia_practice_set1_cn.html",
-      "fileSize": "711 KB / 1.1 MB"
+      "fileSize": "711 KB / 1.1 MB",
+      "cleanPdfUrl_cn": "pdf/clean/WS01_Concept_Rigor_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS01_Concept_Rigor_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws01_concept_rigor_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws01_concept_rigor_clean_en.html",
+      "cleanFileSize": "579 KB / 921 KB"
     },
     {
       "id": "ws-william-01",
@@ -2596,7 +2601,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS02_William_Arithmetic_Recovery_CN.pdf",
       "htmlUrl_en": "worksheets/william_practice_set1_en.html",
       "htmlUrl_cn": "worksheets/william_practice_set1_cn.html",
-      "fileSize": "576 KB / 969 KB"
+      "fileSize": "576 KB / 969 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS02_Arithmetic_Recovery_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS02_Arithmetic_Recovery_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws02_arithmetic_recovery_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws02_arithmetic_recovery_clean_en.html",
+      "cleanFileSize": "459 KB / 743 KB"
     },
     {
       "id": "ws-dual-01",
@@ -2629,7 +2639,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS03_SUIS_G6_Diagnostic_Test_CN.pdf",
       "htmlUrl_en": "worksheets/suis_g6_diagnostic_test_en.html",
       "htmlUrl_cn": "worksheets/suis_g6_diagnostic_test_cn.html",
-      "fileSize": "564 KB / 889 KB"
+      "fileSize": "564 KB / 889 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS03_G6_Diagnostic_Test_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS03_G6_Diagnostic_Test_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws03_g6_diagnostic_test_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws03_g6_diagnostic_test_clean_en.html",
+      "cleanFileSize": "531 KB / 831 KB"
     },
     {
       "id": "ws-flashcards-01",
@@ -2662,7 +2677,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS04_Daily_Error_Flashcards_CN.pdf",
       "htmlUrl_en": "worksheets/error_review_flashcards_en.html",
       "htmlUrl_cn": "worksheets/error_review_flashcards_cn.html",
-      "fileSize": "345 KB / 502 KB"
+      "fileSize": "345 KB / 502 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS04_Error_Review_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS04_Error_Review_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws04_error_review_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws04_error_review_clean_en.html",
+      "cleanFileSize": "293 KB / 396 KB"
     },
     {
       "id": "ws-foundation-01",
@@ -2697,7 +2717,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS05_G45_Decimals_Place_Value_CN.pdf",
       "htmlUrl_en": "worksheets/g45_decimals_place_value_en.html",
       "htmlUrl_cn": "worksheets/g45_decimals_place_value_cn.html",
-      "fileSize": "497 KB / 734 KB"
+      "fileSize": "497 KB / 734 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS05_Decimals_Place_Value_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS05_Decimals_Place_Value_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws05_decimals_place_value_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws05_decimals_place_value_clean_en.html",
+      "cleanFileSize": "387 KB / 592 KB"
     },
     {
       "id": "ws-foundation-02",
@@ -2732,7 +2757,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS06_G45_Powers_Multiplication_CN.pdf",
       "htmlUrl_en": "worksheets/g45_powers_multiplication_en.html",
       "htmlUrl_cn": "worksheets/g45_powers_multiplication_cn.html",
-      "fileSize": "570 KB / 820 KB"
+      "fileSize": "570 KB / 820 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS06_Powers_Multiplication_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS06_Powers_Multiplication_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws06_powers_multiplication_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws06_powers_multiplication_clean_en.html",
+      "cleanFileSize": "477 KB / 669 KB"
     },
     {
       "id": "ws-foundation-03",
@@ -2767,7 +2797,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS07_G45_Fractions_Operations_CN.pdf",
       "htmlUrl_en": "worksheets/g45_fractions_operations_en.html",
       "htmlUrl_cn": "worksheets/g45_fractions_operations_cn.html",
-      "fileSize": "471 KB / 719 KB"
+      "fileSize": "471 KB / 719 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS07_Fractions_Operations_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS07_Fractions_Operations_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws07_fractions_operations_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws07_fractions_operations_clean_en.html",
+      "cleanFileSize": "385 KB / 572 KB"
     },
     {
       "id": "ws-foundation-04",
@@ -2802,7 +2837,12 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS08_G35_BODMAS_Geometry_Word_Problems_CN.pdf",
       "htmlUrl_en": "worksheets/g35_bodmas_geometry_word_problems_en.html",
       "htmlUrl_cn": "worksheets/g35_bodmas_geometry_word_problems_cn.html",
-      "fileSize": "504 KB / 837 KB"
+      "fileSize": "504 KB / 837 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS08_BODMAS_Geometry_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS08_BODMAS_Geometry_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws08_bodmas_geometry_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws08_bodmas_geometry_clean_en.html",
+      "cleanFileSize": "426 KB / 677 KB"
     },
     {
       "id": "ws-sophia-5a-01",
@@ -2837,7 +2877,54 @@ const trackerData = {
       "pdfUrl_cn": "pdf/WS09_Sophia_5A_Consolidation_Test_CN.pdf",
       "htmlUrl_en": "worksheets/sophia_5a_consolidation_test_en.html",
       "htmlUrl_cn": "worksheets/sophia_5a_consolidation_test_cn.html",
-      "fileSize": "709 KB / 1.2 MB"
+      "fileSize": "709 KB / 1.2 MB",
+      "cleanPdfUrl_cn": "pdf/clean/WS09_5A_Consolidation_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS09_5A_Consolidation_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws09_5a_consolidation_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws09_5a_consolidation_clean_en.html",
+      "cleanFileSize": "645 KB / 1020 KB"
+    },
+    {
+      "id": "ws-dual-classrecord-01",
+      "targetStudent": "dual",
+      "studentBadge_en": "🌸 Sophia & ⚡ William",
+      "studentBadge_cn": "🌸 Sophia & ⚡ William",
+      "title_en": "[Classroom Transcript Targeted Mastery] Grade 6 Fortnight Vulnerability & Cognitive Blind Spot Comprehensive Exam (WS10)",
+      "title_cn": "【课堂实录全量靶向】六年级开学两周高频易错与认知盲区综合攻坚卷（WS10）",
+      "timeLimit_en": "50-60 Mins",
+      "timeLimit_cn": "50-60 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#8b5cf6",
+      "targetAreas_en": "Powers of 10 Divisibility · Dimensional Reduction (24cm3÷3cm=8cm2) · Glued Cuboids Double-Overlap · Modulo 13 (91X93Y) · Telescoping Sums",
+      "targetAreas_cn": "十进制幂次整除 · 体积除法降维(24cm³÷3cm=8cm²) · 粘合立体双重遮挡扣除 · 模13同余大题(91X93Y) · 裂项相消求和",
+      "desc_en": "Fully compiled from line-by-line audits of 4 authentic classroom audio transcripts (1702 lines total) and 53 historical error cards. Targets exact vulnerabilities: powers of 10 divisibility principles (8 and 125 last 3 digits), prime/composite truth statements with counterexamples, unit digit cycles (2^2026 and 3^2026), 1D/2D/3D metric unit scaling, physical interpretation of dividing volume by height (base/top faces), scientific notation fast checking, distributive property proof of trapezoid area, mixed number addition avoiding 18+5=90 slip, true LCM finding, HCF/LCM in prime index form, product theorem (a×b=GCD×LCM), telescoping sum 1/(1×2)+...+1/(2025×2026)=2025/2026, glued 3×4×5 cuboid and 2×2×2 cube painted surface area (double-overlap subtraction: 94+24-8=110), three stacking configurations of two 2×3×5 cuboids (correcting school teacher's marking slip: 112 maximum), constant-speed journey fractions (7/20), spending money comparison model (C>A>B>D), and the grand modulo 13 divisibility finale (91X93Y divisible by 65 -> X=7, Y=0). Complete answer key and scoring criteria included.",
+      "desc_cn": "全量基于9月12~20日四次正课转录录音全文（1702行真实师生问答与错答实录）及53张结构化错题卡靶向定制：全面突破十进制整除判定本质（8和125看末三位）、质数合数反例证伪（5的倍数/合数与质数比大小）、乘方周期性末位（2²⁰²⁶与3²⁰²⁶个位数推演）、一二三维高低阶进率换算、体积除以高产生降维的几何空间本质（对应顶面底面绝非侧面）、科学记数法速算与估算检验法（2×30=60抓错）、梯形公式逆用分配律推导、带分数假化运算（严防18+5=90手滑）、短除法真LCM通分、指数形式求HCF/LCM（严禁硬乘万级草稿）、两数之积等于GCD与LCM之积定理、裂项相消经典求和（1/(1×2)+...+1/(2025×2026)=2025/2026）、长方体与正方体粘合表面积（重叠面双倍扣除：94+24-8=110）、两个长方体三种叠放表面积（纠正校内批改104误区，证明112为最大极值）、行程应用题时间分率（最后7分钟占7/20）、花钱收钱法代数大小比较（C>A>B>D）、以及大数同余整除压轴六位数破解（91X93Y能被65整除，模13递推唯一解X=7, Y=0）。内含完整参考答案与详细评分细则。",
+      "tags_en": [
+        "Classroom Audio Audit",
+        "Powers of 10 Divisibility",
+        "Dimensional Reduction",
+        "Glued Cuboids Surface Area",
+        "Modulo 13 Finale",
+        "Telescoping Sums"
+      ],
+      "tags_cn": [
+        "录音实录全量靶向",
+        "十进制整除本质",
+        "除法降维几何意义",
+        "粘合立体双倍扣除",
+        "大数同余模13",
+        "裂项相消"
+      ],
+      "pdfUrl_en": "pdf/WS10_Classrecord_Targeted_Mastery_EN.pdf",
+      "pdfUrl_cn": "pdf/WS10_Classrecord_Targeted_Mastery_CN.pdf",
+      "htmlUrl_en": "worksheets/ws10_classrecord_targeted_mastery_en.html",
+      "htmlUrl_cn": "worksheets/ws10_classrecord_targeted_mastery_cn.html",
+      "fileSize": "840 KB / 1.5 MB",
+      "cleanPdfUrl_cn": "pdf/clean/WS10_Classrecord_Mastery_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS10_Classrecord_Mastery_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws10_classrecord_mastery_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws10_classrecord_mastery_clean_en.html",
+      "cleanFileSize": "767 KB / 1.2 MB"
     }
   ]
 };
