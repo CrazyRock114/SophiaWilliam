@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Math Workbook Targeted Mastery Worksheet (Set 12): Number Theory, Factors, Fractions & 3D Geometry</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #059669;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(5,150,105,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #047857; transform: translateY(-1px); }
+    @media print {
+      .no-print, .teacher-key { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 6px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11.5px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #059669;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 16px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+    .q-subtext {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 48px;
+      padding: 8px;
+      position: relative;
+    }
+    .answer-line {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 6px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1.5px solid #1e293b;
+      text-align: center;
+      padding: 0 4px;
+      margin: 0 4px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    .teacher-key {
+      margin-top: 30px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 16px;
+    }
+    .teacher-key summary {
+      font-weight: 700;
+      font-size: 15px;
+      color: #059669;
+      cursor: pointer;
+    }
+    .sol-item {
+      margin: 10px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 12.5px;
+    }
+    .sol-item strong { color: #0f172a; }
+  </style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">🖨️ Print Exam (A4)</button>
+
+<div class="paper-container">
+
+  <div class="header">
+    <div class="school-title">School Math Workbook Targeted Mastery Series · Progress Assessment</div>
+    <div class="paper-title">School Math Workbook Targeted Mastery Worksheet (Set 12)</div>
+    <div style="font-size:13px; color:#475569; font-weight:600; margin-bottom:8px;">Module: Number Theory · Prime Factorization · Fractions Operations & 3D Geometry</div>
+    <div class="meta-box">
+      <span>Name: <span class="blank" style="min-width:110px;"></span></span>
+      <span>Class: <span class="blank" style="min-width:80px;"></span></span>
+      <span>Date: <span class="blank" style="min-width:100px;"></span></span>
+      <span>Total: 100 pts</span>
+      <span>Score: <span class="blank" style="min-width:70px;"></span></span>
+    </div>
+  </div>
+
+  <!-- Section 1: Factors, Multiples & Primes -->
+  <div class="section-title">
+    <span>Section 1: Factors, Multiples & Primes</span>
+    <span class="target-badge">2 pts each, 20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. List all positive factors in ascending order without omissions:</div>
+    <div style="margin-top: 4px;">
+      <div>(1) All positive factors of $28$: <span class="blank" style="min-width:240px;"></span>;</div>
+      <div style="margin-top:4px;">(2) All positive factors of $48$: <span class="blank" style="min-width:240px;"></span>.</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Among the numbers $77, 83, 91, 97$, the prime numbers are <span class="blank" style="min-width:100px;"></span>, and the composite numbers are <span class="blank" style="min-width:100px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Understand the meaning of powers and evaluate:</div>
+    <div class="grid-5" style="margin-top: 4px;">
+      <div>$2^3 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$2^4 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$3^4 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$10^0 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$10^4 \times 10^5 = 10^{\underline{\hspace{0.8cm}}}$</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. The area of a square with an integer side length is called a square number. Among the integers from $1$ to $20$, the square numbers are <span class="blank" style="min-width:140px;"></span>; the number $6$ is <span class="blank" style="min-width:60px;"></span> a square number (write "is" or "is not").</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">5. Determine whether the outcome of each expression is Odd or Even:</div>
+    <div class="grid-3" style="margin-top: 4px;">
+      <div>(1) $3^2$ is an <span class="blank" style="min-width:60px;"></span> number</div>
+      <div>(2) $6^2$ is an <span class="blank" style="min-width:60px;"></span> number</div>
+      <div>(3) If $n$ is even, $n^2 + 1$ is an <span class="blank" style="min-width:60px;"></span> number</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">6. Consider the 5-digit number $\overline{4271\square}$: if it is divisible by $2$, the digit $\square$ can be <span class="blank" style="min-width:90px;"></span>; if it is divisible by $3$, the digit $\square$ can be <span class="blank" style="min-width:90px;"></span>; if it is divisible by both $2$ and $5$, the digit $\square$ must be <span class="blank" style="min-width:40px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">7. Express the prime factorization of each number in Index Form:</div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>$81 =$ <span class="blank" style="min-width:120px;"></span></div>
+      <div>$72 =$ <span class="blank" style="min-width:120px;"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">8. Given two positive integers $E = 2^{10} \times 3^4$ and $F = 2^6 \times 3 \times 5^5$. In index form, their Highest Common Factor (HCF) is <span class="blank" style="min-width:120px;"></span>; their Lowest Common Multiple (LCM) is <span class="blank" style="min-width:160px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">9. The HCF of two positive integers $a$ and $b$ is $6$, and their LCM is $90$. If $a = 18$, then $b =$ <span class="blank" style="min-width:70px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">10. For $52 \div 24$, the quotient written in division-with-remainder form is <span class="blank" style="min-width:100px;"></span>, and written as a mixed number in its simplest form is <span class="blank" style="min-width:80px;"></span>.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 2: Prime Factorization & HCF/LCM -->
+  <div class="section-title">
+    <span>Section 2: Prime Factorization & HCF/LCM</span>
+    <span class="target-badge">20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Use short division (divisors must be prime numbers) to perform prime factorization, and write out the final prime product (4 pts each, 8 pts total):</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(1) Prime factorization of $54$</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $54 =$ <span class="blank" style="min-width:100px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(2) Prime factorization of $1080$</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $1080 =$ <span class="blank" style="min-width:120px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Use short division to find the HCF and LCM for each set of numbers (4 pts each, 8 pts total):</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(1) Find HCF and LCM of $54$ and $90$</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $\text{HCF} =$ <span class="blank" style="min-width:50px;"></span>, $\text{LCM} =$ <span class="blank" style="min-width:60px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(2) Find HCF and LCM of $24, 36$ and $48$</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $\text{HCF} =$ <span class="blank" style="min-width:50px;"></span>, $\text{LCM} =$ <span class="blank" style="min-width:60px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Counting Factors Investigation (4 pts):</div>
+    <div class="q-subtext">The prime factorization of $72$ is $72 = 2^3 \times 3^2$. Use the prime exponent law to calculate how many positive factors $72$ has in total. Show the calculation expression.</div>
+    <div class="answer-box" style="min-height:75px;">
+      <div class="answer-line">[ Expression: <span class="blank" style="min-width:100px;"></span>, Total factors: <span class="blank" style="min-width:50px;"></span> ]</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Fractions Operations -->
+  <div class="section-title">
+    <span>Section 3: Fractions Operations</span>
+    <span class="target-badge">20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Mental calculations and conversions (1 pt each, 4 pts total):</div>
+    <div class="grid-4" style="margin-top: 6px;">
+      <div>(1) $\frac{23}{6} =$ <span class="blank" style="min-width:50px;"></span> (mixed)</div>
+      <div>(2) $2\frac{3}{7} =$ <span class="blank" style="min-width:50px;"></span> (improper)</div>
+      <div>(3) $\frac{3}{6} + \frac{5}{6} =$ <span class="blank" style="min-width:50px;"></span> (simplest mixed)</div>
+      <div>(4) $1 - \frac{5}{12} =$ <span class="blank" style="min-width:50px;"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Addition and subtraction of unlike fractions (show common denominators, 2 pts each, 8 pts total):</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $\frac{2}{3} + \frac{1}{5}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $2\frac{1}{3} + 3\frac{5}{6}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">③ $4\frac{1}{4} - 1\frac{2}{3}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">④ $\frac{5}{8} - \frac{1}{6} + \frac{7}{12}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Fraction multiplication and division (2 pts each, 8 pts total):</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $\frac{5}{12} \div \frac{15}{16}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $\frac{7}{18} \times \frac{9}{14} \div \frac{5}{6}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">③ $\left(\frac{3}{4} + \frac{1}{6}\right) \times 12$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">④ $\frac{5}{9} \div \left(\frac{2}{3} - \frac{1}{4}\right)$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 4: 3D Spatial Geometry & Blocks -->
+  <div class="section-title">
+    <span>Section 4: 3D Spatial Geometry & Blocks</span>
+    <span class="target-badge">20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Fundamental Rectangular Prism Calculations (6 pts):</div>
+    <div class="q-subtext">A rectangular prism has length $5\text{ cm}$, width $4\text{ cm}$, and height $3\text{ cm}$.</div>
+    <div class="answer-box" style="min-height:95px;">
+      <div>(1) Calculate the total surface area of this rectangular prism in $\text{cm}^2$.</div>
+      <div style="margin-top:6px;">(2) Calculate the volume of this rectangular prism in $\text{cm}^3$.</div>
+      <div class="answer-line">[ (1) Surface Area: <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$; (2) Volume: <span class="blank" style="min-width:70px;"></span> $\text{cm}^3$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Stacking and Joining Identical Prisms (6 pts):</div>
+    <div class="q-subtext">There are two identical rectangular prisms, each measuring $5\text{ cm}$ by $3\text{ cm}$ by $2\text{ cm}$. They are joined along one entire face to form a single larger solid.</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) What is the total surface area of the combined solid if the glued face has maximum area?</div>
+      <div style="margin-top:6px;">(2) What is the total surface area of the combined solid if the glued face has minimum area?</div>
+      <div class="answer-line">[ (1) Max glued face area solid: <span class="blank" style="min-width:60px;"></span> $\text{cm}^2$; (2) Min glued face area solid: <span class="blank" style="min-width:60px;"></span> $\text{cm}^2$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Tiered Composite Block Model (8 pts):</div>
+    <div class="q-subtext">Unit cubes with edge length $1\text{ cm}$ are arranged on a tabletop to build a 3-tier stepped solid: the bottom tier is a $3 \times 3$ grid ($9$ cubes); the middle tier is a $2 \times 2$ grid placed flush against one corner ($4$ cubes); the top tier consists of $1$ cube flush against that same corner.</div>
+    <div class="answer-box" style="min-height:120px;">
+      <div>(1) How many unit cubes are used in total? What is the total volume of the solid in $\text{cm}^3$?</div>
+      <div style="margin-top:6px;">(2) All exposed surfaces (excluding the bottom resting on the table) are painted. What is the total painted surface area in $\text{cm}^2$?</div>
+      <div class="answer-line">[ (1) Total cubes: <span class="blank" style="min-width:50px;"></span>, Volume: <span class="blank" style="min-width:60px;"></span> $\text{cm}^3$; (2) Painted Area: <span class="blank" style="min-width:60px;"></span> $\text{cm}^2$ ]</div>
+    </div>
+  </div>
+
+  <!-- Section 5: High-Order Problem Solving -->
+  <div class="section-title">
+    <span>Section 5: High-Order Problem Solving</span>
+    <span class="target-badge">5 pts each, 20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Divisibility Rules & Multiple Branches (5 pts):</div>
+    <div class="q-subtext">The 6-digit number $\overline{5a342b}$ is divisible by $2$, $3$, and $5$ simultaneously.</div>
+    <div class="answer-box" style="min-height:100px;">
+      <div>(1) What is the value of the last digit $b$?</div>
+      <div style="margin-top:6px;">(2) Find all possible values of digit $a$.</div>
+      <div class="answer-line">[ (1) $b =$ <span class="blank" style="min-width:40px;"></span>; (2) All possible values of $a$: <span class="blank" style="min-width:80px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Statistical Measures: Mean, Median, Mode & Range (5 pts):</div>
+    <div class="q-subtext">A basketball player scored the following points in $10$ consecutive games:<br>
+    <div style="text-align:center; font-weight:600; margin:4px 0;">$24,\quad 28,\quad 27,\quad 31,\quad 27,\quad 35,\quad 27,\quad 29,\quad 31,\quad 41$</div>
+    </div>
+    <div class="answer-box" style="min-height:100px;">
+      <div>(1) Find the Range and the Mode of this dataset.</div>
+      <div style="margin-top:6px;">(2) Find the Median and the Mean of this dataset.</div>
+      <div class="answer-line">[ (1) Range: <span class="blank" style="min-width:50px;"></span>, Mode: <span class="blank" style="min-width:50px;"></span>; (2) Median: <span class="blank" style="min-width:50px;"></span>, Mean: <span class="blank" style="min-width:50px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Periodic Cycle & Starting Point (5 pts):</div>
+    <div class="q-subtext">A playlist of $5$ songs plays continuously in order: $A \to B \to C \to D \to E \to A \to \dots$.</div>
+    <div class="answer-box" style="min-height:100px;">
+      <div>(1) If the playback starts from song $A$, which song is played $43\text{rd}$?</div>
+      <div style="margin-top:6px;">(2) If song $C$ is currently playing (counted as the $1\text{st}$ song), which song is played when the count reaches $38$?</div>
+      <div class="answer-line">[ (1) The $43\text{rd}$ song is <span class="blank" style="min-width:50px;"></span>; (2) The $38\text{th}$ song is <span class="blank" style="min-width:50px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. Encounter Journey & Fraction Modeling (5 pts):</div>
+    <div class="q-subtext">Person A and Person B start simultaneously from two points $1000\text{ m}$ apart and travel towards each other. Person A walks at $60\text{ m/min}$, and Person B rides a bicycle at $140\text{ m/min}$.</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) After how many minutes will they meet?</div>
+      <div style="margin-top:6px;">(2) At the moment they meet, what fraction of the total distance has Person A traveled? How many more meters has Person B traveled than Person A?</div>
+      <div class="answer-line">[ (1) Meet after <span class="blank" style="min-width:60px;"></span> min; (2) Person A traveled <span class="blank" style="min-width:50px;"></span> of total, Person B traveled <span class="blank" style="min-width:60px;"></span> m more ]</div>
+    </div>
+  </div>
+
+  <!-- Teacher Answer Key & Solutions -->
+  <details class="teacher-key">
+    <summary>📌 Teacher Answer Key & Full Step-by-Step Solutions (Click to Expand)</summary>
+    <div style="margin-top:12px;">
+      <div class="sol-item">
+        <strong>Section 1: Factors, Multiples & Primes</strong><br>
+        1. (1) $1, 2, 4, 7, 14, 28$; (2) $1, 2, 3, 4, 6, 8, 12, 16, 24, 48$.<br>
+        2. Primes: $83, 97$; Composites: $77$ ($7\times 11$), $91$ ($7\times 13$).<br>
+        3. $8$; $16$; $81$; $1$; Exponent is $9$ ($10^{4+5} = 10^9$).<br>
+        4. $1, 4, 9, 16$; is not.<br>
+        5. (1) Odd; (2) Even; (3) Odd (square of even is even, plus 1 is odd).<br>
+        6. $0, 2, 4, 6, 8$; $1, 4, 7$ ($4+2+7+1 = 14$, adding 1, 4, or 7 yields a multiple of 3); $0$.<br>
+        7. $81 = 3^4$; $72 = 2^3 \times 3^2$.<br>
+        8. $\text{HCF} = 2^6 \times 3$; $\text{LCM} = 2^{10} \times 3^4 \times 5^5$.<br>
+        9. $b = 30$ (using $a \times b = \text{HCF} \times \text{LCM} \implies 18 \times b = 6 \times 90 = 540 \implies b = 30$).<br>
+        10. $2 \text{ R } 4$; $2\frac{1}{6}$ ($2\frac{4}{24} = 2\frac{1}{6}$).
+      </div>
+      <div class="sol-item">
+        <strong>Section 2: Prime Factorization & HCF/LCM</strong><br>
+        1. (1) Short division: $54 \div 2 = 27, 27 \div 3 = 9, 9 \div 3 = 3$. Product: $54 = 2 \times 3 \times 3 \times 3$ (or $2 \times 3^3$);<br>
+        (2) Short division: $1080 \div 2 = 540 \div 2 = 270 \div 2 = 135 \div 3 = 45 \div 3 = 15 \div 3 = 5$. Product: $1080 = 2^3 \times 3^3 \times 5$.<br>
+        2. (1) $54$ and $90$: Common prime factors $2 \times 3 \times 3 = 18$ ($\text{HCF}$); quotient $3$ and $5$, $\text{LCM} = 18 \times 3 \times 5 = 270$;<br>
+        (2) $24, 36, 48$: Common prime factors $2 \times 2 \times 3 = 12$ ($\text{HCF}$); $\text{LCM} = 144$.<br>
+        3. Formula: $(3 + 1) \times (2 + 1) = 4 \times 3 = 12$; $72$ has $12$ positive factors.
+      </div>
+      <div class="sol-item">
+        <strong>Section 3: Fractions Operations</strong><br>
+        1. (1) $3\frac{5}{6}$; (2) $\frac{17}{7}$; (3) $1\frac{1}{3}$; (4) $\frac{7}{12}$.<br>
+        2. ① $\frac{2}{3} + \frac{1}{5} = \frac{10}{15} + \frac{3}{15} = \frac{13}{15}$;<br>
+        ② $2\frac{1}{3} + 3\frac{5}{6} = 2\frac{2}{6} + 3\frac{5}{6} = 5\frac{7}{6} = 6\frac{1}{6}$;<br>
+        ③ $4\frac{1}{4} - 1\frac{2}{3} = 4\frac{3}{12} - 1\frac{8}{12} = 3\frac{15}{12} - 1\frac{8}{12} = 2\frac{7}{12}$;<br>
+        ④ $\frac{5}{8} - \frac{1}{6} + \frac{7}{12} = \frac{15}{24} - \frac{4}{24} + \frac{14}{24} = \frac{25}{24} = 1\frac{1}{24}$.<br>
+        3. ① $\frac{5}{12} \div \frac{15}{16} = \frac{5}{12} \times \frac{16}{15} = \frac{4}{9}$;<br>
+        ② $\frac{7}{18} \times \frac{9}{14} \div \frac{5}{6} = \frac{1}{4} \times \frac{6}{5} = \frac{3}{10}$;<br>
+        ③ $\left(\frac{3}{4} + \frac{1}{6}\right) \times 12 = \frac{3}{4} \times 12 + \frac{1}{6} \times 12 = 9 + 2 = 11$;<br>
+        ④ $\frac{5}{9} \div \left(\frac{8}{12} - \frac{3}{12}\right) = \frac{5}{9} \div \frac{5}{12} = \frac{5}{9} \times \frac{12}{5} = \frac{4}{3} = 1\frac{1}{3}$.
+      </div>
+      <div class="sol-item">
+        <strong>Section 4: 3D Spatial Geometry & Blocks</strong><br>
+        1. (1) Surface Area $= 2 \times (5\times 4 + 4\times 3 + 5\times 3) = 2 \times (20 + 12 + 15) = 94\text{ cm}^2$;<br>
+        (2) Volume $= 5 \times 4 \times 3 = 60\text{ cm}^3$.<br>
+        2. Single solid SA $= 2 \times (15 + 6 + 10) = 62\text{ cm}^2$. Sum of two $= 124\text{ cm}^2$.<br>
+        (1) Max glued face area ($5 \times 3 = 15\text{ cm}^2$): New SA $= 124 - 2 \times 15 = 94\text{ cm}^2$;<br>
+        (2) Min glued face area ($3 \times 2 = 6\text{ cm}^2$): New SA $= 124 - 2 \times 6 = 112\text{ cm}^2$.<br>
+        3. (1) Total cubes $= 9 + 4 + 1 = 14$; Volume $= 14 \times 1^3 = 14\text{ cm}^3$;<br>
+        (2) Top projection area $= 3 \times 3 = 9\text{ cm}^2$. Each of the 4 side faces has area $3 + 2 + 1 = 6\text{ cm}^2$, lateral area sum $= 4 \times 6 = 24\text{ cm}^2$. Total painted area $= 9 + 24 = 33\text{ cm}^2$.
+      </div>
+      <div class="sol-item">
+        <strong>Section 5: High-Order Problem Solving</strong><br>
+        1. (1) Divisible by both 2 and 5 requires last digit $b = 0$;<br>
+        (2) Sum of digits $= 5 + a + 3 + 4 + 2 + 0 = 14 + a$. For $14 + a$ to be divisible by 3, $a$ can be $1, 4, 7$.<br>
+        2. (1) Range $= 41 - 24 = 17$; Mode $= 27$ (appears 3 times);<br>
+        (2) Ordered data: 24, 27, 27, 27, 28, 29, 31, 31, 35, 41. Median $= (28 + 29) \div 2 = 28.5$; Mean $= 300 \div 10 = 30$.<br>
+        3. (1) Period is 5. $43 \div 5 = 8 \text{ R } 3$, corresponding to the $3\text{rd}$ song: $C$;<br>
+        (2) From C, advance $38 - 1 = 37$ steps. $37 \div 5 = 7 \text{ R } 2$. Advance 2 songs from C ($C \to D \to E$): Song $E$.<br>
+        4. (1) Time to meet $= 1000 \div (60 + 140) = 1000 \div 200 = 5\text{ min}$;<br>
+        (2) Person A distance $= 60 \times 5 = 300\text{ m}$, fraction $= \frac{300}{1000} = \frac{3}{10}$; Person B distance $= 140 \times 5 = 700\text{ m}$, difference $= 700 - 300 = 400\text{ m}$.
+      </div>
+    </div>
+  </details>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+
+</body>
+</html>

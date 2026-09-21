@@ -32,6 +32,10 @@ const tasks = [
   { html: 'ws09_5a_consolidation_clean_cn.html', pdf: 'WS09_5A_Consolidation_Clean_CN.pdf' },
   { html: 'ws10_classrecord_mastery_clean_en.html', pdf: 'WS10_Classrecord_Mastery_Clean_EN.pdf' },
   { html: 'ws10_classrecord_mastery_clean_cn.html', pdf: 'WS10_Classrecord_Mastery_Clean_CN.pdf' },
+  { html: 'ws11_school_workbook_algebra_geometry_clean_en.html', pdf: 'WS11_School_Workbook_Algebra_Geometry_Clean_EN.pdf' },
+  { html: 'ws11_school_workbook_algebra_geometry_clean_cn.html', pdf: 'WS11_School_Workbook_Algebra_Geometry_Clean_CN.pdf' },
+  { html: 'ws12_school_workbook_number_theory_spatial_clean_en.html', pdf: 'WS12_School_Workbook_Number_Theory_Spatial_Clean_EN.pdf' },
+  { html: 'ws12_school_workbook_number_theory_spatial_clean_cn.html', pdf: 'WS12_School_Workbook_Number_Theory_Spatial_Clean_CN.pdf' },
 ];
 
 console.log(`Starting generation of ${tasks.length} Clean Edition PDFs...`);

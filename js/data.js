@@ -3,7 +3,7 @@
  * 完整同步最新重建学生档案（Sophia 23节 / William 17节）
  * 与53道结构化高危错题库（Sophia 33题 / William 20题，含极高危/高危/中危分级）
  * 全面整合 4B练习册、5A练习册、5B练习册 及 6A校本教材全景审计资产
- * 更新时间: 2026-09-20T10:10:42.636Z
+ * 更新时间: 2026-09-21T18:28:00.000Z
  */
 
 const trackerData = {
@@ -12,7 +12,7 @@ const trackerData = {
     "track": "融合班 (Integrated / Bilingual Track)",
     "grade": "小学六年级（初中预备班）第一学期",
     "semesterProgress": "开学半个月（第2周刚结束）",
-    "asOfDate": "2026年9月20日",
+    "asOfDate": "2026年9月21日",
     "curricula": [
       {
         "id": "shanghai",
@@ -2925,6 +2925,86 @@ const trackerData = {
       "cleanHtmlUrl_cn": "worksheets/clean/ws10_classrecord_mastery_clean_cn.html",
       "cleanHtmlUrl_en": "worksheets/clean/ws10_classrecord_mastery_clean_en.html",
       "cleanFileSize": "767 KB / 1.2 MB"
+    },
+    {
+      "id": "ws11-school-workbook-algebra-geometry",
+      "targetStudent": "dual",
+      "studentBadge_en": "📚 School Workbook Targeted (Set 11)",
+      "studentBadge_cn": "📚 校本练习册靶向卷（十一）",
+      "title_en": "School Math Workbook Targeted Mastery Worksheet (Set 11): Numbers, Algebra, Equations & Geometry",
+      "title_cn": "中小学数学校本练习册典型错题针对性巩固卷（十一）：数与代数·方程与几何",
+      "timeLimit_en": "60 Mins",
+      "timeLimit_cn": "60 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#2563eb",
+      "targetAreas_en": "Decimal Place Value · Column Division Alignment · Algebraic Combining Like Terms · Triangle Area Halving · Real-World Word Problems",
+      "targetAreas_cn": "小数数位与计数单位 · 列竖式商对齐与补零 · 代数式化简同类项 · 三角形面积除以2 · 综合实际应用题",
+      "desc_en": "Designed directly from authentic school workbook mistakes (G4B, G5A, G5B audits): decimal place value (tens vs tenths), pure decimal multiplication/division comparisons, quotient scaling rules, repeating decimal cycles, rounding carrying table, algebraic expression simplification (avoiding 5x+4+x=10x), solving multi-step linear equations, triangle & trapezoid areas, composite shape decomposition, and multi-step word problems with remainders.",
+      "desc_cn": "严格基于中小学校本练习册（4B、5A、5B作业与错题库全景）真实错题研制：全面覆盖小数数位认知（十位与十分位）、乘除纯小数大小规律、商的变化与小数点位移、循环小数周期与展开式、四舍五入进位表、代数式同类项化简（杜绝5x+4+x=10x）、解方程与代数求值、直角三角形与梯形逆运算、复合图形割补面积、以及带余包装、单价购物、行程速度与线段方程等综合应用题。",
+      "tags_en": [
+        "School Workbook Audit",
+        "Decimal Place Value",
+        "Column Division",
+        "Algebra & Equations",
+        "Geometry & Measurement"
+      ],
+      "tags_cn": [
+        "校本练习册全景审计",
+        "小数数位与计数",
+        "除法竖式规范",
+        "代数化简与解方程",
+        "几何测量与应用题"
+      ],
+      "pdfUrl_en": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_EN.pdf",
+      "pdfUrl_cn": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_CN.pdf",
+      "htmlUrl_en": "worksheets/ws11_school_workbook_algebra_geometry_en.html",
+      "htmlUrl_cn": "worksheets/ws11_school_workbook_algebra_geometry_cn.html",
+      "fileSize": "680 KB / 920 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws11_school_workbook_algebra_geometry_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws11_school_workbook_algebra_geometry_clean_en.html",
+      "cleanFileSize": "650 KB / 890 KB"
+    },
+    {
+      "id": "ws12-school-workbook-number-theory-spatial",
+      "targetStudent": "dual",
+      "studentBadge_en": "📐 School Workbook Targeted (Set 12)",
+      "studentBadge_cn": "📐 校本练习册靶向卷（十二）",
+      "title_en": "School Math Workbook Targeted Mastery Worksheet (Set 12): Number Theory, Factors, Fractions & 3D Geometry",
+      "title_cn": "中小学数学校本练习册典型错题针对性巩固卷（十二）：数论因倍·分数与立体几何",
+      "timeLimit_en": "60 Mins",
+      "timeLimit_cn": "60 分钟",
+      "totalPoints": 100,
+      "badgeColor": "#059669",
+      "targetAreas_en": "Complete Factors Listing · Prime Factorization Index Form · Short Division Standards · Unlike Fractions Operations · 3D Blocks & Glued Surface Area",
+      "targetAreas_cn": "完备因数列举 · 质因数分解指数形式 · 短除法规范 · 异分母通分四则 · 空间立体积木与表面积",
+      "desc_en": "Designed directly from authentic school workbook and textbook mistakes (G6A textbook and G5B spatial geometry): complete factors listing without omissions (28, 48), prime/composite classification (77, 91), index form powers and HCF/LCM, prime-only short division, improper/mixed fractions conversions, unlike fractions addition/subtraction, Keep-Change-Flip division, rectangular prism stacking extremes, tiered unit-cube composite models with painted surface area, 2/3/5 divisibility branches, and statistical metrics (range, mode, median, mean).",
+      "desc_cn": "严格基于中小学校本教材与练习册（6A校本教材数论因倍、5B立体空间几何及错题库）真实错题研制：全面覆盖正因数完备列举（28与48防漏两端）、质数合数严格辨析（77与91合数辨识）、乘方本质与指数运算、短除法规范试商、指数形式求HCF与LCM、假分数带分数互化、异分母通分四则混合运算、长方体拼接表面积极值比较、阶梯状正方体积木涂漆表面积与体积、多位数2/3/5整除多分支求解、统计特征数（极差、众数、中位数、平均数）及周期相遇综合应用。",
+      "tags_en": [
+        "School Textbook Audit",
+        "Number Theory",
+        "Prime Factorization",
+        "Fractions Operations",
+        "3D Spatial Geometry"
+      ],
+      "tags_cn": [
+        "校本教材深度审计",
+        "数论因倍质合",
+        "短除法质因数分解",
+        "分数通分与四则",
+        "3D空间立体几何"
+      ],
+      "pdfUrl_en": "pdf/clean/WS12_School_Workbook_Number_Theory_Spatial_Clean_EN.pdf",
+      "pdfUrl_cn": "pdf/clean/WS12_School_Workbook_Number_Theory_Spatial_Clean_CN.pdf",
+      "htmlUrl_en": "worksheets/ws12_school_workbook_number_theory_spatial_en.html",
+      "htmlUrl_cn": "worksheets/ws12_school_workbook_number_theory_spatial_cn.html",
+      "fileSize": "690 KB / 940 KB",
+      "cleanPdfUrl_cn": "pdf/clean/WS12_School_Workbook_Number_Theory_Spatial_Clean_CN.pdf",
+      "cleanPdfUrl_en": "pdf/clean/WS12_School_Workbook_Number_Theory_Spatial_Clean_EN.pdf",
+      "cleanHtmlUrl_cn": "worksheets/clean/ws12_school_workbook_number_theory_spatial_clean_cn.html",
+      "cleanHtmlUrl_en": "worksheets/clean/ws12_school_workbook_number_theory_spatial_clean_en.html",
+      "cleanFileSize": "660 KB / 910 KB"
     }
   ]
 };

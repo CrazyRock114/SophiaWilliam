@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>中小学数学校本练习册典型错题针对性巩固卷（十一）：数与代数·方程与几何</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #1d4ed8; transform: translateY(-1px); }
+    @media print {
+      .no-print, .teacher-key { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 6px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11.5px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #2563eb;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 16px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+    .q-subtext {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 48px;
+      padding: 8px;
+      position: relative;
+    }
+    .answer-line {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 6px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1.5px solid #1e293b;
+      text-align: center;
+      padding: 0 4px;
+      margin: 0 4px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0;
+      font-size: 12.5px;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    table.data-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #334155;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    .teacher-key {
+      margin-top: 30px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 16px;
+    }
+    .teacher-key summary {
+      font-weight: 700;
+      font-size: 15px;
+      color: #2563eb;
+      cursor: pointer;
+    }
+    .sol-item {
+      margin: 10px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 12.5px;
+    }
+    .sol-item strong { color: #0f172a; }
+  </style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">🖨️ 打印试卷 (A4)</button>
+
+<div class="paper-container">
+
+  <div class="header">
+    <div class="school-title">校本练习册典型错题针对性巩固提升系列 · 阶段性质量检测</div>
+    <div class="paper-title">中小学数学校本练习册典型错题针对性巩固卷（十一）</div>
+    <div style="font-size:13px; color:#475569; font-weight:600; margin-bottom:8px;">模块：数与代数 · 简易方程 · 平面几何与应用</div>
+    <div class="meta-box">
+      <span>姓名：<span class="blank" style="min-width:100px;"></span></span>
+      <span>班级：<span class="blank" style="min-width:80px;"></span></span>
+      <span>日期：<span class="blank" style="min-width:100px;"></span></span>
+      <span>满分：100 分</span>
+      <span>得分：<span class="blank" style="min-width:70px;"></span></span>
+    </div>
+  </div>
+
+  <!-- 一、认真思考，准确填空 -->
+  <div class="section-title">
+    <span>一、认真思考，准确填空</span>
+    <span class="target-badge">每题 2 分，共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 在数 $483.59$ 中，数字“$8$”在 <span class="blank" style="min-width:80px;"></span> 位上，表示 $8$ 个 <span class="blank" style="min-width:80px;"></span>；数字“$5$”在 <span class="blank" style="min-width:80px;"></span> 位上，表示 $5$ 个 <span class="blank" style="min-width:80px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 在 $\bigcirc$ 里填上“$>$”、“$<$”或“$=$”：</div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>(1) $7.2 \times 0.9 \;\bigcirc\; 7.2 \div 0.9$</div>
+      <div>(2) $4.5 \div 0.1 \;\bigcirc\; 4.5 \times 10$</div>
+      <div>(3) $0.85 \times 1.02 \;\bigcirc\; 0.85$</div>
+      <div>(4) $3.6 \div 1.2 \;\bigcirc\; 3.6$</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 将小数 $0.075$ 化为百分数是 <span class="blank" style="min-width:70px;"></span>，化为最简分数是 <span class="blank" style="min-width:70px;"></span>；将分数 $\frac{1}{8}$ 化为小数是 <span class="blank" style="min-width:70px;"></span>，化为百分数是 <span class="blank" style="min-width:70px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. 已知 $54 \div 24 = 2.25$，根据商的变化规律直接写出下列算式的结果：</div>
+    <div class="grid-3" style="margin-top: 4px;">
+      <div>$5.4 \div 24 =$ <span class="blank"></span></div>
+      <div>$54 \div 0.24 =$ <span class="blank"></span></div>
+      <div>$0.54 \div 2.4 =$ <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">5. 纯循环小数 $0.\dot{8}\dot{2}\dot{5}$ 的循环节是 <span class="blank" style="min-width:70px;"></span>；用展开形式写出它的小数点后前 $8$ 位数字是 <span class="blank" style="min-width:120px;"></span>；它的小数点后第 $100$ 位上的数字是 <span class="blank" style="min-width:50px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">6. 按要求填写下表，求出各数的近似值：</div>
+    <table class="data-table">
+      <tr>
+        <th>原数</th>
+        <th>保留整数</th>
+        <th>精确到十分位</th>
+        <th>精确到百分位（保留两位小数）</th>
+      </tr>
+      <tr>
+        <td>$4.9964$</td>
+        <td><span class="blank" style="min-width:60px;"></span></td>
+        <td><span class="blank" style="min-width:60px;"></span></td>
+        <td><span class="blank" style="min-width:60px;"></span></td>
+      </tr>
+      <tr>
+        <td>$0.7258$</td>
+        <td><span class="blank" style="min-width:60px;"></span></td>
+        <td><span class="blank" style="min-width:60px;"></span></td>
+        <td><span class="blank" style="min-width:60px;"></span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="question">
+    <div class="q-text">7. 比 $x$ 的 $4$ 倍多 $7$ 的数用代数式表示为 <span class="blank" style="min-width:100px;"></span>；化简代数式：$5x + 4 + x =$ <span class="blank" style="min-width:90px;"></span>； $n + n - m + m =$ <span class="blank" style="min-width:90px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">8. 在横线上填上合适的数或单位：</div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>$2.4\text{ m}^2 =$ <span class="blank"></span> $\text{dm}^2$</div>
+      <div>$350\text{ cm}^2 =$ <span class="blank"></span> $\text{dm}^2$</div>
+      <div>$1.5\text{ h} =$ <span class="blank"></span> $\text{min}$</div>
+      <div>$72\text{ km/h} =$ <span class="blank"></span> $\text{m/s}$</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">9. 将一个重 $1.2\text{ kg}$ 的大蛋糕平均切成 $8$ 块分给 $8$ 位同学，每位同学分得整个蛋糕的 <span class="blank" style="min-width:60px;"></span>（填分数），每位同学分得蛋糕重 <span class="blank" style="min-width:60px;"></span> $\text{kg}$。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">10. 一个平行四边形的两条相邻边长分别是 $10\text{ cm}$ 和 $6\text{ cm}$。其中一条高是 $8\text{ cm}$，这条高所对应的底边长是 <span class="blank" style="min-width:50px;"></span> $\text{cm}$，该平行四边形的面积是 <span class="blank" style="min-width:60px;"></span> $\text{cm}^2$。</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 二、细心审题，准确计算 -->
+  <div class="section-title">
+    <span>二、细心审题，准确计算</span>
+    <span class="target-badge">共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 直接写出得数（每题 1 分，共 4 分）：</div>
+    <div class="grid-4" style="margin-top: 6px;">
+      <div>(1) $0.9 + 0.1 =$ <span class="blank" style="min-width:50px;"></span></div>
+      <div>(2) $5.4 \div 0.6 =$ <span class="blank" style="min-width:50px;"></span></div>
+      <div>(3) $0.25 \times 0.4 =$ <span class="blank" style="min-width:50px;"></span></div>
+      <div>(4) $1 - 0.35 =$ <span class="blank" style="min-width:50px;"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 列竖式计算（第①题 2 分；第②题需写出验算竖式 3 分；第③题商精确到百分位 3 分，共 8 分）：</div>
+    <div class="grid-3" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $3.75 \times 2.4$</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $276.5 \div 7.9$ (含验算)</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">③ $40 \div 42$ (保留两位小数)</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 递等式计算（能简算的要简算，每题 2 分，共 8 分）：</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $(1.25 + 2.5) \times 4$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $0.5 \times 1.6 \times 12.5$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">③ $0.4 \times (3.2 - 0.8) \div 1.2$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">④ $7.45 \times 21 + 5.75 \times 14$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 三、深入探究，解方程与代数应用 -->
+  <div class="section-title">
+    <span>三、深入探究，解方程与代数应用</span>
+    <span class="target-badge">共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 解下列方程（每题 3 分，共 12 分）：</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(1) $4x + 7.5 = 23.5$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(2) $4x - 1.2 = x + 4.5$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">(3) $3(2x - 1.5) = 15$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">(4) $5.6 \div x = 0.8$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 先化简代数式，再代入求值（4 分）：</div>
+    <div class="q-subtext">当 $x = 2.5$ 时，求代数式 $3(2x - 1) - 4x + 5$ 的值。</div>
+    <div class="answer-box" style="min-height:90px;">
+      <div class="answer-line">[ 化简结果：<span class="blank" style="min-width:80px;"></span>，求值结果：<span class="blank" style="min-width:70px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 比例与代数关系（4 分）：</div>
+    <div class="q-subtext">已知两个正数 $C$ 与 $D$ 满足比例 $C : D = 3 : 5$。</div>
+    <div class="answer-box" style="min-height:90px;">
+      <div>(1) 用含 $C$ 的代数式表示 $D$：$D =$ <span class="blank" style="min-width:100px;"></span></div>
+      <div style="margin-top:6px;">(2) 若 $C = 18$，则 $D =$ <span class="blank" style="min-width:70px;"></span>；若 $D = 40$，则 $C =$ <span class="blank" style="min-width:70px;"></span>。</div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 四、空间观察，图形测量与面积计算 -->
+  <div class="section-title">
+    <span>四、空间观察，图形测量与面积计算</span>
+    <span class="target-badge">共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 三角形面积与高求解（5 分）：</div>
+    <div class="q-subtext">一个直角三角形的两条直角边长分别是 $0.44\text{ m}$ 和 $0.15\text{ m}$，斜边长是 $0.5\text{ m}$。</div>
+    <div class="answer-box" style="min-height:95px;">
+      <div>(1) 求该直角三角形的面积是多少 $\text{m}^2$？</div>
+      <div style="margin-top:6px;">(2) 求该直角三角形斜边上的高是多少 $\text{m}$？（得数保留两位小数）</div>
+      <div class="answer-line">[ (1) 面积：<span class="blank" style="min-width:70px;"></span> $\text{m}^2$；(2) 斜边的高：<span class="blank" style="min-width:70px;"></span> $\text{m}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 梯形逆向求解（5 分）：</div>
+    <div class="q-subtext">已知一个梯形的面积是 $63\text{ cm}^2$，高是 $7\text{ cm}$，上底长是 $6.8\text{ cm}$。求该梯形的下底长是多少 $\text{cm}$？</div>
+    <div class="answer-box" style="min-height:95px;">
+      <div class="answer-line">[ Ans: 下底长为 <span class="blank" style="min-width:80px;"></span> $\text{cm}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 组合图形割补法面积计算（10 分）：</div>
+    <div class="q-subtext">如图所示，某机械零件截面为一个组合图形：由一个底为 $15\text{ cm}$、高为 $7\text{ cm}$ 的顶部三角形 $A_1$；一个长为 $15\text{ cm}$、宽为 $8\text{ cm}$ 的中部矩形 $A_2$；以及一个底为 $9\text{ cm}$、高为 $8\text{ cm}$ 的右侧直角三角形 $A_3$ 拼接组成。</div>
+    <div class="answer-box" style="min-height:120px;">
+      <div>(1) 分别求出分部面积：$A_1 =$ <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$； $A_2 =$ <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$； $A_3 =$ <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$。</div>
+      <div style="margin-top:8px;">(2) 求该机械零件截面的总面积是多少 $\text{cm}^2$？（写出分步求和计算过程）</div>
+      <div class="answer-line">[ Ans: 零件截面总面积为 <span class="blank" style="min-width:80px;"></span> $\text{cm}^2$ ]</div>
+    </div>
+  </div>
+
+  <!-- 五、联系生活，解决实际问题 -->
+  <div class="section-title">
+    <span>五、联系生活，解决实际问题</span>
+    <span class="target-badge">每题 5 分，共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 食品加工车间共有 $8.6\text{ kg}$ 白糖。工人取出一部分平均装入 $5$ 个完全相同的玻璃罐中，最后还剩下 $0.35\text{ kg}$ 白糖未能装入。请问每个玻璃罐中平均装入了多少千克白糖？</div>
+    <div class="answer-box" style="min-height:100px;">
+      <div class="answer-line">[ Ans: 每个玻璃罐装入 <span class="blank" style="min-width:80px;"></span> $\text{kg}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 食堂采购员购买了 $14\text{ kg}$ 鸡肉，单价为 $5.75\text{ 元/kg}$；另外购买了 $21\text{ kg}$ 牛肉，单价为 $7.45\text{ 元/kg}$。</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) 购买鸡肉与牛肉一共花费了多少元？</div>
+      <div style="margin-top:6px;">(2) 购买牛肉的花费比购买鸡肉的花费多多少元？</div>
+      <div class="answer-line">[ (1) 一共花费 <span class="blank" style="min-width:70px;"></span> 元； (2) 牛肉比鸡肉多花费 <span class="blank" style="min-width:70px;"></span> 元 ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 一辆电动客车从甲地开往乙地，全程共 $276.5\text{ km}$。客车匀速行驶了 $3.5\text{ h}$ 到达乙地，期间总耗电量折算等效燃油为 $7.9\text{ L}$。</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) 求该客车的平均行驶速度是多少 $\text{km/h}$？</div>
+      <div style="margin-top:6px;">(2) 平均每升等效燃油可供该客车行驶多少千米？（得数保留一位小数）</div>
+      <div class="answer-line">[ (1) 平均速度为 <span class="blank" style="min-width:70px;"></span> $\text{km/h}$； (2) 每升行驶 <span class="blank" style="min-width:70px;"></span> $\text{km}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. 科技社团制作了三组不同长度的展示长条。第一组长条由 $4$ 根长度为 $x\text{ cm}$ 的木条首尾相接组成；第二组长条由 $1$ 根长度为 $x\text{ cm}$ 的木条加上一段长 $4.5\text{ cm}$ 的连接件组成。已知第一组长条的总长比第二组长条多 $1.5\text{ cm}$。</div>
+    <div class="answer-box" style="min-height:120px;">
+      <div>(1) 请根据题意列出关于 $x$ 的方程，并求出 $x$ 的值；</div>
+      <div style="margin-top:6px;">(2) 第三组长条由 $3$ 根长度为 $y\text{ cm}$ 的木条组成，其总长度恰好等于第一组长条的总长度。求 $y$ 的值。</div>
+      <div class="answer-line">[ (1) $x =$ <span class="blank" style="min-width:60px;"></span> $\text{cm}$； (2) $y =$ <span class="blank" style="min-width:60px;"></span> $\text{cm}$ ]</div>
+    </div>
+  </div>
+
+  <!-- 教师参考答案与解析 (展开查阅) -->
+  <details class="teacher-key">
+    <summary>📌 教师备课与参考答案解析（点击展开/折叠）</summary>
+    <div style="margin-top:12px;">
+      <div class="sol-item">
+        <strong>一、填空题</strong><br>
+        1. 十；十；十分；十分之一（或 0.1）。<br>
+        2. (1) $<$（乘以小于1的数变小，除以小于1的数变大）； (2) $=$（$4.5\div 0.1 = 45 = 4.5\times 10$）； (3) $>$； (4) $<$。<br>
+        3. $7.5\%$； $\frac{3}{40}$； $0.125$； $12.5\%$。<br>
+        4. $0.225$； $225$； $0.225$。<br>
+        5. $825$； $0.82582582$； $2$（因为 $100 \div 3 = 33 \dots 1$，第1位是8？注意循环节是 825，余数 1 对应第1位 8！若循环节是 825，则 $100 \equiv 1 \pmod 3$ 为 8）。<br>
+        6. $4.9964 \to 5$； $5.0$； $5.00$。 $0.7258 \to 1$； $0.7$； $0.73$。<br>
+        7. $4x + 7$； $6x + 4$； $2n$。<br>
+        8. $240$； $3.5$； $90$； $20$（$72 \times 1000 \div 3600 = 20\text{ m/s}$）。<br>
+        9. $\frac{1}{8}$； $0.15\text{ kg}$（$1.2 \div 8 = 0.15$）。<br>
+        10. $6$； $48$（因为底乘高必须相等，高 $8$ 只能对应短边 $6$，面积为 $6 \times 8 = 48\text{ cm}^2$）。
+      </div>
+      <div class="sol-item">
+        <strong>二、计算题</strong><br>
+        1. (1) $1$（或 $1.0$）； (2) $9$； (3) $0.1$； (4) $0.65$。<br>
+        2. ① $3.75 \times 2.4 = 9$； ② $276.5 \div 7.9 = 35$（验算：$35 \times 7.9 = 276.5$）； ③ $40 \div 42 = 0.9523\dots \approx 0.95$。<br>
+        3. ① $(1.25 + 2.5) \times 4 = 1.25 \times 4 + 2.5 \times 4 = 5 + 10 = 15$；<br>
+        ② $0.5 \times 1.6 \times 12.5 = 0.5 \times (2 \times 0.8) \times 12.5 = (0.5 \times 2) \times (0.8 \times 12.5) = 1 \times 10 = 10$；<br>
+        ③ $0.4 \times 2.4 \div 1.2 = 0.96 \div 1.2 = 0.8$；<br>
+        ④ $7.45 \times 21 + 5.75 \times 14 = 156.45 + 80.5 = 236.95$。
+      </div>
+      <div class="sol-item">
+        <strong>三、方程与代数</strong><br>
+        1. (1) $4x = 16 \implies x = 4$； (2) $3x = 5.7 \implies x = 1.9$； (3) $2x - 1.5 = 5 \implies 2x = 6.5 \implies x = 3.25$； (4) $x = 5.6 \div 0.8 \implies x = 7$。<br>
+        2. 化简：$3(2x - 1) - 4x + 5 = 6x - 3 - 4x + 5 = 2x + 2$。代入 $x=2.5$：$2(2.5) + 2 = 5 + 2 = 7$。<br>
+        3. (1) $D = \frac{5}{3}C$； (2) 当 $C=18$ 时 $D = \frac{5}{3}\times 18 = 30$；当 $D=40$ 时 $C = 40 \div \frac{5}{3} = 24$。
+      </div>
+      <div class="sol-item">
+        <strong>四、空间与图形</strong><br>
+        1. (1) 面积 $= 0.44 \times 0.15 \div 2 = 0.066 \div 2 = 0.033\text{ m}^2$；<br>
+        (2) 斜边的高 $= 0.033 \times 2 \div 0.5 = 0.066 \div 0.5 = 0.132 \approx 0.13\text{ m}$。<br>
+        2. 下底 $= 63 \times 2 \div 7 - 6.8 = 18 - 6.8 = 11.2\text{ cm}$。<br>
+        3. (1) $A_1 = 15 \times 7 \div 2 = 52.5\text{ cm}^2$； $A_2 = 15 \times 8 = 120\text{ cm}^2$； $A_3 = 9 \times 8 \div 2 = 36\text{ cm}^2$。<br>
+        (2) 总面积 $= 52.5 + 120 + 36 = 172.5 + 36 = 208.5\text{ cm}^2$。
+      </div>
+      <div class="sol-item">
+        <strong>五、解决问题</strong><br>
+        1. $(8.6 - 0.35) \div 5 = 8.25 \div 5 = 1.65\text{ kg}$。<br>
+        2. (1) 总花费 $= 14 \times 5.75 + 21 \times 7.45 = 80.5 + 156.45 = 236.95$ 元；<br>
+        (2) 差价 $= 156.45 - 80.5 = 75.95$ 元。<br>
+        3. (1) 平均速度 $= 276.5 \div 3.5 = 79\text{ km/h}$；<br>
+        (2) 每升行驶里程 $= 276.5 \div 7.9 = 35\text{ km/L}$。<br>
+        4. (1) 方程：$4x - (x + 4.5) = 1.5 \implies 3x - 4.5 = 1.5 \implies 3x = 6 \implies x = 2\text{ cm}$。<br>
+        (2) 第一组总长 $= 4 \times 2 = 8\text{ cm}$； $3y = 8 \implies y = \frac{8}{3}\text{ cm}$（或 $2\frac{2}{3}\text{ cm}$）。
+      </div>
+    </div>
+  </details>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+
+</body>
+</html>

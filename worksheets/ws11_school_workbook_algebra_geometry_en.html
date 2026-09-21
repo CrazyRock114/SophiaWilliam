@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Math Workbook Targeted Mastery Worksheet (Set 11): Numbers, Algebra, Equations & Geometry</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #1d4ed8; transform: translateY(-1px); }
+    @media print {
+      .no-print, .teacher-key { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 6px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11.5px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #2563eb;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 16px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+    .q-subtext {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 48px;
+      padding: 8px;
+      position: relative;
+    }
+    .answer-line {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 6px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1.5px solid #1e293b;
+      text-align: center;
+      padding: 0 4px;
+      margin: 0 4px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0;
+      font-size: 12.5px;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    table.data-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #334155;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    .teacher-key {
+      margin-top: 30px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 16px;
+    }
+    .teacher-key summary {
+      font-weight: 700;
+      font-size: 15px;
+      color: #2563eb;
+      cursor: pointer;
+    }
+    .sol-item {
+      margin: 10px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 12.5px;
+    }
+    .sol-item strong { color: #0f172a; }
+  </style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">🖨️ Print Exam (A4)</button>
+
+<div class="paper-container">
+
+  <div class="header">
+    <div class="school-title">School Math Workbook Targeted Mastery Series · Progress Assessment</div>
+    <div class="paper-title">School Math Workbook Targeted Mastery Worksheet (Set 11)</div>
+    <div style="font-size:13px; color:#475569; font-weight:600; margin-bottom:8px;">Module: Number & Algebra · Linear Equations · Plane Geometry & Problem Solving</div>
+    <div class="meta-box">
+      <span>Name: <span class="blank" style="min-width:110px;"></span></span>
+      <span>Class: <span class="blank" style="min-width:80px;"></span></span>
+      <span>Date: <span class="blank" style="min-width:100px;"></span></span>
+      <span>Total: 100 pts</span>
+      <span>Score: <span class="blank" style="min-width:70px;"></span></span>
+    </div>
+  </div>
+
+  <!-- Section 1: Fill in the Blanks -->
+  <div class="section-title">
+    <span>Section 1: Fill in the Blanks</span>
+    <span class="target-badge">2 pts each, 20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. In the number $483.59$, the digit '$8$' is in the <span class="blank" style="min-width:80px;"></span> place, representing $8$ <span class="blank" style="min-width:80px;"></span>; the digit '$5$' is in the <span class="blank" style="min-width:80px;"></span> place, representing $5$ <span class="blank" style="min-width:80px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Insert '$>$', '$<$', or '$=$' in each $\bigcirc$:</div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>(1) $7.2 \times 0.9 \;\bigcirc\; 7.2 \div 0.9$</div>
+      <div>(2) $4.5 \div 0.1 \;\bigcirc\; 4.5 \times 10$</div>
+      <div>(3) $0.85 \times 1.02 \;\bigcirc\; 0.85$</div>
+      <div>(4) $3.6 \div 1.2 \;\bigcirc\; 3.6$</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Convert $0.075$ into a percentage: <span class="blank" style="min-width:70px;"></span>, and into a fraction in its simplest form: <span class="blank" style="min-width:70px;"></span>; convert $\frac{1}{8}$ into a decimal: <span class="blank" style="min-width:70px;"></span>, and into a percentage: <span class="blank" style="min-width:70px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. Given that $54 \div 24 = 2.25$, apply place value and quotient rules to evaluate:</div>
+    <div class="grid-3" style="margin-top: 4px;">
+      <div>$5.4 \div 24 =$ <span class="blank"></span></div>
+      <div>$54 \div 0.24 =$ <span class="blank"></span></div>
+      <div>$0.54 \div 2.4 =$ <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">5. For the pure recurring decimal $0.\dot{8}\dot{2}\dot{5}$, the recurring period is <span class="blank" style="min-width:70px;"></span>; its first $8$ decimal places written in expanded form are <span class="blank" style="min-width:120px;"></span>; the $100\text{th}$ digit after the decimal point is <span class="blank" style="min-width:50px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">6. Complete the rounding table below:</div>
+    <table class="data-table">
+      <tr>
+        <th>Number</th>
+        <th>Round to nearest integer</th>
+        <th>Round to 1 decimal place</th>
+        <th>Round to 2 decimal places</th>
+      </tr>
+      <tr>
+        <td>$4.9964$</td>
+        <td><span class="blank" style="min-width:70px;"></span></td>
+        <td><span class="blank" style="min-width:70px;"></span></td>
+        <td><span class="blank" style="min-width:70px;"></span></td>
+      </tr>
+      <tr>
+        <td>$0.7258$</td>
+        <td><span class="blank" style="min-width:70px;"></span></td>
+        <td><span class="blank" style="min-width:70px;"></span></td>
+        <td><span class="blank" style="min-width:70px;"></span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="question">
+    <div class="q-text">7. An expression for "$7$ more than $4$ times $x$" is <span class="blank" style="min-width:100px;"></span>. Simplify the expressions: $5x + 4 + x =$ <span class="blank" style="min-width:90px;"></span>; $n + n - m + m =$ <span class="blank" style="min-width:90px;"></span>.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">8. Fill in the missing numbers or units:</div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>$2.4\text{ m}^2 =$ <span class="blank"></span> $\text{dm}^2$</div>
+      <div>$350\text{ cm}^2 =$ <span class="blank"></span> $\text{dm}^2$</div>
+      <div>$1.5\text{ h} =$ <span class="blank"></span> $\text{min}$</div>
+      <div>$72\text{ km/h} =$ <span class="blank"></span> $\text{m/s}$</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">9. A large cake weighing $1.2\text{ kg}$ is divided equally among $8$ students. Each student receives <span class="blank" style="min-width:60px;"></span> of the whole cake (express as a fraction), which weighs <span class="blank" style="min-width:60px;"></span> $\text{kg}$.</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">10. A parallelogram has two adjacent sides of lengths $10\text{ cm}$ and $6\text{ cm}$. If one of its heights is $8\text{ cm}$, the corresponding base is <span class="blank" style="min-width:50px;"></span> $\text{cm}$, and the area of the parallelogram is <span class="blank" style="min-width:60px;"></span> $\text{cm}^2$.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 2: Calculations & Column Operations -->
+  <div class="section-title">
+    <span>Section 2: Calculations & Column Operations</span>
+    <span class="target-badge">20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Mental Math (1 pt each, 4 pts total):</div>
+    <div class="grid-4" style="margin-top: 6px;">
+      <div>(1) $0.9 + 0.1 =$ <span class="blank" style="min-width:50px;"></span></div>
+      <div>(2) $5.4 \div 0.6 =$ <span class="blank" style="min-width:50px;"></span></div>
+      <div>(3) $0.25 \times 0.4 =$ <span class="blank" style="min-width:50px;"></span></div>
+      <div>(4) $1 - 0.35 =$ <span class="blank" style="min-width:50px;"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Column Operations (Part ① 2 pts; Part ② include check 3 pts; Part ③ round to 2 d.p. 3 pts; 8 pts total):</div>
+    <div class="grid-3" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $3.75 \times 2.4$</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $276.5 \div 7.9$ (with check)</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">③ $40 \div 42$ (to 2 d.p.)</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Order of Operations & Convenient Calculations (2 pts each, 8 pts total):</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $(1.25 + 2.5) \times 4$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $0.5 \times 1.6 \times 12.5$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">③ $0.4 \times (3.2 - 0.8) \div 1.2$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">④ $7.45 \times 21 + 5.75 \times 14$</div>
+        <div class="answer-box" style="min-height:100px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:80px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Solve Equations & Algebraic Application -->
+  <div class="section-title">
+    <span>Section 3: Solve Equations & Algebraic Application</span>
+    <span class="target-badge">20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Solve the following equations (3 pts each, 12 pts total):</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(1) $4x + 7.5 = 23.5$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(2) $4x - 1.2 = x + 4.5$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">(3) $3(2x - 1.5) = 15$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">(4) $5.6 \div x = 0.8$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ $x =$ <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Simplify and Evaluate (4 pts):</div>
+    <div class="q-subtext">When $x = 2.5$, evaluate the algebraic expression: $3(2x - 1) - 4x + 5$.</div>
+    <div class="answer-box" style="min-height:90px;">
+      <div class="answer-line">[ Simplified form: <span class="blank" style="min-width:80px;"></span>, Value: <span class="blank" style="min-width:70px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Ratio and Algebraic Relations (4 pts):</div>
+    <div class="q-subtext">Given that two positive quantities $C$ and $D$ satisfy the ratio $C : D = 3 : 5$.</div>
+    <div class="answer-box" style="min-height:90px;">
+      <div>(1) Express $D$ in terms of $C$: $D =$ <span class="blank" style="min-width:100px;"></span></div>
+      <div style="margin-top:6px;">(2) If $C = 18$, then $D =$ <span class="blank" style="min-width:70px;"></span>; if $D = 40$, then $C =$ <span class="blank" style="min-width:70px;"></span>.</div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 4: Geometry & Spatial Measurement -->
+  <div class="section-title">
+    <span>Section 4: Geometry & Spatial Measurement</span>
+    <span class="target-badge">20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. Triangle Area and Height (5 pts):</div>
+    <div class="q-subtext">A right-angled triangle has legs of lengths $0.44\text{ m}$ and $0.15\text{ m}$, and a hypotenuse of length $0.5\text{ m}$.</div>
+    <div class="answer-box" style="min-height:95px;">
+      <div>(1) Calculate the area of this right-angled triangle in $\text{m}^2$.</div>
+      <div style="margin-top:6px;">(2) Calculate the height perpendicular to the hypotenuse in $\text{m}$ (round to 2 decimal places).</div>
+      <div class="answer-line">[ (1) Area: <span class="blank" style="min-width:70px;"></span> $\text{m}^2$; (2) Height: <span class="blank" style="min-width:70px;"></span> $\text{m}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. Reverse Calculation of Trapezoid (5 pts):</div>
+    <div class="q-subtext">The area of a trapezoid is $63\text{ cm}^2$, its height is $7\text{ cm}$, and its top base is $6.8\text{ cm}$. Find the length of its bottom base in $\text{cm}$.</div>
+    <div class="answer-box" style="min-height:95px;">
+      <div class="answer-line">[ Ans: Bottom base is <span class="blank" style="min-width:80px;"></span> $\text{cm}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. Area of a Composite Figure (10 pts):</div>
+    <div class="q-subtext">A mechanical component's cross-section is formed by combining: a top triangle $A_1$ with base $15\text{ cm}$ and height $7\text{ cm}$; a middle rectangle $A_2$ of length $15\text{ cm}$ and width $8\text{ cm}$; and a right-side right triangle $A_3$ with base $9\text{ cm}$ and height $8\text{ cm}$.</div>
+    <div class="answer-box" style="min-height:120px;">
+      <div>(1) Find each component area: $A_1 =$ <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$; $A_2 =$ <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$; $A_3 =$ <span class="blank" style="min-width:70px;"></span> $\text{cm}^2$.</div>
+      <div style="margin-top:8px;">(2) Calculate the total cross-sectional area of the component in $\text{cm}^2$ (show full addition steps).</div>
+      <div class="answer-line">[ Ans: Total area is <span class="blank" style="min-width:80px;"></span> $\text{cm}^2$ ]</div>
+    </div>
+  </div>
+
+  <!-- Section 5: Real-World Word Problems -->
+  <div class="section-title">
+    <span>Section 5: Real-World Word Problems</span>
+    <span class="target-badge">5 pts each, 20 pts total</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. A workshop has $8.6\text{ kg}$ of sugar. A worker packs a portion equally into $5$ identical glass jars, leaving $0.35\text{ kg}$ of sugar unpacked. How many kilograms of sugar are packed into each glass jar on average?</div>
+    <div class="answer-box" style="min-height:100px;">
+      <div class="answer-line">[ Ans: Each jar contains <span class="blank" style="min-width:80px;"></span> $\text{kg}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. A cafeteria purchaser bought $14\text{ kg}$ of chicken at $5.75\text{ dollars/kg}$, and $21\text{ kg}$ of beef at $7.45\text{ dollars/kg}$.</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) What was the total cost for both chicken and beef?</div>
+      <div style="margin-top:6px;">(2) How much more was spent on beef than on chicken?</div>
+      <div class="answer-line">[ (1) Total cost: $<span class="blank" style="min-width:70px;"></span>; (2) Beef cost $<span class="blank" style="min-width:70px;"></span> more ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. An electric bus travels from City A to City B, covering a total distance of $276.5\text{ km}$ at a constant speed in $3.5\text{ h}$. The total energy consumed was equivalent to $7.9\text{ L}$ of fuel.</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) What was the average speed of the bus in $\text{km/h}$?</div>
+      <div style="margin-top:6px;">(2) On average, how many kilometers does the bus travel per equivalent liter of fuel? (Round to 1 decimal place)</div>
+      <div class="answer-line">[ (1) Average speed: <span class="blank" style="min-width:70px;"></span> $\text{km/h}$; (2) Distance per liter: <span class="blank" style="min-width:70px;"></span> $\text{km}$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. A science club created three display bars. Bar 1 consists of $4$ wooden rods of length $x\text{ cm}$ placed end-to-end. Bar 2 consists of $1$ wooden rod of length $x\text{ cm}$ connected to a $4.5\text{ cm}$ metal connector. Bar 1 is $1.5\text{ cm}$ longer than Bar 2.</div>
+    <div class="answer-box" style="min-height:120px;">
+      <div>(1) Set up an equation in terms of $x$ and solve for $x$.</div>
+      <div style="margin-top:6px;">(2) Bar 3 consists of $3$ wooden rods of length $y\text{ cm}$, and its total length is exactly equal to the length of Bar 1. Find the value of $y$.</div>
+      <div class="answer-line">[ (1) $x =$ <span class="blank" style="min-width:60px;"></span> $\text{cm}$; (2) $y =$ <span class="blank" style="min-width:60px;"></span> $\text{cm}$ ]</div>
+    </div>
+  </div>
+
+  <!-- Teacher Answer Key & Solutions -->
+  <details class="teacher-key">
+    <summary>📌 Teacher Answer Key & Full Step-by-Step Solutions (Click to Expand)</summary>
+    <div style="margin-top:12px;">
+      <div class="sol-item">
+        <strong>Section 1: Fill in the Blanks</strong><br>
+        1. Tens; tens; tenths; tenths (or 0.1).<br>
+        2. (1) $<$ (multiplying by $<1$ decreases value, dividing by $<1$ increases value); (2) $=$ ($4.5\div 0.1 = 45 = 4.5\times 10$); (3) $>$; (4) $<$.<br>
+        3. $7.5\%$; $\frac{3}{40}$; $0.125$; $12.5\%$.<br>
+        4. $0.225$; $225$; $0.225$.<br>
+        5. $825$; $0.82582582$; $8$ (since $100 \div 3 = 33 \text{ R } 1$, the first digit of the cycle 825 is 8).<br>
+        6. $4.9964 \to 5$; $5.0$; $5.00$. $0.7258 \to 1$; $0.7$; $0.73$.<br>
+        7. $4x + 7$; $6x + 4$; $2n$.<br>
+        8. $240$; $3.5$; $90$; $20$ ($72 \times 1000 \div 3600 = 20\text{ m/s}$).<br>
+        9. $\frac{1}{8}$; $0.15\text{ kg}$ ($1.2 \div 8 = 0.15$).<br>
+        10. $6$; $48$ (the height 8 must pair with the shorter side 6, area $= 6 \times 8 = 48\text{ cm}^2$).
+      </div>
+      <div class="sol-item">
+        <strong>Section 2: Calculations & Column Operations</strong><br>
+        1. (1) $1$; (2) $9$; (3) $0.1$; (4) $0.65$.<br>
+        2. ① $3.75 \times 2.4 = 9$; ② $276.5 \div 7.9 = 35$ (Check: $35 \times 7.9 = 276.5$); ③ $40 \div 42 \approx 0.95$.<br>
+        3. ① $(1.25 + 2.5) \times 4 = 1.25 \times 4 + 2.5 \times 4 = 5 + 10 = 15$;<br>
+        ② $0.5 \times 1.6 \times 12.5 = (0.5 \times 2) \times (0.8 \times 12.5) = 1 \times 10 = 10$;<br>
+        ③ $0.4 \times 2.4 \div 1.2 = 0.96 \div 1.2 = 0.8$;<br>
+        ④ $7.45 \times 21 + 5.75 \times 14 = 156.45 + 80.5 = 236.95$.
+      </div>
+      <div class="sol-item">
+        <strong>Section 3: Equations & Algebra</strong><br>
+        1. (1) $4x = 16 \implies x = 4$; (2) $3x = 5.7 \implies x = 1.9$; (3) $2x - 1.5 = 5 \implies 2x = 6.5 \implies x = 3.25$; (4) $x = 5.6 \div 0.8 \implies x = 7$.<br>
+        2. Simplification: $3(2x - 1) - 4x + 5 = 6x - 3 - 4x + 5 = 2x + 2$. At $x=2.5$: $2(2.5) + 2 = 7$.<br>
+        3. (1) $D = \frac{5}{3}C$; (2) When $C=18$, $D = 30$; when $D=40$, $C = 24$.
+      </div>
+      <div class="sol-item">
+        <strong>Section 4: Geometry & Spatial Measurement</strong><br>
+        1. (1) Area $= 0.44 \times 0.15 \div 2 = 0.033\text{ m}^2$;<br>
+        (2) Height $= 0.033 \times 2 \div 0.5 = 0.132 \approx 0.13\text{ m}$.<br>
+        2. Bottom base $= 63 \times 2 \div 7 - 6.8 = 18 - 6.8 = 11.2\text{ cm}$.<br>
+        3. (1) $A_1 = 15 \times 7 \div 2 = 52.5\text{ cm}^2$; $A_2 = 15 \times 8 = 120\text{ cm}^2$; $A_3 = 9 \times 8 \div 2 = 36\text{ cm}^2$.<br>
+        (2) Total area $= 52.5 + 120 + 36 = 208.5\text{ cm}^2$.
+      </div>
+      <div class="sol-item">
+        <strong>Section 5: Word Problems</strong><br>
+        1. $(8.6 - 0.35) \div 5 = 8.25 \div 5 = 1.65\text{ kg}$.<br>
+        2. (1) Total cost $= 14 \times 5.75 + 21 \times 7.45 = 80.5 + 156.45 = 236.95\text{ dollars}$ (&dollar;236.95);<br>
+        (2) Difference $= 156.45 - 80.5 = 75.95\text{ dollars}$ (&dollar;75.95).<br>
+        3. (1) Average speed $= 276.5 \div 3.5 = 79\text{ km/h}$;<br>
+        (2) Distance per liter $= 276.5 \div 7.9 = 35\text{ km/L}$.<br>
+        4. (1) Equation: $4x - (x + 4.5) = 1.5 \implies 3x - 4.5 = 1.5 \implies 3x = 6 \implies x = 2\text{ cm}$.<br>
+        (2) Total length of Bar 1 $= 4 \times 2 = 8\text{ cm}$; $3y = 8 \implies y = \frac{8}{3}\text{ cm}$ (or $2\frac{2}{3}\text{ cm}$).
+      </div>
+    </div>
+  </details>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+
+</body>
+</html>

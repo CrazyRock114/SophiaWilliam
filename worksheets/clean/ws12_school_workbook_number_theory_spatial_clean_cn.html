@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>中小学数学校本练习册典型错题针对性巩固卷（十二）：数论因倍·分数与立体几何</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #059669;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(5,150,105,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #047857; transform: translateY(-1px); }
+    @media print {
+      .no-print { display: none !important; }
+    }
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .paper-title {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 4px 0 6px 0;
+    }
+    .meta-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .target-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11.5px;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #059669;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 16px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .q-text {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+    .q-subtext {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      border-radius: 4px;
+      min-height: 48px;
+      padding: 8px;
+      position: relative;
+    }
+    .answer-line {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 6px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1.5px solid #1e293b;
+      text-align: center;
+      padding: 0 4px;
+      margin: 0 4px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">🖨️ 打印试卷 (A4)</button>
+
+<div class="paper-container">
+
+  <div class="header">
+    <div class="school-title">校本练习册典型错题针对性巩固提升系列 · 阶段性质量检测</div>
+    <div class="paper-title">中小学数学校本练习册典型错题针对性巩固卷（十二）</div>
+    <div style="font-size:13px; color:#475569; font-weight:600; margin-bottom:8px;">模块：数论因倍 · 质因数分解 · 分数四则与立体几何</div>
+    <div class="meta-box">
+      <span>姓名：<span class="blank" style="min-width:100px;"></span></span>
+      <span>班级：<span class="blank" style="min-width:80px;"></span></span>
+      <span>日期：<span class="blank" style="min-width:100px;"></span></span>
+      <span>满分：100 分</span>
+      <span>得分：<span class="blank" style="min-width:70px;"></span></span>
+    </div>
+  </div>
+
+  <!-- 一、因数、倍数与质合判断填空 -->
+  <div class="section-title">
+    <span>一、因数、倍数与质合判断填空</span>
+    <span class="target-badge">每题 2 分，共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 按顺序完整写出下列各数的所有正因数：</div>
+    <div style="margin-top: 4px;">
+      <div>(1) 数 $28$ 的所有正因数有：<span class="blank" style="min-width:240px;"></span>；</div>
+      <div style="margin-top:4px;">(2) 数 $48$ 的所有正因数有：<span class="blank" style="min-width:240px;"></span>。</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 在数 $77, 83, 91, 97$ 中，质数有 <span class="blank" style="min-width:100px;"></span>，合数有 <span class="blank" style="min-width:100px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 深入理解乘方本质并计算：</div>
+    <div class="grid-5" style="margin-top: 4px;">
+      <div>$2^3 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$2^4 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$3^4 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$10^0 =$ <span class="blank" style="min-width:40px;"></span></div>
+      <div>$10^4 \times 10^5 = 10^{\underline{\hspace{0.8cm}}}$</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. 边长为正整数的正方形面积称为完全平方数。在 $1 \sim 20$ 的整数中，完全平方数有 <span class="blank" style="min-width:140px;"></span>；数字 $6$ <span class="blank" style="min-width:60px;"></span> 完全平方数（填“是”或“不是”）。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">5. 计算并判断各式的结果是奇数（Odd）还是偶数（Even）：</div>
+    <div class="grid-3" style="margin-top: 4px;">
+      <div>(1) $3^2$ 是 <span class="blank" style="min-width:60px;"></span> 数</div>
+      <div>(2) $6^2$ 是 <span class="blank" style="min-width:60px;"></span> 数</div>
+      <div>(3) 若 $n$ 为偶数，则 $n^2 + 1$ 必为 <span class="blank" style="min-width:60px;"></span> 数</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">6. 一个五位数 $\overline{4271\square}$：若它是 $2$ 的倍数，$\square$ 里可以填 <span class="blank" style="min-width:90px;"></span>；若它是 $3$ 的倍数，$\square$ 里可以填 <span class="blank" style="min-width:90px;"></span>；若它同时是 $2$ 和 $5$ 的倍数，$\square$ 里只能填 <span class="blank" style="min-width:40px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">7. 将下列各数分解质因数，并用指数形式（Index Form）表示：</div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>$81 =$ <span class="blank" style="min-width:120px;"></span></div>
+      <div>$72 =$ <span class="blank" style="min-width:120px;"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">8. 已知正整数 $E = 2^{10} \times 3^4$，$F = 2^6 \times 3 \times 5^5$。则 $E$ 和 $F$ 的最大公因数（HCF）用指数形式表示为 <span class="blank" style="min-width:120px;"></span>；最小公倍数（LCM）用指数形式表示为 <span class="blank" style="min-width:160px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">9. 两个正整数 $a$ 和 $b$ 的最大公因数是 $6$，最小公倍数是 $90$。若 $a = 18$，则 $b =$ <span class="blank" style="min-width:70px;"></span>。</div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">10. 计算 $52 \div 24$，其商写成带余除法形式为 <span class="blank" style="min-width:100px;"></span>，写成最简带分数形式为 <span class="blank" style="min-width:80px;"></span>。</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 二、短除法与质因数分解规范 -->
+  <div class="section-title">
+    <span>二、短除法与质因数分解规范</span>
+    <span class="target-badge">共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 请用规范的短除法（每次除数必须为质数）对下列各数进行质因数分解，并写出最终标准质因数分解式（每题 4 分，共 8 分）：</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(1) 对 $54$ 进行质因数分解</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $54 =$ <span class="blank" style="min-width:100px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(2) 对 $1080$ 进行质因数分解</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $1080 =$ <span class="blank" style="min-width:120px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 用短除法求下列各组数的最大公因数（HCF）和最小公倍数（LCM）（每题 4 分，共 8 分）：</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(1) 求 $54$ 和 $90$ 的 HCF 与 LCM</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $\text{HCF} =$ <span class="blank" style="min-width:50px;"></span>, $\text{LCM} =$ <span class="blank" style="min-width:60px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">(2) 求 $24, 36$ 和 $48$ 的 HCF 与 LCM</div>
+        <div class="answer-box" style="min-height:120px;">
+          <div class="answer-line">[ $\text{HCF} =$ <span class="blank" style="min-width:50px;"></span>, $\text{LCM} =$ <span class="blank" style="min-width:60px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 因数个数探究（4 分）：</div>
+    <div class="q-subtext">已知正整数 $72$ 的质因数分解式为 $72 = 2^3 \times 3^2$。请利用质因数指数规律，列式计算 $72$ 一共有多少个正因数？并写出计算式。</div>
+    <div class="answer-box" style="min-height:75px;">
+      <div class="answer-line">[ 算式：<span class="blank" style="min-width:100px;"></span>，因数总个数：<span class="blank" style="min-width:50px;"></span> 个 ]</div>
+    </div>
+  </div>
+
+  <!-- 三、分数四则混合运算与假带互化 -->
+  <div class="section-title">
+    <span>三、分数四则混合运算与假带互化</span>
+    <span class="target-badge">共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 直接写出得数或完成互化（每题 1 分，共 4 分）：</div>
+    <div class="grid-4" style="margin-top: 6px;">
+      <div>(1) $\frac{23}{6} =$ <span class="blank" style="min-width:50px;"></span> (带分数)</div>
+      <div>(2) $2\frac{3}{7} =$ <span class="blank" style="min-width:50px;"></span> (假分数)</div>
+      <div>(3) $\frac{3}{6} + \frac{5}{6} =$ <span class="blank" style="min-width:50px;"></span> (最简带分数)</div>
+      <div>(4) $1 - \frac{5}{12} =$ <span class="blank" style="min-width:50px;"></span></div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 异分母分数加减法计算（写出通分过程，每题 2 分，共 8 分）：</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $\frac{2}{3} + \frac{1}{5}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $2\frac{1}{3} + 3\frac{5}{6}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">③ $4\frac{1}{4} - 1\frac{2}{3}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">④ $\frac{5}{8} - \frac{1}{6} + \frac{7}{12}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 分数乘除法与混合运算（能简算的要简算，每题 2 分，共 8 分）：</div>
+    <div class="grid-2" style="margin-top: 6px;">
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">① $\frac{5}{12} \div \frac{15}{16}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600; margin-bottom:4px;">② $\frac{7}{18} \times \frac{9}{14} \div \frac{5}{6}$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">③ $\left(\frac{3}{4} + \frac{1}{6}\right) \times 12$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="font-weight:600; margin-bottom:4px;">④ $\frac{5}{9} \div \left(\frac{2}{3} - \frac{1}{4}\right)$</div>
+        <div class="answer-box" style="min-height:95px;">
+          <div class="answer-line">[ Ans: <span class="blank" style="min-width:70px;"></span> ]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 四、立体空间几何·体积与表面积 -->
+  <div class="section-title">
+    <span>四、立体空间几何·体积与表面积</span>
+    <span class="target-badge">共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 长方体基本计算（6 分）：</div>
+    <div class="q-subtext">一个长方体的长为 $5\text{ cm}$，宽为 $4\text{ cm}$，高为 $3\text{ cm}$。</div>
+    <div class="answer-box" style="min-height:95px;">
+      <div>(1) 求该长方体的表面积是多少 $\text{cm}^2$？</div>
+      <div style="margin-top:6px;">(2) 求该长方体的体积是多少 $\text{cm}^3$？</div>
+      <div class="answer-line">[ (1) 表面积：<span class="blank" style="min-width:70px;"></span> $\text{cm}^2$； (2) 体积：<span class="blank" style="min-width:70px;"></span> $\text{cm}^3$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 长方体的堆叠与拼合表面积（6 分）：</div>
+    <div class="q-subtext">现有两个完全相同的长方体，每个长方体的长为 $5\text{ cm}$，宽为 $3\text{ cm}$，高为 $2\text{ cm}$。现将这两个长方体的一个面完全重合拼成一个新的大长方体。</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) 如果重叠的拼合面面积最大，拼成的大长方体表面积是多少 $\text{cm}^2$？</div>
+      <div style="margin-top:6px;">(2) 如果重叠的拼合面面积最小，拼成的大长方体表面积是多少 $\text{cm}^2$？</div>
+      <div class="answer-line">[ (1) 最大拼合面对应表面积：<span class="blank" style="min-width:60px;"></span> $\text{cm}^2$； (2) 最小拼合面对应表面积：<span class="blank" style="min-width:60px;"></span> $\text{cm}^2$ ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 复合阶梯状积木立体模型（8 分）：</div>
+    <div class="q-subtext">如图所示，由棱长为 $1\text{ cm}$ 的小正方体在桌面上紧密搭成一个 $3$ 层的阶梯状立体模型：底层平铺 $3 \times 3$ 个小正方体（共 $9$ 个）；中层靠紧一个角平铺 $2 \times 2$ 个小正方体（共 $4$ 个）；顶层放置 $1$ 个小正方体。</div>
+    <div class="answer-box" style="min-height:120px;">
+      <div>(1) 求搭成该立体模型一共使用了多少个小正方体？其总体积是多少 $\text{cm}^3$？</div>
+      <div style="margin-top:6px;">(2) 现要在露出的所有表面（不含紧贴桌面的底面）涂上油漆，求需要涂油漆的总表面积是多少 $\text{cm}^2$？</div>
+      <div class="answer-line">[ (1) 总个数：<span class="blank" style="min-width:50px;"></span> 个，总体积：<span class="blank" style="min-width:60px;"></span> $\text{cm}^3$； (2) 涂漆总面积：<span class="blank" style="min-width:60px;"></span> $\text{cm}^2$ ]</div>
+    </div>
+  </div>
+
+  <!-- 五、综合探究与多分支压轴题 -->
+  <div class="section-title">
+    <span>五、综合探究与多分支压轴题</span>
+    <span class="target-badge">每题 5 分，共 20 分</span>
+  </div>
+
+  <div class="question">
+    <div class="q-text">1. 多位数整除分类讨论（5 分）：</div>
+    <div class="q-subtext">已知一个六位数 $\overline{5a342b}$ 能同时被 $2$、$3$ 和 $5$ 整除。</div>
+    <div class="answer-box" style="min-height:100px;">
+      <div>(1) 末尾数字 $b$ 的值必须是 <span class="blank" style="min-width:60px;"></span>；</div>
+      <div style="margin-top:6px;">(2) 写出数字 $a$ 的所有可能取值：$a =$ <span class="blank" style="min-width:120px;"></span>。</div>
+      <div class="answer-line">[ (1) $b =$ <span class="blank" style="min-width:40px;"></span>； (2) $a$ 的所有可能值为 <span class="blank" style="min-width:80px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">2. 统计特征数综合分析（5 分）：</div>
+    <div class="q-subtext">校篮球队主力队员在最近 $10$ 场比赛中的个人单场得分记录如下：<br>
+    <div style="text-align:center; font-weight:600; margin:4px 0;">$24,\quad 28,\quad 27,\quad 31,\quad 27,\quad 35,\quad 27,\quad 29,\quad 31,\quad 41$</div>
+    </div>
+    <div class="answer-box" style="min-height:100px;">
+      <div>(1) 求这组得分数据的极差（Range）与众数（Mode）；</div>
+      <div style="margin-top:6px;">(2) 求这组得分数据的中位数（Median）与平均数（Mean）。</div>
+      <div class="answer-line">[ (1) 极差：<span class="blank" style="min-width:50px;"></span> 分，众数：<span class="blank" style="min-width:50px;"></span> 分； (2) 中位数：<span class="blank" style="min-width:50px;"></span> 分，平均数：<span class="blank" style="min-width:50px;"></span> 分 ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">3. 周期循环与起点定位（5 分）：</div>
+    <div class="q-subtext">音乐播放器中有 $5$ 首乐曲，按顺序循环播放：$A \to B \to C \to D \to E \to A \to \dots$。</div>
+    <div class="answer-box" style="min-height:100px;">
+      <div>(1) 如果从播放乐曲 $A$ 开始，第 $43$ 首播放的乐曲是哪一首？</div>
+      <div style="margin-top:6px;">(2) 如果当前正在播放乐曲 $C$，从当前这首算作第 $1$ 首，那么再继续播放到第 $38$ 首时，播放的是哪一首乐曲？</div>
+      <div class="answer-line">[ (1) 第 43 首是乐曲 <span class="blank" style="min-width:50px;"></span>； (2) 播放的是乐曲 <span class="blank" style="min-width:50px;"></span> ]</div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="q-text">4. 行程相遇与分率建模（5 分）：</div>
+    <div class="q-subtext">甲、乙两人同时从相距 $1000\text{ 米}$ 的两地出发，沿笔直公路相向而行。甲步行速度为 $60\text{ 米/分}$，乙骑自行车速度为 $140\text{ 米/分}$。</div>
+    <div class="answer-box" style="min-height:110px;">
+      <div>(1) 经过几分钟后两人在途中相遇？</div>
+      <div style="margin-top:6px;">(2) 相遇时，甲走过的路程占全程总路程的几分之几？乙走过的路程比甲多走多少米？</div>
+      <div class="answer-line">[ (1) <span class="blank" style="min-width:60px;"></span> 分钟后相遇； (2) 甲占全程的 <span class="blank" style="min-width:50px;"></span>，乙比甲多走 <span class="blank" style="min-width:60px;"></span> 米 ]</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+
+</body>
+</html>
