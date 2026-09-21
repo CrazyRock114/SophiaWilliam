@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>William WS11 真实试卷批改报告与考前深度错题精讲 | SUIS G6 Math</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      background: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    .no-print {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+      transition: all 0.2s;
+    }
+    .no-print:hover { background: #1d4ed8; transform: translateY(-1px); }
+    @media print {
+      body { background: #fff; }
+      .no-print { display: none !important; }
+      .report-container { box-shadow: none; margin: 0; max-width: 100%; padding: 0; }
+      .page-break { page-break-after: always; }
+      .avoid-break { page-break-inside: avoid; }
+    }
+    .report-container {
+      max-width: 860px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 24px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2.5px solid #0f172a;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .school-title {
+      font-size: 13.5px;
+      color: #64748b;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .paper-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 6px 0 6px 0;
+    }
+    .paper-subtitle {
+      font-size: 13.5px;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .meta-label {
+      font-size: 11px;
+      color: #64748b;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .meta-val {
+      font-size: 14px;
+      color: #0f172a;
+      font-weight: 800;
+    }
+    .score-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+    .score-number {
+      font-size: 38px;
+      font-weight: 900;
+      color: #f59e0b;
+      line-height: 1;
+    }
+    .score-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .section-title {
+      background: #f1f5f9;
+      border-left: 4px solid #2563eb;
+      padding: 6px 12px;
+      font-size: 13.5px;
+      font-weight: 800;
+      margin: 16px 0 10px 0;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    .tag-badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px 0;
+      font-size: 12px;
+    }
+    .table-custom th, .table-custom td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 8px;
+      vertical-align: middle;
+    }
+    .table-custom th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #334155;
+      text-align: center;
+    }
+    .ans-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .ans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .student-ans {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 11.5px;
+    }
+    .standard-ans {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 11.5px;
+    }
+    .callout-box {
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      font-size: 12px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .callout-praise {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      color: #166534;
+    }
+    .callout-warning {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      color: #92400e;
+    }
+    .callout-danger {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      color: #991b1b;
+    }
+    .formula-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    .mnemonic-banner {
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin: 10px 0;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">🖨️ 打印报告 (A4 PDF)</button>
+
+<div class="report-container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="school-title">SUIS G6 Integrated Math · Diagnostic Grading & Error Breakdown</div>
+    <div class="paper-title">William WS11 真实试卷批改报告与考前深度错题精讲</div>
+    <div class="paper-subtitle">试卷对应：School Math Workbook Targeted Mastery Worksheet (Set 11)</div>
+    
+    <div class="meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">考生姓名</span>
+        <span class="meta-val">William (融合G6)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">批改时间</span>
+        <span class="meta-val">2026年9月21日</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">试卷满分</span>
+        <span class="meta-val">100 分 (纯英卷)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">实考得分</span>
+        <span class="meta-val" style="color:#d97706;">43.0 分</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Score Banner & Highlights -->
+  <div class="score-banner">
+    <div>
+      <div style="font-size:13px; color:#cbd5e1; font-weight:600;">综合成绩诊断评定</div>
+      <div style="display:flex; align-items:baseline; gap:12px; margin-top:4px;">
+        <span class="score-number">43.0</span>
+        <span style="font-size:16px; color:#94a3b8;">/ 100 分</span>
+        <span class="score-tag" style="background:#f59e0b; color:#fff;">计算表现惊艳 · 概念审题需筑牢</span>
+      </div>
+      <div style="font-size:12px; color:#e2e8f0; margin-top:6px;">
+        🎉 <strong>最大亮点：</strong>第二大题（竖式与简算）狂揽 <strong>18分（满分20分，得分率90%）</strong>，进位、小数乘除、乘法分配律功底极强！
+      </div>
+    </div>
+    <div style="text-align:right; border-left:1px solid #334155; padding-left:18px;">
+      <div style="font-size:12px; color:#cbd5e1;">提分潜力空间预测</div>
+      <div style="font-size:26px; font-weight:800; color:#34d399;">+35 ~ +40 分</div>
+      <div style="font-size:11.5px; color:#94a3b8;">杜绝留白与移项失误即破80+</div>
+    </div>
+  </div>
+
+  <!-- Section 1: Score Breakdown Table -->
+  <div class="section-title">
+    <span>📊 模块得分全景与五维评价总表</span>
+    <span class="tag-badge" style="background:#dbeafe; color:#1e40af;">各板块得分率剖析</span>
+  </div>
+
+  <table class="table-custom">
+    <thead>
+      <tr>
+        <th style="width:28%;">考核板块 (Section)</th>
+        <th style="width:14%;">满分</th>
+        <th style="width:14%;">实得分</th>
+        <th style="width:16%;">得分率</th>
+        <th style="width:28%;">能力诊断与评价</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Section 1: 填空题 (Fill in Blanks)</strong></td>
+        <td style="text-align:center;">20 分</td>
+        <td style="text-align:center; font-weight:700; color:#b45309;">8.5 分</td>
+        <td style="text-align:center; font-weight:700; color:#b45309;">42.5%</td>
+        <td>数位概念扎实，但循环小数与单位换算有漏洞</td>
+      </tr>
+      <tr style="background:#f0fdf4;">
+        <td><strong>Section 2: 竖式与简便计算</strong></td>
+        <td style="text-align:center;">20 分</td>
+        <td style="text-align:center; font-weight:700; color:#15803d;">18.0 分</td>
+        <td style="text-align:center; font-weight:700; color:#15803d;">90.0% ⭐</td>
+        <td><strong>卓越超常！</strong>小数乘除竖式与乘法分配律全对</td>
+      </tr>
+      <tr>
+        <td><strong>Section 3: 解方程与代数应用</strong></td>
+        <td style="text-align:center;">20 分</td>
+        <td style="text-align:center; font-weight:700; color:#b45309;">7.0 分</td>
+        <td style="text-align:center; font-weight:700; color:#b45309;">35.0%</td>
+        <td>前2题全对，后2题移项变号与除数求解法则错位</td>
+      </tr>
+      <tr style="background:#fef2f2;">
+        <td><strong>Section 4: 几何与空间测量</strong></td>
+        <td style="text-align:center;">20 分</td>
+        <td style="text-align:center; font-weight:700; color:#b91c1c;">0.0 分</td>
+        <td style="text-align:center; font-weight:700; color:#b91c1c;">0.0% ⚠️</td>
+        <td><strong>极重失分区：</strong>遗忘除以2，第3题10分大题留白</td>
+      </tr>
+      <tr>
+        <td><strong>Section 5: 实际生活应用题</strong></td>
+        <td style="text-align:center;">20 分</td>
+        <td style="text-align:center; font-weight:700; color:#b45309;">9.5 分</td>
+        <td style="text-align:center; font-weight:700; color:#b45309;">47.5%</td>
+        <td>行程全对；买肉差价审题漏减；第4题留白</td>
+      </tr>
+      <tr style="background:#f8fafc; font-weight:800;">
+        <td style="text-align:center;">总分合计 (Total)</td>
+        <td style="text-align:center;">100 分</td>
+        <td style="text-align:center; color:#d97706; font-size:15px;">43.0 分</td>
+        <td style="text-align:center; color:#d97706; font-size:15px;">43.0%</td>
+        <td>真实计算实力极佳，补齐审题和公式即能飞跃</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Praise & Encouragement Box -->
+  <div class="callout-box callout-praise avoid-break">
+    <strong>🌟 老师由衷的赞赏与肯定：</strong>
+    <p style="margin:4px 0 0 0;">
+      William，看到你的第二大题（计算与竖式），老师非常为你骄傲！<strong>4道简便运算全部拿满分，两道大数竖式 $3.75 \times 2.4 = 9$ 与 $276.5 \div 7.9 = 35$ 乘法验算写得工工整整、毫无瑕疵！</strong> 这证明你暑期和近期的计算特训收到了巨大的成效，你的逻辑思维和运算底层能力是非常优秀的！卷面上丢分的绝大部分并不是因为“不会算”，而是“公式记偏”、“移项弄反了符号”以及“看到长题直接留白”。只要我们今天把这几个漏洞堵住，明天的考试你完全具备 <strong>80分甚至85分以上</strong> 的强劲实力！
+    </p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 2: Question-by-Question Grading -->
+  <div class="section-title">
+    <span>📝 逐题精细批改明细（得分、学生原答案与标准解答）</span>
+    <span class="tag-badge" style="background:#e0e7ff; color:#3730a3;">还原考场真实答卷</span>
+  </div>
+
+  <!-- SECTION 1 DETAILS -->
+  <div style="margin-bottom:14px;">
+    <div style="font-weight:700; color:#1e3a8a; margin-bottom:6px; font-size:13.5px;">一、填空题部分 (Section 1: 满分 20分，实得 8.5分)</div>
+    
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第1题：小数数位与计数单位 (满分2分)</span>
+        <span style="color:#16a34a;">得分: 2.0 / 2.0 (全对满分)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>tens, tens; tenths, tenths</div>
+        <div class="standard-ans"><strong>标准答案：</strong>tens place ($8$ tens); tenths place ($5$ tenths)</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>完美区分整数十位（tens）与小数十分位（tenths），英文术语表达准确无误！</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第2题：大小关系比较 (满分2分)</span>
+        <span style="color:#b45309;">得分: 1.0 / 2.0 (漏做2空)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>(1) &lt; , (3) &gt; （(2)与(4)留空未做）</div>
+        <div class="standard-ans"><strong>标准答案：</strong>(1) &lt; ; (2) = ; (3) &gt; ; (4) &lt;</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>做出的2道完全正确，但(2) $4.5\div 0.1$ 与 $4.5\times 10$（均等于45，应填 =）及(4) $3.6\div 1.2$ 与 $3.6$（$3 < 3.6$，应填 &lt;）留白，痛失1分。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第3题：小数、分数与百分数互化 (满分2分)</span>
+        <span style="color:#b45309;">得分: 1.0 / 2.0 (前后混淆)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>0.075 化百分数写 $\frac{3}{40}$，化最简分数写 $\frac{1}{8}$；$\frac{1}{8}$ 化小数写 $0.125$，化百分数写 $12.5\%$</div>
+        <div class="standard-ans"><strong>标准答案：</strong>$0.075 = 7.5\% = \frac{3}{40}$；$\frac{1}{8} = 0.125 = 12.5\%$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>对 $\frac{1}{8} = 0.125 = 12.5\%$ 熟记在心，但审题时把 $0.075$ 对应的空填反了（百分数填成了分数），导致失分。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第4题：商的变化规律与小数点移动 (满分2分)</span>
+        <span style="color:#16a34a;">得分: 2.0 / 2.0 (全对满分)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>$0.225$ , $225$ , $0.225$</div>
+        <div class="standard-ans"><strong>标准答案：</strong>$5.4\div 24 = 0.225$ ; $54\div 0.24 = 225$ ; $0.54\div 2.4 = 0.225$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>极其优秀！被除数缩小、除数缩小导致商同向或反向变化理解深刻。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第5题：纯循环小数与周期探究 (满分2分)</span>
+        <span style="color:#b91c1c;">得分: 0.5 / 2.0 (周期与第100位)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>周期写 825 (或826)，展开写 6，第100位写 1 (或5)</div>
+        <div class="standard-ans"><strong>标准答案：</strong>周期为 $3$ (循环节为 $825$)；展开前8位 $0.82582582$；第100位：$100\div 3 = 33\dots 1$，对应第1位数字 $8$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>未理解“recurring period”（周期长度是3位数字），周期余数计算未用除法求余。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第6题：小数四舍五入表格 (满分2分)</span>
+        <span style="color:#b91c1c;">得分: 0.5 / 2.0 (末尾补零规范)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>$4.9964 \to 5, 5, 5.1$；$0.7258 \to 1, 1, 1.02$</div>
+        <div class="standard-ans"><strong>标准答案：</strong>$4.9964 \to 5, 5.0, 5.00$；$0.7258 \to 1, 0.7, 0.73$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>核心漏洞是“末尾补零”规范。保留一位小数进位后必须写 $5.0$，保留两位小数必须写 $5.00$。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第7题：代数式表示与化简 (满分2分)</span>
+        <span style="color:#b91c1c;">得分: 0.5 / 2.0 (同类项混淆)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>第一空写 $11x$；第二空写 $6x+4$；第三空写 $n-m$</div>
+        <div class="standard-ans"><strong>标准答案：</strong>第一空 $4x + 7$；第二空 $6x + 4$；第三空 $2n$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>第2空 $5x+4+x=6x+4$ 做得很好！但第1空把 $4x+7$ 错加成了 $11x$（同类项陷阱）；第3空 $n+n-m+m = 2n + 0 = 2n$ 错写为 $n-m$。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第8题：面积、时间与速度单位换算 (满分2分)</span>
+        <span style="color:#b45309;">得分: 1.0 / 2.0 (时间与速度进率)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>$240\text{ dm}^2$ , $3.5\text{ dm}^2$ , $150\text{ min}$ , $720\text{ m/s}$</div>
+        <div class="standard-ans"><strong>标准答案：</strong>$240\text{ dm}^2$ ; $3.5\text{ dm}^2$ ; $90\text{ min}$ ; $20\text{ m/s}$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>面积单位（进率100）全对！但时间 $1.5\text{ h} = 1.5\times 60 = 90\text{ min}$ 写成 $150$（误当百进制）；$72\text{ km/h} = 72\div 3.6 = 20\text{ m/s}$ 误乘10。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第9题：分数的意义与平均分 (满分2分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 2.0 (概念混淆)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>写了 6 与 7</div>
+        <div class="standard-ans"><strong>标准答案：</strong>占整体的 $\frac{1}{8}$ ；每份重 $1.2\div 8 = 0.15\text{ kg}$ (或 $\frac{3}{20}\text{ kg}$)</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>求“分率”写 $\frac{1}{n}$，求“具体质量”用 总重量 $\div$ 人数。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>第10题：平行四边形底高对应与面积 (满分2分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 2.0 (底高对应错误)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>对应底边写 16，面积留空</div>
+        <div class="standard-ans"><strong>标准答案：</strong>底边长 $6\text{ cm}$，面积 $6\times 8 = 48\text{ cm}^2$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>高为 $8\text{ cm} > 6\text{ cm}$，在平行四边形中直角高不可能大于其所在的斜边（邻边$10$），因此该高对应的只能是较短底边 $6$。</div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 2 DETAILS -->
+  <div style="margin-bottom:14px;">
+    <div style="font-weight:700; color:#15803d; margin-bottom:6px; font-size:13.5px;">二、竖式与简算部分 (Section 2: 满分 20分，实得 18.0分 · 90%得分率！)</div>
+    
+    <div class="ans-card" style="border: 1.5px solid #86efac; background: #f0fdf4;">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>1. 口算小题 (4小题，每题1分，满分4分)</span>
+        <span style="color:#15803d;">得分: 3.0 / 4.0</span>
+      </div>
+      <div style="font-size:12px; margin-top:4px;">
+        (1) $0.9+0.1$ 误写为 $0.1$ (扣1分，应为 $1.0$ 或 $1$)；<br>
+        (2) $5.4\div 0.6 = 9$ (全对)；(3) $0.25\times 0.4 = 0.1$ (全对)；(4) $1 - 0.35 = 0.65$ (全对)。
+      </div>
+    </div>
+
+    <div class="ans-card" style="border: 1.5px solid #86efac; background: #f0fdf4;">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>2. 竖式笔算 (3小题，满分8分)</span>
+        <span style="color:#15803d;">得分: 7.0 / 8.0</span>
+      </div>
+      <div style="font-size:12px; margin-top:4px;">
+        <strong>① $3.75 \times 2.4 = 9$ (满分2分)：</strong> 竖式中 $375\times 4 = 1500$，$375\times 2 = 750$，相加得 $9000$，3位小数末尾划零，完全满分！<br>
+        <strong>② $276.5 \div 7.9 = 35$ (满分3分)：</strong> 除数去小数点移一位变成 $2765\div 79 = 35$，验算 $35\times 7.9 = 276.5$ 步骤严谨规范，满分！<br>
+        <strong>③ $40 \div 42$ (满分3分，得2分)：</strong> 长除法除到 $0.9523\dots$ 竖式完全正确！失分点在于题目明确要求“to 2 d.p.（四舍五入保留两位小数）”，William写了 $0.9523$ 且标注 $0.952\approx 0.9523$，未将最终答案四舍五入写成 $0.95$。扣1分。
+      </div>
+    </div>
+
+    <div class="ans-card" style="border: 1.5px solid #86efac; background: #f0fdf4;">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>3. 简便计算与运算律 (4小题，每题2分，满分8分)</span>
+        <span style="color:#15803d;">得分: 8.0 / 8.0 (惊艳满分！)</span>
+      </div>
+      <div style="font-size:12px; margin-top:4px;">
+        ① $(1.25 + 2.5) \times 4 = 3.75\times 4 = 15$（满分2分）<br>
+        ② $0.5 \times 1.6 \times 12.5 = 0.8\times 12.5 = 10$（满分2分）<br>
+        ③ $0.4 \times (3.2 - 0.8) \div 1.2 = 0.4\times 2.4 \div 1.2 = 0.96\div 1.2 = 0.8$（满分2分）<br>
+        ④ $7.45 \times 21 + 5.75 \times 14 = 156.45 + 80.50 = 236.95$（满分2分）
+      </div>
+      <div style="font-size:12px; color:#166534; margin-top:4px; font-weight:600;">
+        🏆 批注：本大题展现出惊人的运算耐力与准确度，证明 William 完全具备优秀数学尖子生的计算底色！
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 DETAILS -->
+  <div style="margin-bottom:14px;">
+    <div style="font-weight:700; color:#1e3a8a; margin-bottom:6px; font-size:13.5px;">三、解方程与代数部分 (Section 3: 满分 20分，实得 7.0分)</div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>1. 解方程组 (4小题，每题3分，满分12分)</span>
+        <span style="color:#b45309;">得分: 7.0 / 12.0</span>
+      </div>
+      <div style="font-size:12px; margin-top:4px;">
+        <strong>(1) $4x + 7.5 = 23.5$ (满分3分)：</strong> $4x = 23.5 - 7.5 \implies 4x = 16 \implies x = 4$。格式标准，得3分！<br>
+        <strong>(2) $4x - 1.2 = x + 4.5$ (满分3分)：</strong> $4x - x = 1.2 + 4.5 \implies 3x = 5.7 \implies x = 1.9$。移项完全正确，得3分！<br>
+        <strong>(3) $3(2x - 1.5) = 15$ (满分3分，得1分)：</strong> 第一步 $2x - 1.5 = 15\div 3 = 5$ 正确；但在第二步出现了致命错位：<strong>$2x = 1.5 \div 5$</strong>！减法移项应变成加法：$2x = 5 + 1.5 = 6.5 \implies x = 3.25$。得1分步骤分。<br>
+        <strong>(4) $5.6 \div x = 0.8$ (满分3分，得0分)：</strong> William写成了 <strong>$x = 5.6 \times 0.8 = 4.48$</strong>！除数 = 被除数 $\div$ 商，正确应为 $x = 5.6 \div 0.8 = 7$。
+      </div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>2. 代数式化简求值 (满分4分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 4.0</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>化简写 $3(x-4x)+5$，代入值写 4</div>
+        <div class="standard-ans"><strong>标准答案：</strong>展开 $6x - 3 - 4x + 5 = 2x + 2$；当 $x=2.5$ 时，原式 $= 2(2.5)+2 = 7$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>乘法分配律去括号未落实到每一项，同类项未合并，代入求值失误。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>3. 比例与代数关系 (满分4分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 4.0</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>(1) 写 3；(2) 写 5 与 35</div>
+        <div class="standard-ans"><strong>标准答案：</strong>(1) $D = \frac{5}{3}C$；(2) 若 $C=18$ 则 $D = 30$；若 $D=40$ 则 $C = 24$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>未能将比例 $C:D=3:5$ 转化为等式 $\frac{C}{3} = \frac{D}{5}$ 或 $D = \frac{5}{3}C$。</div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 4 DETAILS -->
+  <div style="margin-bottom:14px;">
+    <div style="font-weight:700; color:#b91c1c; margin-bottom:6px; font-size:13.5px;">四、几何与空间测量部分 (Section 4: 满分 20分，实得 0.0分 · 需重点突破)</div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>1. 直角三角形面积与斜边高 (满分5分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 5.0</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>(1) 面积写 6 ；(2) 高写 2</div>
+        <div class="standard-ans"><strong>标准答案：</strong>(1) 面积 $= 0.44\times 0.15\div 2 = 0.033\text{ m}^2$；(2) 高 $= 0.033\times 2 \div 0.5 = 0.132 \approx 0.13\text{ m}$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>忘记三角形面积“底乘高必须除以2”！并且未能利用“等面积法”反求斜边上的高。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>2. 梯形已知面积逆求下底 (满分5分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 5.0</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>下底写 16.8 cm</div>
+        <div class="standard-ans"><strong>标准答案：</strong>两底之和 $= 63\times 2 \div 7 = 18\text{ cm}$，下底 $= 18 - 6.8 = 11.2\text{ cm}$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>梯形逆算口诀“先乘2再除以高”未落实，可能直接算了 $63\div 7 = 9$ 随后混淆。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>3. 组合图形横截面积 (满分10分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 10.0 (留白未答)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>全题留白，未写任何算式</div>
+        <div class="standard-ans"><strong>标准答案：</strong>$A_1 = 15\times 7\div 2 = 52.5$；$A_2 = 15\times 8 = 120$；$A_3 = 9\times 8\div 2 = 36$；总面积 $= 52.5 + 120 + 36 = 208.5\text{ cm}^2$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>大题畏难留白是丢分重灾区！其实本题三部分长宽已知，完全能轻松拿下全部 10 分！</div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 DETAILS -->
+  <div style="margin-bottom:14px;">
+    <div style="font-weight:700; color:#1e3a8a; margin-bottom:6px; font-size:13.5px;">五、实际应用题部分 (Section 5: 满分 20分，实得 9.5分)</div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>1. 糖果装袋与余数反算 (满分5分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 5.0</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>写了 1.79 kg (即 $(8.6+0.35)\div 5$)</div>
+        <div class="standard-ans"><strong>标准答案：</strong>已装重量 $= 8.6 - 0.35 = 8.25\text{ kg}$，每瓶 $= 8.25\div 5 = 1.65\text{ kg}$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>余下的糖没有被装入瓶子，应该先“减掉”，William误做成了“加法”。</div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>2. 食堂采购鸡肉与牛肉差价 (满分5分)</span>
+        <span style="color:#b45309;">得分: 2.5 / 5.0 (漏做差)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>(1) 总价 $236.95 ；(2) 差价写 $156.45</div>
+        <div class="standard-ans"><strong>标准答案：</strong>(1) 总价 $236.95 ；(2) 多花牛肉钱 $= 156.45 - 80.50 = 75.95 美元</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>第(1)问总价全对！第(2)问问“比鸡肉多花多少”，William直接把牛肉的总价 $156.45$ 填上了，漏做了两数相减。</div>
+    </div>
+
+    <div class="ans-card" style="border: 1.5px solid #86efac; background: #f0fdf4;">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>3. 电动公交车平均速度与能耗 (满分5分)</span>
+        <span style="color:#15803d;">得分: 5.0 / 5.0 (全对满分！)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>(1) 速度 79 km/h ；(2) 每升行驶 35 km</div>
+        <div class="standard-ans"><strong>标准答案：</strong>(1) $276.5\div 3.5 = 79\text{ km/h}$ ；(2) $276.5\div 7.9 = 35\text{ km/L}$</div>
+      </div>
+      <div style="font-size:12px; color:#166534; margin-top:4px; font-weight:600;">
+        🎉 批注：全对！对速度与单耗的物理意义理解清晰，且除法竖式准确无误！
+      </div>
+    </div>
+
+    <div class="ans-card">
+      <div style="display:flex; justify-content:space-between; font-weight:700;">
+        <span>4. 木棒拼接列方程应用题 (满分5分)</span>
+        <span style="color:#b91c1c;">得分: 0.0 / 5.0 (留白未答)</span>
+      </div>
+      <div class="ans-grid">
+        <div class="student-ans"><strong>William作答：</strong>全题留白，未写任何算式</div>
+        <div class="standard-ans"><strong>标准答案：</strong>(1) $4x - (x + 4.5) = 1.5 \implies 3x = 6 \implies x = 2\text{ cm}$；(2) $3y = 4x = 8 \implies y = \frac{8}{3}\text{ cm}$</div>
+      </div>
+      <div style="font-size:12px; color:#475569; margin-top:4px;">💡 <strong>诊断：</strong>再次因为题目文字较多而留白。只要列出第一步等量关系就能斩获大半步骤分！</div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 3: The 7 Fatal Traps & Fixes -->
+  <div class="section-title">
+    <span>🎯 七大高频丢分陷阱重点解析与纠偏口诀</span>
+    <span class="tag-badge" style="background:#fee2e2; color:#991b1b;">考前必背 · 绝不再犯</span>
+  </div>
+
+  <!-- TRAP 1 -->
+  <div class="callout-box callout-danger avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 1：移项变号颠倒与除数求解颠倒（丢失 6 分）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      ① 在 $2x - 1.5 = 5$ 中，写成 $2x = 1.5 \div 5 = 0.3$（把减法移项当成了除法！）；<br>
+      ② 在 $5.6 \div x = 0.8$ 中，写成 $x = 5.6 \times 0.8 = 4.48$（把除数当成了积！）。<br>
+      ✅ <strong>正确铁则与解法：</strong><br>
+      ① 移项就像跨过一座桥，<strong>减号跨桥变成加号</strong>：$2x = 5 + 1.5 = 6.5 \implies x = 6.5 \div 2 = 3.25$。<br>
+      ② 当未知数 $x$ 在除数位置时：<strong>除数 = 被除数 $\div$ 商</strong>！$x = 5.6 \div 0.8 = 56 \div 8 = 7$。
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>移项跨桥要变号，减号过桥变加号！被除数大除数小，求除数用被除数除以商！</span>
+    </div>
+  </div>
+
+  <!-- TRAP 2 -->
+  <div class="callout-box callout-danger avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 2：代数式强行合并不同类项（丢失 3 分）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      遇到“7 more than 4 times $x$”，写成了 $11x$（把 $4x$ 和 $7$ 强行相加）；遇到 $3(2x-1)-4x+5$ 展开写成 $3(x-4x)+5$。<br>
+      ✅ <strong>正确铁则与解法：</strong><br>
+      ① $4x$ 是有字母的项，$7$ 是纯常数项，它们不是一类事物，绝不能合并成一个数！只能保留原样写成 $4x + 7$。<br>
+      ② 去括号必须用乘法分配律，外面的 3 必须同时乘每一项：$3(2x - 1) = 6x - 3$；再合并同类项：$6x - 4x - 3 + 5 = 2x + 2$。
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>字母苹果常数梨，不同类别不能挤！乘法拆门进括号，雨露均沾每一项！</span>
+    </div>
+  </div>
+
+  <!-- TRAP 3 -->
+  <div class="callout-box callout-danger avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 3：平面几何面积遗漏“除以2”与逆算公式（丢失 10 分）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      直角三角形面积只算了底乘高，忘记除以2；梯形已知面积求底，未先乘2，直接盲目计算。<br>
+      ✅ <strong>正确铁则与解法：</strong><br>
+      ① 三角形面积：$S = \text{底} \times \text{高} \div 2 = 0.44 \times 0.15 \div 2 = 0.033\text{ m}^2$；<br>
+      ② 梯形逆算底边：<strong>两底之和 = 面积 $\times 2 \div$ 高</strong>！$63 \times 2 \div 7 = 18\text{ cm}$，下底 $= 18 - 6.8 = 11.2\text{ cm}$。
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>三角梯形算面积，千万别忘除以二！已知面积反求底和高，先乘二来再除高！</span>
+    </div>
+  </div>
+
+  <!-- TRAP 4 -->
+  <div class="callout-box callout-warning avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 4：应用题审题漏步与余数顺逆（丢失 7.5 分）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      ① 问牛肉比鸡肉多花多少钱（How much more），算出牛肉 $156.45$ 后直接填入，没减去鸡肉的 $80.50$；<br>
+      ② 糖果装瓶还剩 $0.35\text{ kg}$ 未装，William用加法加到了总数里。<br>
+      ✅ <strong>正确铁则与解法：</strong><br>
+      ① 审题圈出“more than / difference”，必须做减法：$156.45 - 80.50 = 75.95$ 美元！<br>
+      ② 剩下的就是没装进瓶子的，必须先用总重减去余数：$(8.6 - 0.35) \div 5 = 8.25 \div 5 = 1.65\text{ kg}$。
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>余下未装先减掉，再除瓶数算单重！英文问你 more than 谁，两数相减见分晓！</span>
+    </div>
+  </div>
+
+  <!-- TRAP 5 -->
+  <div class="callout-box callout-warning avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 5：单位换算进率错位（时间60进制 vs 速度3.6倍）（丢失 2 分）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      $1.5\text{ h}$ 写成 $150\text{ min}$；$72\text{ km/h}$ 写成 $720\text{ m/s}$。<br>
+      ✅ <strong>正确铁则与解法：</strong><br>
+      ① 1小时 = 60分钟，半小时 (0.5h) = 30分钟，所以 $1.5\text{ h} = 60 + 30 = 90\text{ min}$！<br>
+      ② $1\text{ m/s} = 3.6\text{ km/h}$，千米每小时化为米每秒是<strong>除以 3.6</strong>：$72 \div 3.6 = 20\text{ m/s}$。
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>时间单位六十进，一点五时九十分！公里每小时化米每秒，除以三点六牢记心！</span>
+    </div>
+  </div>
+
+  <!-- TRAP 6 -->
+  <div class="callout-box callout-warning avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 6：四舍五入末尾补零与有效数位（丢失 2.5 分）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      $4.9964$ 保留一位小数写成 5，保留两位小数写成 5.1；除法竖式算到 $0.9523$ 没四舍五入到两位小数 0.95。<br>
+      ✅ <strong>正确铁则与解法：</strong><br>
+      保留一位小数看第2位，进位得 $5.0$（<strong>末尾的0不能扔，代表精度！</strong>）；保留两位小数看第3位，进位得 $5.00$（<strong>必须写两个0！</strong>）。
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>保留几位定乾坤，末尾进零必须写！看后一位定去留，四舍五入记心间！</span>
+    </div>
+  </div>
+
+  <!-- TRAP 7 -->
+  <div class="callout-box callout-danger avoid-break">
+    <div style="font-size:14px; font-weight:800; margin-bottom:4px;">陷阱 7：大题留白心理障碍（整整丢失 15 分！）</div>
+    <div style="font-size:12.5px; line-height:1.6;">
+      ❌ <strong>William考场痛点：</strong><br>
+      组合图形面积（Section 4 第3题，10分）和木棒方程应用题（Section 5 第4题，5分）因为文字长、图多，全卷留白，一分没拿！<br>
+      ✅ <strong>考场抢分必杀技：</strong><br>
+      在国际化分班考和校本期末考中，<strong>大题全部是按步骤给分！</strong><br>
+      哪怕做不完，组合图形第一步把 $A_1 = 15\times 7\div 2 = 52.5$、$A_2 = 15\times 8 = 120$、$A_3 = 9\times 8\div 2 = 36$ 分开算出来，就能稳稳拿下 6-8 分！绝不能留一张大白卷交上去！
+    </div>
+    <div class="mnemonic-banner">
+      <span>🔔 核心口诀：</span>
+      <span>题目再长大题拆，哪怕算半也有分！设出未知列等式，只要动笔就不空！</span>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Section 4: Tomorrow's Exam Battle Plan -->
+  <div class="section-title">
+    <span>🚀 William 明天六年级分班考·考场必杀秘籍</span>
+    <span class="tag-badge" style="background:#dcfce7; color:#15803d;">一招提振 20+ 分</span>
+  </div>
+
+  <div style="background:#fff; border:1px solid #cbd5e1; border-radius:8px; padding:16px; margin-bottom:16px;">
+    <h3 style="font-size:15px; font-weight:800; color:#0f172a; margin-top:0;">📋 考场4步核心操作守则</h3>
+    <ol style="font-size:13px; line-height:1.8; margin:8px 0; padding-left:20px;">
+      <li>
+        <strong>先拿稳你的绝对优势项（计算大题）：</strong><br>
+        发下试卷后，遇到竖式笔算、简便运算，像今天一样沉着细心书写，乘法对齐末位、除法移动小数点，把这 20-30 分稳稳放进口袋！
+      </li>
+      <li>
+        <strong>解方程遇到除法多看一眼：</strong><br>
+        看到 $a \div x = b$，默念“<strong>除数在下面，求除数用被除数除以商</strong>”，算出结果马上代回原式口算验算一遍！
+      </li>
+      <li>
+        <strong>几何图形动笔就写“$\div 2$”：</strong><br>
+        凡是看到 Triangle（三角形）和 Trapezoid（梯形），公式立刻在草稿纸写下 $\frac{b\times h}{2}$ 和 $\frac{(a+b)\times h}{2}$。逆算先将面积乘 2！
+      </li>
+      <li>
+        <strong>大题决不留白：</strong><br>
+        遇到长应用题，拿铅笔圈出给出的数字和问题中的关键动词（如 total, difference, more than, remaining）。列出算式哪怕没算完，也能斩获关键步骤分！
+      </li>
+    </ol>
+  </div>
+
+  <div style="background:linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color:#fff; border-radius:8px; padding:16px 20px; text-align:center;">
+    <div style="font-size:16px; font-weight:800; color:#f59e0b;">🌟 老师寄语：William，你其实离 80+ 只有一步之遥！</div>
+    <div style="font-size:13px; color:#cbd5e1; margin-top:8px; line-height:1.6; max-width:720px; margin-left:auto; margin-right:auto;">
+      今天卷面 43 分完全遮蔽了你惊艳的计算功底（Section 2 狂砍 90% 满分级得分）。只要把 15 分的留白捡起来、把 10 分的几何除以2写上去、把 6 分的方程移项改过来，你的真实实力立刻就能重返 80 分梯队！今晚把这份精讲的 7 个口诀读三遍，明天考场上自信沉着，你一定能交出一份令全家和老师惊喜的漂亮答卷！加油！
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ]
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -2987,7 +2987,9 @@ const trackerData = {
       "cleanPdfUrl_en": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_EN.pdf",
       "cleanHtmlUrl_cn": "worksheets/clean/ws11_school_workbook_algebra_geometry_clean_cn.html",
       "cleanHtmlUrl_en": "worksheets/clean/ws11_school_workbook_algebra_geometry_clean_en.html",
-      "cleanFileSize": "650 KB / 890 KB"
+      "cleanFileSize": "650 KB / 890 KB",
+      "gradingPdfUrl": "pdf/William_WS11_Grading_and_Error_Analysis.pdf",
+      "gradingHtmlUrl": "worksheets/william_ws11_grading_and_error_analysis.html"
     },
     {
       "id": "ws12-school-workbook-number-theory-spatial",
@@ -3028,6 +3030,80 @@ const trackerData = {
       "cleanHtmlUrl_cn": "worksheets/clean/ws12_school_workbook_number_theory_spatial_clean_cn.html",
       "cleanHtmlUrl_en": "worksheets/clean/ws12_school_workbook_number_theory_spatial_clean_en.html",
       "cleanFileSize": "660 KB / 910 KB"
+    },
+    {
+      "id": "william-ws11-grading-analysis",
+      "targetStudent": "william",
+      "studentBadge_en": "⚡ William WS11 Real Paper Grading & Analysis",
+      "studentBadge_cn": "⚡ William WS11 真实答卷逐题精批与深度精讲",
+      "title_en": "William WS11 Diagnostic Grading Report & 7 Fatal Traps Deep Breakdown",
+      "title_cn": "William WS11 真实试卷逐题精细批改报告与考前核心错题深度精讲 (PDF)",
+      "timeLimit_en": "Diagnostic Report",
+      "timeLimit_cn": "学情诊断报告",
+      "totalPoints": 100,
+      "badgeColor": "#f59e0b",
+      "targetAreas_en": "Transposition & Divisor Rules · Unlike Terms Merging · Geometry Halving Formulas · Remainder Word Problems · Step-by-Step Scoring",
+      "targetAreas_cn": "移项变号与除数法则 · 代数同类项辨析 · 几何面积除以2公式 · 审题差价与余数 · 考场大题步步得分",
+      "desc_en": "Full question-by-question handwriting audit of William's WS11 test paper (43/100, with outstanding 90% score in Section 2 column operations and convenient math). Features comprehensive error analysis, teacher annotations, standard solutions, seven fatal exam traps with mnemonics, and tomorrow's 4-step exam game plan (+35~40 pts potential).",
+      "desc_cn": "基于 William 真实手写 WS11 答卷全景精细批改（实考43/100分，第二大题计算竖式斩获90%卓越高分！）。深入剖析五大板块失分根因，包含逐题红绿标注、标准分步解答、移项变号/几何除以2/审题做差等七大考场丢分陷阱与速记口诀，附明日分班考4步抢分秘籍（冲刺80+分空间）。",
+      "tags_en": [
+        "Handwriting Audit",
+        "Section 2 (90%)",
+        "Equations Transposition",
+        "Geometry Reverse",
+        "Word Problem Pitfalls"
+      ],
+      "tags_cn": [
+        "手写答卷全景精批",
+        "计算90%惊艳得分",
+        "方程移项与除数",
+        "几何逆运算除以2",
+        "大题步骤分抢分"
+      ],
+      "pdfUrl_en": "pdf/William_WS11_Grading_and_Error_Analysis.pdf",
+      "pdfUrl_cn": "pdf/William_WS11_Grading_and_Error_Analysis.pdf",
+      "htmlUrl_en": "worksheets/william_ws11_grading_and_error_analysis.html",
+      "htmlUrl_cn": "worksheets/william_ws11_grading_and_error_analysis.html",
+      "fileSize": "2.3 MB",
+      "cleanPdfUrl_cn": null,
+      "cleanPdfUrl_en": null
+    },
+    {
+      "id": "g6-placement-exam-dual-handbook",
+      "targetStudent": "dual",
+      "studentBadge_en": "🏆 G6 Placement Exam English Mastery Handbook",
+      "studentBadge_cn": "🏆 六年级纯英文分班考考前冲刺通关秘籍",
+      "title_en": "SUIS G6 Placement Exam Dual-Student Secret Review Handbook (Pure English Test Prep)",
+      "title_cn": "协和双语六年级分班考·双人针对性考前复习秘籍 (纯英文试卷冲刺)",
+      "timeLimit_en": "Exam Prep",
+      "timeLimit_cn": "考前密卷",
+      "totalPoints": 100,
+      "badgeColor": "#6366f1",
+      "targetAreas_en": "English Math Glossary · Sophia Concept Traps · William Arithmetic Rules · 3D Spatial Geometry · High-Frequency Mistakes",
+      "targetAreas_cn": "纯英文数学术语表 · Sophia概念陷阱防粗心 · William四则运算与乘方 · 3D积木立体空间 · 考场必背口诀",
+      "desc_en": "Custom-tailored for tomorrow's Grade 6 Placement Exam (pure English paper). Contains dedicated survival guides for both Sophia (precision & multi-step rigor) and William (place value, arithmetic safety, algebraic transposition, and fraction conversions), plus a 40-word English-Chinese math vocabulary cheat sheet.",
+      "desc_cn": "专为明日六年级分班考（纯英文试卷）量身定制。涵盖 Sophia 专属避坑指南（通分、几何单位、概念辨析）与 William 专属抢分秘籍（小数数位、乘方本质、解方程移项、分数互化），配齐40大核心纯英文数学术语速记表与考场口诀。",
+      "tags_en": [
+        "Placement Exam",
+        "English Terminology",
+        "Sophia Checklist",
+        "William Checklist",
+        "Dual Handbook"
+      ],
+      "tags_cn": [
+        "分班考纯英必胜",
+        "专业英文数学词汇",
+        "Sophia避坑清单",
+        "William保分口诀",
+        "双人考前合卷"
+      ],
+      "pdfUrl_en": "pdf/G6_Placement_Exam_Dual_Secret_Handbook.pdf",
+      "pdfUrl_cn": "pdf/G6_Placement_Exam_Dual_Secret_Handbook.pdf",
+      "htmlUrl_en": "worksheets/g6_placement_exam_dual_handbook.html",
+      "htmlUrl_cn": "worksheets/g6_placement_exam_dual_handbook.html",
+      "fileSize": "1.2 MB",
+      "cleanPdfUrl_cn": null,
+      "cleanPdfUrl_en": null
     }
   ]
 };

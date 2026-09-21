@@ -1346,6 +1346,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 </a>
               </div>
             ` : ''}
+            ${ws.gradingPdfUrl ? `
+              <div style="display: flex; gap: 8px; align-items: center; margin-top: 2px;">
+                <a href="${ws.gradingPdfUrl}" download class="pill-btn" style="flex: 1.2; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 7px 10px; font-weight: 700; font-size: 11.5px; border-radius: var(--radius-full); background: #fffbeb; border: 1.5px solid #f59e0b; color: #b45309;">
+                  📝 ${isEn ? "William's Grading Report (PDF)" : "William 实考批改与精讲 (PDF)"}
+                </a>
+                <a href="${ws.gradingHtmlUrl}" target="_blank" class="pill-btn" style="flex: 0.8; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 7px 8px; font-weight: 600; font-size: 11.5px; border-radius: var(--radius-full); background: #fefce8; border: 1px solid #fde047; color: #a16207;">
+                  🔍 ${isEn ? 'Grading Web' : '批改网页'}
+                </a>
+              </div>
+            ` : ''}
           </div>
         </div>
       `;
