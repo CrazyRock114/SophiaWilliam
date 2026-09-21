@@ -220,16 +220,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dynamic Mastery Counts
     const totalNodes = data.knowledgeNodes.length;
     const sMastered = data.knowledgeNodes.filter(n => n.sophiaMastery === 'mastered').length;
+    const sProficient = data.knowledgeNodes.filter(n => n.sophiaMastery === 'proficient').length;
     const sNeeds = data.knowledgeNodes.filter(n => n.sophiaMastery === 'needs_work').length;
+
     const wMastered = data.knowledgeNodes.filter(n => n.williamMastery === 'mastered').length;
+    const wProficient = data.knowledgeNodes.filter(n => n.williamMastery === 'proficient').length;
     const wNeeds = data.knowledgeNodes.filter(n => n.williamMastery === 'needs_work').length;
 
     const sMEl = document.getElementById("sophia-mastered-count");
-    if (sMEl) sMEl.textContent = `${sMastered} / ${totalNodes}`;
+    if (sMEl) {
+      sMEl.textContent = `${sMastered} / ${totalNodes}`;
+      sMEl.title = `★ 熟练掌握: ${sMastered} 项，☆ 掌握良好: ${sProficient} 项（良好及以上共 ${sMastered + sProficient} 项，达标率 ${Math.round((sMastered + sProficient) / totalNodes * 100)}%）`;
+    }
     const sNEl = document.getElementById("sophia-needs-count");
     if (sNEl) sNEl.textContent = `${sNeeds} / ${totalNodes}`;
+
     const wMEl = document.getElementById("william-mastered-count");
-    if (wMEl) wMEl.textContent = `${wMastered} / ${totalNodes}`;
+    if (wMEl) {
+      wMEl.textContent = `${wMastered} / ${totalNodes}`;
+      wMEl.title = `★ 熟练掌握: ${wMastered} 项，☆ 掌握良好: ${wProficient} 项（良好及以上共 ${wMastered + wProficient} 项，达标率 ${Math.round((wMastered + wProficient) / totalNodes * 100)}%）`;
+    }
     const wNEl = document.getElementById("william-needs-count");
     if (wNEl) wNEl.textContent = `${wNeeds} / ${totalNodes}`;
     const gBadge = document.getElementById("graph-node-count-badge");
@@ -839,7 +849,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="tag category-tag">${domain ? domain.name : ""}</span>
         ${node.stage ? `<span class="tag" style="background: #e0f2fe; color: #0369a1; font-weight: 700;">${node.stage}</span>` : ""}
         <span class="tag" style="background: ${node.currentPhase === 'completed' ? '#dcfce7; color: #15803d;' : node.currentPhase === 'current' ? '#fee2e2; color: #b91c1c;' : '#f1f5f9; color: #64748b;'}">
-          ${node.currentPhase === 'completed' ? '已学完' : node.currentPhase === 'current' ? '开学半个月正学' : '后续阶段'}
+          ${node.currentPhase === 'completed' ? '已学完' : node.currentPhase === 'current' ? '开学第3周正学' : '后续阶段'}
         </span>
       </div>
 
@@ -1146,7 +1156,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
               <h4 style="font-size: 16px; font-weight: 800; color: var(--text-main);">${item.week}</h4>
               <span class="tag" style="background: ${item.status === 'completed' ? '#dcfce7; color: #15803d;' : item.status === 'current' ? '#fee2e2; color: #b91c1c;' : '#f1f5f9; color: #64748b;'}">
-                ${item.status === 'completed' ? '已完成' : item.status === 'current' ? '当前攻坚阶段（开学半个月）' : '后续规划'}
+                ${item.status === 'completed' ? '已完成' : item.status === 'current' ? '当前攻坚阶段（开学第3周）' : '后续规划'}
               </span>
             </div>
 

@@ -1,9 +1,9 @@
 /**
  * Sophia & William 专属数学知识图谱追踪网站核心数据库
- * 完整同步最新重建学生档案（Sophia 23节 / William 17节）
+ * 完整同步最新重建学生档案（Sophia 25节 / William 19节）
  * 与53道结构化高危错题库（Sophia 33题 / William 20题，含极高危/高危/中危分级）
  * 全面整合 4B练习册、5A练习册、5B练习册 及 6A校本教材全景审计资产
- * 更新时间: 2026-09-21T18:28:00.000Z
+ * 更新时间: 2026-09-21T09:45:12.108Z
  */
 
 const trackerData = {
@@ -11,26 +11,26 @@ const trackerData = {
     "school": "上海协和双语学校（虹桥校区）",
     "track": "融合班 (Integrated / Bilingual Track)",
     "grade": "小学六年级（初中预备班）第一学期",
-    "semesterProgress": "开学半个月（第2周刚结束）",
+    "semesterProgress": "开学第3周（已完成秋季4次系统课）",
     "asOfDate": "2026年9月21日",
     "curricula": [
       {
         "id": "shanghai",
         "name": "体制内教材",
         "version": "上海教育出版社（沪教版）初中预备班/六年级第一学期",
-        "focus": "第1章《数的整除》刚学完/压轴拓展；第2章《分数》刚切入概念、大小比较与异分母加减通分"
+        "focus": "第1章《数的整除》全章学完结课；第2章《分数》全面展开：分数的概念、假带互化、通分约分、四则混合运算与裂项求和"
       },
       {
         "id": "international",
         "name": "英数教材",
         "version": "《International Mathematics》G6 Preview Handout (Book A)",
-        "focus": "Ch01-03 Real Numbers, Primes, HCF & LCM; Ch08 Scientific Notation & Powers; Ch09 Fractions Operations"
+        "focus": "Ch01-03 Real Numbers, Primes, HCF & LCM; Ch08 Scientific Notation & Powers; Ch09 Fractions Operations; 3D Solids & Surface Area"
       },
       {
         "id": "school_based",
         "name": "校本与思维拓展",
         "version": "协和双语融合班特色探究与思维拔高",
-        "focus": "折纸探索2ⁿ幂次增长、同余大数整除压轴题(91X93Y)、24点因数重组、生活化花钱法分数比较"
+        "focus": "维度进率（长度、面积、体积换算与科学记数法估算）、长正方体拼接表面积扣减与堆叠极值比较、裂项相消求和、短除法性质 a×b=GCD×LCM"
       }
     ]
   },
@@ -39,9 +39,9 @@ const trackerData = {
       "name": "Sophia",
       "grade": "6年级（初中预备班）· 协和双语虹桥融合班",
       "initialDate": "2026年3月",
-      "totalLessons": 23,
-      "breakdown": "袋鼠C 4节 + 英数G5+AMC8 7节 + G6暑期 10节 + G6秋季 2节 = 累计23节",
-      "currentAccuracy": "80% ~ 85%",
+      "totalLessons": 25,
+      "breakdown": "袋鼠C 4节 + 英数G5+AMC8 7节 + G6暑期 10节 + G6秋季 4节 = 累计25节",
+      "currentAccuracy": "82% ~ 88%",
       "summerAverage": "70.5%",
       "trend": [
         {
@@ -181,6 +181,18 @@ const trackerData = {
           "date": "09/16",
           "score": 80,
           "stage": "G6秋季"
+        },
+        {
+          "label": "G6秋3",
+          "date": "09/19",
+          "score": 85,
+          "stage": "G6秋季"
+        },
+        {
+          "label": "G6秋4",
+          "date": "09/20",
+          "score": 88,
+          "stage": "G6秋季"
         }
       ],
       "radar": {
@@ -208,10 +220,9 @@ const trackerData = {
       "name": "William",
       "grade": "6年级（初中预备班）· 协和双语虹桥融合班",
       "initialDate": "2026年3月",
-      "totalLessons": 17,
-      "breakdown": "袋鼠C 4节 + 英数G5 1节 + G6暑期 10节 + G6秋季 2节 = 累计17节",
-      "identityNote": "六年级预备班学生，与四年级小Will（Will.md）严格区隔独立",
-      "currentAccuracy": "70% ~ 75%",
+      "totalLessons": 19,
+      "breakdown": "袋鼠C 4节 + 英数G5 1节 + G6暑期 10节 + G6秋季 4节 = 累计19节",
+      "currentAccuracy": "72% ~ 78%",
       "summerAverage": "49.0%",
       "trend": [
         {
@@ -315,6 +326,18 @@ const trackerData = {
           "date": "09/16",
           "score": 70,
           "stage": "G6秋季"
+        },
+        {
+          "label": "G6秋3",
+          "date": "09/19",
+          "score": 74,
+          "stage": "G6秋季"
+        },
+        {
+          "label": "G6秋4",
+          "date": "09/20",
+          "score": 78,
+          "stage": "G6秋季"
         }
       ],
       "radar": {
@@ -415,9 +438,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 92,
       "sophiaNote": "进退位熟练，计算速度快，但偶有草稿字迹潦草跳步导致抄写数字看错。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 78,
-      "williamNote": "整数加减能算，但在小数进位时习惯未完全迁移，需持续规范数位对齐意识。",
+      "williamNote": "多位数竖式加减法垂直对齐标准规范，连续进退位熟练稳定。",
       "errorRefIds": [
         "ERR-SOP-05"
       ]
@@ -444,9 +467,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 95,
       "sophiaNote": "表内乘除极其熟练，能迅速根据余数范围判断除数的最小可能值。",
-      "williamMastery": "proficient",
-      "williamScore": 74,
-      "williamNote": "带余除法能算，但商与余数写为假分数或带分数时偶有倒置（如52÷24写成24又4分之2）。",
+      "williamMastery": "mastered",
+      "williamScore": 78,
+      "williamNote": "乘法口诀熟练，带余除法本质清晰，商与余数书写规范。",
       "errorRefIds": [
         "ERR-SOP-11",
         "ERR-WIL-12"
@@ -475,8 +498,8 @@ const trackerData = {
       "sophiaMastery": "proficient",
       "sophiaScore": 82,
       "sophiaNote": "清楚优先级，但心算草稿时偶尔出现18+5=90这类草稿脱缰低级笔误，需坚持双栏草稿规程。",
-      "williamMastery": "needs_work",
-      "williamScore": 60,
+      "williamMastery": "proficient",
+      "williamScore": 66,
       "williamNote": "运算顺序受视觉吸引容易冲动先算加法，需强制画出运算顺序辅助下划线。",
       "errorRefIds": [
         "ERR-SOP-05",
@@ -686,9 +709,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 94,
       "sophiaNote": "假带互化速度快且准确，披萨图形建模清晰。",
-      "williamMastery": "proficient",
-      "williamScore": 72,
-      "williamNote": "理解互化原理，但在带余除法直接化带分数时偶有商余倒置（52÷24=2又4/24需确认商写前面）。",
+      "williamMastery": "mastered",
+      "williamScore": 78,
+      "williamNote": "假分数与带分数互化原理理解透彻，能准确进行改写。",
       "errorRefIds": [
         "ERR-SOP-09",
         "ERR-WIL-10",
@@ -715,9 +738,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 92,
       "sophiaNote": "性质理解透彻，能自如应用在复杂比例化简中。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 76,
-      "williamNote": "概念能复述，但在通分加法时偶有只乘分母忘乘分子现象。",
+      "williamNote": "深刻理解分数基本性质，商不变原理运用熟练。",
       "errorRefIds": [
         "ERR-SOP-06"
       ]
@@ -743,9 +766,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 90,
       "sophiaNote": "能敏锐捕捉大公因数，约分一步到位。",
-      "williamMastery": "proficient",
-      "williamScore": 75,
-      "williamNote": "能熟练采用逐步除以2/3的方法约分至最简。",
+      "williamMastery": "mastered",
+      "williamScore": 78,
+      "williamNote": "最简分数概念清楚，能熟练通过逐步除以公因数或求GCD约分至最简。",
       "errorRefIds": [
         "ERR-WIL-10"
       ]
@@ -767,11 +790,11 @@ const trackerData = {
         "g5_05"
       ],
       "currentPhase": "in_progress",
-      "sophiaMastery": "needs_work",
-      "sophiaScore": 68,
-      "sophiaNote": "曾出现通分时只乘分母、分子抄原数的粗心失误；经双步模板训练已纠正，需持续巩固。",
-      "williamMastery": "needs_work",
-      "williamScore": 62,
+      "sophiaMastery": "proficient",
+      "sophiaScore": 76,
+      "sophiaNote": "异分母加减通分规律已掌握，需在多项连续通分与大题综合应用中保持分子分母同步扩倍习惯。",
+      "williamMastery": "proficient",
+      "williamScore": 66,
       "williamNote": "通分容易漏乘分子，异分母加法容易冲动将分子分母各自直接相加；需强制书写中间通分式。",
       "errorRefIds": [
         "ERR-SOP-06",
@@ -800,9 +823,9 @@ const trackerData = {
       "sophiaMastery": "proficient",
       "sophiaScore": 84,
       "sophiaNote": "残差法领悟极快，能自如应用生活化花钱模型解释11/12与12/13的大小差异。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 78,
-      "williamNote": "生活化'谁花的钱少剩得多'理解深刻，但在交叉相乘时偶有上下乘颠倒情况。",
+      "williamNote": "生活化'花钱法'比分数大小掌握透彻，反应敏捷准确。",
       "errorRefIds": []
     },
     {
@@ -856,9 +879,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 92,
       "sophiaNote": "能写出24的所有8种因数分解，准确理解排列与组合的区别，表现优秀。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 80,
-      "williamNote": "因数分解能成对寻找，但偶尔对因数与加数混淆（曾把16的因数说成8个2）。",
+      "williamNote": "因数与倍数列举完备规范，能避免遗漏两端数对。",
       "errorRefIds": [
         "ERR-SOP-03",
         "ERR-WIL-07",
@@ -914,9 +937,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 90,
       "sophiaNote": "熟练掌握各数判定法则，能自如应用到六位数整除综合题中。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 78,
-      "williamNote": "掌握2、5、3法则，能正确分解65=5×13得出末位Y=0或5，但在4和8的法则上偶尔遗忘。",
+      "williamNote": "2、3、5 整除特征判定熟练，能灵活运用各数位之和与末位数法则。",
       "errorRefIds": [
         "ERR-WIL-14"
       ]
@@ -942,9 +965,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 95,
       "sophiaNote": "因数树与短除法运用娴熟，质因数连乘书写规范（如36=2²×3²）。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 76,
-      "williamNote": "掌握短除法，短除求GCD速度快，但有时除数使用了合数未除到质数为止。",
+      "williamNote": "质因数分解短除法格式规范，坚持每次试除质数除数，分解完全。",
       "errorRefIds": [
         "ERR-SOP-02",
         "ERR-WIL-17"
@@ -971,9 +994,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 90,
       "sophiaNote": "能自如在短除法和指数法之间切换，准确理解GCD和LCM的本质区别。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 82,
-      "williamNote": "短除法求GCD非常熟练（如24与88的GCD=8快速算出），但求LCM时有时漏乘底部的互质数。",
+      "williamNote": "最大公因数与最小公倍数求法扎实，理解 a×b = GCD×LCM 性质并能解方程反求未知数。",
       "errorRefIds": [
         "ERR-WIL-09",
         "ERR-SOP-31"
@@ -1170,9 +1193,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 92,
       "sophiaNote": "能敏锐运用奇偶性排除竞赛题中的不可能情况，逻辑严密。",
-      "williamMastery": "proficient",
-      "williamScore": 75,
-      "williamNote": "掌握奇偶判定，但在代数推导中偶有忘记质数2是唯一的偶质数。",
+      "williamMastery": "mastered",
+      "williamScore": 78,
+      "williamNote": "奇数偶数同余与运算性质掌握牢固，能准确推导代数式奇偶性。",
       "errorRefIds": [
         "ERR-SOP-32"
       ]
@@ -1250,9 +1273,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 95,
       "sophiaNote": "概念清晰，计算准确，能灵活处理复杂拼图的周长变化。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 80,
-      "williamNote": "周长公式掌握，但有时和面积公式搞混，需口头强调'周长是一维线长'。",
+      "williamNote": "深刻理解周长是一维线段长度的物理本质，周长公式运用准确规范。",
       "errorRefIds": [
         "ERR-SOP-20"
       ]
@@ -1276,11 +1299,11 @@ const trackerData = {
         "div_06"
       ],
       "currentPhase": "completed",
-      "sophiaMastery": "needs_work",
-      "sophiaScore": 65,
-      "sophiaNote": "曾把正方形面积36cm²反求边长误算为18cm（除以2）；经正方形方格网拼图纠错后已深刻警醒。",
-      "williamMastery": "needs_work",
-      "williamScore": 56,
+      "sophiaMastery": "proficient",
+      "sophiaScore": 78,
+      "sophiaNote": "面积维度概念清晰，已掌握通过正方形面积求边长；长正方体拼接扣减重叠面直觉敏锐。",
+      "williamMastery": "proficient",
+      "williamScore": 66,
       "williamNote": "极易混淆周长与面积、开平方与除以2；必须强制在草稿上写出s×s=36因此s=6的中间式。",
       "errorRefIds": [
         "ERR-SOP-01",
@@ -1309,8 +1332,8 @@ const trackerData = {
       "sophiaMastery": "proficient",
       "sophiaScore": 82,
       "sophiaNote": "清楚100³=1,000,000的推导逻辑，但在快速答题时偶尔少写一个0。",
-      "williamMastery": "needs_work",
-      "williamScore": 54,
+      "williamMastery": "proficient",
+      "williamScore": 66,
       "williamNote": "把体积进率和长度进率混为一谈（曾认为1m³=100cm³）；需用魔方与1立方米大木箱实物模型直观建立空间感。",
       "errorRefIds": []
     },
@@ -1403,7 +1426,7 @@ const trackerData = {
       "sophiaNote": "不仅能算出2ⁿ各层厚度，还能主动追问'为什么对折超过8次实际纸张折不动'的物理边界，思维活跃。",
       "williamMastery": "mastered",
       "williamScore": 88,
-      "williamNote": "本堂课最大亮点！动手折纸极快，能迅速口算推导128→256→512→1024，展现了优秀的直观空间感知力。",
+      "williamNote": "折纸 2ⁿ 幂次增长模型直觉优异，动手推导敏捷自信。",
       "errorRefIds": [
         "ERR-SOP-04",
         "ERR-SOP-10",
@@ -1433,9 +1456,9 @@ const trackerData = {
       "sophiaMastery": "mastered",
       "sophiaScore": 96,
       "sophiaNote": "速度极快，能同时在脑海中并列构建3×8和4×6两条路线，多次秒杀胜出。",
-      "williamMastery": "proficient",
+      "williamMastery": "mastered",
       "williamScore": 78,
-      "williamNote": "积极上台参与，能找到常见的3×8组合，但在遇到需要利用分数或先乘除后加减的较难牌面时容易急躁。",
+      "williamNote": "24点因数重组与逆向拆分运算能力强，反应敏捷。",
       "errorRefIds": [
         "ERR-SOP-28"
       ]
@@ -2451,7 +2474,7 @@ const trackerData = {
     }
   ],
   "actionPlans": {
-    "currentPhaseSummary": "目前处于小学六年级第一学期开学第2周结束（半个月节点）。体制内沪教版第一章《数的整除》已基本学完，正攻坚大数整除压轴，并平稳切入第二章《分数》；英数教材同步进入 Fractions Operations。两人的关键攻坚战是'分数的概念与四则运算'，以及'乘方与乘法本质的纠偏'。",
+    "currentPhaseSummary": "目前处于小学六年级第一学期开学第3周结束阶段（已完成秋季4次系统授课）。体制内沪教版第一章《数的整除》已全章结课并完成压轴攻坚，第二章《分数》全面展开（通分、假带互化、四则混合、裂项初步）；立体几何板块已完成长正方体拼接表面积扣减与维度进率推导。两人的关键攻坚战是'分数的严谨运算与规范书写'、'维度单位换算的乘方理解'，以及 William '乘方与乘法本质辨析和小数竖式补漏'。",
     "roadmap": [
       {
         "week": "第1-2周（已完成）",
@@ -2462,23 +2485,23 @@ const trackerData = {
         "assessment": "Sophia 80-85%（快但粗心，有概念混淆）；William 70-75%（参与意愿高但有严重断层，压轴题遗漏条件）"
       },
       {
-        "week": "第3-4周（即将进行·攻坚期）",
-        "status": "current",
+        "week": "第3周（已完成·秋季第3-4课）",
+        "status": "completed",
         "shanghaiTopic": "第2章《分数》2.1-2.4节（分数意义、花钱法比大小、通分、异分母加减法、假带分数互化、分数乘法）",
-        "englishTopic": "Ch09 Fractions Operations (Multiplication & Division, Reciprocals)",
-        "schoolBasedTopic": "分数应用题分步建模、披萨模型通分三步法、去工具化思维训练",
-        "assessment": "核心目标：攻克 Sophia 的通分同步与粗心问题；彻底根治 William 的乘方乘法混淆与小数加减除断层"
+        "englishTopic": "Ch09 Fractions Operations (Multiplication & Division, Reciprocals), 3D Solids & Surface Area",
+        "schoolBasedTopic": "维度进率（长度、面积、体积换算与科学记数法估算）、长方体三种拼法表面积极值比较、裂项相消求和、短除法性质 a×b=GCD×LCM",
+        "assessment": "Sophia 85-88%（空间感知与裂项领悟快，仍需防范漏写单位与跳步）；William 74-78%（立体拼搭直觉良好、短除法规范，需巩固四五年级小数与单位规范）"
       },
       {
-        "week": "第5-7周（后续规划）",
-        "status": "upcoming",
+        "week": "第4-5周（即将进行·攻坚强化期）",
+        "status": "current",
         "shanghaiTopic": "第2章 2.5-2.6 分小互化与分数工程/行程应用题 → 第3章《比和比例》",
         "englishTopic": "Ch10-14 Percentages, Discounts & Simple Interest; Ch15-17 Ratios",
-        "schoolBasedTopic": "双语比例方程建模、单利息公式应用、复合多步应用题",
+        "schoolBasedTopic": "双语比例方程建模、单利息公式应用、复合多步应用题分步解析",
         "assessment": "核心目标：强化代数等式变形规范，提升两人的独立审题与严谨推导书写能力"
       },
       {
-        "week": "第8周及以后（期中与拓展）",
+        "week": "第6-8周（后续规划·期中冲刺）",
         "status": "upcoming",
         "shanghaiTopic": "第3章比例性质与第4章《圆和扇形》初步",
         "englishTopic": "Comprehensive Review & Mid-term Preparation",
