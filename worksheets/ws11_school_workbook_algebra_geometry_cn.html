@@ -39,7 +39,15 @@
     }
     .no-print:hover { background: #1d4ed8; transform: translateY(-1px); }
     @media print {
-      .no-print, .teacher-key { display: none !important; }
+      .no-print { display: none !important; }
+    }
+    .answer-key-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-top: 24px;
+      page-break-before: always;
     }
     .paper-container {
       max-width: 820px;
@@ -493,17 +501,19 @@
     </div>
   </div>
 
-  <!-- 教师参考答案与解析 (展开查阅) -->
-  <details class="teacher-key">
-    <summary>📌 教师备课与参考答案解析（点击展开/折叠）</summary>
-    <div style="margin-top:12px;">
+  <!-- 教师参考答案与全解评分细则 -->
+  <div class="answer-key-box">
+    <div style="font-weight:800; font-size:15px; color:#0f172a; margin-bottom:12px; border-bottom:2px solid #cbd5e1; padding-bottom:6px;">
+      📋 【参考答案与全解评分细则】（教师批改与家长备课专用）
+    </div>
+    <div>
       <div class="sol-item">
         <strong>一、填空题</strong><br>
         1. 十；十；十分；十分之一（或 0.1）。<br>
         2. (1) $<$（乘以小于1的数变小，除以小于1的数变大）； (2) $=$（$4.5\div 0.1 = 45 = 4.5\times 10$）； (3) $>$； (4) $<$。<br>
         3. $7.5\%$； $\frac{3}{40}$； $0.125$； $12.5\%$。<br>
         4. $0.225$； $225$； $0.225$。<br>
-        5. $825$； $0.82582582$； $2$（因为 $100 \div 3 = 33 \dots 1$，第1位是8？注意循环节是 825，余数 1 对应第1位 8！若循环节是 825，则 $100 \equiv 1 \pmod 3$ 为 8）。<br>
+        5. $825$； $0.82582582$； $8$（因为 $100 \div 3 = 33 \dots 1$，对应循环节第 1 位数字 $8$）。<br>
         6. $4.9964 \to 5$； $5.0$； $5.00$。 $0.7258 \to 1$； $0.7$； $0.73$。<br>
         7. $4x + 7$； $6x + 4$； $2n$。<br>
         8. $240$； $3.5$； $90$； $20$（$72 \times 1000 \div 3600 = 20\text{ m/s}$）。<br>
@@ -544,7 +554,7 @@
         (2) 第一组总长 $= 4 \times 2 = 8\text{ cm}$； $3y = 8 \implies y = \frac{8}{3}\text{ cm}$（或 $2\frac{2}{3}\text{ cm}$）。
       </div>
     </div>
-  </details>
+  </div>
 
 </div>
 

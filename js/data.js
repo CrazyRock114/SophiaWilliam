@@ -2955,8 +2955,8 @@ const trackerData = {
         "代数化简与解方程",
         "几何测量与应用题"
       ],
-      "pdfUrl_en": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_EN.pdf",
-      "pdfUrl_cn": "pdf/clean/WS11_School_Workbook_Algebra_Geometry_Clean_CN.pdf",
+      "pdfUrl_en": "pdf/WS11_School_Workbook_Algebra_Geometry_EN.pdf",
+      "pdfUrl_cn": "pdf/WS11_School_Workbook_Algebra_Geometry_CN.pdf",
       "htmlUrl_en": "worksheets/ws11_school_workbook_algebra_geometry_en.html",
       "htmlUrl_cn": "worksheets/ws11_school_workbook_algebra_geometry_cn.html",
       "fileSize": "680 KB / 920 KB",
@@ -2995,8 +2995,8 @@ const trackerData = {
         "分数通分与四则",
         "3D空间立体几何"
       ],
-      "pdfUrl_en": "pdf/clean/WS12_School_Workbook_Number_Theory_Spatial_Clean_EN.pdf",
-      "pdfUrl_cn": "pdf/clean/WS12_School_Workbook_Number_Theory_Spatial_Clean_CN.pdf",
+      "pdfUrl_en": "pdf/WS12_School_Workbook_Number_Theory_Spatial_EN.pdf",
+      "pdfUrl_cn": "pdf/WS12_School_Workbook_Number_Theory_Spatial_CN.pdf",
       "htmlUrl_en": "worksheets/ws12_school_workbook_number_theory_spatial_en.html",
       "htmlUrl_cn": "worksheets/ws12_school_workbook_number_theory_spatial_cn.html",
       "fileSize": "690 KB / 940 KB",

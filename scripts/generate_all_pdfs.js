@@ -32,6 +32,10 @@ const tasks = [
   { html: 'sophia_5a_consolidation_test_cn.html', pdf: 'WS09_Sophia_5A_Consolidation_Test_CN.pdf' },
   { html: 'ws10_classrecord_targeted_mastery_en.html', pdf: 'WS10_Classrecord_Targeted_Mastery_EN.pdf' },
   { html: 'ws10_classrecord_targeted_mastery_cn.html', pdf: 'WS10_Classrecord_Targeted_Mastery_CN.pdf' },
+  { html: 'ws11_school_workbook_algebra_geometry_en.html', pdf: 'WS11_School_Workbook_Algebra_Geometry_EN.pdf' },
+  { html: 'ws11_school_workbook_algebra_geometry_cn.html', pdf: 'WS11_School_Workbook_Algebra_Geometry_CN.pdf' },
+  { html: 'ws12_school_workbook_number_theory_spatial_en.html', pdf: 'WS12_School_Workbook_Number_Theory_Spatial_EN.pdf' },
+  { html: 'ws12_school_workbook_number_theory_spatial_cn.html', pdf: 'WS12_School_Workbook_Number_Theory_Spatial_CN.pdf' },
 ];
 
 console.log(`Starting generation of ${tasks.length} PDFs...`);

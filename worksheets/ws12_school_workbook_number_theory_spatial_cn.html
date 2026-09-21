@@ -39,7 +39,15 @@
     }
     .no-print:hover { background: #047857; transform: translateY(-1px); }
     @media print {
-      .no-print, .teacher-key { display: none !important; }
+      .no-print { display: none !important; }
+    }
+    .answer-key-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-top: 24px;
+      page-break-before: always;
     }
     .paper-container {
       max-width: 820px;
@@ -478,10 +486,12 @@
     </div>
   </div>
 
-  <!-- 教师参考答案与解析 (展开查阅) -->
-  <details class="teacher-key">
-    <summary>📌 教师备课与参考答案解析（点击展开/折叠）</summary>
-    <div style="margin-top:12px;">
+  <!-- 教师参考答案与全解评分细则 -->
+  <div class="answer-key-box">
+    <div style="font-weight:800; font-size:15px; color:#0f172a; margin-bottom:12px; border-bottom:2px solid #cbd5e1; padding-bottom:6px;">
+      📋 【参考答案与全解评分细则】（教师批改与家长备课专用）
+    </div>
+    <div>
       <div class="sol-item">
         <strong>一、填空题</strong><br>
         1. (1) $1, 2, 4, 7, 14, 28$； (2) $1, 2, 3, 4, 6, 8, 12, 16, 24, 48$。<br>
@@ -537,7 +547,7 @@
         (2) 甲路程 $= 60 \times 5 = 300$ 米，占全程 $\frac{300}{1000} = \frac{3}{10}$；乙路程 $= 140 \times 5 = 700$ 米，乙比甲多走 $700 - 300 = 400$ 米。
       </div>
     </div>
-  </details>
+  </div>
 
 </div>
 
