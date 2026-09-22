@@ -3104,6 +3104,43 @@ const trackerData = {
       "fileSize": "1.2 MB",
       "cleanPdfUrl_cn": null,
       "cleanPdfUrl_en": null
+    },
+    {
+      "id": "sophia-fractions-operation-interactive",
+      "targetStudent": "sophia",
+      "studentBadge_en": "🌸 Sophia Interactive Lab · Fractions Mastery",
+      "studentBadge_cn": "🌸 Sophia 专属互动实验室 · 分数运算与应用题全通关",
+      "title_en": "Interactive Fraction Mixed Operations & Word Problem Breakthrough (SUIS G6 Topic: Fractions Operation)",
+      "title_cn": "Sophia 专属数学互动实验室 · 分数四则混合运算与应用题全通关（协和双语六上最新校本作业精讲）",
+      "timeLimit_en": "Interactive Lab",
+      "timeLimit_cn": "交互探索工坊",
+      "totalPoints": 100,
+      "badgeColor": "#ec4899",
+      "targetAreas_en": "BODMAS with Fractions · Cross-Cancelling · Singapore Bar Model · Unit '1' Identification · Algebraic Modeling",
+      "targetAreas_cn": "分数四则混合运算 · 交叉大约分 · 新加坡数学条形建模 · 基准量单位1锁定 · 代数未知数建模",
+      "desc_en": "Dedicated interactive tutorial designed for Sophia's authentic SUIS worksheet (Topic: Fractions operation p.9). Features interactive BODMAS step-by-step breakdowns, Singapore Bar Model for brother ages, and the interactive candidate simulator for Ellen's interview calls.",
+      "desc_cn": "针对 Sophia 真实校本作业（Topic: Fractions operation 第9页）量身研制的深度交互教学工坊。全面覆盖混合运算顺序、假分数保留规范、新加坡条形建模法破解三兄弟年龄、以及互动滑块彻底解开最后一题 Ellen 招聘电话的“代数思维与条件缺失”之谜！",
+      "tags_en": [
+        "Interactive Lab",
+        "Fractions BODMAS",
+        "Singapore Bar Model",
+        "Algebraic Modeling",
+        "Ellen Interview Mystery"
+      ],
+      "tags_cn": [
+        "动态交互工坊",
+        "混合运算运算律",
+        "新加坡条形建模",
+        "代数思维破局",
+        "Ellen面试电话之谜"
+      ],
+      "pdfUrl_en": "worksheets/sophia_fractions_operation_interactive.html",
+      "pdfUrl_cn": "worksheets/sophia_fractions_operation_interactive.html",
+      "htmlUrl_en": "worksheets/sophia_fractions_operation_interactive.html",
+      "htmlUrl_cn": "worksheets/sophia_fractions_operation_interactive.html",
+      "fileSize": "Dynamic Web App",
+      "cleanPdfUrl_cn": null,
+      "cleanPdfUrl_en": null
     }
   ]
 };
