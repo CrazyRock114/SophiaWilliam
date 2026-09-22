@@ -578,6 +578,36 @@
       align-items: center;
       gap: 6px;
     }
+    /* Mode Toggle Buttons */
+    .mode-toggle-group {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 30px;
+      gap: 4px;
+      margin: 12px 0;
+      border: 1px solid #cbd5e1;
+      flex-wrap: wrap;
+    }
+    .mode-toggle-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 20px;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mode-toggle-btn:hover {
+      color: #0f172a;
+    }
+    .mode-toggle-btn.active {
+      background: #4f46e5;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(79,70,229,0.3);
+    }
   </style>
 </head>
 <body>
@@ -1007,83 +1037,123 @@
         After the interview, Ellen decided to hire two of the applicants and reject the others. Ellen's assistant called back the applicants to tell them the result. She spent $\frac{1}{30}$ of an hour calling each of the rejected applicants and $\frac{1}{3}$ of an hour calling the hired applicants. How much time did the assistant spend making these calls?
       </div>
 
-      <!-- Why Sophia Got Stuck -->
-      <div style="background:#fff7ed; border-left:4px solid #f97316; padding:14px 18px; border-radius:6px; margin-bottom:18px;">
-        <h4 style="font-size:15px; color:#c2410c; margin-bottom:6px;">🤔 为什么 Sophia 看到这道题会“完全不会”？</h4>
-        <p style="font-size:13.5px; color:#431407; line-height:1.7;">
-          Sophia 读完题的第一反应肯定是：<strong>“题目只说了录取 2 个人，根本没告诉我总共有多少人被淘汰（reject the others）啊！没有数字我怎么算？这题是不是印错了？！”</strong><br>
-          恭喜 Sophia！你的数学直觉极其敏锐——<strong>这道题确实没有给出淘汰人数的具体常数！</strong><br>
-          在国际体系（如英国 Key Stage 3、IB MYP 以及校本高阶思维）中，这种题目正是用来<strong>考查学生从“死板算术”跨越到“代数思维（Algebraic Expression）”与“情境分类”的分水岭！</strong>
-        </p>
-      </div>
-
-      <!-- The 3 Interpretations -->
-      <div class="grid-2" style="margin-bottom:18px;">
-        <div class="step-box" style="border-left:4px solid #6366f1;">
-          <div class="step-header">
-            <span class="step-num">核心换算</span>
-            <span class="step-title">把“抽象分数小时”化为“亲切的分钟”</span>
-          </div>
-          <div style="font-size:13px; line-height:1.7;">
-            1 小时 $= 60$ 分钟：<br>
-            • 每打给一个被淘汰者：$\frac{1}{30} \text{ 小时} = 60 \times \frac{1}{30} = \mathbf{2 \text{ 分钟}}$<br>
-            • 打给录用者：$\frac{1}{3} \text{ 小时} = 60 \times \frac{1}{3} = \mathbf{20 \text{ 分钟}}$<br>
-            • 录取了 2 个人，每人 20 分钟（或两人共20分），每人打20分则为：$2 \times 20 = \mathbf{40 \text{ 分钟}}$（即 $\frac{2}{3}$ 小时）！
+      <!-- Core Analysis: The 2 Big Breakthroughs -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:18px;">
+        
+        <!-- Breakthrough 1: Missing Conditions -->
+        <div style="background:#fff7ed; border:1.5px solid #fed7aa; border-radius:8px; padding:14px 16px;">
+          <h4 style="font-size:14.5px; color:#c2410c; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>🤔</span> 疑问一：第4题确定是缺少条件吗？
+          </h4>
+          <p style="font-size:13px; color:#7c2d12; line-height:1.7; margin-bottom:8px;">
+            <strong>答案：是的！如果要算出一个确切的单一数字，这道题 100% 缺少条件！</strong>
+          </p>
+          <div style="font-size:12.5px; color:#9a3412; line-height:1.6;">
+            • <strong>数学证明：</strong> 设被拒绝的人数为 $r$。淘汰电话是按每人 2 分钟计算的，所以淘汰总时间是 $2r$ 分钟。<br>
+            • 只要题目<strong>没有给出总应聘人数（或淘汰人数 $r$）</strong>，$r$ 就是一个完全自由的变量！当 $r=3$ 时总时间是 26 分钟，当 $r=8$ 时总时间是 36 分钟，当 $r=20$ 时总时间是 60 分钟……永远无法算出单一确定数字！<br>
+            • <strong>为什么会这样？</strong> 国际学校老师从国外题库（如英国 GCSE/KS3）剪辑本套练习时，<strong>极大概率漏印了前置背景句</strong>（例如漏掉了：<em>"12 people applied for the job..."</em>）。<br>
+            • <strong>破局之道：</strong> 如果不是漏印，合法的唯一答案就是<strong>写成含有未知数 $r$ 的代数表达式</strong>！
           </div>
         </div>
 
+        <!-- Breakthrough 2: Grammar - Each vs Collective -->
+        <div style="background:#f0fdf4; border:1.5px solid #bbf7d0; border-radius:8px; padding:14px 16px;">
+          <h4 style="font-size:14.5px; color:#15803d; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>🔎</span> 疑问二：录用者电话到底要不要乘以 2？
+          </h4>
+          <p style="font-size:13px; color:#14532d; line-height:1.7; margin-bottom:8px;">
+            <strong>答案：严格按照英文卷面语法，绝对不应该乘以 2！</strong>
+          </p>
+          <div style="font-size:12.5px; color:#166534; line-height:1.6;">
+            • <strong>英文语法显微镜：</strong><br>
+            ① 对被拒者：<code>calling EACH OF the rejected applicants</code> $\rightarrow$ 明确用了分配限定词 <strong>each of</strong>，表示“每个被拒者”耗时 $\frac{1}{30}$ 小时（2分钟）；<br>
+            ② 对录用者：<code>calling THE hired applicants</code> $\rightarrow$ <strong>没有 each of</strong>！而是使用了定冠词加复数集合名词短语 <strong>the hired applicants</strong>，在标准英文中表示<strong>“打给录用者群体”这件事总共用了 $\frac{1}{3}$ 小时（20分钟）</strong>！<br>
+            • <strong>结论：</strong> 录用者电话总耗时就是 <strong>20 分钟</strong>（$\frac{1}{3}$ 小时），不应该再乘以 2！<br>
+            • <strong>防出题人粗心备选：</strong> 只有在老师英语不严谨、心中想表达“每人”却粗心漏写了 each 时，才会被算成 $2 \times 20 = 40$ 分钟。
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Time Expressions & Comparison -->
+      <div class="grid-2" style="margin-bottom:18px;">
         <div class="step-box" style="border-left:4px solid #10b981;">
           <div class="step-header">
-            <span class="step-num">代数通解</span>
-            <span class="step-title">未知人数？就用字母 $r$ 代替！</span>
+            <span class="step-num" style="background:#10b981;">视角 A (推荐 ⭐)</span>
+            <span class="step-title">严格卷面语法：录用者共计 20 分钟 (不乘2)</span>
           </div>
-          <div style="font-size:13px; line-height:1.7;">
-            设被淘汰的人数为 $r$ 人（Rejected）：<br>
-            • 录用电话总耗时 $= \mathbf{40 \text{ 分钟}}$（$\frac{2}{3}$ 小时）<br>
-            • 淘汰电话总耗时 $= \mathbf{2r \text{ 分钟}}$（$\frac{r}{30}$ 小时）<br>
-            • <strong>总耗时表达式</strong>：
-            $$\mathbf{40 + 2r \text{ 分钟}} \quad \text{或} \quad \mathbf{\frac{2}{3} + \frac{r}{30} \text{ 小时}}$$
+          <div style="font-size:13px; line-height:1.8;">
+            • 录用电话总用时 $= \mathbf{20 \text{ 分钟}}$（即 $\frac{1}{3}$ 小时）<br>
+            • 淘汰电话总用时 $= \mathbf{2r \text{ 分钟}}$（即 $\frac{r}{30}$ 小时）<br>
+            • <strong>总时间代数通解：</strong>
+            $$\mathbf{(20 + 2r) \text{ 分钟}} \quad \text{或} \quad \mathbf{\left(\frac{1}{3} + \frac{r}{30}\right) \text{ 小时}}$$
+          </div>
+        </div>
+
+        <div class="step-box" style="border-left:4px solid #94a3b8;">
+          <div class="step-header">
+            <span class="step-num" style="background:#94a3b8;">视角 B (备选)</span>
+            <span class="step-title">防出题人漏词：若录用者每人 20 分钟 (乘2)</span>
+          </div>
+          <div style="font-size:13px; line-height:1.8;">
+            • 若出题老师漏写了 each：$2 \times 20 = \mathbf{40 \text{ 分钟}}$（$\frac{2}{3}$ 小时）<br>
+            • 淘汰电话总用时 $= \mathbf{2r \text{ 分钟}}$（即 $\frac{r}{30}$ 小时）<br>
+            • <strong>总时间代数通解：</strong>
+            $$\mathbf{(40 + 2r) \text{ 分钟}} \quad \text{或} \quad \mathbf{\left(\frac{2}{3} + \frac{r}{30}\right) \text{ 小时}}$$
           </div>
         </div>
       </div>
 
       <!-- Interactive Candidate Simulator -->
       <div class="interactive-panel">
-        <div class="interactive-title">
-          <span>🎛️</span> 候选人人数动态实验室 (拖动滑块，感受时间随淘汰人数的变化)
+        <div class="interactive-title" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div><span>🎛️</span> 候选人人数与语法视角动态实验室</div>
+        </div>
+
+        <!-- Mode Toggle Pill -->
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:4px;">
+          <span style="font-size:12px; font-weight:700; color:#475569;">选择语法解读模式：</span>
+          <div class="mode-toggle-group">
+            <button class="mode-toggle-btn active" id="mode-btn-strict" onclick="setEllenHiredMode('strict')">
+              ⭐ 严谨卷面：录用者共 20 分钟 (不乘 2)
+            </button>
+            <button class="mode-toggle-btn" id="mode-btn-loose" onclick="setEllenHiredMode('loose')">
+              若出题人漏词：录用者每人 20 分钟 (共 40 分钟)
+            </button>
+          </div>
         </div>
 
         <div class="slider-box">
           <div class="slider-header">
             <span style="font-size:14px; font-weight:700; color:#334155;">
-              被淘汰的应聘者人数 (Rejected Applicants $r$)：
+              假设被淘汰的人数 (Rejected Applicants $r$)：
             </span>
-            <span class="slider-val-badge" id="slider-val-text">4 人 (假设总共 6 人面试)</span>
+            <span class="slider-val-badge" id="slider-val-text">8 人 (假设总共 10 人面试)</span>
           </div>
-          <input type="range" min="0" max="25" value="4" class="custom-range" id="reject-slider" oninput="updateEllenSimulator(this.value)">
+          <input type="range" min="0" max="25" value="8" class="custom-range" id="reject-slider" oninput="updateEllenSimulator(this.value)">
           <div style="display:flex; justify-content:space-between; font-size:11.5px; color:#94a3b8; margin-top:4px;">
             <span>0 人 (全录用)</span>
             <span>4 人 (共6人)</span>
-            <span>10 人 (共12人)</span>
-            <span>20 人 (大招聘)</span>
+            <span>8 人 (共10人)</span>
+            <span>18 人 (共20人)</span>
           </div>
         </div>
 
         <div class="clock-display-grid">
           <div class="calc-card">
-            <span class="calc-title">🎉 录用者电话时间 (2人)</span>
-            <span class="calc-val" style="color:#4f46e5;" id="hired-time-display">40 分钟</span>
-            <span class="calc-sub">$2 \times \frac{1}{3}\text{ h} = \frac{2}{3}\text{ h}$ (固定用时)</span>
+            <span class="calc-title">🎉 录用者电话时间</span>
+            <span class="calc-val" style="color:#4f46e5;" id="hired-time-display">20 分钟</span>
+            <span class="calc-sub" id="hired-formula-display">严格语法：定冠词集体名词，共 20 分钟</span>
           </div>
           <div class="calc-card">
             <span class="calc-title">❌ 淘汰者电话时间 ($r$人)</span>
-            <span class="calc-val" style="color:#ef4444;" id="rejected-time-display">8 分钟</span>
-            <span class="calc-sub" id="rejected-formula-display">$4 \times 2\text{ min} = \frac{4}{30}\text{ h}$</span>
+            <span class="calc-val" style="color:#ef4444;" id="rejected-time-display">16 分钟</span>
+            <span class="calc-sub" id="rejected-formula-display">8 人 × 2 分钟 = 16 分钟 (8/30 小时)</span>
           </div>
           <div class="calc-card" style="border: 2px solid #6366f1; background:#eff6ff;">
-            <span class="calc-title" style="color:#1d4ed8;">⏱️ 助理总共打给电话时间</span>
-            <span class="calc-val" style="color:#1d4ed8;" id="total-time-display">48 分钟</span>
-            <span class="calc-sub" id="total-fraction-display">$\frac{4}{5}$ 小时</span>
+            <span class="calc-title" style="color:#1d4ed8;">⏱️ 助理总共拨打电话时间</span>
+            <span class="calc-val" style="color:#1d4ed8;" id="total-time-display">36 分钟</span>
+            <span class="calc-sub" id="total-fraction-display">等于 3/5 小时 (即 1/3 + 8/30 小时)</span>
           </div>
         </div>
       </div>
@@ -1091,21 +1161,23 @@
       <!-- The Teacher's Model Answer -->
       <div class="teacher-answer-sheet">
         <div class="tas-header">
-          <span>🏆</span> Sophia 的考场满分答卷模板（让英国/国际校老师眼前一亮的写法语录）
+          <span>🏆</span> Sophia 考场满分答卷模板（同时展现严谨语法与代数思维，无可挑剔！）
         </div>
         <div style="font-size:13.5px; color:#78350f; line-height:1.8;">
-          如果考卷上遇到这道题，Sophia 这样写，老师绝对会给你打满分加五角星 ⭐：<br>
-          <div style="background:#fff; padding:10px 14px; border-radius:6px; margin:6px 0; border:1px solid #fde68a; font-family: monospace; font-size:13px; color:#0f172a;">
+          如果考卷上遇到这道缺少条件的题目，Sophia 这样写，任何学校老师都会给你打满分加五角星 ⭐：<br>
+          <div style="background:#fff; padding:12px 16px; border-radius:6px; margin:8px 0; border:1px solid #fde68a; font-family: monospace; font-size:13px; color:#0f172a; line-height:1.7;">
             <strong>Answer:</strong><br>
-            Time spent calling each hired applicant = $\frac{1}{3}$ hour = $20$ minutes.<br>
-            Time spent calling 2 hired applicants = $2 \times 20 = 40$ minutes (or $\frac{2}{3}$ hour).<br>
-            Time spent calling each rejected applicant = $\frac{1}{30}$ hour = $2$ minutes.<br>
+            • Time spent calling each rejected applicant = $\frac{1}{30}$ hour = $2$ minutes.<br>
+            • Time spent calling the hired applicants = $\frac{1}{3}$ hour = $20$ minutes.<br>
             <br>
-            Let $r$ be the number of rejected applicants (or $n$ be the total applicants, where $r = n - 2$):<br>
-            • <strong>In terms of hours:</strong> Total time = $\left(\frac{2}{3} + \frac{r}{30}\right)$ hours.<br>
-            • <strong>In terms of minutes:</strong> Total time = $(40 + 2r)$ minutes.<br>
+            <em>Note: The question does not specify the total number of applicants or rejected applicants. Let $r$ be the number of rejected applicants:</em><br>
             <br>
-            <em>(For example: if there were 6 applicants in total, 4 were rejected, then total time = $40 + 2 \times 4 = 48$ minutes = $\frac{4}{5}$ hour; if there were 12 applicants, 10 were rejected, total time = $40 + 20 = 60$ minutes = 1 full hour).</em>
+            <strong>Primary Interpretation (Strict grammar — 20 min total for hired):</strong><br>
+            Total time = $\mathbf{(20 + 2r) \text{ minutes}}$ &nbsp; (or $\mathbf{\frac{1}{3} + \frac{r}{30} \text{ hours}}$).<br>
+            <em>Example: If there were 10 applicants in total ($r = 8$), total time = $20 + 2 \times 8 = \mathbf{36 \text{ minutes}}$ ($\frac{3}{5}$ hour).</em><br>
+            <br>
+            <strong>Alternative Interpretation (If "each" was implied for hired — 20 min each):</strong><br>
+            Total time = $2 \times 20 + 2r = \mathbf{(40 + 2r) \text{ minutes}}$ &nbsp; (or $\mathbf{\frac{2}{3} + \frac{r}{30} \text{ hours}}$).
           </div>
         </div>
       </div>
@@ -1177,10 +1249,11 @@
       <div class="step-box" style="margin-bottom:14px;">
         <div class="step-header">
           <span class="step-num">心法 5</span>
-          <span class="step-title">题目没给具体数字？用代数变量勇敢设未知数！</span>
+          <span class="step-title">题目没给具体数字？用代数变量勇敢设未知数，细察 each of！</span>
         </div>
-        <p style="font-size:13px; color:#475569;">
-          从小学到初中最大的思维跃迁，就是<strong>允许答案是一个代数式（含有字母 $r$ 或 $x$）</strong>！只要把已知的关系写出来，列出 $(40 + 2r)$，你就是超越小学水平的小数学家！
+        <p style="font-size:13px; color:#475569; line-height:1.7;">
+          从小学到初中最大的思维跃迁，就是<strong>允许答案是一个代数式（含有字母 $r$ 或 $x$）</strong>！<br>
+          同时注意英文限定词：有 <strong>each of</strong> 的要乘人数（如 $2 \times r$ 分钟），没有 each of 的集合名词代表总共（如录用者总共 20 分钟），列出 $\mathbf{(20 + 2r)}$，你就是超越小学水平的小数学家！
         </p>
       </div>
 
@@ -1235,12 +1308,12 @@
       <!-- Quiz 3 -->
       <div class="step-box">
         <div style="font-weight:700; font-size:14px; margin-bottom:8px;">
-          3. 如果学校应用题中，面试官录用了 3 个人，每人打电话用 $\frac{1}{4}$ 小时；淘汰了 $m$ 个人，每人打电话用 $\frac{1}{20}$ 小时。那么总耗时是：
+          3. 细读英文：“She spent $\frac{1}{30}$ of an hour calling each of the rejected applicants and $\frac{1}{3}$ of an hour calling the hired applicants.”（共录用2人，淘汰 $r$ 人），按照最严谨的英语语法，总用时应该是：
         </div>
         <div style="display:flex; flex-direction:column; gap:8px;">
-          <button class="btn-action secondary" onclick="checkQuiz(3, true, this)">A. $\left(\frac{3}{4} + \frac{m}{20}\right)$ 小时，或者 $(45 + 3m)$ 分钟</button>
-          <button class="btn-action secondary" onclick="checkQuiz(3, false, this)">B. 无法解答，直接交白卷</button>
-          <button class="btn-action secondary" onclick="checkQuiz(3, false, this)">C. $3 + m$ 分钟</button>
+          <button class="btn-action secondary" onclick="checkQuiz(3, true, this)">A. $(20 + 2r)$ 分钟（因为 hired 前面没有 each of，录用者总共耗时 20 分钟，不应再乘 2！）⭐</button>
+          <button class="btn-action secondary" onclick="checkQuiz(3, false, this)">B. $(40 + 2r)$ 分钟（误以为录用者每人都是 20 分钟而乘了 2）</button>
+          <button class="btn-action secondary" onclick="checkQuiz(3, false, this)">C. 无法解答，直接交白卷</button>
         </div>
         <div id="quiz-fb-3" style="display:none; margin-top:8px; font-size:13px; font-weight:700;"></div>
       </div>
@@ -1381,27 +1454,49 @@
   }
 
   // Question c: Ellen Simulator Logic
+  let ellenHiredMode = 'strict'; // 'strict' (20 mins total) or 'loose' (40 mins total)
+
+  function setEllenHiredMode(mode) {
+    ellenHiredMode = mode;
+    document.querySelectorAll('.mode-toggle-btn').forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.getElementById(`mode-btn-${mode}`);
+    if (activeBtn) activeBtn.classList.add('active');
+    
+    const slider = document.getElementById('reject-slider');
+    if (slider) updateEllenSimulator(slider.value);
+  }
+
   function updateEllenSimulator(val) {
     const r = parseInt(val, 10);
     const sliderText = document.getElementById('slider-val-text');
+    const hiredTimeDisplay = document.getElementById('hired-time-display');
+    const hiredFormulaDisplay = document.getElementById('hired-formula-display');
     const rejectedTimeDisplay = document.getElementById('rejected-time-display');
     const rejectedFormulaDisplay = document.getElementById('rejected-formula-display');
     const totalTimeDisplay = document.getElementById('total-time-display');
     const totalFractionDisplay = document.getElementById('total-fraction-display');
 
     const totalApplicants = 2 + r;
-    sliderText.innerText = `${r} 人 (假设总共 ${totalApplicants} 人参加面试)`;
+    if (sliderText) sliderText.innerText = `${r} 人 (假设总共 ${totalApplicants} 人参加面试)`;
 
-    // Hired: 40 mins
-    const hiredMinutes = 40;
-    // Rejected: r * 2 mins
+    const isStrict = (ellenHiredMode === 'strict');
+    const hiredMinutes = isStrict ? 20 : 40;
+    
+    if (hiredTimeDisplay) hiredTimeDisplay.innerText = `${hiredMinutes} 分钟`;
+    if (hiredFormulaDisplay) {
+      hiredFormulaDisplay.innerText = isStrict 
+        ? "严格语法：定冠词集体名词，共 20 分钟 (1/3 小时，不乘2)" 
+        : "假设录用者每人20分钟: 2 × 20 = 40 分钟 (2/3 小时)";
+    }
+
     const rejectedMinutes = r * 2;
+    if (rejectedTimeDisplay) rejectedTimeDisplay.innerText = `${rejectedMinutes} 分钟`;
+    if (rejectedFormulaDisplay) {
+      rejectedFormulaDisplay.innerText = `${r} 人 × 2 分钟 = ${rejectedMinutes} 分钟 (${r}/30 小时)`;
+    }
+
     const totalMinutes = hiredMinutes + rejectedMinutes;
-
-    rejectedTimeDisplay.innerText = `${rejectedMinutes} 分钟`;
-    rejectedFormulaDisplay.innerText = `${r} 人 × 2 分钟 = ${rejectedMinutes} 分钟 (${r}/30 小时)`;
-
-    totalTimeDisplay.innerText = `${totalMinutes} 分钟`;
+    if (totalTimeDisplay) totalTimeDisplay.innerText = `${totalMinutes} 分钟`;
     
     // Express total minutes as fraction of hour: totalMinutes / 60
     function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
@@ -1409,10 +1504,13 @@
     const num = totalMinutes / g;
     const den = 60 / g;
 
-    if (den === 1) {
-      totalFractionDisplay.innerText = `整整 ${num} 小时！`;
-    } else {
-      totalFractionDisplay.innerText = `等于 ${num}/${den} 小时 (即 40 + 2×${r} 分钟)`;
+    if (totalFractionDisplay) {
+      const baseHourStr = isStrict ? "1/3" : "2/3";
+      if (den === 1) {
+        totalFractionDisplay.innerText = `整整 ${num} 小时！(即 ${hiredMinutes} + 2×${r} 分钟)`;
+      } else {
+        totalFractionDisplay.innerText = `等于 ${num}/${den} 小时 (即 ${baseHourStr} + ${r}/30 小时)`;
+      }
     }
   }
 
@@ -1445,7 +1543,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     renderMenGrid('count');
     renderSingaporeBars();
-    updateEllenSimulator(4);
+    updateEllenSimulator(8);
 
     if (window.renderMathInElement) {
       renderMathInElement(document.body, {
